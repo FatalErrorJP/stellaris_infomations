@@ -1,0 +1,9 @@
+@import "https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.css";
+
+.tableblock {
+	display: none;
+}
+
+th, td {
+	max-width: 500px;
+}
