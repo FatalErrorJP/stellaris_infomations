@@ -1,0 +1,23 @@
+= Stellaris Infomations
+:author: ERRORJP
+:toc: left
+:toc-title: 目次
+:sectnums:
+
+== これはなに？
+Stellarisの自作の解析用のコードと、解析結果を配置するためのリポジトリです。 +
+ドキュメントについては以下を参照してください。 +
+現状はリーダー特性一覧の解析結果のみを掲載しています。 +
+https://fatalerrorjp.github.io/stellaris_infomations/
+
+== 使い方
+=== 前準備
+. Python3をインストールする
+  3.10以上推奨です。
+. AsciiDoctorをインストールする
+. src/settings/settings.pyを編集する +
+  Stellarisのインストールフォルダがデフォルトと異なる場合は``GAME_BASE_DIR``のパスを書き換えてください。
+
+=== ツールの実行方法
+. ``main.bat``をダブルクリックする
+  docs配下に解析結果が出力されます。

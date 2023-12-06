@@ -6,7 +6,7 @@
 # VERSION_FILE_NAME: Stellarisのバージョン情報の記載されているファイル名
 # LOCALISATION_DIR: Stellarisの日本語ローカライズファイルのフォルダパス
 ###############################################################################
-GAME_BASE_DIR = 'B:/SteamLibrary/steamapps/common/Stellaris'
+GAME_BASE_DIR = 'C:/Program Files (x86)/Steam/steamapps/common/Stellaris'
 VERSION_FILE_NAME = 'launcher-settings.json'
 LEADER_TRAIT_DIR = 'common/traits'
 INLINE_SCRIPTS_DIR = 'common/inline_scripts'
