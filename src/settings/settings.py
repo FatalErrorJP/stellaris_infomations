@@ -23,7 +23,7 @@ TEMPLATE_TITLE = '''= リーダー特性一覧 Ver{version}
 
 '''
 TEMPLATE_HEADER = '''[[GotoTop]]
-link:../[トップへ戻る]
+link:./[トップへ戻る]
 
 [cols="27*a", separator=＆, options="autowidth,header"]
 .リーダー特性一覧
