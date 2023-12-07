@@ -1,0 +1,34 @@
+= Stellaris Infomations
+最終更新日: {docdatetime}
+:toc:
+:toc-title: 目次
+:sectnums:
+
+
+== このサイトについて
+このサイトは、Stellarisの自作の解析結果を配置するためだけのサイトです。 +
+私の自作Modや、Modの作り方に関するガイドの情報については、<<Steam, Steam>>を参照してください。
+
+
+== 掲載情報一覧
+* link:./leader_traits.html[リーダー特性一覧]
+
+
+== 外部リンク
+GitHub::
+* https://github.com/FatalErrorJP[プロフィール]
+* https://github.com/FatalErrorJP/stellaris_infomations[このサイトのソースコード]
+
+SNS::
+* https://misskey.io/@ERRORJP[Misskey.io]
+* https://social.vivaldi.net/@ERRORJP[Vivaldi Social]
+* https://twitter.com/ERRORJP[Twitter]
+
+Video::
+* https://www.youtube.com/@ERRORJP[YouTube]
+
+[[Steam]]
+Steam::
+* https://steamcommunity.com/profiles/76561199152309881/[プロフィール]
+* https://steamcommunity.com/profiles/76561199152309881/myworkshopfiles/?p=1&numperpage=30[自作Mod一覧]
+* https://steamcommunity.com/profiles/76561199152309881/myworkshopfiles/?section=guides&p=1&numperpage=30[自作ガイド一覧]
