@@ -22,7 +22,6 @@ GitHub::
 SNS::
 * https://misskey.io/@ERRORJP[Misskey.io]
 * https://social.vivaldi.net/@ERRORJP[Vivaldi Social]
-* https://twitter.com/ERRORJP[Twitter]
 
 Video::
 * https://www.youtube.com/@ERRORJP[YouTube]
