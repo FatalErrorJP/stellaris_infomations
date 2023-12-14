@@ -1,5 +1,4 @@
 = Stellaris Infomations
-最終更新日: {docdatetime}
 :toc:
 :toc-title: 目次
 :sectnums:

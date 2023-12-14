@@ -5,15 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.20">
-<meta name="author" content="最終更新日: 2023-12-07 19:46:03 +0900">
-<title>リーダー特性一覧 Ver3.10.3</title>
+<meta name="author" content="最終更新日: 2023-12-14 21:29:15 +0900">
+<title>リーダー特性一覧 Ver3.10.4</title>
 <link rel="stylesheet" href="./leader_traits.css">
 </head>
 <body class="article">
 <div id="header">
-<h1>リーダー特性一覧 Ver3.10.3</h1>
+<h1>リーダー特性一覧 Ver3.10.4</h1>
 <div class="details">
-<span id="author" class="author">最終更新日: 2023-12-07 19:46:03 +0900</span><br>
+<span id="author" class="author">最終更新日: 2023-12-14 21:29:15 +0900</span><br>
 </div>
 </div>
 <div id="content">
@@ -6795,6 +6795,7 @@ leader_trait_lethargic_2<br></p>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>艦隊:<br>
 ・ship_fire_rate_mult (艦船連射レート) = -0.05<br>
+・ship_disengage_chance_mult (戦闘離脱成功率) = 0.05<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -6867,6 +6868,7 @@ leader_trait_lethargic_2<br></p>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>艦隊:<br>
 ・ship_fire_rate_mult (艦船連射レート) = -0.15<br>
+・ship_disengage_chance_mult (戦闘離脱成功率) = 0.15<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -6938,6 +6940,7 @@ leader_trait_lethargic_2<br></p>
 <p>艦隊:<br>
 ・ship_evasion_mult (回避) = -0.05<br>
 ・ship_speed_mult (亜光速移動速度) = -0.05<br>
+・ships_upkeep_mult (艦船維持費) = -0.025<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -7012,6 +7015,7 @@ leader_trait_gale_speed_3<br></p>
 <p>艦隊:<br>
 ・ship_evasion_mult (回避) = -0.15<br>
 ・ship_speed_mult (亜光速移動速度) = -0.15<br>
+・ships_upkeep_mult (艦船維持費) = -0.05<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -7082,7 +7086,7 @@ leader_trait_gale_speed_3<br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>艦隊:<br>
-・command_limit_mult (艦隊指揮上限) = -0.1<br>
+・ships_upkeep_mult (艦船維持費) = 0.1<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -7147,7 +7151,7 @@ leader_trait_gale_speed_3<br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>艦隊:<br>
-・command_limit_mult (艦隊指揮上限) = -0.3<br>
+・ships_upkeep_mult (艦船維持費) = 0.3<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -18669,7 +18673,7 @@ trait_ruler_feedback_loop_2<br></p>
 <br>
 triggered_desc:<br>
 ・exclusive_trigger条件：{"always": "yes"}<br>
-・§Eスキルレベルごとの£planet£ §Y惑星§!§E効果§!：§!\n    £job£ 職業からの£unity£ 統合力：§G+5%§!<br>
+・§Eスキルレベルごとの£planet£ §Y惑星総督§! §E効果§!：§!\n    £job£ 職業からの£unity£ 統合力：§G+5%§!<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -18751,7 +18755,7 @@ triggered_desc:<br>
 <br>
 triggered_desc:<br>
 ・exclusive_trigger条件：{"always": "yes"}<br>
-・§Eスキルレベルごとの£planet£ §Y惑星§!§E効果§!：§!\n    £job£ 職業からの£unity£ 統合力：§G+5%§!\n\n§Eスキルレベルごとの§Y£sector£セクター§!効果：§!\n    £job£ 職業からの£unity£ 統合力：§G+2.5%§!<br>
+・§Eスキルレベルごとの£planet£ §Y惑星総督§! §E効果§!：§!\n    £job£ 職業からの£unity£ 統合力：§G+5%§!\n\n§Eスキルレベルごとの§Y£sector£セクター§!効果：§!\n    £job£ 職業からの£unity£ 統合力：§G+2.5%§!<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -20318,7 +20322,7 @@ leader_trait_procrastinator_2<br></p>
 <p>leader_trait_trade_focus</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>トレーダー</p>
+<p>交易志向</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -20396,7 +20400,7 @@ leader_trait_procrastinator_2<br></p>
 <p>leader_trait_trade_focus_2</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>トレーダー II</p>
+<p>交易志向 II</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -20448,7 +20452,7 @@ leader_trait_procrastinator_2<br></p>
 <p>no</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>トレーダー<br></p>
+<p>交易志向<br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -22461,7 +22465,7 @@ custom_tooltip_with_modifiers:<br>
 <p>leader_trait_farming_focus</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>農業優先</p>
+<p>農業志向</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>yes</p>
@@ -22543,7 +22547,7 @@ custom_tooltip_with_modifiers:<br>
 <p>leader_trait_farming_focus_2</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>農業優先 II</p>
+<p>農業志向 II</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>yes</p>
@@ -22598,7 +22602,7 @@ custom_tooltip_with_modifiers:<br>
 <p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>農業優先<br></p>
+<p>農業志向<br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -22618,7 +22622,7 @@ custom_tooltip_with_modifiers:<br>
 <p>leader_trait_farming_focus_3</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>農業優先 III</p>
+<p>農業志向 III</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>yes</p>
@@ -22673,7 +22677,7 @@ custom_tooltip_with_modifiers:<br>
 <p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>農業優先 II<br></p>
+<p>農業志向 II<br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -23790,7 +23794,7 @@ custom_tooltip_with_modifiers:<br>
 <p>leader_trait_industrial_focus</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>産業優先</p>
+<p>工場志向</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -23872,7 +23876,7 @@ custom_tooltip_with_modifiers:<br>
 <p>leader_trait_industrial_focus_2</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>産業優先 II</p>
+<p>工場志向 II</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -23927,7 +23931,7 @@ custom_tooltip_with_modifiers:<br>
 <p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>産業優先<br></p>
+<p>工場志向<br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -24002,7 +24006,7 @@ custom_tooltip_with_modifiers:<br>
 <p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>産業優先 II<br></p>
+<p>工場志向 II<br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -25320,7 +25324,7 @@ custom_tooltip_with_modifiers:<br>
 ・mult (mod_mult) = planet.value:species_on_planet<br>
 <br>
 custom_tooltip:<br>
-・£planet£ §Y惑星§!§E効果§!:\n    惑星に存在する種族1種につき、 £amenities£快適度の産出量を§G2%§!増やす\n    惑星に存在する種族1種につき、 §Y幸福度§!を§G2%§!増やす\n\n§Eセクター首都統治中の£sector£ §Yセクター§!効果§!：\n    各惑星に存在する種族1種につき、 £amenities£快適度の産出量を§G1%§!増やす\n    各惑星に存在する種族1種につき、 §Y幸福度§!を§G1%§!増やす<br>
+・£planet£ §Y惑星総督§! §E効果§!:\n    惑星に存在する種族1種につき、 £amenities£快適度の産出量を§G2%§!増やす\n    惑星に存在する種族1種につき、 §Y幸福度§!を§G2%§!増やす\n\n£sector£ §Yセクター総督§! §E効果§!：\n    各惑星に存在する種族1種につき、 £amenities£快適度の産出量を§G1%§!増やす\n    各惑星に存在する種族1種につき、 §Y幸福度§!を§G1%§!増やす<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -27911,7 +27915,7 @@ leader_trait_neurotic_2<br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>custom_tooltip:<br>
-・£science_ship£ §Y調査船§!§E効果§!：\n    調査完了時：\n        一定確率で資源鉱床規模が上昇：§G+20%§!<br>
+・£science_ship£ §Y調査船§!§E効果§!：\n    調査完了時：\n        一定確率で資源鉱床規模が上昇： §G+20%§!<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -27983,7 +27987,7 @@ leader_trait_neurotic_2<br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>custom_tooltip:<br>
-・£science_ship£ §Y調査船§!§E効果§!：\n    調査完了時：\n        一定確率で資源鉱床規模が上昇：§G+35%§!<br>
+・£science_ship£ §Y調査船§!§E効果§!：\n    調査完了時：\n        一定確率で資源鉱床規模が上昇： §G+35%§!<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -28052,7 +28056,7 @@ leader_trait_neurotic_2<br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>custom_tooltip_with_modifiers:<br>
-・£science_ship£ §Y調査船§!§E効果§!：\n    調査完了時：\n        一定確率で資源鉱床規模が上昇：§G+50%§!<br>
+・£science_ship£ §Y調査船§!§E効果§!：\n    調査完了時：\n        一定確率で資源鉱床規模が上昇： §G+50%§!<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -35106,7 +35110,7 @@ custom_tooltip_with_modifiers:<br>
 <br>
 triggered_desc:<br>
 ・trigger条件：{"has_ancrel": "yes", "is_currently_excavating_site": "no"}<br>
-・\n    考古学調査地点の発掘中、 月間£society_research£ 社会学研究と£minor_artifacts£ 出土品を付与<br>
+・\n    考古学調査地点の発掘中、 §G@trait_collective_wisdom_soc_amt|0§! 月間£society_research£ 社会学研究 と §G+@trait_collective_wisdom_ma_amt|0§! £minor_artifacts£ 出土品 を付与<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -53382,7 +53386,7 @@ custom_tooltip_with_modifiers:<br>
 <p>leader_trait_fotd_commander</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>leader_trait_fotd_commander</p>
+<p>策略家</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>yes</p>
