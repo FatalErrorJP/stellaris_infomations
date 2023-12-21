@@ -2,7 +2,8 @@
 :toc:
 :toc-title: 目次
 :sectnums:
-
+:docinfo: private-head
+:docinfodir: ../staticfile/meta
 
 == このサイトについて
 このサイトは、Stellarisの自作の解析結果を配置するためだけのサイトです。 +

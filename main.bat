@@ -10,6 +10,7 @@ copy staticfile\asciidoc\*.adoc asciidoc
 mkdir docs
 copy staticfile\css\*.css docs
 copy staticfile\js\*.js docs
+copy staticfile\yaml\*.yml docs
 
 rem Stellaris File To AsciiDoc
 python -m src.main
