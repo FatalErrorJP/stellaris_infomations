@@ -391,3 +391,6 @@ https://steamcommunity.com/profiles/76561198332246255/myworkshopfiles/?section=g
 https://steamcommunity.com/profiles/76561199152309881/myworkshopfiles/?section=guides&p=1&numperpage=30
 
 以上
+
+[[GotoTop]]
+link:../[TOPへ戻る]
