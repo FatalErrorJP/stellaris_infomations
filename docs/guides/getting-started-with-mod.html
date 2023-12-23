@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.20">
+<title>【Stellaris 3.6.1】初心者のためのMod導入ガイド</title>
+<link rel="stylesheet" href="../css/default.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="article toc2 toc-left">
+<div id="header">
+<h1>【Stellaris 3.6.1】初心者のためのMod導入ガイド</h1>
+<div id="toc" class="toc2">
+<div id="toctitle">目次</div>
+<ul class="sectlevel1">
+<li><a href="#_modを導入しゲーム内で利用する">1. Modを導入し、ゲーム内で利用する</a>
+<ul class="sectlevel2">
+<li><a href="#_modの追加方法">1.1. Modの追加方法</a></li>
+<li><a href="#_プレイセットを作成する">1.2. プレイセットを作成する</a></li>
+<li><a href="#_プレイセットを選択しゲームを起動する">1.3. プレイセットを選択し、ゲームを起動する</a></li>
+<li><a href="#_補足modの対応バージョンが古い場合について">1.4. (補足)Modの対応バージョンが古い場合について</a></li>
+</ul>
+</li>
+<li><a href="#_modの仕組みについて">2. Modの仕組みについて</a>
+<ul class="sectlevel2">
+<li><a href="#_modの保存場所">2.1. Modの保存場所</a></li>
+<li><a href="#_ゲーム開始時に行われていること概念図">2.2. ゲーム開始時に行われていること(概念図)</a></li>
+<li><a href="#_ゲーム開始時に行われていることファイル上書きの例">2.3. ゲーム開始時に行われていること(ファイル上書きの例)</a></li>
+<li><a href="#_ゲーム開始時に行われていること別名だが記述が重複している場合の例">2.4. ゲーム開始時に行われていること(別名だが記述が重複している場合の例)</a></li>
+<li><a href="#_ゲーム開始時に行われていること依存関係">2.5. ゲーム開始時に行われていること(依存関係)</a></li>
+</ul>
+</li>
+<li><a href="#_modの不具合やmod同士の競合について_編集">3. Modの不具合や、Mod同士の競合について 編集</a>
+<ul class="sectlevel2">
+<li><a href="#_対応バージョンの古いmod">3.1. 対応バージョンの古いMod</a></li>
+<li><a href="#_同じファイルや定義を書き換えている場合">3.2. 同じファイルや定義を書き換えている場合</a></li>
+</ul>
+</li>
+<li><a href="#_modを利用する上での心構えについて">4. Modを利用する上での心構えについて</a>
+<ul class="sectlevel2">
+<li><a href="#_ソフトウェアは生ものです">4.1. ソフトウェアは生ものです</a></li>
+<li><a href="#_不具合報告は詳細に書こう">4.2. 不具合報告は詳細に書こう</a></li>
+<li><a href="#_更新されないmodをどうしても使いたかったら">4.3. 更新されないModをどうしても使いたかったら…</a></li>
+<li><a href="#_引き継ぐためにmodの仕組みを覚えたい">4.4. 引き継ぐために、Modの仕組みを覚えたい</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>このガイドは、初めてStellarisのMod導入をしようと思っている人向けのガイドとなります。<br>
+なお、本ガイドはWindows OS上で動作するSteam版のStellarisで動作することを前提としています。<br>
+他の環境化ではあまり参考にならない可能性がありますのでご了承ください。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_modを導入しゲーム内で利用する">1. Modを導入し、ゲーム内で利用する</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Steam版のStellarisの場合は、Steam WorkshopにてサブスクライブするだけでModを簡単に導入することができます。</p>
+</div>
+<div class="sect2">
+<h3 id="_modの追加方法">1.1. Modの追加方法</h3>
+<div class="paragraph">
+<p>まず、使いたいModをWorkshopから探してサブスクライブしてください。
+この手順だけではまだゲームには反映されません。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>StellarisのWorkshopのページにアクセスする<br>
+<a href="https://steamcommunity.com/app/281990/workshop/" class="bare">https://steamcommunity.com/app/281990/workshop/</a></p>
+</li>
+<li>
+<p>目的のModを探す</p>
+</li>
+<li>
+<p>サブスクライブボタンを押す</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_プレイセットを作成する">1.2. プレイセットを作成する</h3>
+<div class="paragraph">
+<p>ゲームで使いたいModを適用するためのプレイセットを作成します。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Stellarisのランチャー画面を表示する</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/getting-started-with-mod_1.png" alt="getting started with mod 1">
+</div>
+</div>
+</li>
+<li>
+<p>「新規プレイセットを追加」を押す</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/getting-started-with-mod_2.png" alt="getting started with mod 2">
+</div>
+</div>
+</li>
+<li>
+<p>プレイセットの名前を入力し、「作成」ボタンを押す</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/getting-started-with-mod_3.png" alt="getting started with mod 3">
+</div>
+</div>
+</li>
+<li>
+<p>プレイセットの画面にて、「Modをさらに追加」ボタンを押す</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/getting-started-with-mod_4.png" alt="getting started with mod 4">
+</div>
+</div>
+</li>
+<li>
+<p>導入したいModにチェックを入れ、「プレイセットに追加」ボタンを押す</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/getting-started-with-mod_5.png" alt="getting started with mod 5">
+</div>
+</div>
+</li>
+<li>
+<p>必要なら順序を入れ替える</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>ロード順がカスタムの場合はModの数字の書いている所にマウスカーソルを合わせ<br>
+上下方向にドラッグ＆ドロップすることで順序の入れ替えが可能です。</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/getting-started-with-mod_6.png" alt="getting started with mod 6">
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_プレイセットを選択しゲームを起動する">1.3. プレイセットを選択し、ゲームを起動する</h3>
+<div class="paragraph">
+<p>ホームに戻り、先ほど作ったプレイセットを選択した状態でゲームを開始してください。<br>
+これで、Modが適用された状態でゲームが開始されるはずです。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/getting-started-with-mod_7.png" alt="getting started with mod 7">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_補足modの対応バージョンが古い場合について">1.4. (補足)Modの対応バージョンが古い場合について</h3>
+<div class="paragraph">
+<p>Modの対応バージョンが古く、現在のStellaris本体のバージョンと一致しないことがあります。<br>
+その場合については、原則最新版への対応を待つことをオススメします。<br>
+どうしても入れたい場合には、以下のガイドを参考にしてください。</p>
+</div>
+<div class="paragraph">
+<p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3046602042">【Stellaris】古いModを導入したいときの確認事項について</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_modの仕組みについて">2. Modの仕組みについて</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>複数のModを導入していると、Mod同士の相性によっては上手く動作しないことがあります。<br>
+そもそも導入したModはどのように適用されるのでしょうか。<br>
+この章ではこの概念的な適用の動きについて説明します。</p>
+</div>
+<div class="sect2">
+<h3 id="_modの保存場所">2.1. Modの保存場所</h3>
+<div class="paragraph">
+<p>概念説明をする前に、先にStellaris本体のデータやModの保存場所を記載しておきます。</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">本体の保存場所</dt>
+<dd>
+<p>本体の保存場所は、以下の手順で確認ができます。<br></p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Steamのローカルアプリを起動し、「ライブラリ」を表示する</p>
+</li>
+<li>
+<p>ライブラリ上に表示されているStellarisを右クリック&#8594;「プロパティ」を選択する</p>
+</li>
+<li>
+<p>「ローカルファイル」メニューの「参照」ボタンを押す</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>これでStellaris本体の保存場所が開くはずです。<br>
+特にSteamの保存先の設定等を変更していないのであれば、以下のパスになっているのではないかと思います。<br>
+<code>C:\Program Files (x86)\Steam\steamapps\common\Stellaris</code></p>
+</div>
+</dd>
+<dt class="hdlist1">Modの保存場所</dt>
+<dd>
+<p>Modの保存場所は、本体の保存場所から見て、以下の相対パス上に存在します。<br>
+<code>..\..\workshop\content\281990</code></p>
+<div class="paragraph">
+<p>特にSteamの保存先の設定等を変更していないのであれば、絶対パスは以下のパスになっているのではないかと思います。<br>
+<code>C:\Program Files (x86)\Steam\steamapps\workshop\content\281990</code></p>
+</div>
+<div class="paragraph">
+<p>このフォルダ内を開くと、数字の記載されたフォルダが大量に表示されます。<br>
+この数字のフォルダの中身一つ一つがそれぞれのModの中身になります。<br>
+どの数字がどのModを指しているかは、WorkshopのModのURLを確認すれば判別できます。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/getting-started-with-mod_8.png" alt="getting started with mod 8">
+</div>
+</div>
+</dd>
+<dt class="hdlist1">自作Modの保存場所</dt>
+<dd>
+<p>今回は説明の対象外とはなりますが、自作Modの保存場所も一応記載しておきます。<br>
+<code>C:\Users\(ユーザー名)\Documents\Paradox Interactive\Stellaris\mod</code></p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ゲーム開始時に行われていること概念図">2.2. ゲーム開始時に行われていること(概念図)</h3>
+<div class="paragraph">
+<p>ゲーム開始時に行われている本体とModの動作イメージについては以下画像を参照してください。<br>
+本体データに対して、Modの内容をプレイセットの上から下(=ロード順)に適用していくような形で動作します。<br>
+※あくまで概念として記載したイメージなので、実際の内部動作とは異なる可能性があります。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/getting-started-with-mod_9.png" alt="getting started with mod 9">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ゲーム開始時に行われていることファイル上書きの例">2.3. ゲーム開始時に行われていること(ファイル上書きの例)</h3>
+<div class="paragraph">
+<p>本体とMod、Mod間同士などで同名のファイルがあった場合、同名ファイルのデータはどう扱われるでしょうか。<br>
+概念図を元に考えると、同名ファイルは上書きされ、結果として最後に適用されたファイルが採用されることがわかります。<br>
+例として、私の自作Mod「<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2874290799">AI国家のゲートウェイ建造ラッシュがうざい！</a>」を適用した場合を考えてみましょう。</p>
+</div>
+<div class="paragraph">
+<p>このModのフォルダ構成は以下の通りです。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>common
+└megastructures
+　└05_gateways.txt</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>本体にもModにも<code>common\megastructures\05_gateways.txt</code>があります。<br>
+このModのみを適用した状態でゲームを起動するとどうなるでしょうか。</p>
+</div>
+<div class="paragraph">
+<p>まず、最初に本体の<code>common\megastructures\05_gateways.txt</code>の内容が読み込まれます。<br>
+続いてModの<code>common\megastructures\05_gateways.txt</code>が読み込まれ、<br>
+本体側の<code>common\megastructures\05_gateways.txt</code>の内容が上書きされます。</p>
+</div>
+<div class="paragraph">
+<p>つまり本体側の<code>common\megastructures\05_gateways.txt</code>の内容は無視され、<br>
+Mod側の<code>common\megastructures\05_gateways.txt</code>のみが採用されることがわかります。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ゲーム開始時に行われていること別名だが記述が重複している場合の例">2.4. ゲーム開始時に行われていること(別名だが記述が重複している場合の例)</h3>
+<div class="paragraph">
+<p>ファイル名自体が別名でも、内容に重複があった場合は片方の内容のみが採用されます。<br>
+読み込み処理はファイル名順に行われますが、先勝ちか後勝ちかはファイルの配置場所に応じて変わります。<br>
+例として、私の自作Mod「<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2888039864">え、交易路に海賊が！？</a>」を適用した場合を考えてみましょう。</p>
+</div>
+<div class="paragraph">
+<p>このModのフォルダ構成は以下の通りです。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>common
+├situations
+│└pirate_situations.txt
+├events
+│├pirate_situation_events.txt
+│└pirate_1_events.txt
+└localisation
+　└pirate_situation_l_japanese.yml</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ファイル名自体は本体と一切被っていないので、2-3のようなファイル上書きの動作はされません。<br>
+ただし、<code>events\pirate_1_events.txt</code>には、本体側の<code>events\pirate_events.txt</code>と同じ定義が記述されています。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code># 本体側の「events\pirate_events.txt」のコード例
+country_event = {
+	id = pirate.1
+	title = "pirate.1.name"
+	picture = GFX_evt_pirate_armada
+	show_sound = event_space_battle
+	location = event_target:pirate_system
+～ 以下略 ～
+}
+
+# Mod側の「events\pirate_1_events.txt」のコード例
+country_event = {
+	id = pirate.1              # ←このIDが被っているイベントは同じ定義扱いになる
+	hide_window = yes
+	is_triggered_only = yes
+～ 以下略 ～
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>pirate.1の内容が重複していることがわかります。<br>
+ファイル名順に読み込みが行われるため、まず、本体側の<code>pirate_events.txt</code>のpirate.1の内容が読み込まれます。<br>
+続いてMod側の<code>pirate_1_events.txt</code>に記述されたpirate.1の内容が読み込まれます。</p>
+</div>
+<div class="paragraph">
+<p>events以下のファイルは先に読み込んだ方が優先されるため、結果として本体側の<code>events\pirate_events.txt</code>は無視されます。<br>
+Mod側の<code>events\pirate_1_events.txt</code>のみが採用されることになります。</p>
+</div>
+<div class="paragraph">
+<p>先に読み込んだ方と後に読み込んだ方、どちらが優先されるかは英語Wikiを確認してください。<br>
+<a href="https://stellaris.paradoxwikis.com/Modding#Overwriting_specific_elements" class="bare">https://stellaris.paradoxwikis.com/Modding#Overwriting_specific_elements</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ゲーム開始時に行われていること依存関係">2.5. ゲーム開始時に行われていること(依存関係)</h3>
+<div class="paragraph">
+<p>Mod制作者が他Modとの依存関係を記述している場合、設定した順番を考慮したロード順となります。<br>
+これは、利用者の設定したロード順の設定よりも優先されます。<br></p>
+</div>
+<div class="paragraph">
+<p>以下2つのModを例に見てみましょう。<br>
+前者は私が代理公開中の略ｱ略様作のポートレート追加Modとなります。<br>
+後者はそのModを最新バージョンのStellarisでも動くように修正するためのパッチ用Modとなります。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2781730165">[代理公開]F17 VOICEROID Portraits</a></p>
+</li>
+<li>
+<p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2759645085">[Fix Patch]F17 VOICEROID Portraits</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>「[Fix Patch]F17 VOICEROID Portraits」のdescriptor.modをテキストエディタで開いてみてください。<br>
+以下のような記載がされているのがわかると思います。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>version="1.0.0"
+dependencies={
+	"[代理公開]F17 VOICEROID Portraits"
+}
+tags={
+	"Graphics"
+	"Leaders"
+	"Species"
+	"Fixes"
+}
+name="[Fix Patch]F17 VOICEROID Portraits"
+picture="thumbnail.png"
+supported_version="3.6.1"
+remote_file_id="2759645085"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>dependenciesで囲まれた部分が依存関係の記述になります。<br>
+このModは「[代理公開]F17 VOICEROID Portraits」が適用されている上で利用することを前提としているよ、という意味です。<br>
+この記述があると、プレイセットで指定したロード順に関わらず、ロード順が以下で固定されます。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>[代理公開]F17 VOICEROID Portraits</p>
+</li>
+<li>
+<p>[Fix Patch]F17 VOICEROID Portraits</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_modの不具合やmod同士の競合について_編集">3. Modの不具合や、Mod同士の競合について 編集</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>2章の説明内容を踏まえた上で、Modで起きる不具合や複数Modを入れたときの競合が何故起きるのかを考えてみましょう。</p>
+</div>
+<div class="sect2">
+<h3 id="_対応バージョンの古いmod">3.1. 対応バージョンの古いMod</h3>
+<div class="paragraph">
+<p>私の自作Mod「<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2874290799">AI国家のゲートウェイ建造ラッシュがうざい！</a>」を例にして考えてみましょう。</p>
+</div>
+<div class="paragraph">
+<p>Stellaris Ver3.6.1では、<code>common\megastructures\05_gateways.txt</code>に更新が入りました。<br>
+私の自作Modは当時、このVer3.6.1への対応を当日中に完了させていましたが、<br>
+仮にModの更新が行われず、Modの対応バージョンが3.6.0だった場合には何が起きていたと考えられるでしょうか。</p>
+</div>
+<div class="paragraph">
+<p>「AI国家のゲートウェイ建造ラッシュがうざい！」は、<code>common\megastructures\05_gateways.txt</code>を上書き修正しています。<br>
+2章で説明したとおり、Modと本体で同名のファイルがある場合は、Mod側のファイルの内容のみが反映されます。<br>
+本体側の記述は無視されてしまうため、Ver3.6.1で更新されたはずのゲートウェイの定義を壊してしまうことになります。</p>
+</div>
+<div class="paragraph">
+<p>この例のように、ファイルを丸々上書きするような形で修正が入るModや、ファイル名が異なっていても元の定義を書き換えるような修正を入れるケースのModは、常に最新版へ対応されているかどうかの確認が必要です。<br>
+古いバージョンのModを使い回すと動作不良を招きます。</p>
+</div>
+<div class="paragraph">
+<p>日本語Wiki等を見ていると、Stellaris本体の英語部分を日本語化する日本語化パッチなどを古いまま使っている人がおり、この手の不具合を起こしている報告が散見されていますが、上記の理由から、対応バージョンが古い場合は利用を控えるのが無難です。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_同じファイルや定義を書き換えている場合">3.2. 同じファイルや定義を書き換えている場合</h3>
+<div class="paragraph">
+<p>同じファイルや定義を書き換えるModを複数入れると、意図しない動作を起こします。</p>
+</div>
+<div class="paragraph">
+<p>以下のModを2つ同時に入れたらどうなるでしょうか。<br>
+前者は私の自作Mod、後者は他作者様のModです。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2891865158">No AI habitats…元々あった星系だけは許そう</a></p>
+</li>
+<li>
+<p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2781997213">No AI habitats (3.6)</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>本体と各Modにはそれぞれ軌道上居住地周りの定義ファイルが含まれています。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Stellaris本体</p>
+<div class="ulist">
+<ul>
+<li>
+<p>common\megastructures\habitats.txt</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>No AI habitats…元々あった星系だけは許そう</p>
+<div class="ulist">
+<ul>
+<li>
+<p>common\megastructures\habitats.txt</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>No AI habitats (3.6)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>common\megastructures\habitats___noAI___.txt</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>ファイル構成だけ見ると、両方のModを採用した場合、元々あった～のModは本体側の<code>habitats.txt</code>を上書きしているように見えます。<br>
+No AI habitats (3.6)は本体とはファイル名が違うので<code>habitats___noAI___.txt</code>がそのまま展開されるように見えます。<br>
+ただ、No AI habitats (3.6)の<code>habitats___noAI___.txt</code>の中身は本体の<code>habitats.txt</code>と同じ定義を書き換える形で記載しています。</p>
+</div>
+<div class="paragraph">
+<p><code>habitats.txt</code>と<code>habitats___noAI___.txt</code>を名前順にすると<code>habitats___noAI___.txt</code>が後になります。<br>
+megastructuresのフォルダ内は後に読み込んだ方が優先されるため、<code>habitats___noAI___.txt</code>の内容が優先されることになります。<br>
+つまり、No AI habitats (3.6)の仕組みが採用され、元々あった～のModの内容は無視されることがわかります。<br>
+両方入れたはずなのに片方のModは動作しなくなりましたね。</p>
+</div>
+<div class="paragraph">
+<p>今回例で出したModは、単独ファイルしか書き換えていないので影響も少ないですが、色んなファイルを書き換えているModの1ファイルだけが他Modの内容に置き換わったとしたらどうでしょうか。当然Modは壊れ、意図しない動作をするでしょう。<br>
+場合によってはゲームの起動自体ができず、エラーで落ちるかもしれません。</p>
+</div>
+<div class="paragraph">
+<p>このように、複数のModを入れている場合は同じ内容を書き換えていないかなどの注意が必要です。<br>
+Mod制作者によっては、Modの説明欄に書き換えている内容や他Modとの相性を明記してくれている場合がありますが、全ての組み合わせを網羅することは不可能なので、基本的には自分自身で確認をする必要があります。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_modを利用する上での心構えについて">4. Modを利用する上での心構えについて</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>最後に、Mod利用する上で意識をしておいて欲しいことについて説明します。</p>
+</div>
+<div class="sect2">
+<h3 id="_ソフトウェアは生ものです">4.1. ソフトウェアは生ものです</h3>
+<div class="paragraph">
+<p>Windows OSも、Stellarisのゲーム本体も、Modも含めてソフトウェアは生ものです。<br>
+日々改良され土台となる仕組みそのものから変わっていく現代では、維持管理されていないソフトウェアはすぐに寿命が来ます。</p>
+</div>
+<div class="paragraph">
+<p>そして、維持管理をするにも時間やお金などのコストがかかります。<br>
+実際Modを公開している人は沢山いますが、維持管理することを放棄し更新が止まってしまったModも星の数ほど見受けられます。</p>
+</div>
+<div class="paragraph">
+<p>Modを公開している人にとってのメリットは、人によって違います。 <br>
+承認欲求だったり、仕組みを知るための知的好奇心だったり、集金しようとしている人にとってそれはお金かもしれません。</p>
+</div>
+<div class="paragraph">
+<p>いずれの理由にせよ、維持管理を続けるための煩わしさというデメリットが公開するメリットを上回ったら、作者が維持管理をやめてしまうことは間違いありません。<br>
+維持管理を続けてもらうためには、メリットを提示したり、デメリットとなる負担を軽くするような協力をするほかありません。</p>
+</div>
+<div class="paragraph">
+<p>制作者を無限に持ち上げろなどというつもりはありませんが、長いこと更新の止まっているModに対して、「アップデートしろ」とだけを書いたところでこのデメリットがメリットを上回ることはなく、より足が遠のいてしまうような結果になるのは想像に難くないでしょう。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_不具合報告は詳細に書こう">4.2. 不具合報告は詳細に書こう</h3>
+<div class="paragraph">
+<p>例えば、Stellaris本体のバージョンアップの影響で意図しない動作を起こすようになったModがあった場合、<br>
+制作者にどのような報告をすればいいでしょうか。</p>
+</div>
+<div class="paragraph">
+<p>「Modが動きません」とだけ報告をすれば大丈夫でしょうか？<br>
+この報告だと具体的に何が問題になっているのかわかりません。<br>
+原因の調査にもコストがかかります。何もわからない状態から調査を始めても、問題点には気がつけないかもしれません。<br>
+調査の手助けになるような具体的な報告をすれば、この調査の負担を減らし、開発者の手を動かす要因に繋がる可能性があります。</p>
+</div>
+<div class="paragraph">
+<p>例えば以下のように具体的に報告をするように意識をすると良いでしょう。<br>
+この時、可能なら具体的な原因や解決策まで提示できるとより開発者の負担を減らす結果に繋がるでしょう。<br>
+また、エラーメッセージが出ているなら、その内容を提示するのも参考になるかもしれません。<br>
+Stellarisプレイ後のエラーメッセージは、以下のファイルに出力されています。<br>
+<code>C:\Users\(ユーザー名)\Documents\Paradox Interactive\Stellaris\logs\error.log</code></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>■発生内容
+ゲーム開始時にランダム生成される種族が、このModの種族の時のみ国家名が空欄になる
+
+■再現手順
+以下の手順で再現しました。
+1.このModだけを適用した状態でゲームを開始する
+2.communicationのコンソールコマンドで全ての国家との通信を確立し、このModで追加された種族の国家を探す
+3.当該国家名が空欄となっていることを確認する
+
+■原因や解決方法
+他の種族追加系のModと比較したところ、他Modにはネームリストの記述がありました。
+common\name_lists\xxxxxx.txtというファイルが必要になるかもしれません。</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_更新されないmodをどうしても使いたかったら">4.3. 更新されないModをどうしても使いたかったら…</h3>
+<div class="paragraph">
+<p>作者が諦めてしまった以上は、またその作者がやる気を出すか、誰かが引き継ぐのを待つしかないでしょう。<br>
+私みたいな弱小Modderが出している登録者2桁のModならともかく、4～5桁登録者がいる大手の人気Modなら利用者の中にMod制作者が沢山いるでしょうから、誰かが引き継いでくれるかもしれません。</p>
+</div>
+<div class="paragraph">
+<p>ただ、それだけ利用者がいてもなお放置され続けているということは、結局は引き継いで得られるメリットより、そのModを維持管理して得られるデメリットの方が大きいと判断されているということに他なりません。<br>
+そのデメリットを考慮してでも欲しいというのなら、自分で手をあげるしかないでしょう。<br>
+それができないのであれば、あなたも結局は維持管理するだけのコストを払ってまでModを使いたくないと判断しているということになります。</p>
+</div>
+<div class="paragraph">
+<p>「アプデしろ」とコメントを書くのは簡単ですが、そのコメントを書く前に、少し考えて見てはいかがでしょうか。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_引き継ぐためにmodの仕組みを覚えたい">4.4. 引き継ぐために、Modの仕組みを覚えたい</h3>
+<div class="paragraph">
+<p>このデメリットを支払ってまでModを引き継いで対応したいともし考え、<br>
+Modの仕組みについて調べ始めることができたならその瞬間からあなたはStellarisの新しいModderです。<br>
+少しでもその調査の役にたつように、いくつかのURLを貼ってこのガイドを終わりにしたいと思います。</p>
+</div>
+<div class="paragraph">
+<p>Modに関しての体系的な情報は、英語Wikiに記載されています。</p>
+</div>
+<div class="paragraph">
+<p>Modding - Stellaris Wiki<br>
+<a href="https://stellaris.paradoxwikis.com/Modding" class="bare">https://stellaris.paradoxwikis.com/Modding</a></p>
+</div>
+<div class="paragraph">
+<p>日本語環境では残念ながら体系的な情報はありません。<br>
+しかし、少し古いものの、初心者向けの導入に役立つガイドはいくつかあるようです。</p>
+</div>
+<div class="paragraph">
+<p>こちらのM_Gamelin様やNaK1119様のガイド一覧は、日本語で記載されている非常に優良なガイドですので、<br>
+参考になるかと思います。まずはこちらのガイドの通りに実施してみてはいかがでしょうか。</p>
+</div>
+<div class="paragraph">
+<p>M_Gamelin様のガイド一覧<br>
+<a href="https://steamcommunity.com/profiles/76561198087424981/myworkshopfiles/?section=guides&amp;appid=281990" class="bare">https://steamcommunity.com/profiles/76561198087424981/myworkshopfiles/?section=guides&amp;appid=281990</a></p>
+</div>
+<div class="paragraph">
+<p>NaK1119様のガイド一覧<br>
+<a href="https://steamcommunity.com/profiles/76561198332246255/myworkshopfiles/?section=guides&amp;appid=281990" class="bare">https://steamcommunity.com/profiles/76561198332246255/myworkshopfiles/?section=guides&amp;appid=281990</a></p>
+</div>
+<div class="paragraph">
+<p>また、私も個人的なMod作成時のメモをSteamガイドに載せていますが、ある程度Modの仕組みを理解した上でないと読むのが少し難しいかもしれません。<br>
+<a href="https://steamcommunity.com/profiles/76561199152309881/myworkshopfiles/?section=guides&amp;p=1&amp;numperpage=30" class="bare">https://steamcommunity.com/profiles/76561199152309881/myworkshopfiles/?section=guides&amp;p=1&amp;numperpage=30</a></p>
+</div>
+<div class="paragraph">
+<p>以上</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- [FC2 Analyzer] //analyzer.fc2.com/  -->
+<script language="javascript" src="//analyzer5.fc2.com/ana/processor.php?uid=1036071" type="text/javascript"></script>
+<noscript><div align="right"><img src="//analyzer5.fc2.com/ana/icon.php?uid=1036071&ref=&href=&wid=0&hei=0&col=0" /></div></noscript>
+<!-- [FC2 Analyzer]  -->
+</body>
+</html>

@@ -19,6 +19,8 @@ OUTPUT_LEADER_TRAIT_FILE = 'leader_traits.adoc'
 ###############################################################################
 TEMPLATE_TITLE = '''= リーダー特性一覧 Ver{version}
 最終更新日: {{docdatetime}}
+:docinfo: private,shared
+:docinfodir: ../staticfile/meta
 :table-caption: 表
 
 '''
@@ -63,9 +65,4 @@ TEMPLATE_DATA = '''＆ {key}
 ＆ {ethic_destiny_trait}
 '''
 TEMPLATE_FOOTER = '''|===
-++++
-<div id="trait_list_table"></div>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.js"></script>
-<script src="./leader_traits.js"></script>
-++++
 '''

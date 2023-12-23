@@ -1,8 +1,9 @@
 = Stellaris Infomations
-:toc:
+:toc: left
 :toc-title: 目次
 :sectnums:
-:docinfo: private-head
+:docinfo: private,shared
+:icons: font
 :docinfodir: ../staticfile/meta
 
 == このサイトについて
@@ -11,6 +12,10 @@
 
 
 == 掲載情報一覧
+ドキュメント::
+* link:./guides/getting-started-with-mod.html[【Stellaris 3.6.1】初心者のためのMod導入ガイド]
+
+解析情報::
 * link:./leader_traits.html[リーダー特性一覧]
 
 

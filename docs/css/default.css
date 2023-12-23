@@ -1,0 +1,30 @@
+@import "https://cdn.jsdelivr.net/npm/asciidoctor-stylesheets@0.7.1/css/riak.min.css";
+
+body {
+  background: #eeeeee;
+  font-family: 'BIZ UDPゴシック', 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;
+}
+
+#header>h1:nth-last-child(2) {
+  border-bottom: 1px solid #a0a0a0!important;
+}
+
+.sect1 + .sect1 {
+  border-top: 1px solid #a0a0a0;
+}
+
+dl dt {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 50em;
+}
+
+.listingblock > .content > pre {
+  background: #d7e2de!important;
+}
+
+code {
+  font-family: 'BIZ UDゴシック', monospace, serif;
+}

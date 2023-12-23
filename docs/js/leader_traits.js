@@ -28,7 +28,7 @@
         manualColumnFreeze: true,
         manualColumnMove: true,
         manualRowMove: true,
-        renderAllRows: true,
+        //renderAllRows: true,
         rowHeaders: true
 
     }
