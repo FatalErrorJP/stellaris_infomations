@@ -28,3 +28,8 @@ img {
 code {
   font-family: 'BIZ UDゴシック', monospace, serif;
 }
+
+#GotoTop {
+  text-align: center;
+  padding-top: 15px;
+}
