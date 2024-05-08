@@ -5,15 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.20">
-<meta name="author" content="最終更新日: 2024-04-11 23:38:32 +0900">
-<title>リーダー特性一覧 Ver3.11.3</title>
+<meta name="author" content="最終更新日: 2024-05-08 23:23:06 +0900">
+<title>リーダー特性一覧 Ver3.12.1</title>
 <link rel="stylesheet" href="./css/leader_traits.css">
 </head>
 <body class="article">
 <div id="header">
-<h1>リーダー特性一覧 Ver3.11.3</h1>
+<h1>リーダー特性一覧 Ver3.12.1</h1>
 <div class="details">
-<span id="author" class="author">最終更新日: 2024-04-11 23:38:32 +0900</span><br>
+<span id="author" class="author">最終更新日: 2024-05-08 23:23:06 +0900</span><br>
 </div>
 </div>
 <div id="content">
@@ -6791,6 +6791,72 @@ leader_trait_trickster_2<br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>leader_trait_tactical_algorithms</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>戦術アルゴリズム</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>destiny</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>none</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>艦隊(条件あり):<br>
+・条件：{"always": "yes"}<br>
+・ship_military_alloys_upkeep_mult (軍艦合金維持費) = -0.1<br>
+・ship_military_energy_upkeep_mult (軍艦エネルギー維持費) = 0.2<br>
+・mult (mod_mult) = trigger:has_skill<br>
+<br>
+custom_tooltip_with_modifiers:<br>
+・    この特性の効果は§Yリーダーのスキルレベル§!に応じて変化する<br>
+<br></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -13749,12 +13815,12 @@ leader_trait_tyrannical_2<br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>本人(条件あり):<br>
-・条件：{"has_paragon_dlc": "yes"}<br>
+・条件：{"owner": {"has_relic": "r_the_rulerchip"}, "is_ruler": "yes"}<br>
 ・leader_trait_selection_options_add (リーダーの特性の追加選択肢) = 1<br>
 <br>
 出身地(条件あり):<br>
-・条件：{"is_ruler": "yes", "exists": "FROM", "FROM.owner": {"is_same_value": "root.owner"}, "owner": {"has_valid_civic": "civic_imperial_cult"}}<br>
-・job_priest_add (司祭の職業枠) = 1<br>
+・条件：{"is_ruler": "yes", "exists": "FROM", "FROM.owner": {"is_same_value": "root.owner"}, "owner": {"has_origin": "origin_cybernetic_creed", "has_valid_civic": "civic_imperial_cult"}}<br>
+・job_haruspex_add (臓卜師の職業枠) = 1<br>
 ・mult (mod_mult) = trigger:has_skill<br>
 <br>
 custom_tooltip_with_modifiers:<br>
@@ -16501,7 +16567,7 @@ trait_ruler_feedback_loop_2<br></p>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>惑星(条件あり):<br>
 ・条件：{"always": "yes"}<br>
-・planet_administrators_unity_produces_mult ([GetAdministratorPluralWithIcon]からの£unity£ 統合力) = 0.05<br>
+・planet_jobs_unity_produces_mult (£job£ 職業からの£unity£ 統合力) = 0.05<br>
 ・mult (mod_mult) = trigger:has_skill<br>
 <br>
 triggered_desc:<br>
@@ -16569,12 +16635,12 @@ triggered_desc:<br>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>惑星(条件あり):<br>
 ・条件：{"always": "yes"}<br>
-・planet_administrators_unity_produces_mult ([GetAdministratorPluralWithIcon]からの£unity£ 統合力) = 0.05<br>
+・planet_jobs_unity_produces_mult (£job£ 職業からの£unity£ 統合力) = 0.05<br>
 ・mult (mod_mult) = trigger:has_skill<br>
 <br>
 セクター(条件あり):<br>
 ・条件：{"always": "yes"}<br>
-・planet_administrators_unity_produces_mult ([GetAdministratorPluralWithIcon]からの£unity£ 統合力) = 0.025<br>
+・planet_jobs_unity_produces_mult (£job£ 職業からの£unity£ 統合力) = 0.025<br>
 ・mult (mod_mult) = trigger:has_skill<br>
 <br>
 triggered_desc:<br>
@@ -17078,7 +17144,23 @@ triggered_desc:<br>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>{
+    "trait_is_crisis_faction_check": "no",
+    "exists": "owner",
+    "owner": {
+        "OR": {
+            "NOT": {
+                "has_origin": "origin_synthetic_fertility"
+            },
+            "AND": {
+                "has_origin": "origin_synthetic_fertility",
+                "has_technology": "tech_synthetic_workers"
+            }
+        }
+    }
+}</p>
+</div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -21868,11 +21950,17 @@ custom_tooltip_with_modifiers:<br>
 <p>惑星:<br>
 ・planet_jobs_worker_produces_mult ([GetWorker]POPの資源産出) = 0.15<br>
 ・planet_jobs_specialist_produces_mult ([GetSpecialist]POPの資源産出) = 0.1<br>
-・planet_jobs_ruler_produces_mult (統治者POPの資源産出) = 0.05<br>
 <br>
 セクター:<br>
 ・planet_jobs_worker_produces_mult ([GetWorker]POPの資源産出) = 0.075<br>
 ・planet_jobs_specialist_produces_mult ([GetSpecialist]POPの資源産出) = 0.05<br>
+<br>
+惑星(条件あり):<br>
+・条件：{"trait_is_gestalt_check": "no"}<br>
+・planet_jobs_ruler_produces_mult (統治者POPの資源産出) = 0.05<br>
+<br>
+セクター(条件あり):<br>
+・条件：{"trait_is_gestalt_check": "no"}<br>
 ・planet_jobs_ruler_produces_mult (統治者POPの資源産出) = 0.025<br>
 <br></p>
 </div></div></td>
@@ -22150,11 +22238,11 @@ custom_tooltip_with_modifiers:<br>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>惑星:<br>
 ・planet_jobs_ruler_produces_mult (統治者POPの資源産出) = 0.5<br>
-・pop_cat_ruler_political_power (£pop_cat_ruler£ 統治者の£political_power£ 政治力) = 0.15<br>
+・pop_cat_ruler_political_power (統治者の政治力) = 0.15<br>
 <br>
 セクター:<br>
 ・planet_jobs_ruler_produces_mult (統治者POPの資源産出) = 0.25<br>
-・pop_cat_ruler_political_power (£pop_cat_ruler£ 統治者の£political_power£ 政治力) = 0.075<br>
+・pop_cat_ruler_political_power (統治者の政治力) = 0.075<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -22216,19 +22304,21 @@ custom_tooltip_with_modifiers:<br>
 <p>none</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>惑星:<br>
+<p>惑星(条件あり):<br>
+・条件：{"trait_is_individual_machine_check": "yes"}<br>
 ・planet_jobs_worker_produces_mult ([GetWorker]POPの資源産出) = 0.5<br>
 ・planet_jobs_slave_produces_mult (奴隷POPの資源産出) = 0.5<br>
 ・planet_pops_upkeep_mult (POP維持費) = -0.35<br>
 ・pop_happiness (幸福度) = -0.1<br>
-・pop_growth_speed_reduction (POPの成長速度の低下) = 0.05<br>
+・planet_pop_assembly_mult (機械POP製造速度) = -0.05<br>
 <br>
-セクター:<br>
+セクター(条件あり):<br>
+・条件：{"trait_is_individual_machine_check": "yes"}<br>
 ・planet_jobs_worker_produces_mult ([GetWorker]POPの資源産出) = 0.25<br>
 ・planet_jobs_slave_produces_mult (奴隷POPの資源産出) = 0.25<br>
 ・planet_pops_upkeep_mult (POP維持費) = -0.175<br>
 ・pop_happiness (幸福度) = -0.05<br>
-・pop_growth_speed_reduction (POPの成長速度の低下) = 0.025<br>
+・planet_pop_assembly_mult (機械POP製造速度) = -0.025<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -22290,14 +22380,16 @@ custom_tooltip_with_modifiers:<br>
 <p>none</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>惑星:<br>
+<p>惑星(条件あり):<br>
+・条件：{"trait_is_individual_machine_check": "yes"}<br>
 ・pop_happiness (幸福度) = 0.2<br>
-・pop_growth_from_immigration (移住によるPOPの流入) = 0.25<br>
+・planet_pop_assembly_mult (機械POP製造速度) = 0.05<br>
 ・planet_immigration_pull_mult (流入魅力) = 0.1<br>
 <br>
-セクター:<br>
+セクター(条件あり):<br>
+・条件：{"trait_is_individual_machine_check": "yes"}<br>
 ・pop_happiness (幸福度) = 0.1<br>
-・pop_growth_from_immigration (移住によるPOPの流入) = 0.125<br>
+・planet_pop_assembly_mult (機械POP製造速度) = 0.025<br>
 ・planet_immigration_pull_mult (流入魅力) = 0.05<br>
 <br></p>
 </div></div></td>
@@ -22862,11 +22954,13 @@ leader_trait_martinet_3<br></p>
 <p>1</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>惑星:<br>
-・pop_growth_speed (POPの成長速度) = -0.05<br>
+<p>惑星(条件あり):<br>
+・条件：{"trait_is_individual_machine_check": "yes"}<br>
+・planet_pop_assembly_mult (機械POP製造速度) = -0.05<br>
 <br>
-セクター:<br>
-・pop_growth_speed (POPの成長速度) = -0.025<br>
+セクター(条件あり):<br>
+・条件：{"trait_is_individual_machine_check": "yes"}<br>
+・planet_pop_assembly_mult (機械POP製造速度) = -0.025<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -22931,11 +23025,13 @@ leader_trait_martinet_3<br></p>
 <p>2</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>惑星:<br>
-・pop_growth_speed (POPの成長速度) = -0.15<br>
+<p>惑星(条件あり):<br>
+・条件：{"trait_is_individual_machine_check": "yes"}<br>
+・planet_pop_assembly_mult (機械POP製造速度) = -0.15<br>
 <br>
-セクター:<br>
-・pop_growth_speed (POPの成長速度) = -0.075<br>
+セクター(条件あり):<br>
+・条件：{"trait_is_individual_machine_check": "yes"}<br>
+・planet_pop_assembly_mult (機械POP製造速度) = -0.075<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -27972,7 +28068,7 @@ triggered_desc:<br>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>triggered</p>
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>1</p>
@@ -28050,7 +28146,7 @@ triggered_desc:<br>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>triggered</p>
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>2</p>
@@ -28121,7 +28217,7 @@ triggered_desc:<br>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>triggered</p>
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>3</p>
@@ -28196,7 +28292,7 @@ triggered_desc:<br>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>triggered</p>
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>1</p>
@@ -28274,7 +28370,7 @@ triggered_desc:<br>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>triggered</p>
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>2</p>
@@ -28345,7 +28441,7 @@ triggered_desc:<br>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>triggered</p>
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>3</p>
@@ -28420,7 +28516,7 @@ triggered_desc:<br>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>triggered</p>
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>1</p>
@@ -28498,7 +28594,7 @@ triggered_desc:<br>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>triggered</p>
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>2</p>
@@ -28569,7 +28665,7 @@ triggered_desc:<br>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>triggered</p>
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>3</p>
@@ -28644,7 +28740,7 @@ triggered_desc:<br>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>triggered</p>
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>1</p>
@@ -28722,7 +28818,7 @@ triggered_desc:<br>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>triggered</p>
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>2</p>
@@ -28793,7 +28889,7 @@ triggered_desc:<br>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>triggered</p>
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>3</p>
@@ -28868,7 +28964,7 @@ triggered_desc:<br>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>triggered</p>
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>1</p>
@@ -28946,7 +29042,7 @@ triggered_desc:<br>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>triggered</p>
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>2</p>
@@ -29017,7 +29113,7 @@ triggered_desc:<br>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>triggered</p>
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>3</p>
@@ -29092,7 +29188,7 @@ triggered_desc:<br>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>triggered</p>
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>1</p>
@@ -29170,7 +29266,7 @@ triggered_desc:<br>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>triggered</p>
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>2</p>
@@ -29241,7 +29337,7 @@ triggered_desc:<br>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>triggered</p>
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>3</p>
@@ -29316,7 +29412,7 @@ triggered_desc:<br>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>triggered</p>
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>1</p>
@@ -29394,7 +29490,7 @@ triggered_desc:<br>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>triggered</p>
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>2</p>
@@ -29465,7 +29561,7 @@ triggered_desc:<br>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>triggered</p>
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>3</p>
@@ -29540,7 +29636,7 @@ triggered_desc:<br>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>triggered</p>
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>1</p>
@@ -29631,7 +29727,7 @@ triggered_desc:<br>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>triggered</p>
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>2</p>
@@ -29702,7 +29798,7 @@ triggered_desc:<br>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>triggered</p>
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>3</p>
@@ -29777,7 +29873,7 @@ triggered_desc:<br>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>triggered</p>
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>1</p>
@@ -29855,7 +29951,7 @@ triggered_desc:<br>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>triggered</p>
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>2</p>
@@ -29926,7 +30022,7 @@ triggered_desc:<br>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>triggered</p>
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>3</p>
@@ -30001,7 +30097,7 @@ triggered_desc:<br>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>triggered</p>
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>1</p>
@@ -30079,7 +30175,7 @@ triggered_desc:<br>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>triggered</p>
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>2</p>
@@ -30150,7 +30246,7 @@ triggered_desc:<br>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>triggered</p>
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>3</p>
@@ -30225,7 +30321,7 @@ triggered_desc:<br>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>triggered</p>
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>1</p>
@@ -30303,7 +30399,7 @@ triggered_desc:<br>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>triggered</p>
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>2</p>
@@ -30374,7 +30470,7 @@ triggered_desc:<br>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>triggered</p>
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>3</p>
@@ -30449,7 +30545,7 @@ triggered_desc:<br>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>triggered</p>
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>1</p>
@@ -30527,7 +30623,7 @@ triggered_desc:<br>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>triggered</p>
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>2</p>
@@ -30598,7 +30694,7 @@ triggered_desc:<br>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>triggered</p>
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>3</p>
@@ -30673,7 +30769,7 @@ triggered_desc:<br>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>triggered</p>
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>1</p>
@@ -30766,7 +30862,7 @@ triggered_desc:<br>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>triggered</p>
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>2</p>
@@ -30836,7 +30932,7 @@ triggered_desc:<br>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>triggered</p>
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>3</p>
@@ -31228,7 +31324,7 @@ triggered_desc:<br>
 }</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>ロボット労働者<br></p>
+<p>人工労働力<br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -32519,11 +32615,11 @@ leader_trait_collaborator_3<br></p>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>リーダーアサイン時(条件あり):<br>
 ・条件：{"is_ruler": "no", "leader_class": "scientist"}<br>
-・ship_anomaly_generation_chance_mult (アノマリー発見率) = 0.15<br>
+・ship_anomaly_generation_chance_mult (アノマリー発見率) = 0.25<br>
 <br>
 本人(条件あり):<br>
-・条件：{"is_ruler": "no", "leader_class": "commander"}<br>
-・planet_combat_width_add (惑星の戦闘正面幅) = 2<br>
+・条件：{"exists": "owner", "owner": {"has_authority": "auth_machine_intelligence", "has_country_flag": "driven_neural_chorus"}}<br>
+・leaders_upkeep_mult (リーダー維持費) = -0.25<br>
 <br>
 惑星(条件あり):<br>
 ・条件：{"is_ruler": "no"}<br>
@@ -32540,12 +32636,12 @@ leader_trait_collaborator_3<br></p>
 艦隊(条件あり):<br>
 ・条件：{"is_ruler": "no", "leader_class": "commander"}<br>
 ・ship_weapon_damage (艦船武器ダメージ) = 0.10<br>
-・ship_weapon_range_mult (艦船武器射程) = 0.10<br>
-・ship_orbital_bombardment_mult (軌道爆撃ダメージ) = 0.10<br>
+・ship_weapon_range_mult (艦船武器射程) = 0.15<br>
+・ship_orbital_bombardment_mult (軌道爆撃ダメージ) = 0.20<br>
 <br>
 銀河共同体(条件あり):<br>
 ・条件：{"is_ruler": "no", "leader_class": "official"}<br>
-・diplo_weight_technology_mult (技術力から発生する外交発言力) = 0.05<br>
+・diplo_weight_technology_mult (技術力から発生する外交発言力) = 0.10<br>
 <br>
 連邦(条件あり):<br>
 ・条件：{"is_ruler": "no", "leader_class": "official"}<br>
@@ -32619,6 +32715,11 @@ leader_trait_collaborator_3<br></p>
 <p>リーダーアサイン時(条件あり):<br>
 ・条件：{"has_astral_planes_dlc": "yes", "is_ruler": "no", "leader_class": "scientist"}<br>
 ・ship_astral_rift_speed_mult (天体の裂け目の探索速度) = 0.10<br>
+<br>
+本人(条件あり):<br>
+・条件：{"owner": {"has_edict": "subsidized_identity_backups"}}<br>
+・leader_lifespan_add (リーダーの寿命) = 20<br>
+・species_leader_exp_gain (mod_species_leader_exp_gain) = 0.10<br>
 <br>
 惑星(条件あり):<br>
 ・条件：{"is_ruler": "no"}<br>
@@ -33589,6 +33690,225 @@ leader_trait_collaborator_3<br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>leader_trait_hacked</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>サイバー操り人形</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>negative</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>none</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>本人:<br>
+・leaders_upkeep_mult (リーダー維持費) = 0.20<br>
+・species_leader_exp_gain (mod_species_leader_exp_gain) = -0.20<br>
+・negative_traits_leader (リーダーのネガティブな特性の最大値) = 2<br>
+<br></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>leader_trait_firewalled</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>神経ファイアウォール</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>basic</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>none</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>本人:<br>
+・species_leader_exp_gain (mod_species_leader_exp_gain) = -0.10<br>
+・negative_traits_leader (リーダーのネガティブな特性の最大値) = -1<br>
+<br>
+本人(条件あり):<br>
+・条件：{"leader_class": "scientist"}<br>
+・leader_scientists_energy_upkeep_add (£energy£ §Yエネルギー通貨§! 維持費) = 2<br>
+<br></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>leader_trait_virtual</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>仮想リーダー</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>basic</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>triggered</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>none</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>リーダーアサイン時(条件あり):<br>
+・条件：{"has_astral_planes_dlc": "yes", "is_ruler": "no", "leader_class": "scientist"}<br>
+・ship_astral_rift_speed_mult (天体の裂け目の探索速度) = 0.10<br>
+<br>
+惑星(条件あり):<br>
+・条件：{"is_ruler": "no"}<br>
+・planet_jobs_physics_research_produces_mult (£job£ 職業からの£physics_research£ 物理学研究) = 0.10<br>
+・planet_jobs_society_research_produces_mult (£job£ 職業からの£society_research£ 社会学研究) = 0.10<br>
+・planet_jobs_engineering_research_produces_mult (£job£ 職業からの£engineering_research£ 工学研究) = 0.10<br>
+<br>
+セクター(条件あり):<br>
+・条件：{"is_ruler": "no"}<br>
+・planet_jobs_physics_research_produces_mult (£job£ 職業からの£physics_research£ 物理学研究) = 0.05<br>
+・planet_jobs_society_research_produces_mult (£job£ 職業からの£society_research£ 社会学研究) = 0.05<br>
+・planet_jobs_engineering_research_produces_mult (£job£ 職業からの£engineering_research£ 工学研究) = 0.05<br>
+<br>
+艦隊(条件あり):<br>
+・条件：{"is_ruler": "no", "leader_class": "commander"}<br>
+・ship_fire_rate_mult (艦船連射レート) = 0.10<br>
+・ship_disengage_chance_mult (戦闘離脱成功率) = 0.10<br>
+<br>
+地上軍(条件あり):<br>
+・条件：{"is_ruler": "no", "leader_class": "commander"}<br>
+・army_damage_taken_mult (地上軍の被ダメージ) = -0.10<br>
+・army_disengage_chance_mult (地上軍の戦闘離脱成功率) = 0.10<br>
+<br>
+銀河共同体(条件あり):<br>
+・条件：{"is_ruler": "no", "leader_class": "official"}<br>
+・diplo_weight_technology_mult (技術力から発生する外交発言力) = 0.1<br>
+<br>
+連邦(条件あり):<br>
+・条件：{"is_ruler": "no", "leader_class": "official"}<br>
+・federation_experience_add (毎月の経験値) = 1<br>
+<br>
+評議会(条件あり):<br>
+・条件：{"is_ruler": "yes"}<br>
+・country_ruler_influence_produces_add (毎月の影響力) = 0.5<br>
+・intel_encryption_add (暗号力) = 1<br>
+<br></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -37902,6 +38222,10 @@ custom_tooltip_with_modifiers:<br>
     "OR": {
         "has_paragon_dlc": "no",
         "has_trait": "subclass_official_diplomacy_councilor"
+    },
+    "exists": "owner",
+    "owner": {
+        "is_homicidal": "no"
     }
 }</p>
 </div></div></td>
@@ -44281,7 +44605,7 @@ custom_tooltip_with_modifiers:<br>
 <p>評議会:<br>
 ・pop_amenities_usage_mult (POPの快適度使用量) = -0.1<br>
 ・pop_housing_usage_mult (POPの住居使用量) = -0.1<br>
-・planet_priests_society_research_produces_add (£job_priest£ £job_death_priest£司祭からの£society£ 社会学) = 0.5<br>
+・planet_priests_society_research_produces_add ([GetPriestIcon] [GetPriest]からの£society£ 社会学研究) = 0.5<br>
 <br>
 custom_tooltip_with_modifiers:<br>
 ・\n§G啓発統治者の特性§!<br>
@@ -44351,7 +44675,7 @@ custom_tooltip_with_modifiers:<br>
 <p>評議会:<br>
 ・pop_amenities_usage_mult (POPの快適度使用量) = -0.15<br>
 ・pop_housing_usage_mult (POPの住居使用量) = -0.15<br>
-・planet_priests_society_research_produces_add (£job_priest£ £job_death_priest£司祭からの£society£ 社会学) = 1<br>
+・planet_priests_society_research_produces_add ([GetPriestIcon] [GetPriest]からの£society£ 社会学研究) = 1<br>
 <br>
 custom_tooltip_with_modifiers:<br>
 ・\n§G啓発統治者の特性§!<br>
@@ -44418,7 +44742,7 @@ custom_tooltip_with_modifiers:<br>
 <p>評議会:<br>
 ・pop_amenities_usage_mult (POPの快適度使用量) = -0.20<br>
 ・pop_housing_usage_mult (POPの住居使用量) = -0.20<br>
-・planet_priests_society_research_produces_add (£job_priest£ £job_death_priest£司祭からの£society£ 社会学) = 2<br>
+・planet_priests_society_research_produces_add ([GetPriestIcon] [GetPriest]からの£society£ 社会学研究) = 2<br>
 <br>
 custom_tooltip_with_modifiers:<br>
 ・\n§G啓発統治者の特性§!<br>
@@ -45906,7 +46230,7 @@ custom_tooltip_with_modifiers:<br>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>評議会:<br>
 ・planet_pop_assembly_mult (機械POP製造速度) = 0.05<br>
-・planet_pop_assemblers_engineering_research_produces_add (£job_roboticist£ ロボット製造者からの£engineering£ 工学) = 0.5<br>
+・planet_pop_assemblers_engineering_research_produces_add ([GetPopAssemblersPlural]からの£engineering£ §Y工学研究§!) = 0.5<br>
 <br>
 custom_tooltip_with_modifiers:<br>
 ・    £job_roboticist£ ロボット製造者による £amenities£ 快適度：§G+1§!\n\n§G啓発統治者の特性§!<br>
@@ -45975,7 +46299,7 @@ custom_tooltip_with_modifiers:<br>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>評議会:<br>
 ・planet_pop_assembly_mult (機械POP製造速度) = 0.1<br>
-・planet_pop_assemblers_engineering_research_produces_add (£job_roboticist£ ロボット製造者からの£engineering£ 工学) = 1<br>
+・planet_pop_assemblers_engineering_research_produces_add ([GetPopAssemblersPlural]からの£engineering£ §Y工学研究§!) = 1<br>
 <br>
 custom_tooltip_with_modifiers:<br>
 ・    £job_roboticist£ ロボット製造者による £amenities£ 快適度：§G+2§!\n\n§G啓発統治者の特性§!<br>
@@ -46041,7 +46365,7 @@ custom_tooltip_with_modifiers:<br>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>評議会:<br>
 ・planet_pop_assembly_mult (機械POP製造速度) = 0.15<br>
-・planet_pop_assemblers_engineering_research_produces_add (£job_roboticist£ ロボット製造者からの£engineering£ 工学) = 2<br>
+・planet_pop_assemblers_engineering_research_produces_add ([GetPopAssemblersPlural]からの£engineering£ §Y工学研究§!) = 2<br>
 <br>
 custom_tooltip_with_modifiers:<br>
 ・    £job_roboticist£ ロボット製造者による £amenities£ 快適度：§G+3§!\n\n§G啓発統治者の特性§!<br>
@@ -46107,8 +46431,7 @@ custom_tooltip_with_modifiers:<br>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>評議会:<br>
 ・BIOLOGICAL_species_trait_points_add (遺伝子特性ポイント) = 1<br>
-・modify_species_cost_mult (mod_modify_species_cost_mult) = -0.1<br>
-・planet_pops_upkeep_mult (POP維持費) = -0.05<br>
+・planet_pops_upkeep_mult (POP維持費) = -0.10<br>
 <br>
 custom_tooltip_with_modifiers:<br>
 ・\n§G啓発統治者の特性§!<br>
@@ -46176,8 +46499,7 @@ custom_tooltip_with_modifiers:<br>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>評議会:<br>
-・BIOLOGICAL_species_trait_points_add (遺伝子特性ポイント) = 1<br>
-・modify_species_cost_mult (mod_modify_species_cost_mult) = -0.2<br>
+・BIOLOGICAL_species_trait_points_add (遺伝子特性ポイント) = 2<br>
 ・planet_pops_upkeep_mult (POP維持費) = -0.15<br>
 <br>
 custom_tooltip_with_modifiers:<br>
@@ -46243,9 +46565,9 @@ custom_tooltip_with_modifiers:<br>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>評議会:<br>
-・BIOLOGICAL_species_trait_points_add (遺伝子特性ポイント) = 1<br>
-・modify_species_cost_mult (mod_modify_species_cost_mult) = -0.4<br>
-・planet_pops_upkeep_mult (POP維持費) = -0.3<br>
+・BIOLOGICAL_species_trait_points_add (遺伝子特性ポイント) = 2<br>
+・BIOLOGICAL_species_trait_picks_add (有機生命種族の特性数) = 1<br>
+・planet_pops_upkeep_mult (POP維持費) = -0.25<br>
 <br>
 custom_tooltip_with_modifiers:<br>
 ・\n§G啓発統治者の特性§!<br>
@@ -47341,7 +47663,7 @@ custom_tooltip_with_modifiers:<br>
 <p>評議会:<br>
 ・BIOLOGICAL_species_trait_points_add (遺伝子特性ポイント) = 1<br>
 ・BIOLOGICAL_species_trait_picks_add (有機生命種族の特性数) = 1<br>
-・modify_species_cost_mult (mod_modify_species_cost_mult) = -0.15<br>
+・modify_species_cost_mult (mod_modify_species_cost_mult) = -0.10<br>
 ・pop_growth_speed (POPの成長速度) = -0.15<br>
 <br>
 本人(条件あり):<br>
@@ -47351,6 +47673,132 @@ custom_tooltip_with_modifiers:<br>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>leader_trait_unholy</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>不信心</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>basic</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>none</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>評議会:<br>
+・damage_vs_country_type_synth_queen_mult (セタナへのダメージ) = 0.15<br>
+・damage_vs_country_type_awakened_synth_queen_mult (人工生命体の女王セタナへのダメージ) = 0.15<br>
+・damage_vs_country_type_synth_queen_convoys_mult (セタナへのダメージの護送隊) = 0.15<br>
+・damage_vs_country_type_synth_queen_outposts_mult (セタナへのダメージの前哨地) = 0.15<br>
+<br></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>leader_trait_unholy_node</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>罰当たりな指導</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>basic</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>none</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>評議会:<br>
+・damage_vs_country_type_synth_queen_mult (セタナへのダメージ) = 0.15<br>
+・damage_vs_country_type_awakened_synth_queen_mult (人工生命体の女王セタナへのダメージ) = 0.15<br>
+・damage_vs_country_type_synth_queen_convoys_mult (セタナへのダメージの護送隊) = 0.15<br>
+・damage_vs_country_type_synth_queen_outposts_mult (セタナへのダメージの前哨地) = 0.15<br>
+<br></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -48553,6 +49001,307 @@ custom_tooltip_with_modifiers:<br>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>leader_trait_blorg_insight</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>ブローグの知見</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>destiny</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>none</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>評議会:<br>
+・intel_decryption_add (解読力) = 2<br>
+・add_base_country_intel (基礎情報レベル) = 15<br>
+・diplo_weight_mult (外交発言力) = -0.05<br>
+<br>
+custom_tooltip_with_modifiers:<br>
+・§Y人間§!の帝国の態度が§R-25§!になる。<br>
+<br></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>leader_trait_limited_cyborg</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>限定的サイボーグ</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>basic</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>triggered</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>none</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>本人:<br>
+・leaders_upkeep_mult (リーダー維持費) = -0.10<br>
+・species_leader_exp_gain (mod_species_leader_exp_gain) = 0.1<br>
+<br>
+評議会(条件あり):<br>
+・条件：{"is_ruler": "yes"}<br>
+・spiritualist_attraction (mod_spiritualist_attraction) = 0.25<br>
+・empire_size_districts_mult (区域からの帝国規模) = -0.05<br>
+<br></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>超能力者<br>
+選ばれし者<br></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>leader_trait_robotic_surrogate</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>ロボット代理</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>basic</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>triggered</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>none</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>本人:<br>
+・negative_traits_leader (リーダーのネガティブな特性の最大値) = -1<br>
+・species_leader_exp_gain (mod_species_leader_exp_gain) = -0.25<br>
+<br>
+評議会(条件あり):<br>
+・条件：{"is_councilor": "yes"}<br>
+・planet_jobs_engineering_research_produces_mult (£job£ 職業からの£engineering_research£ 工学研究) = 0.05<br>
+・planet_jobs_unity_produces_mult (£job£ 職業からの£unity£ 統合力) = 0.05<br>
+・council_agenda_progress_speed (評議会の方針の進行速度) = -0.1<br>
+<br></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>leader_trait_ritualistic_implants_cyborg</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>儀式用インプラント</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>basic</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>triggered</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>none</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>リーダーアサイン時(条件あり):<br>
+・条件：{"is_ruler": "no", "leader_class": "scientist"}<br>
+・ship_anomaly_generation_chance_mult (アノマリー発見率) = 0.15<br>
+<br>
+本人(条件あり):<br>
+・条件：{"is_ruler": "no", "leader_class": "commander"}<br>
+・planet_combat_width_add (惑星の戦闘正面幅) = 1<br>
+<br>
+惑星(条件あり):<br>
+・条件：{"is_ruler": "no"}<br>
+・planet_jobs_physics_research_produces_mult (£job£ 職業からの£physics_research£ 物理学研究) = 0.05<br>
+・planet_jobs_society_research_produces_mult (£job£ 職業からの£society_research£ 社会学研究) = 0.05<br>
+・planet_jobs_engineering_research_produces_mult (£job£ 職業からの£engineering_research£ 工学研究) = 0.05<br>
+<br>
+セクター(条件あり):<br>
+・条件：{"is_ruler": "no"}<br>
+・planet_jobs_physics_research_produces_mult (£job£ 職業からの£physics_research£ 物理学研究) = 0.025<br>
+・planet_jobs_society_research_produces_mult (£job£ 職業からの£society_research£ 社会学研究) = 0.025<br>
+・planet_jobs_engineering_research_produces_mult (£job£ 職業からの£engineering_research£ 工学研究) = 0.025<br>
+<br>
+艦隊(条件あり):<br>
+・条件：{"is_ruler": "no", "leader_class": "commander"}<br>
+・ship_weapon_damage (艦船武器ダメージ) = 0.05<br>
+・ship_weapon_range_mult (艦船武器射程) = 0.10<br>
+・ship_orbital_bombardment_mult (軌道爆撃ダメージ) = 0.15<br>
+<br>
+銀河共同体(条件あり):<br>
+・条件：{"is_ruler": "no", "leader_class": "official"}<br>
+・diplo_weight_technology_mult (技術力から発生する外交発言力) = 0.05<br>
+<br>
+連邦(条件あり):<br>
+・条件：{"is_ruler": "no", "leader_class": "official"}<br>
+・federation_experience_add (毎月の経験値) = 0.5<br>
+<br>
+評議会(条件あり):<br>
+・条件：{"is_ruler": "yes"}<br>
+・planet_structures_upkeep_mult (建造物と区域の維持費) = -0.10<br>
+・empire_size_districts_mult (区域からの帝国規模) = -0.05<br>
+<br></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>超能力者<br>
+選ばれし者<br>
+サイボーグ<br></p>
+</div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
 </div></div></td>
