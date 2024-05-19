@@ -1,0 +1,2442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.20">
+<title>【Stellaris 3.12.2】ポートレート＆種族の作り方</title>
+<link rel="stylesheet" href="../css/default.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="article toc2 toc-left">
+<div id="header">
+<h1>【Stellaris 3.12.2】ポートレート＆種族の作り方</h1>
+<div id="toc" class="toc2">
+<div id="toctitle">目次</div>
+<ul class="sectlevel1">
+<li><a href="#_本ガイドを読む前に実施すべきこと">1. 本ガイドを読む前に実施すべきこと</a></li>
+<li><a href="#_作成にあたって必要なもの">2. 作成にあたって必要なもの</a>
+<ul class="sectlevel2">
+<li><a href="#_最終的な構成">2.1. 最終的な構成</a></li>
+<li><a href="#_素材">2.2. 素材</a></li>
+</ul>
+</li>
+<li><a href="#_mod生成用フォルダを作成する">3. Mod生成用フォルダを作成する</a></li>
+<li><a href="#_ネームリストを作成する">4. ネームリストを作成する</a>
+<ul class="sectlevel2">
+<li><a href="#_空の種族定義を作成する">4.1. 空の種族定義を作成する</a></li>
+<li><a href="#_ネームリスト定義を作成する">4.2. ネームリスト定義を作成する</a></li>
+<li><a href="#_種族名称定義を作成する">4.3. 種族名称定義を作成する</a></li>
+<li><a href="#_ローカライズ定義を作成する">4.4. ローカライズ定義を作成する</a></li>
+</ul>
+</li>
+<li><a href="#_ポートレート種族を作成する">5. ポートレート＆種族を作成する</a>
+<ul class="sectlevel2">
+<li><a href="#_ポートレート素材を所定の場所に配置する">5.1. ポートレート素材を所定の場所に配置する</a></li>
+<li><a href="#_ポートレート定義を作成する">5.2. ポートレート定義を作成する</a></li>
+<li><a href="#_種族定義を修正する">5.3. 種族定義を修正する</a></li>
+<li><a href="#_種族_ポートレート紐付け用定義を作成する">5.4. 種族-ポートレート紐付け用定義を作成する</a></li>
+<li><a href="#_自作帝国作成時の種族選択画面表示用の定義を作成する">5.5. 自作帝国作成時の種族選択画面表示用の定義を作成する</a></li>
+<li><a href="#_ローカライズ定義を必要な内容を追記する">5.6. ローカライズ定義を必要な内容を追記する</a></li>
+</ul>
+</li>
+<li><a href="#_必要に応じてその他の要素を追加する">6. 必要に応じてその他の要素を追加する</a>
+<ul class="sectlevel2">
+<li><a href="#_音声定義を作成する">6.1. 音声定義を作成する</a></li>
+<li><a href="#_服を着ている種族である条件を追加する">6.2. 服を着ている種族である条件を追加する</a></li>
+<li><a href="#_ロボット製造ができるようになった時や人口生命体の初期ポートレートを指定する">6.3. ロボット製造ができるようになった時や人口生命体の初期ポートレートを指定する</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>このガイドは静的画像を利用したポートレート＆種族の作り方を説明したものとなります。<br>
+アニメーションをするような種族追加の方法はこのガイドの対象外となりますので、<br>
+6thStrikeUnitさんのガイド、<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3047654773">【Stellaris 3.9.x】アニメーションポートレート作成備忘録</a>を確認してください。</p>
+</div>
+<div class="paragraph">
+<p>本ガイド内のソースコードについてですが、基本的には<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2759667965">D-man Portraits</a>をベースに記載しています。<br>
+ただし、<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2759667965">D-man Portraits</a>に存在していない部分については、<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2760247086">[Compatibility Patch</a> F17 VP/VP]から引っ張ってきています。<br>
+そのため全てのサンプルコードを1つにまとめても、そのままでは動作しません。その旨ご了承ください。</p>
+</div>
+<div class="paragraph">
+<p>なお、本ガイドはWindows OS上で動作するSteam版のStellarisで動作することを前提としています。<br>
+他の環境化ではあまり参考にならない可能性がありますのでご了承ください。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_本ガイドを読む前に実施すべきこと">1. 本ガイドを読む前に実施すべきこと</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>前提としてModの最低限の仕組みの理解のため、<a href="https://fatalerrorjp.github.io/stellaris_infomations/guides/getting-started-with-mod.html">初心者のためのMod導入ガイド</a>の一読をお願いします。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_作成にあたって必要なもの">2. 作成にあたって必要なもの</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_最終的な構成">2.1. 最終的な構成</h3>
+<div class="paragraph">
+<p>最終的には画像のような項目を揃えていく必要があります。<br>
+青で塗りつぶされているものは必須、赤射線のものは任意です。</p>
+</div>
+<details open>
+<summary class="title">最終的な構成</summary>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>C:\Users\(ユーザー名)\Documents\Paradox Interactive\Stellaris\mod\(MODのディレクトリ名)
+├common
+│├name_lists <i class="conum" data-value="1"></i><b>(1)</b>
+││└(種族名)_name_lists.txt
+││
+│├portrait_categories <i class="conum" data-value="2"></i><b>(2)</b>
+││└(種族名)_portrait_categories.txt
+││
+│├portrait_sets <i class="conum" data-value="3"></i><b>(3)</b>
+││└(種族名)_portrait_sets.txt
+││
+│├scripted_effects <i class="conum" data-value="4"></i><b>(4)</b>
+││└set_synth_or_robot_portrait_effect.txt
+││
+│├scripted_triggers <i class="conum" data-value="5"></i><b>(5)</b>
+││└wears_clothes.txt
+││
+│├species_classes <i class="conum" data-value="6"></i><b>(6)</b>
+││└!(種族名)_species_classes.txt
+││
+│└species_names <i class="conum" data-value="7"></i><b>(7)</b>
+│　└(種族名)_species_names.txt
+│
+├gfx
+│├models
+││└portraits <i class="conum" data-value="8"></i><b>(8)</b>
+││　└(ポートレート名)
+││　　├(ポートレート名)-01.dds
+││　　...(省略)
+││　　└(ポートレート名)-xx.dds
+││
+│└portraits
+│　└portraits <i class="conum" data-value="9"></i><b>(9)</b>
+│　　└(ポートレート名)_portraits.txt
+│
+├localisation <i class="conum" data-value="10"></i><b>(10)</b>
+│└(Mod名)_l_japanese.yml
+│
+├sound
+│└portrait <i class="conum" data-value="11"></i><b>(11)</b>
+│　└(ポートレート名)
+│　　├(ポートレート名).asset
+│　　├(ポートレート名)-01.wav
+│　　...(省略)
+│　　└(ポートレート名)-xx.wav
+│
+└descriptor.mod <i class="conum" data-value="12"></i><b>(12)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>ネームリスト定義(必須)</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>自作帝国作成時の種族選択画面表示用の定義(任意)</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>種族-ポートレート紐付け用定義(必須)</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>ロボットや人口生命体のポートレートの初期設定の記述(任意)</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>服を着た種族かどうかの判定処理(任意)</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>種族定義(必須)</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="7"></i><b>7</b></td>
+<td>種族名称定義(必須)</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="8"></i><b>8</b></td>
+<td>ポートレート画像(必須)</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="9"></i><b>9</b></td>
+<td>ポートレート定義(必須)</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="10"></i><b>10</b></td>
+<td>ローカライズ定義(必須)</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="11"></i><b>11</b></td>
+<td>音声定義＆音声素材(任意)</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="12"></i><b>12</b></td>
+<td>Modの基本情報(必須)</td>
+</tr>
+</table>
+</div>
+</div>
+</details>
+</div>
+<div class="sect2">
+<h3 id="_素材">2.2. 素材</h3>
+<div class="sect3">
+<h4 id="_ポートレートとして追加したい静止画像_dds">2.2.1. ポートレートとして追加したい静止画像(*.dds)</h4>
+<div class="paragraph">
+<p>多少サイズは前後しても大丈夫そうですが、横 x 縦 = 472 x 324の大きさを目安として用意してください。<br>
+明確なサイズは決まっていないので、必ずしもこのサイズである必要はありませんが、<br>
+あまり大きすぎるとゲーム画面上で画像が見切れて表示される可能性があります。<br>
+ddsというファイル形式には、フリーソフトであればpaint.netというソフトが対応しています。<br>
+保存時のddsの設定は「B8G8R8A8(線形, A8R8G8B8)」にすると比較的劣化が少なそうです。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_音声ファイル_wav">2.2.2. 音声ファイル(*.wav)</h4>
+<div class="paragraph">
+<p>任意です。AI帝国を表示した時に音声も欲しい場合には必須となります。<br>
+真空波動研Liteというフリーソフトの表記で言う、以下の内容であれば問題ないようです。<br>
+<code>PCM 44.10kHz 16Bit 2ch 1411.20kb/s</code></p>
+</div>
+<div class="paragraph">
+<p>A.I.VOICEで作成した音源を使いたい場合は、以下のようにすると良いでしょう。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>A.I.VOICEの設定を以下に設定し、必要な内容を喋らせて保存する<br>
+<code>WAVE 44100Hz 16bit PCM</code></p>
+</li>
+<li>
+<p>ffmpegにて、Stellarisに準拠した音声データに変換する。以下はコマンドの例<br>
+<code>ffmpeg -i (A.I.VOICEで出力したwavファイル) -acodec pcm_s16le -ac 2 -ar 44100 (変換後のファイル名)</code></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mod生成用フォルダを作成する">3. Mod生成用フォルダを作成する</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Stellarisのランチャーから自動生成できるので、その機能を活用しましょう。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Stellarisのランチャーを起動する</p>
+</li>
+<li>
+<p>ランチャーの左メニューの、「インストール済みのすべてのMOD」をクリックする</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/create-species_1.png" alt="create species 1">
+</div>
+</div>
+</li>
+<li>
+<p>画面右上の「MODをアップロードする」を押す</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/create-species_2.png" alt="create species 2">
+</div>
+</div>
+</li>
+<li>
+<p>「MODを作成する」ボタンを押す</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/create-species_3.png" alt="create species 3">
+</div>
+</div>
+</li>
+<li>
+<p>以下の内容を入力して、「OK」ボタンを押す</p>
+<div class="ulist">
+<ul>
+<li>
+<p>名称: MODの名前を入力する。日本語も可</p>
+</li>
+<li>
+<p>バージョン: このMODのバージョン。Stellaris本体のバージョンではないので注意。半角英数のみ</p>
+</li>
+<li>
+<p>ディレクトリ: MOD作成用のディレクトリ名。半角英数記号のみ</p>
+</li>
+<li>
+<p>タグ: WorkshopでMOD検索する時に使う。必要なタグにチェックを入れる</p>
+<div class="exampleblock">
+<div class="title">例 1. D-man Portraitsの場合</div>
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>名称: D-man Portraits</p>
+</li>
+<li>
+<p>バージョン: 1.0.0</p>
+</li>
+<li>
+<p>ディレクトリ: mod/d-man_portraits</p>
+</li>
+<li>
+<p>タグ: Graphics, Leaders, Speciesにチェック</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/create-species_4.png" alt="create species 4">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>ここまでの操作をすることで、以下のディレクトリが作成されます。<br>
+<code>C:\Users\(ユーザー名)\Documents\Paradox Interactive\Stellaris\mod\(5.のディレクトリ名)</code><br></p>
+</div>
+<div class="paragraph">
+<p>これ以降の作業は、原則このディレクトリ以下を基準として記載していきます。<br>
+「MODを作成する」領域を作るために「MODをアップロードする」ボタンを押さないといけないのは、<br>
+正直意味不明なのでこの辺の導線については今後なんとかして欲しいですね…。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ネームリストを作成する">4. ネームリストを作成する</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>種族やポートレートの追加をせず、ネームリストだけを作りたいといった場合もあると思うので、<br>
+まずはネームリストの作成部分を作成しましょう。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/create-species_5.png" alt="create species 5">
+</div>
+</div>
+<details open>
+<summary class="title">ネームリスト表示のために必要な構成</summary>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>C:\Users\(ユーザー名)\Documents\Paradox Interactive\Stellaris\mod\(MODのディレクトリ名)
+├common
+│├name_lists <i class="conum" data-value="1"></i><b>(1)</b>
+││└(種族名)_name_lists.txt
+││
+│├species_classes <i class="conum" data-value="2"></i><b>(2)</b>
+││└!(種族名)_species_classes.txt
+││
+│└species_names <i class="conum" data-value="3"></i><b>(3)</b>
+│　└(種族名)_species_names.txt
+│
+└localisation <i class="conum" data-value="4"></i><b>(4)</b>
+　└(Mod名)_l_japanese.yml</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>ネームリスト定義(必須)</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>種族定義(必須)</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>種族名称定義(必須)</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>ローカライズ定義(必須)</td>
+</tr>
+</table>
+</div>
+</div>
+</details>
+<div class="sect2">
+<h3 id="_空の種族定義を作成する">4.1. 空の種族定義を作成する</h3>
+<div class="paragraph">
+<p>ネームリスト定義は種族と紐付いているので、まずはポートレートの設定されていない空の種族定義を作成します。<br>
+以下の構成で、新規のテキストファイルを作成してください。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>C:\Users\(ユーザー名)\Documents\Paradox Interactive\Stellaris\mod\(MODのディレクトリ名)
+└common
+　└species_classes
+　　└!(種族名)_species_classes.txt ← これを作る</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>テキストエディタを開き、種族の定義を記述していきましょう。<br>
+以下はD言語くんの定義を作成した時のサンプルです。<br>
+保存する際の文字コードはUTF-8 BOMなしを指定してください。</p>
+</div>
+<div class="listingblock">
+<div class="title">common\species_classes\!d-man_species_classes.txt</div>
+<div class="content">
+<pre class="highlight"><code># Mod側のspecies_classesのファイル名の付け方についての補足)
+# ファイル名順で昇順ソートしたときに、以下の順序になるようなファイル名にしておくと良い
+# ・Modのファイル名
+# ・00_species_classes.txt
+# ・01_base_species_classes.txt
+#
+# この順序になるようにしておくと、バニラのgraphical_cultureを使い回したときに
+# 都市外観等に表示される種族名がバニラのまま変わらないので、影響範囲を最小限に抑えられる。
+# 本ファイルの先頭に「!」をつけているのはこのファイル名の順序を意識した意図的なものとなっている。
+#
+##############################################################
+# D言語くん種族用の定義
+##############################################################
+# D言語くん(有機種族)
+d-man-biologicals = {
+	playable = { always = yes }
+	randomized = no
+	graphical_culture = humanoid_01
+}
+
+# D言語くん種族(機械知性)
+d-man-machines = {
+	playable = { always = yes }
+	randomized = no
+	graphical_culture = humanoid_01
+}
+
+# D言語くん種族(岩石種族)
+d-man-lithoids = {
+	playable = { always = yes }
+	randomized = no
+	graphical_culture = humanoid_01
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>これで、ポートレートの指定のされていない空の種族、D言語くん(有機種族)<br>
+D言語くん種族(機械知性)、D言語くん種族(岩石種族)が作成できました。<br>
+<code>d-man-biologicals</code>や<code>d-man-machines</code>の部分については好きな半角英数字を指定できますが、<br>
+基本的には自分が作ろうとしている種族の名前にすると良いでしょう。</p>
+</div>
+<div class="paragraph">
+<p>graphical_cultureについては、バニラの既存の種族を使い回しています。<br>
+こちらは「ヒューマノイド」や「鳥人」などのタイプ毎に<br>
+都市の背景や基地、艦隊などの見た目のデザインを用意するためのものなのですが、<br>
+私はこちらについてはあまり詳しくないので説明は割愛します。<br>
+※一応<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2982605349">過去に私が書いたSteamガイド</a>の9章にて軽く触れていますが、あまり参考にならないと思います。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ネームリスト定義を作成する">4.2. ネームリスト定義を作成する</h3>
+<div class="paragraph">
+<p>次にネームリストを作成します。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>C:\Users\(ユーザー名)\Documents\Paradox Interactive\Stellaris\mod\(MODのディレクトリ名)
+└common
+　└name_lists
+　　└(種族名)_name_lists.txt ← これを作る</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>以下はD言語くんの定義を作成した時のサンプルです。<br>
+保存する際の文字コードはUTF-8 BOMありを指定してください。<br>
+BOMありです。何故かこのファイルは他と違ってBOMありにしないといけないので注意してください。<br></p>
+</div>
+<details open>
+<summary class="title">common\name_lists\d-man_name_lists.txt</summary>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code># D言語くん(有機種族)
+d-man-biologicals = {
+	selectable = { always = yes }
+
+	ship_names = {
+		corvette = {
+			HUMAN1_SHIP_Aardvark HUMAN1_SHIP_Accentor # 以下略
+		}
+
+		destroyer = {
+			HUMAN1_SHIP_Amsterdam HUMAN1_SHIP_Austin # 以下略
+		}
+
+		cruiser = {
+			HUMAN1_SHIP_Bolivar HUMAN1_SHIP_Brusilov # 以下略
+		}
+
+		battleship = {
+			HUMAN1_SHIP_Ulysses HUMAN1_SHIP_Xenophon # 以下略
+		}
+
+		titan = {
+			HUMAN1_SHIP_Enterprise HUMAN1_SHIP_Invincible # 以下略
+		}
+
+		colossus = {
+			HUMAN1_SHIP_SolInvictus HUMAN1_SHIP_Adjudicator # 以下略
+		}
+
+		juggernaut = {
+			HUMAN1_SHIP_Ararat HUMAN1_SHIP_AxisMundi # 以下略
+		}
+
+		constructor = {
+			HUMAN1_SHIP_Pacific HUMAN1_SHIP_Atlantic # 以下略
+		}
+
+		colonizer = {
+			HUMAN1_SHIP_Mayflower HUMAN1_SHIP_Abundance # 以下略
+		}
+
+		sponsored_colonizer = { # needed when there are no generic names
+			HUMAN1_SHIP_Mayflower HUMAN1_SHIP_Abundance # 以下略
+		}
+
+		science = {
+			HUMAN1_SHIP_Aldrin HUMAN1_SHIP_Armstrong # 以下略
+		}
+
+		transport = {
+			HUMAN1_SHIP_Cowpens HUMAN1_SHIP_BelleauWood # 以下略
+		}
+
+		military_station_small = {
+			HUMAN1_SHIP_Citadel HUMAN1_SHIP_Albacore # 以下略
+		}
+
+		ion_cannon = {
+			HUMAN1_SHIP_Bombard HUMAN1_SHIP_Ballista # 以下略
+		}
+	}
+
+	fleet_names = {
+		sequential_name = HUMAN1_FLEET
+	}
+
+	army_names = {
+
+		generic = {
+			sequential_name = HUMAN1_EXPEDITIONARYFORCE
+		}
+
+		machine_defense = {
+			sequential_name = HUMAN1_PLANETARYGUARD
+		}
+
+		machine_assault_1 = {
+			sequential_name = HUMAN1_EXPEDITIONARYFORCE
+		}
+
+		machine_assault_2 = {
+			sequential_name = HUMAN1_EXPEDITIONARYFORCE
+		}
+
+		machine_assault_3 = {
+			sequential_name = HUMAN1_EXPEDITIONARYFORCE
+		}
+
+		defense_army = {
+			sequential_name = HUMAN1_PLANETARYGUARD
+		}
+
+		assault_army = {
+			sequential_name = HUMAN1_EXPEDITIONARYFORCE
+		}
+
+		slave_army = {
+			sequential_name = HUMAN1_INDENTUREDRIFLES
+		}
+
+		clone_army = {
+			sequential_name = HUMAN1_CLONEARMY
+		}
+
+		undead_army = {
+			sequential_name = HUMAN1_DREADCOMMANDO
+		}
+
+		robotic_army = {
+			sequential_name = HUMAN1_HUNTERKILLERGROUP
+		}
+
+		robotic_defense_army = {
+			sequential_name = HUMAN1_GROUNDDEFENSEMATRIX
+		}
+
+		psionic_army = {
+			sequential_name = HUMAN1_PSICOMMANDO
+		}
+
+		xenomorph_army = {
+			sequential_name = HUMAN1_BIOWARFAREDIVISION
+		}
+
+		gene_warrior_army = {
+			random_names = {
+				HUMAN1_ARMY_SARC-AGladiators HUMAN1_ARMY_SARC-BWidowmakers # 以下略
+			}
+			sequential_name = HUMAN1_BIOENGINEEREDSQUADRON
+		}
+
+		occupation_army = {
+			sequential_name = HUMAN1_GARRISONFORCE
+		}
+
+		individual_machine_occupation_army = {
+			sequential_name = HUMAN1_GARRISONFORCE
+		}
+
+		robotic_occupation_army = {
+			sequential_name = HUMAN1_MECHANIZEDGARRISON
+		}
+
+		primitive_army = {
+			sequential_name = HUMAN1_PRIMITIVEARMY
+		}
+
+		industrial_army = {
+			sequential_name = HUMAN1_INDUSTRIALARMY
+		}
+
+		postatomic_army = {
+			sequential_name = HUMAN1_POSTATOMICARMY
+		}
+
+		warpling_army = {
+			sequential_name = seq_warpling_army
+		}
+	}
+
+	planet_names = {
+
+		generic = {
+			names = {
+				HUMAN1_PLANET_NewJerusalem HUMAN1_PLANET_Anchor # 以下略
+			}
+		}
+
+		pc_desert = {
+			names = {
+				HUMAN1_PLANET_NovaArabia HUMAN1_PLANET_Sahara # 以下略
+			}
+		}
+
+		pc_arid = {
+			names = {
+				HUMAN1_PLANET_Lebanon HUMAN1_PLANET_Tyre # 以下略
+			}
+		}
+
+		pc_tropical = {
+			names = {
+				HUMAN1_PLANET_Amazonia HUMAN1_PLANET_Congo # 以下略
+			}
+		}
+
+		pc_continental = {
+			names = {
+				HUMAN1_PLANET_Albion HUMAN1_PLANET_Amor # 以下略
+			}
+		}
+
+		pc_gaia = {
+			names = {
+				HUMAN1_PLANET_Eden HUMAN1_PLANET_Elysium # 以下略
+			}
+		}
+
+		pc_ocean = {
+			names = {
+				HUMAN1_PLANET_Atlantis HUMAN1_PLANET_Oceania # 以下略
+			}
+		}
+
+		pc_tundra = {
+			names = {
+				HUMAN1_PLANET_Iceland HUMAN1_PLANET_Canada # 以下略
+			}
+		}
+
+		pc_arctic = {
+			names = {
+				HUMAN1_PLANET_Thule HUMAN1_PLANET_Arctica # 以下略
+			}
+		}
+
+		pc_savannah = {
+			names = {
+			}
+		}
+
+		pc_alpine = {
+			names = {
+			}
+		}
+
+	}
+
+
+	### CHARACTERS
+
+	character_names = {
+
+		default = {
+			first_names_male = {
+				HUMAN1_CHR_John HUMAN1_CHR_Brian # 以下略
+			}
+			first_names_female = {
+				HUMAN1_CHR_Olivia HUMAN1_CHR_Emily # 以下略
+			}
+			second_names = {
+				HUMAN1_CHR_Smith HUMAN1_CHR_Jones # 以下略
+			}
+			regnal_first_names_male = {
+				HUMAN1_CHR_Alexander HUMAN1_CHR_Vladimir # 以下略
+			}
+			regnal_first_names_female = {
+				HUMAN1_CHR_Theodora HUMAN1_CHR_Fatima # 以下略
+			}
+			regnal_second_names = {
+				HUMAN1_CHR_Habsburg HUMAN1_CHR_Romanov # 以下略
+			}
+		}
+	}
+}
+# D言語くん種族(機械知性)
+d-man-machines = {
+	selectable = { always = no }
+	# 以下、d-man-biologicalsと中身は同じため省略
+}
+
+# D言語くん種族(岩石種族)
+d-man-lithoids = {
+	selectable = { always = no }
+	# 以下、d-man-biologicalsと中身は同じため省略
+}</code></pre>
+</div>
+</div>
+</div>
+</details>
+<div class="paragraph">
+<p>考えるのが面倒だったので既存の定義を丸々引っ張っています。<br>
+<code>d-man-biologicals</code>の部分は、種族定義と名前を一致させる必要があります。<br>
+サンプルコード上の「HUMAN1_xxxxx」の部分は、後述するローカライズ定義のキー名になります。<br>
+古いバージョンだと、キー名ではなく直接ここに日本語で名前を記述していたかと思いますが、<br>
+最新の環境では多言語対応を簡単にするため、一旦キー名を記載するようになりました。<br></p>
+</div>
+<div class="paragraph">
+<p><code>selectable = { always = no }</code>の部分は、新規で自作帝国を作成する時の<br>
+ネームリストの選択欄にこのネームリストを載せないようにするための記述です。<br>
+<code>always = yes</code>にすると逆に載るようになります。<br>
+サンプルの場合は有機種族のネームリストのみ載るようにしています。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_種族名称定義を作成する">4.3. 種族名称定義を作成する</h3>
+<div class="paragraph">
+<p>続いて種族名称定義を作成します。<br>
+この定義は自作帝国作成時のランダム名称の設定や、ゲーム開始時に出てくるランダム帝国の国家名や種族名として利用されます。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>C:\Users\(ユーザー名)\Documents\Paradox Interactive\Stellaris\mod\(MODのディレクトリ名)
+└common
+　└species_names
+　　└(種族名)_species_names.txt ← これを作る</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>以下はD言語くんの定義を作成した時のサンプルです。<br>
+保存する際の文字コードはUTF-8 BOMなしを指定してください。</p>
+</div>
+<div class="listingblock">
+<div class="title">common\species_names\d-man_species_names.txt</div>
+<div class="content">
+<pre class="highlight"><code>##############################################################
+# ランダム生成される帝国名用の定義
+# name : 種族名
+# plural : 種族名(複数形)
+# home_planet : 惑星名
+# home_system : 恒星名
+# name_list : ネームリスト…思いつかないので公式のHUM1を使い回し
+##############################################################
+### D言語くん種族(有機種族)
+d-man-biologicals = {
+	d-man1 = {
+		name = SPEC_D-MAN
+		plural = SPEC_D-MAN_pl
+		home_planet = SPEC_D-MAN_planet1
+		home_system = SPEC_D-MAN_system1
+		name_list = "d-man-biologicals"
+	}
+	d-man2 = {
+		name = SPEC_D-MAN
+		plural = SPEC_D-MAN_pl
+		home_planet = SPEC_D-MAN_planet2
+		home_system = SPEC_D-MAN_system2
+		name_list = "d-man-biologicals"
+	}
+	d-man3 = {
+		name = SPEC_D-MAN
+		plural = SPEC_D-MAN_pl
+		home_planet = SPEC_D-MAN_planet3
+		home_system = SPEC_D-MAN_system3
+		name_list = "d-man-biologicals"
+	}
+	d-man4 = {
+		name = SPEC_D-MAN
+		plural = SPEC_D-MAN_pl
+		home_planet = SPEC_D-MAN_planet4
+		home_system = SPEC_D-MAN_system4
+		name_list = "d-man-biologicals"
+	}
+	d-man5 = {
+		name = SPEC_D-MAN
+		plural = SPEC_D-MAN_pl
+		home_planet = SPEC_D-MAN_planet5
+		home_system = SPEC_D-MAN_system5
+		name_list = "d-man-biologicals"
+	}
+	d-man6 = {
+		name = SPEC_D-MAN
+		plural = SPEC_D-MAN_pl
+		home_planet = SPEC_D-MAN_planet6
+		home_system = SPEC_D-MAN_system6
+		name_list = "d-man-biologicals"
+	}
+}
+
+# D言語くん種族(機械知性)
+d-man-machines = {
+	d-man11 = {
+		name = SPEC_D-MAN
+		plural = SPEC_D-MAN_pl
+		home_planet = SPEC_D-MAN_planet1
+		home_system = SPEC_D-MAN_system1
+		name_list = "d-man-machines"
+	}
+	d-man12 = {
+		name = SPEC_D-MAN
+		plural = SPEC_D-MAN_pl
+		home_planet = SPEC_D-MAN_planet2
+		home_system = SPEC_D-MAN_system2
+		name_list = "d-man-machines"
+	}
+	d-man13 = {
+		name = SPEC_D-MAN
+		plural = SPEC_D-MAN_pl
+		home_planet = SPEC_D-MAN_planet3
+		home_system = SPEC_D-MAN_system3
+		name_list = "d-man-machines"
+	}
+	d-man14 = {
+		name = SPEC_D-MAN
+		plural = SPEC_D-MAN_pl
+		home_planet = SPEC_D-MAN_planet4
+		home_system = SPEC_D-MAN_system4
+		name_list = "d-man-machines"
+	}
+	d-man15 = {
+		name = SPEC_D-MAN
+		plural = SPEC_D-MAN_pl
+		home_planet = SPEC_D-MAN_planet5
+		home_system = SPEC_D-MAN_system5
+		name_list = "d-man-machines"
+	}
+	d-man16 = {
+		name = SPEC_D-MAN
+		plural = SPEC_D-MAN_pl
+		home_planet = SPEC_D-MAN_planet6
+		home_system = SPEC_D-MAN_system6
+		name_list = "d-man-machines"
+	}
+}
+
+# D言語くん種族(岩石種族)
+d-man-lithoids = {
+	d-man21 = {
+		name = SPEC_D-MAN
+		plural = SPEC_D-MAN_pl
+		home_planet = SPEC_D-MAN_planet1
+		home_system = SPEC_D-MAN_system1
+		name_list = "d-man-lithoids"
+	}
+	d-man22 = {
+		name = SPEC_D-MAN
+		plural = SPEC_D-MAN_pl
+		home_planet = SPEC_D-MAN_planet2
+		home_system = SPEC_D-MAN_system2
+		name_list = "d-man-lithoids"
+	}
+	d-man23 = {
+		name = SPEC_D-MAN
+		plural = SPEC_D-MAN_pl
+		home_planet = SPEC_D-MAN_planet3
+		home_system = SPEC_D-MAN_system3
+		name_list = "d-man-lithoids"
+	}
+	d-man24 = {
+		name = SPEC_D-MAN
+		plural = SPEC_D-MAN_pl
+		home_planet = SPEC_D-MAN_planet4
+		home_system = SPEC_D-MAN_system4
+		name_list = "d-man-lithoids"
+	}
+	d-man25 = {
+		name = SPEC_D-MAN
+		plural = SPEC_D-MAN_pl
+		home_planet = SPEC_D-MAN_planet5
+		home_system = SPEC_D-MAN_system5
+		name_list = "d-man-lithoids"
+	}
+	d-man26 = {
+		name = SPEC_D-MAN
+		plural = SPEC_D-MAN_pl
+		home_planet = SPEC_D-MAN_planet6
+		home_system = SPEC_D-MAN_system6
+		name_list = "d-man-lithoids"
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>d-man-biologicals</code>の部分は、種族定義と名前を一致させる必要があります。<br>
+name_listの部分も基本的には同じ種族のネームリストの名前で合わせておきましょう。<br>
+別のネームリストを使う用に指定したものは、指定したネームリストと紐付いてしまうので、<br>
+自作帝国作成時のランダム命名処理が動作しなくなると言った問題が発生する可能性があります。</p>
+</div>
+<div class="paragraph">
+<p><code>d-man1</code>や<code>d-man2</code>などの名前は任意で良いのですが、ランダム生成される際に数が少なかったり<br>
+名前が被ったりするとゲームが強制終了してしまうことがあるみたいです。<br>
+※ただし落ちていたのを確認していたのがVer2系時代の話なので今はもしかしたら対策されているかもしれません。</p>
+</div>
+<div class="paragraph">
+<p>1種族定義辺り最低6つ、名前を被らないようにして作れば、<br>
+強制終了も滅多に起きなくなるのではないかと思います。</p>
+</div>
+<div class="paragraph">
+<p>name_list以外の項目の「=」の右側の部分は、後述するローカライズ定義のキー名になります。<br>
+古いバージョンだと、キー名ではなく直接ここに日本語で名前を記述していたかと思いますが、<br>
+最新の環境では多言語対応を簡単にするため、一旦キー名を記載するようになりました。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ローカライズ定義を作成する">4.4. ローカライズ定義を作成する</h3>
+<div class="paragraph">
+<p>最後にローカライズ定義を作成します。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>C:\Users\(ユーザー名)\Documents\Paradox Interactive\Stellaris\mod\(MODのディレクトリ名)
+└localisation
+　└(Mod名)_l_japanese.yml</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>以下はD言語くんの定義を作成した時のサンプルです。<br>
+保存する際の文字コードはUTF-8 BOMありを指定してください。<br>
+BOMありです。このファイルは他と違ってBOMありにしないといけないので注意してください。</p>
+</div>
+<div class="listingblock">
+<div class="title">localisation\d-man_portraits_l_japanese.yml</div>
+<div class="content">
+<pre class="highlight"><code>l_japanese:
+  d-man-biologicals: "D言語くん(有機)"
+  d-man-machines:0 "D言語くん(機械)"
+  d-man-lithoids:0 "D言語くん(岩石)"
+  name_list_d-man-biologicals: "D言語くん(有機)"
+
+  # species_names用のローカライズ定義
+  SPEC_D-MAN: "D-Man"
+  SPEC_D-MAN_pl: "D-Man"
+  SPEC_D-MAN_planet1: "D Lang"
+  SPEC_D-MAN_planet2: "D"
+  SPEC_D-MAN_planet3: "D-Man"
+  SPEC_D-MAN_planet4: "Go Lang"
+  SPEC_D-MAN_planet5: "Go"
+  SPEC_D-MAN_planet6: "Lisp"
+  SPEC_D-MAN_system1: "DMD"
+  SPEC_D-MAN_system2: "GDC"
+  SPEC_D-MAN_system3: "LDC"
+  SPEC_D-MAN_system4: "gc"
+  SPEC_D-MAN_system5: "Gccgo"
+  SPEC_D-MAN_system6: "CLISP"
+
+  # name_lists用の定義
+  # ※今回はバニラのキー名を使い回しているので省略するが一応記載する場合のサンプルを載せておく
+  HUMAN1_SHIP_Aardvark: "アードヴァーク"
+  HUM1_SHIP_RhuntheUnyielding: "不屈のルーン"
+  # 以下略</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>species_namesやname_listsでローカライズ用のキー名を記載しておくと書きましたが、<br>
+そのキー名をコロンの左側に、実際に表示させたい日本語を右側に記載するような形式となります。</p>
+</div>
+<div class="paragraph">
+<p>なお、拡張子ymlのファイルは、YAMLというファイル形式に則った記述をする必要があります。<br>
+ただのテキストファイルではないです。</p>
+</div>
+<div class="paragraph">
+<p>具体的には<code>l_japanese:</code>以降の行のインデントは全て揃えてください。<br>
+うろ覚えだけど形式上スペースの数自体は何個でも良かったはず。<br>
+スペース2個がYAMLでよく見るインデント数かな…。</p>
+</div>
+<div class="paragraph">
+<p>他の言語にも対応したい場合はそれぞれの言語ファイルも用意しましょう。<br>
+今回は自分が多言語で書けないので割愛します。</p>
+</div>
+<div class="paragraph">
+<p>ネームリストだけ作成したい場合はここまでの手順で実現可能なはずです。
+ネームリストの作成部分については以上です。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ポートレート種族を作成する">5. ポートレート＆種族を作成する</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>ネームリストの作成が終わったら今度はネームリストを作成した種族について、<br>
+ポートレートを追加し種族として利用できるようにしてみましょう。</p>
+</div>
+<details open>
+<summary class="title">ポートレート追加のために必要な構成</summary>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>C:\Users\(ユーザー名)\Documents\Paradox Interactive\Stellaris\mod\(MODのディレクトリ名)
+├common
+│├name_lists <i class="conum" data-value="1"></i><b>(1)</b>
+││└(種族名)_name_lists.txt
+││
+│├portrait_categories <i class="conum" data-value="2"></i><b>(2)</b>
+││└(種族名)_portrait_categories.txt
+││
+│├portrait_sets <i class="conum" data-value="3"></i><b>(3)</b>
+││└(種族名)_portrait_sets.txt
+││
+│├species_classes <i class="conum" data-value="4"></i><b>(4)</b>
+││└!(種族名)_species_classes.txt
+││
+│└species_names <i class="conum" data-value="5"></i><b>(5)</b>
+│　└(種族名)_species_names.txt
+│
+├gfx
+│├models
+││└portraits <i class="conum" data-value="6"></i><b>(6)</b>
+││　└(ポートレート名)
+││　　├(ポートレート名)-01.dds
+││　　...(省略)
+││　　└(ポートレート名)-xx.dds
+││
+│└portraits
+│　└portraits <i class="conum" data-value="7"></i><b>(7)</b>
+│　　└(ポートレート名)_portraits.txt
+│
+├localisation <i class="conum" data-value="8"></i><b>(8)</b>
+　└(Mod名)_l_japanese.yml</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>ネームリスト定義(必須)</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>自作帝国作成時の種族選択画面表示用の定義(任意)</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>種族-ポートレート紐付け用定義(必須)</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>種族定義(必須)</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>種族名称定義(必須)</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>ポートレート画像(必須)</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="7"></i><b>7</b></td>
+<td>ポートレート定義(必須)</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="8"></i><b>8</b></td>
+<td>ローカライズ定義(必須)</td>
+</tr>
+</table>
+</div>
+</div>
+</details>
+<div class="sect2">
+<h3 id="_ポートレート素材を所定の場所に配置する">5.1. ポートレート素材を所定の場所に配置する</h3>
+<div class="paragraph">
+<p>以下の通り、ポートレート用の素材画像を配置しましょう。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>C:\Users\(ユーザー名)\Documents\Paradox Interactive\Stellaris\mod\(MODのディレクトリ名)
+└gfx
+　└models
+　　└portraits
+　　　└(ポートレート名)
+　　　　├(ポートレート名)-01.dds
+　　　　...(省略)
+　　　　└(ポートレート名)-xx.dds</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ファイル名については、既存のゲームのファイル名と被らなければ基本的にはなんでも構いません。<br>
+以下のように命名ルールを決めておくと管理しやすくなるのではないかとは思います。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>(種族名)-(ポトレ名)-(通し番号)</p>
+</li>
+<li>
+<p>(ポートレート名)-(通し番号)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ポートレート定義を作成する">5.2. ポートレート定義を作成する</h3>
+<div class="paragraph">
+<p>次にポートレート定義を作成します。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>C:\Users\(ユーザー名)\Documents\Paradox Interactive\Stellaris\mod\(MODのディレクトリ名)
+└gfx
+　└portraits
+　　└portraits
+　　　└(ポートレート名)_portraits.txt</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>テキストエディタを開き、ポートレートの定義を記述していきましょう。<br>
+以下はD言語くんの定義を作成した時のサンプルです。<br>
+保存する際の文字コードはUTF-8 BOMなしを指定してください。</p>
+</div>
+<details open>
+<summary class="title">gfx\portraits\portraits\d-man_portraits.txt</summary>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>##############################################################
+# D言語くん種族用のポートレート定義
+# 本ポートレートを参照する種族の定義は以下に記載しています
+# common\species_classes\d-man.txt
+##############################################################
+# 画像、音声ファイルとのリンク設定
+portraits = {
+	d-man_red     = { texturefile = "gfx/models/portraits/d-man/d-man-red.dds"     greeting_sound = "d-man_portrait_sound_red"     }
+	d-man_green   = { texturefile = "gfx/models/portraits/d-man/d-man-green.dds"   greeting_sound = "d-man_portrait_sound_green"   }
+	d-man_blue    = { texturefile = "gfx/models/portraits/d-man/d-man-blue.dds"    greeting_sound = "d-man_portrait_sound_blue"    }
+	d-man_cyan    = { texturefile = "gfx/models/portraits/d-man/d-man-cyan.dds"    greeting_sound = "d-man_portrait_sound_cyan"    }
+	d-man_magenta = { texturefile = "gfx/models/portraits/d-man/d-man-magenta.dds" greeting_sound = "d-man_portrait_sound_magenta" }
+	d-man_yellow  = { texturefile = "gfx/models/portraits/d-man/d-man-yellow.dds"  greeting_sound = "d-man_portrait_sound_yellow"  }
+}
+
+# 各場面別のポートレート
+portrait_groups = {
+
+	# D言語君(有機生命) 単色のみ
+	d-man-biological-01 = {
+		# デフォルト
+		default = d-man_red
+
+		# 帝国作成時
+		game_setup = {
+			add = {
+				trigger = { ruler = { OR = { gender = male gender = indeterminable } } }
+				portraits = {
+					d-man_red
+				}
+			}
+			add = {
+				trigger = { ruler = { OR = { gender = female gender = indeterminable } } }
+				portraits = {
+					d-man_red
+				}
+			}
+		}
+
+		# 汎用
+		species = {
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					d-man_red
+				}
+			}
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					d-man_red
+				}
+			}
+		}
+
+		# 惑星上のPOP
+		pop = {
+			add = {
+				trigger = { NOT = { species = { species_gender = female } } }
+				portraits = {
+					d-man_red
+				}
+			}
+			add = {
+				trigger = { NOT = { species = { species_gender = male } } }
+				portraits = {
+					d-man_red
+				}
+			}
+		}
+
+		#リーダー
+		leader = {
+			add = {
+				trigger = { OR = { gender = male gender = indeterminable } }
+				portraits = {
+					d-man_red
+				}
+			}
+			add = {
+				trigger = { OR = { gender = female gender = indeterminable } }
+				portraits = {
+					d-man_red
+				}
+			}
+		}
+
+		# 国家元首
+		ruler = {
+			add = {
+				trigger = { OR = { gender = male gender = indeterminable } }
+				portraits = {
+					d-man_red
+				}
+			}
+			add = {
+				trigger = { OR = { gender = female gender = indeterminable } }
+				portraits = {
+					d-man_red
+				}
+			}
+		}
+	}
+
+	# D言語君(有機生命) 6色カラー
+	d-man-biological-02 = {
+		# デフォルト
+		default = d-man_red
+
+		# 帝国作成時
+		game_setup = {
+			add = {
+				trigger = { ruler = { OR = { gender = male gender = indeterminable } } }
+				portraits = {
+					d-man_red d-man_green d-man_blue
+				}
+			}
+			add = {
+				trigger = { ruler = { OR = { gender = female gender = indeterminable } } }
+				portraits = {
+					d-man_cyan d-man_magenta d-man_yellow
+				}
+			}
+		}
+
+		# 汎用
+		species = {
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					d-man_red d-man_green d-man_blue
+				}
+			}
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					d-man_cyan d-man_magenta d-man_yellow
+				}
+			}
+		}
+
+		# 惑星上のPOP
+		pop = {
+			add = {
+				trigger = { NOT = { species = { species_gender = female } } }
+				portraits = {
+					d-man_red d-man_green d-man_blue
+				}
+			}
+			add = {
+				trigger = { NOT = { species = { species_gender = male } } }
+				portraits = {
+					d-man_cyan d-man_magenta d-man_yellow
+				}
+			}
+		}
+
+		#リーダー
+		leader = {
+			add = {
+				trigger = { OR = { gender = male gender = indeterminable } }
+				portraits = {
+					d-man_red d-man_green d-man_blue
+				}
+			}
+			add = {
+				trigger = { OR = { gender = female gender = indeterminable } }
+				portraits = {
+					d-man_cyan d-man_magenta d-man_yellow
+				}
+			}
+		}
+
+		# 国家元首
+		ruler = {
+			add = {
+				trigger = { OR = { gender = male gender = indeterminable } }
+				portraits = {
+					d-man_red d-man_green d-man_blue
+				}
+			}
+			add = {
+				trigger = { OR = { gender = female gender = indeterminable } }
+				portraits = {
+					d-man_cyan d-man_magenta d-man_yellow
+				}
+			}
+		}
+	}
+
+	# D言語君(機械知性) 単色のみ
+	d-man-machine-01 = {
+		# d-man-biological-01と中身は同じなので省略
+	}
+	# D言語君(機械知性) 6色カラー
+	d-man-machine-02 = {
+		# d-man-biological-02と中身は同じなので省略
+	}
+	# D言語君(岩石生命) 単色のみ
+	d-man-lithoid-01 = {
+		# d-man-biological-01と中身は同じなので省略
+	}
+	# D言語君(岩石生命) 6色カラー
+	d-man-lithoid-02 = {
+		# d-man-biological-02と中身は同じなので省略
+	}
+	# D言語君(ロボット) 単色のみ
+	d-man-robot-01 = {
+		# d-man-biological-01と中身は同じなので省略
+	}
+	# D言語君(ロボット) 6色カラー
+	d-man-robot-02 = {
+		# d-man-biological-02と中身は同じなので省略
+	}</code></pre>
+</div>
+</div>
+</div>
+</details>
+<div class="paragraph">
+<p><code>portraits</code>にて、画像素材及び音声素材との紐付けをしています。<br>
+性別やスキルに応じてどのポートレートを使えるかの条件を<code>portrait_groups</code>の中に記述していきます。</p>
+</div>
+<div class="paragraph">
+<p>赤色単色だけの定義についてはここまで条件を細かく設定しなくてもよさそうですが、<br>
+一応下手に弄りたくなかったので、バニラの定義を参考にそのままにしています。<br>
+triggerの条件を変えれば性別以外に種族やリーダーの特性や幸福度に応じたポートレート画像を指定するなんてことも可能です。</p>
+</div>
+<div class="paragraph">
+<p>また、同じ画像素材で有機生命、機械知性、岩石生命と種族を分ける場合は<br>
+条件が同じでも必ずこのポートレート定義は分けて作るようにしてください。<br>
+この定義を使い回すと、以下の動画のように意図しない挙動を起こします。</p>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe width="640" height="360" src="https://www.youtube.com/embed/VGXHfyu5hCA?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="paragraph">
+<p><code>greeting_sound</code>は後述の音声の追加が必要な場合にのみ記載をしてください。
+音声の追加がない場合は記載を省略しましょう。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_種族定義を修正する">5.3. 種族定義を修正する</h3>
+<div class="paragraph">
+<p>ネームリスト作成時の手順で作った空の種族定義に、<br>
+有機種族用、機械種族用、岩石種族用の設定をそれぞれ追記しましょう。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>C:\Users\(ユーザー名)\Documents\Paradox Interactive\Stellaris\mod\(MODのディレクトリ名)
+└common
+　└species_classes
+　　└!(種族名)_species_classes.txt</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>以下はD言語くんの定義を作成した時のサンプルです。<br>
+内容としては3.12.1時点のバニラの人類、機械、岩石種族用の内容を踏襲しています。<br>
+各パラメータの意味についてはソース内のコメントから判断してください。</p>
+</div>
+<div class="listingblock">
+<div class="title">common\species_classes\!d-man_species_classes.txt</div>
+<div class="content">
+<pre class="highlight"><code># Mod側のspecies_classesのファイル名の付け方についての補足)
+# ファイル名順で昇順ソートしたときに、以下の順序になるようなファイル名にしておくと良い
+# ・Modのファイル名
+# ・00_species_classes.txt
+# ・01_base_species_classes.txt
+#
+# この順序になるようにしておくと、バニラのgraphical_cultureを使い回したときに
+# 都市外観等に表示される種族名がバニラのまま変わらないので、影響範囲を最小限に抑えられる。
+# 本ファイルの先頭に「!」をつけているのはこのファイル名の順序を意識した意図的なものとなっている。
+#
+##############################################################
+# D言語くん種族用の定義
+##############################################################
+# D言語くん種族(有機種族)
+d-man-biologicals = {
+	# 種別
+	# BIOLOGICAL:有機種族
+	# MACHINE:機械知性
+	# ROBOT:ロボティクス
+	# LITHOID:岩石種族
+	# PRESAPIENT:準知性
+	# OTHER:その他
+	archetype = BIOLOGICAL
+
+	# 権限の設定
+	# バニラの人類の条件に準拠
+	# 機械知性は選択不可
+	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
+
+	# グラフィックカルチャー
+	graphical_culture = humanoid_01
+}
+
+# D言語くん種族(機械知性)
+d-man-machines = {
+	# 種別
+	# BIOLOGICAL:有機種族
+	# MACHINE:機械知性
+	# ROBOT:ロボティクス
+	# LITHOID:岩石種族
+	# PRESAPIENT:準知性
+	# OTHER:その他
+	archetype = MACHINE
+
+	# この種族を利用可能な条件
+	# バニラの機械種族の条件に準拠
+	possible = {
+		OR = {
+			AND = { host_has_dlc = "The Machine Age" authority = { NOT = { value = auth_hive_mind } } }
+			authority = { OR = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_USE_MACHINE_INTELLIGENCE } }
+		}
+	}
+	possible_secondary = {
+		OR = {
+			AND = { host_has_dlc = "The Machine Age" civics = { NOT = { value = civic_machine_servitor } } }
+			OR = { always = no text = SECONDARY_SPECIES_CLASS_INVALID }
+		}
+	}
+
+	# プレイ可能な条件
+	# バニラの機械種族の条件に準拠
+	# 機械知性はDLC(Synthetic Dawn)または(Machine Age)が必須
+	playable = {
+		OR = {
+			host_has_dlc = "Synthetic Dawn Story Pack"
+			has_machine_age_dlc = yes
+		}
+	}
+	randomized = {
+		OR = {
+			host_has_dlc = "Synthetic Dawn Story Pack"
+			has_machine_age_dlc = yes
+		}
+		NOT = { has_global_flag = game_started }
+	}
+
+	# デフォルト種族特性「機械」
+	trait = trait_machine_unit
+
+	# 性別:オリジナルの機械知性だとyesだが、自由度を増やしたいので敢えて外しておく
+	# gender = yes
+
+	# 居住特性の選択:なし
+	use_climate_preference = no
+
+	# 種族の改造時のポートレートの変更:あり
+	portrait_modding = yes
+
+	# 雇用時のリーダーの年齢
+	leader_age_min = 5
+	leader_age_max = 10
+
+	# グラフィックカルチャー
+	graphical_culture = synthetics_01
+}
+
+# D言語くん種族(岩石種族)
+d-man-lithoids = {
+	# 種別
+	# BIOLOGICAL:有機種族
+	# MACHINE:機械知性
+	# ROBOT:ロボティクス
+	# LITHOID:岩石種族
+	# PRESAPIENT:準知性
+	# OTHER:その他
+	archetype = LITHOID
+
+	# この種族を利用可能な条件
+	# バニラの岩石種族の条件に準拠
+	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
+
+	# プレイ可能な条件
+	# バニラの岩石種族の条件に準拠
+	playable = { has_lithoids = yes }
+	randomized = { has_lithoids = yes }
+
+	# デフォルト種族特性「岩石」
+	trait = "trait_lithoid"
+
+	# グラフィックカルチャー
+	graphical_culture = lithoid_01
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>D言語くんのロボット種族用の定義が書かれていませんが、<br>
+ロボットはバニラに元々存在する種族であり、記載する必要はありません。</p>
+</div>
+<div class="paragraph">
+<p>ちなみに<code>randomized = no</code>にすると、ランダム生成帝国が出なくなるほか、<br>
+自作の帝国にこのポトレを指定してもAI帝国としては出現しなくなるようです。</p>
+</div>
+<div class="paragraph">
+<p>ランダム生成帝国としては出したくないが自作の帝国をAI帝国として出現させたい場合は、<br>
+種族-ポートレート紐付け用定義内の<code>non_randomized_portraits = {}</code>の部分に<br>
+出現させたくないポートレートを指定するようにしてください。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_種族_ポートレート紐付け用定義を作成する">5.4. 種族-ポートレート紐付け用定義を作成する</h3>
+<div class="paragraph">
+<p>種族定義とポートレート定義を作ったので、それぞれを紐付けするための定義ファイルを作成します。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>C:\Users\(ユーザー名)\Documents\Paradox Interactive\Stellaris\mod\(MODのディレクトリ名)
+└common
+　└portrait_sets
+　　└(種族名)_portrait_sets.txt</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>以下はD言語君のサンプルです。<br>
+保存する際の文字コードはUTF-8 BOMなしを指定してください。</p>
+</div>
+<div class="listingblock">
+<div class="title">common\portrait_sets\d-man_portrait_sets.txt</div>
+<div class="content">
+<pre class="highlight"><code># D言語くん種族(有機種族)
+d-man-biologicals = {
+	species_class = d-man-biologicals
+	portraits = { "d-man-biological-01" "d-man-biological-02" }
+}
+
+# D言語くん種族(機械知性)
+d-man-machines = {
+	species_class = d-man-machines
+
+	conditional_portraits = {
+		randomizable = { OR = { has_synthetic_dawn = yes has_machine_age_dlc = yes } }
+		playable = { OR = { has_synthetic_dawn = yes has_machine_age_dlc = yes } }
+		portraits = { "d-man-machine-01" "d-man-machine-02" }
+	}
+}
+
+# D言語くん種族(岩石種族)
+d-man-lithoids = {
+	species_class = d-man-lithoids
+
+	conditional_portraits = {
+		randomizable = { has_lithoids = yes }
+		playable = { has_lithoids = yes }
+		portraits = { "d-man-lithoid-01" "d-man-lithoid-02" }
+	}
+}
+
+# D言語くん種族(ロボット)
+d-man-robots = {
+	species_class = ROBOT
+	portraits = { "d-man-robot-01" "d-man-robot-02" }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>species_class</code>の部分に種族定義、<code>portraits</code>の部分にポートレート定義を記載することで紐付けを実施しています。<br>
+<code>d-man-robots</code>などと記載している部分については好きな文字列で良いのですが、わかりやすいので名前を合わせています。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_自作帝国作成時の種族選択画面表示用の定義を作成する">5.5. 自作帝国作成時の種族選択画面表示用の定義を作成する</h3>
+<div class="paragraph">
+<p>portrait_setsだけでは、自作帝国作成時の種族選択画面には表示されません。<br>
+ここに表示するためには、portrait_categoriesにも記述の追加が必要になります。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>C:\Users\(ユーザー名)\Documents\Paradox Interactive\Stellaris\mod\(MODのディレクトリ名)
+└common
+　└portrait_categories
+　　└(種族名)_portrait_categories.txt</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>以下はD言語君のサンプルです。<br>
+保存する際の文字コードはUTF-8 BOMなしを指定してください。</p>
+</div>
+<div class="listingblock">
+<div class="title">common\portrait_categories\d-man_portrait_categories.txt</div>
+<div class="content">
+<pre class="highlight"><code># D言語くん種族(有機種族)
+d-man-biologicals = {
+	name = d-man-biologicals
+	sets = { d-man-biologicals }
+}
+
+# D言語くん種族(機械知性)
+d-man-machines = {
+	name = d-man-machines
+	sets = { d-man-machines }
+}
+
+# D言語くん種族(岩石種族)
+d-man-lithoids = {
+	name = d-man-lithoids
+	sets = { d-man-lithoids }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ロボット種族用のD言語君は自作帝国作成時の種族選択画面に表示する必要がないのでサンプルコードにも記載をしていません。<br>
+サンプルだけだといまいちわかりづらいと思うので、補足の画像も合わせて記載しておきます。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/create-species_6.png" alt="create species 6">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ローカライズ定義を必要な内容を追記する">5.6. ローカライズ定義を必要な内容を追記する</h3>
+<div class="paragraph">
+<p>最後にローカライズ定義に種族追加で必要となった内容を追記します。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>C:\Users\(ユーザー名)\Documents\Paradox Interactive\Stellaris\mod\(MODのディレクトリ名)
+└localisation
+　└(Mod名)_l_japanese.yml</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>以下はD言語くんの定義を作成した時のサンプルです。</p>
+</div>
+<div class="listingblock">
+<div class="title">localisation\d-man_portraits_l_japanese.yml</div>
+<div class="content">
+<pre class="highlight"><code>l_japanese:
+d-man-biologicals:0 "D言語くん(有機)"
+  # species_classes用のローカライズ定義
+  d-man-biologicals_desc:0 "プログラム言語の1つ、D言語のマスコットキャラクター。プログラム言語マスコット界隈の中では恐らく最も人気のあるマスコットキャラクターだと思われる"
+  d-man-biologicals_plural:0 "D言語くん"
+  d-man-biologicals_adj:0 "D言語くんX"
+  d-man-biologicals_insult_01:0 "クリーチャー"
+  d-man-biologicals_insult_plural_01:0 "クリーチャー"
+  d-man-biologicals_compliment_01:0 "高級言語"
+  d-man-biologicals_compliment_plural_01:0 "高級言語"
+  d-man-biologicals_spawn:0 "子供"
+  d-man-biologicals_spawn_plural:0 "子供"
+  d-man-biologicals_sound_01:0 "ノイズ"
+  d-man-biologicals_sound_02:0 "ビープ音"
+  d-man-biologicals_sound_03:0 "鳴き声"
+  d-man-biologicals_sound_04:0 "声"
+  d-man-biologicals_sound_05:0 "音"
+  d-man-biologicals_organ:0 "空洞"
+  d-man-biologicals_organ_plural:0 "空洞"
+  d-man-biologicals_mouth:0 "空洞"
+  d-man-biologicals_ear:0 "聴覚器官"
+  d-man-biologicals_ear_plural:0 "聴覚器官"
+  d-man-biologicals_hand:0 "手"
+  d-man-biologicals_hand_plural:0 "手"
+  d-man-biologicals_tooth:0 "空洞"
+  d-man-biologicals_tooth_plural:0 "空洞"
+  d-man-biologicals_fossil:0 "化石"
+  d-man-biologicals_fossil_plural:0 "化石"
+  d-man-biologicals_remnant:0 "骨格"
+  d-man-biologicals_remnant_plural:0 "骨格"
+  name_list_d-man-biologicals: "D言語くん(有機)"
+
+  d-man-machines:0 "D言語くん(機械)"
+  d-man-machines_desc:0 "プログラム言語の1つ、D言語のマスコットキャラクター。プログラム言語マスコット界隈の中では恐らく最も人気のあるマスコットキャラクターだと思われる"
+  d-man-machines_plural:0 "D言語くん"
+  d-man-machines_adj:0 "D言語くんX"
+  d-man-machines_insult_01:0 "クリーチャー"
+  d-man-machines_insult_plural_01:0 "クリーチャー"
+  d-man-machines_compliment_01:0 "高級言語"
+  d-man-machines_compliment_plural_01:0 "高級言語"
+  d-man-machines_spawn:0 "子供"
+  d-man-machines_spawn_plural:0 "子供"
+  d-man-machines_sound_01:0 "ノイズ"
+  d-man-machines_sound_02:0 "ビープ音"
+  d-man-machines_sound_03:0 "鳴き声"
+  d-man-machines_sound_04:0 "声"
+  d-man-machines_sound_05:0 "音"
+  d-man-machines_organ:0 "空洞"
+  d-man-machines_organ_plural:0 "空洞"
+  d-man-machines_mouth:0 "空洞"
+  d-man-machines_ear:0 "聴覚器官"
+  d-man-machines_ear_plural:0 "聴覚器官"
+  d-man-machines_hand:0 "手"
+  d-man-machines_hand_plural:0 "手"
+  d-man-machines_tooth:0 "空洞"
+  d-man-machines_tooth_plural:0 "空洞"
+  d-man-machines_fossil:0 "化石"
+  d-man-machines_fossil_plural:0 "化石"
+  d-man-machines_remnant:0 "骨格"
+  d-man-machines_remnant_plural:0 "骨格"
+
+  d-man-lithoids:0 "D言語くん(岩石)"
+  d-man-lithoids_desc:0 "プログラム言語の1つ、D言語のマスコットキャラクター。プログラム言語マスコット界隈の中では恐らく最も人気のあるマスコットキャラクターだと思われる"
+  d-man-lithoids_plural:0 "D言語くん"
+  d-man-lithoids_adj:0 "D言語くんX"
+  d-man-lithoids_insult_01:0 "クリーチャー"
+  d-man-lithoids_insult_plural_01:0 "クリーチャー"
+  d-man-lithoids_compliment_01:0 "高級言語"
+  d-man-lithoids_compliment_plural_01:0 "高級言語"
+  d-man-lithoids_spawn:0 "子供"
+  d-man-lithoids_spawn_plural:0 "子供"
+  d-man-lithoids_sound_01:0 "ノイズ"
+  d-man-lithoids_sound_02:0 "ビープ音"
+  d-man-lithoids_sound_03:0 "鳴き声"
+  d-man-lithoids_sound_04:0 "声"
+  d-man-lithoids_sound_05:0 "音"
+  d-man-lithoids_organ:0 "空洞"
+  d-man-lithoids_organ_plural:0 "空洞"
+  d-man-lithoids_mouth:0 "空洞"
+  d-man-lithoids_ear:0 "聴覚器官"
+  d-man-lithoids_ear_plural:0 "聴覚器官"
+  d-man-lithoids_hand:0 "手"
+  d-man-lithoids_hand_plural:0 "手"
+  d-man-lithoids_tooth:0 "空洞"
+  d-man-lithoids_tooth_plural:0 "空洞"
+  d-man-lithoids_fossil:0 "化石"
+  d-man-lithoids_fossil_plural:0 "化石"
+  d-man-lithoids_remnant:0 "骨格"
+  d-man-lithoids_remnant_plural:0 "骨格"
+
+  # species_names用のローカライズ定義
+  SPEC_D-MAN: "D-Man"
+  SPEC_D-MAN_pl: "D-Man"
+  SPEC_D-MAN_planet1: "D Lang"
+  SPEC_D-MAN_planet2: "D"
+  SPEC_D-MAN_planet3: "D-Man"
+  SPEC_D-MAN_planet4: "Go Lang"
+  SPEC_D-MAN_planet5: "Go"
+  SPEC_D-MAN_planet6: "Lisp"
+  SPEC_D-MAN_system1: "DMD"
+  SPEC_D-MAN_system2: "GDC"
+  SPEC_D-MAN_system3: "LDC"
+  SPEC_D-MAN_system4: "gc"
+  SPEC_D-MAN_system5: "Gccgo"
+  SPEC_D-MAN_system6: "CLISP"
+
+  # name_lists用の定義
+  # ※今回はバニラのキー名を使い回しているので省略するが一応記載する場合のサンプルを載せておく
+  HUMAN1_SHIP_Aardvark: "アードヴァーク"
+  HUM1_SHIP_RhuntheUnyielding: "不屈のルーン"
+  # 以下略</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>種族のローカライズ定義の意味は上から順に以下の通り。<br>
+このローカライズを書いておかないと、他国との外交などの画面の文章がおかしくなります。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>(種族名)：種族の名前</p>
+</li>
+<li>
+<p>(種族名)_desc：種族の説明 ※何処で使ってるのかわからん</p>
+</li>
+<li>
+<p>(種族名)_plural：種族の名前(複数形)</p>
+</li>
+<li>
+<p>(種族名)_adj：種族の名前(形容詞)</p>
+</li>
+<li>
+<p>(種族名)_insult_01：侮辱する時にその種族を揶揄する言葉。昆虫をバグと呼ぶなど。後ろの数字を増やして何個でも定義できる</p>
+</li>
+<li>
+<p>(種族名)_insult_02</p>
+</li>
+<li>
+<p>&#8230;&#8203;</p>
+</li>
+<li>
+<p>(種族名)_insult_plural_01：(種族名)_insult_01に対する複数形</p>
+</li>
+<li>
+<p>(種族名)_insult_plural_02：</p>
+</li>
+<li>
+<p>&#8230;&#8203;</p>
+</li>
+<li>
+<p>(種族名)_compliment_01：侮蔑とは逆に賞賛する時に使うらしい。後ろの数字を増やして何個でも定義できる</p>
+</li>
+<li>
+<p>(種族名)_compliment_02</p>
+</li>
+<li>
+<p>&#8230;&#8203;</p>
+</li>
+<li>
+<p>(種族名)_compliment_plural_01：(種族名)_compliment_01に対する複数形</p>
+</li>
+<li>
+<p>(種族名)_compliment_plural_02：</p>
+</li>
+<li>
+<p>&#8230;&#8203;</p>
+</li>
+<li>
+<p>(種族名)_spawn：その種族の子供を意味する言葉、蛙っぽいやつならオタマジャクシとか</p>
+</li>
+<li>
+<p>(種族名)_spawn_plural：(種族名)_spawnの複数形</p>
+</li>
+<li>
+<p>(種族名)_sound_01：よくわかってないので英語Wikiの以下原文ママを記載。機械知性への特有の侮蔑用語とかなのか…？</p>
+</li>
+<li>
+<p>(種族名)_sound_02："CLASS_sound_X" denotes descriptive noises (e.g. "stupid Robot, will you stop that beeping").</p>
+</li>
+<li>
+<p>(種族名)_sound_03：こちらは01～05まで必ず書かないといけないとのこと</p>
+</li>
+<li>
+<p>(種族名)_sound_04：</p>
+</li>
+<li>
+<p>(種族名)_sound_05：</p>
+</li>
+<li>
+<p>(種族名)_organ：種族の身体の一部を記載する。「胃が痛い」とかの表現の時に使うっぽくて、その場合は胃で良さそう</p>
+</li>
+<li>
+<p>(種族名)_organ_plural：organの複数形</p>
+</li>
+<li>
+<p>(種族名)_mouth：その種族が食物を摂取するための器官、人間で言う口に当たる部位を書く</p>
+</li>
+<li>
+<p>(種族名)_ear：その種族が音を聴くための器官、人間で言う耳に当たる部位を書く</p>
+</li>
+<li>
+<p>(種族名)_ear_plural：earの複数形</p>
+</li>
+<li>
+<p>(種族名)_hand：その種族が物を拾うために使う部位、人間でいう手に当たる部位を書く</p>
+</li>
+<li>
+<p>(種族名)_hand_plura：handの複数形</p>
+</li>
+<li>
+<p>(種族名)_tooth：その種族が食物を細かくするための器官、人間で言う歯に当たる部位を書く</p>
+</li>
+<li>
+<p>(種族名)_tooth_plural：toothの複数形</p>
+</li>
+<li>
+<p>(種族名)_fossil：その種族があとから発掘などされた時に表現する物。化石とか残骸とか</p>
+</li>
+<li>
+<p>(種族名)_fossil_plural：fossilの複数形</p>
+</li>
+<li>
+<p>(種族名)_remnant：その種族のfossilとして残る物？骨格とか部品とか</p>
+</li>
+<li>
+<p>(種族名)_remnant_plural：remnantの複数形</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>よくわからなかったらバニラの以下の定義を参考にして見てください。
+<code>localisation\japanese\name_lists\name_lists_l_japanese.yml</code></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_必要に応じてその他の要素を追加する">6. 必要に応じてその他の要素を追加する</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>以下は、必要に応じて追加可能なオプション要素になります。</p>
+</div>
+<div class="sect2">
+<h3 id="_音声定義を作成する">6.1. 音声定義を作成する</h3>
+<div class="paragraph">
+<p>他国との外交画面を表示した際に音声を流すようにしたい場合は、音声素材と音声定義を準備しましょう。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>C:\Users\(ユーザー名)\Documents\Paradox Interactive\Stellaris\mod\(MODのディレクトリ名)
+└sound
+　└portrait
+　　└(ポートレート名)
+　　　├(ポートレート名).asset
+　　　├(ポートレート名)-01.wav
+　　　...(省略)
+　　　└(ポートレート名)-xx.wav</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>以下はD言語くんの定義を作成した時の音声定義のサンプルです。<br>
+保存する際の文字コードはUTF-8 BOMなしを指定してください。</p>
+</div>
+<div class="listingblock">
+<div class="title">sound\portrait\d-man\d-man_species.asset</div>
+<div class="content">
+<pre class="highlight"><code>###########################################################
+# ポートレート毎の挨拶時の音声設定を定義する
+###########################################################
+# D言語くん種族用挨拶音声定義
+category = {
+	name = "Effects"
+	soundeffects = {
+		d-man_portrait_sound_red
+		d-man_portrait_sound_green
+		d-man_portrait_sound_blue
+		d-man_portrait_sound_cyan
+		d-man_portrait_sound_magenta
+		d-man_portrait_sound_yellow
+	}
+}
+
+## D言語君(赤色)
+soundeffect = {
+	name = d-man_portrait_sound_red
+	sounds = {
+		sound = d-man_portrait_sound_01
+		sound = d-man_portrait_sound_02
+		sound = d-man_portrait_sound_03
+	}
+	volume = 0.30
+}
+## D言語君(緑色)
+soundeffect = {
+	name = d-man_portrait_sound_green
+	sounds = {
+		sound = d-man_portrait_sound_01
+		sound = d-man_portrait_sound_02
+		sound = d-man_portrait_sound_03
+	}
+	volume = 0.30
+}
+## D言語君(青色)
+soundeffect = {
+	name = d-man_portrait_sound_blue
+	sounds = {
+		sound = d-man_portrait_sound_01
+		sound = d-man_portrait_sound_02
+		sound = d-man_portrait_sound_03
+	}
+	volume = 0.30
+}
+## D言語君(シアン)
+soundeffect = {
+	name = d-man_portrait_sound_cyan
+	sounds = {
+		sound = d-man_portrait_sound_01
+		sound = d-man_portrait_sound_02
+		sound = d-man_portrait_sound_03
+	}
+	volume = 0.30
+}
+## D言語君(マゼンタ)
+soundeffect = {
+	name = d-man_portrait_sound_magenta
+	sounds = {
+		sound = d-man_portrait_sound_01
+		sound = d-man_portrait_sound_02
+		sound = d-man_portrait_sound_03
+	}
+	volume = 0.30
+}
+## D言語君(黄色)
+soundeffect = {
+	name = d-man_portrait_sound_yellow
+	sounds = {
+		sound = d-man_portrait_sound_01
+		sound = d-man_portrait_sound_02
+		sound = d-man_portrait_sound_03
+	}
+	volume = 0.30
+}
+
+## 音声ファイル定義
+## 色毎の種族で変更も可能だが、今回は使い回す
+sound = {
+	name = "d-man_portrait_sound_01"
+	file = "d-man-01.wav"
+}
+sound = {
+	name = "d-man_portrait_sound_02"
+	file = "d-man-02.wav"
+}
+sound = {
+	name = "d-man_portrait_sound_03"
+	file = "d-man-03.wav"
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>「soundeffect - sound - 音声素材」と言った流れで紐付けされていることがわかるかと思います。<br>
+nameは任意で基本的にOKですが、ポートレートの定義と紐付ける際に<br>
+soundeffectのnameを書くようになるので、忘れないようにしましょう。<br>
+D言語くんの場合は、色単位でポートレートをわけているのでnameに色をつけるようにしておきました。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_服を着ている種族である条件を追加する">6.2. 服を着ている種族である条件を追加する</h3>
+<div class="paragraph">
+<p>新しく用意した種族が服を着ている種族である場合は、その旨を判定する条件式に対象の種族を追加しましょう。<br>
+これを追加しないと、例えば見た目上服を着ているのに、以下のような侮辱のセリフを言われてしまうなどといった事が発生します。</p>
+</div>
+<div class="exampleblock">
+<div class="title">例 2. 侮辱の例</div>
+<div class="content">
+<div class="paragraph">
+<p>なぜお前たちは、そのだらしない部位をはしたなくぶら下げている？<br>
+そしてなぜほかの有機生命体のように布で身体を覆わない？<br>
+その見苦しい 肉体を見て喜ぶ者など皆無なのだぞ。</p>
+</div>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>C:\Users\(ユーザー名)\Documents\Paradox Interactive\Stellaris\mod\(MODのディレクトリ名)
+└scripted_triggers
+　└wears_clothes.txt</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>バニラのファイルを上書きする形での記述となるのでバニラより後に読み込まれるようにファイル名の付け方は工夫してください。<br>
+基本的にバニラのファイルが数字開始なので、ファイル名は英字開始で始めれば大丈夫だと思います。<br>
+以下はサンプルとなります。</p>
+</div>
+<div class="listingblock">
+<div class="title">common\scripted_triggers\wears_clothes.txt</div>
+<div class="content">
+<pre class="highlight"><code>#####################################
+# 服を着る種族かどうか
+# バニラの種族だけでなく、更にこのMODの種族を追加
+#####################################
+wears_clothes = {
+	OR = {
+		is_human_species = yes
+		species_portrait = humanoid_02
+		species_portrait = humanoid_03
+		species_portrait = humanoid_04
+		species_portrait = humanoid_05
+		species_portrait = humanoid_hp_01
+		species_portrait = humanoid_hp_02
+		species_portrait = humanoid_hp_06
+		species_portrait = humanoid_hp_07
+		species_portrait = humanoid_hp_08
+		species_portrait = humanoid_hp_09
+		species_portrait = humanoid_hp_10
+		species_portrait = humanoid_hp_11
+		species_portrait = humanoid_hp_12
+		species_portrait = humanoid_hp_13
+		species_portrait = mam1
+		species_portrait = mam2
+		species_portrait = mam3
+		species_portrait = mam4
+		species_portrait = mam5
+		species_portrait = mam6
+		species_portrait = mam7
+		species_portrait = mam8
+		species_portrait = mam9
+		species_portrait = mam10
+		species_portrait = mam11
+		species_portrait = mam12
+		species_portrait = mam13
+		species_portrait = mam14
+		species_portrait = mam15
+		species_portrait = mam16
+		species_portrait = mam17
+		species_portrait = mam_rat
+		species_portrait = rep1
+		species_portrait = rep2
+		species_portrait = rep3
+		species_portrait = rep4
+		species_portrait = rep5
+		species_portrait = rep6
+		species_portrait = rep7
+		species_portrait = rep8
+		species_portrait = rep9
+		species_portrait = rep10
+		species_portrait = rep11
+		species_portrait = rep12
+		species_portrait = rep13
+		species_portrait = rep15
+		species_portrait = rep16
+		species_portrait = avi1
+		species_portrait = avi2
+		species_portrait = avi4
+		species_portrait = avi5
+		species_portrait = avi6
+		species_portrait = avi8
+		species_portrait = avi9
+		species_portrait = avi10
+		species_portrait = avi11
+		species_portrait = avi12
+		species_portrait = avi13
+		species_portrait = avi14
+		species_portrait = avi15
+		species_portrait = avi16
+		species_portrait = art6
+		species_portrait = art7
+		species_portrait = art8
+		species_portrait = art9
+		species_portrait = art10
+		species_portrait = mol1
+		species_portrait = mol2
+		species_portrait = mol3
+		species_portrait = mol4
+		species_portrait = mol5
+		species_portrait = mol11
+		species_portrait = mol12
+		species_portrait = mol13
+		species_portrait = mol14
+		species_portrait = mol15
+		species_portrait = fun6
+		species_portrait = fun7
+		species_portrait = fun8
+		species_portrait = fun9
+		species_portrait = fun10
+		species_portrait = pla6
+		species_portrait = pla7
+		species_portrait = pla8
+		species_portrait = pla9
+		species_portrait = pla10
+		species_portrait = aqu4
+		species_portrait = aqu5
+		species_portrait = aqu6
+		species_portrait = nec10
+		species_portrait = nec11
+		species_portrait = nec12
+		species_portrait = nec13
+		species_portrait = nec14
+		species_portrait = nec15
+		species_portrait = tox2
+		species_portrait = tox3
+		species_portrait = tox6
+		species_portrait = tox8
+		species_portrait = tox10
+		species_portrait = tox11
+		species_portrait = tox12
+		species_portrait = tox14
+		species_portrait = tox15
+		species_portrait = cyb8
+		species_portrait = cyb1
+		species_portrait = cyb2
+		species_portrait = cyb3
+		species_portrait = cyb6
+		species_portrait = cyb7
+		species_portrait = cyb4
+		species_portrait = cyb10
+		species_portrait = cyb5
+		## ここからMod追加コード
+		species_portrait = d-man-biological-01
+		species_portrait = d-man-biological-02
+		species_portrait = d-man-machine-01
+		species_portrait = d-man-machine-02
+		species_portrait = d-man-lithoid-01
+		species_portrait = d-man-lithoid-02
+		species_portrait = d-man-robot-01
+		species_portrait = d-man-robot-02
+		## ここまでMod追加コード
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ちなみにバニラのwears_clothesの記述は、バニラの新規種族が追加される度に手が入ります。<br>
+このサンプルではなく、バニラ本体の記述をベースに追加するようにしましょう。<br>
+/common/scripted_triggers/00_scripted_triggers.txt</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ロボット製造ができるようになった時や人口生命体の初期ポートレートを指定する">6.3. ロボット製造ができるようになった時や人口生命体の初期ポートレートを指定する</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>ロボットの製造ができるようになった時の初回に製造されるロボットのポートレートを指定する</p>
+</li>
+<li>
+<p>人工生命体ルートの初回のロボットポートレートを指定する</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>この2つの処理はVer3.12.1にて共通化されました。
+共通化された処理を変更することで、2つにまとめて対応することが可能です。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>C:\Users\(ユーザー名)\Documents\Paradox Interactive\Stellaris\mod\(MODのディレクトリ名)
+└scripted_effects
+　└set_synth_or_robot_portrait_effect.txt</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>バニラのファイルを上書きする形での記述となるのでバニラより後に読み込まれるようにファイル名の付け方は工夫してください。<br>
+基本的にバニラのファイルが数字開始なので、ファイル名は英字開始で始めれば大丈夫だと思います。<br>
+以下はサンプルとなります。</p>
+</div>
+<div class="listingblock">
+<div class="title">common\scripted_triggers\set_synth_or_robot_portrait_effect.txt</div>
+<div class="content">
+<pre class="highlight"><code>set_synth_or_robot_portrait_effect = {
+	if = {
+		limit = {
+			prev = { use_robot_portrait_tma_synth_machine_01 = yes }
+		}
+		change_species_characteristics = { portrait = "synth_machine_01" }
+	}
+	else_if = {
+		limit = {
+			prev = { use_robot_portrait_tma_synth_machine_02 = yes }
+		}
+		change_species_characteristics = { portrait = "synth_machine_02" }
+	}
+	else_if = {
+		limit = {
+			prev = { use_robot_portrait_tma_synth_machine_03 = yes }
+		}
+		change_species_characteristics = { portrait = "synth_machine_03" }
+	}
+	else_if = {
+		limit = {
+			prev = { use_robot_portrait_tma_synth_machine_04 = yes }
+		}
+		change_species_characteristics = { portrait = "synth_machine_04" }
+	}
+	else_if = {
+		limit = {
+			prev = { use_robot_portrait_tma_synth_machine_05 = yes }
+		}
+		change_species_characteristics = { portrait = "synth_machine_05" }
+	}
+	else_if = {
+		limit = {
+			prev = { use_robot_portrait_tma_synth_machine_06 = yes }
+		}
+		change_species_characteristics = { portrait = "synth_machine_06" }
+	}
+	else_if = {
+		limit = {
+			prev = { use_robot_portrait_tma_synth_machine_07 = yes }
+		}
+		change_species_characteristics = { portrait = "synth_machine_07" }
+	}
+	else_if = {
+		limit = {
+			prev = { use_robot_portrait_tma_synth_machine_08 = yes }
+		}
+		change_species_characteristics = { portrait = "synth_machine_08" }
+	}
+	else_if = {
+		limit = {
+			prev = { use_robot_portrait_tma_synth_machine_09 = yes }
+		}
+		change_species_characteristics = { portrait = "synth_machine_09" }
+	}
+	else_if = {
+		limit = {
+			prev = { use_robot_portrait_sd_hum_robot = yes }
+		}
+		change_species_characteristics = { portrait = "sd_hum_robot" }
+	}
+	else_if = {
+		limit = {
+			prev = { use_robot_portrait_sd_mam_robot = yes }
+		}
+		change_species_characteristics = { portrait = "sd_mam_robot" }
+	}
+	else_if = {
+		limit = {
+			prev = { use_robot_portrait_sd_rep_robot = yes }
+		}
+		change_species_characteristics = { portrait = "sd_rep_robot" }
+	}
+	else_if = {
+		limit = {
+			prev = { use_robot_portrait_sd_avi_robot = yes }
+		}
+		change_species_characteristics = { portrait = "sd_avi_robot" }
+	}
+	else_if = {
+		limit = {
+			prev = { use_robot_portrait_sd_art_robot = yes }
+		}
+		change_species_characteristics = { portrait = "sd_art_robot" }
+	}
+	else_if = {
+		limit = {
+			prev = { use_robot_portrait_sd_mol_robot = yes }
+		}
+		change_species_characteristics = { portrait = "sd_mol_robot" }
+	}
+	else_if = {
+		limit = {
+			prev = { use_robot_portrait_sd_fun_robot = yes }
+		}
+		change_species_characteristics = { portrait = "sd_fun_robot" }
+	}
+	else_if = {
+		limit = {
+			prev = { use_robot_portrait_sd_pla_robot = yes }
+		}
+		change_species_characteristics = { portrait = "sd_pla_robot" }
+	}
+	else_if = {
+		limit = {
+			prev = { use_robot_portrait_sd_lit_robot = yes }
+		}
+		change_species_characteristics = { portrait = "lith_machine" }
+	}
+	else_if = {
+		limit = {
+			prev = { use_robot_portrait_sd_nec_robot = yes }
+		}
+		change_species_characteristics = { portrait = "nec_machine" }
+	}
+	else_if = {
+		limit = {
+			prev = { use_robot_portrait_sd_aqu_robot = yes }
+		}
+		change_species_characteristics = { portrait = "aqu_machine" }
+	}
+	else_if = {
+		limit = {
+			prev = { use_robot_portrait_sd_tox_robot = yes }
+		}
+		change_species_characteristics = { portrait = "tox_machine" }
+	}
+	#####################################################
+	# ここから MOD追加コード
+	#####################################################
+	else_if = {
+		prev = {
+			switch = {
+				trigger = species_portrait
+				d-man-biological-01 = { prev = { change_species_characteristics = { portrait = "d-man-robot-01" } } }
+				d-man-biological-02 = { prev = { change_species_characteristics = { portrait = "d-man-robot-02" } } }
+				d-man-machine-01    = { prev = { change_species_characteristics = { portrait = "d-man-robot-01" } } }
+				d-man-machine-02    = { prev = { change_species_characteristics = { portrait = "d-man-robot-02" } } }
+				d-man-lithoid-01    = { prev = { change_species_characteristics = { portrait = "d-man-robot-01" } } }
+				d-man-lithoid-02    = { prev = { change_species_characteristics = { portrait = "d-man-robot-02" } } }
+			}
+		}
+	}
+	#####################################################
+	# ここまで MOD追加コード
+	#####################################################
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ちなみにバニラのset_synth_or_robot_portrait_effectの記述は、バニラの新規種族が追加される度に手が入ります。<br>
+このサンプルではなく、バニラ本体の記述をベースに追加するようにしましょう。<br>
+/common/scripted_effects/02_machine_age_effects.txt</p>
+</div>
+<div class="paragraph">
+<p>以上</p>
+</div>
+<div id="GotoTop" class="paragraph">
+<p><a href="../">TOPへ戻る</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- [FC2 Analyzer] //analyzer.fc2.com/  -->
+<script language="javascript" src="//analyzer5.fc2.com/ana/processor.php?uid=1036071" type="text/javascript"></script>
+<noscript><div align="right"><img src="//analyzer5.fc2.com/ana/icon.php?uid=1036071&ref=&href=&wid=0&hei=0&col=0" /></div></noscript>
+<!-- [FC2 Analyzer]  -->
+</body>
+</html>

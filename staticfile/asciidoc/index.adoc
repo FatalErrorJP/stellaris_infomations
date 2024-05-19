@@ -14,6 +14,7 @@
 == 掲載情報一覧
 ドキュメント::
 * link:./guides/getting-started-with-mod.html[【Stellaris 3.6.1】初心者のためのMod導入ガイド]
+* link:./guides/create-species.html[【Stellaris 3.12.2】ポートレート＆種族の作り方]
 
 解析情報::
 * link:./leader_traits.html[リーダー特性一覧]
