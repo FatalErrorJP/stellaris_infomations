@@ -5,15 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.20">
-<meta name="author" content="最終更新日: 2024-05-20 00:36:22 +0900">
-<title>リーダー特性一覧 Ver3.12.2</title>
+<meta name="author" content="最終更新日: 2024-05-31 00:53:23 +0900">
+<title>リーダー特性一覧 Verv3.12.3</title>
 <link rel="stylesheet" href="./css/leader_traits.css">
 </head>
 <body class="article">
 <div id="header">
-<h1>リーダー特性一覧 Ver3.12.2</h1>
+<h1>リーダー特性一覧 Verv3.12.3</h1>
 <div class="details">
-<span id="author" class="author">最終更新日: 2024-05-20 00:36:22 +0900</span><br>
+<span id="author" class="author">最終更新日: 2024-05-31 00:53:23 +0900</span><br>
 </div>
 </div>
 <div id="content">
@@ -12710,8 +12710,9 @@ custom_tooltip_with_modifiers:<br>
 <p>1</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>本人:<br>
-・leader_lifespan_add (リーダーの寿命) = 10<br>
+<p>本人(条件あり):<br>
+・条件：{"is_immortal": "yes"}<br>
+・leaders_upkeep_mult (リーダー維持費) = -0.05<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -12776,8 +12777,9 @@ leader_trait_substance_abuser_2<br></p>
 <p>2</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>本人:<br>
-・leader_lifespan_add (リーダーの寿命) = 20<br>
+<p>本人(条件あり):<br>
+・条件：{"is_immortal": "yes"}<br>
+・leaders_upkeep_mult (リーダー維持費) = -0.1<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -22560,7 +22562,6 @@ custom_tooltip_with_modifiers:<br>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>{
     "has_paragon_dlc": "yes",
-    "has_ethic": "ethic_spiritualist",
     "OR": {
         "has_trait": "subclass_commander_governor"
     }
@@ -31266,10 +31267,10 @@ triggered_desc:<br>
 <p>ロボット工学の帝王</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>no</p>
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>no</p>
+<p>yes</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>yes</p>
@@ -31285,14 +31286,16 @@ triggered_desc:<br>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>惑星:<br>
-・planet_pop_assembly_mult (機械POP製造速度) = 0.2<br>
 ・planet_jobs_robotic_produces_mult (ロボットの産出) = 0.2<br>
-・pop_amenities_usage_robotic_mult (ロボティクスのPOPの快適度使用量) = -0.2<br>
+・planet_pops_robotics_upkeep_mult (ロボットの維持費) = -0.2<br>
+・planet_cyborg_jobs_produces_mult (サイボーグPOPからの資源) = 0.2<br>
+・planet_pops_cyborgs_upkeep_mult (サイボーグの維持費) = -0.2<br>
 <br>
 セクター:<br>
-・planet_pop_assembly_mult (機械POP製造速度) = 0.1<br>
 ・planet_jobs_robotic_produces_mult (ロボットの産出) = 0.1<br>
-・pop_amenities_usage_robotic_mult (ロボティクスのPOPの快適度使用量) = -0.1<br>
+・planet_pops_robotics_upkeep_mult (ロボットの維持費) = -0.1<br>
+・planet_cyborg_jobs_produces_mult (サイボーグPOPからの資源) = 0.1<br>
+・planet_pops_cyborgs_upkeep_mult (サイボーグの維持費) = -0.1<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -31319,8 +31322,9 @@ triggered_desc:<br>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>{
     "has_paragon_dlc": "yes",
-    "has_trait": "subclass_scientist_governor",
-    "has_ethic": "ethic_materialist"
+    "OR": {
+        "has_trait": "subclass_commander_governor"
+    }
 }</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -46430,7 +46434,7 @@ custom_tooltip_with_modifiers:<br>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>評議会:<br>
-・BIOLOGICAL_species_trait_points_add (遺伝子特性ポイント) = 1<br>
+・BIOLOGICAL_species_trait_points_add (有機生命種族改良ポイント) = 1<br>
 ・planet_pops_upkeep_mult (POP維持費) = -0.10<br>
 <br>
 custom_tooltip_with_modifiers:<br>
@@ -46499,7 +46503,7 @@ custom_tooltip_with_modifiers:<br>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>評議会:<br>
-・BIOLOGICAL_species_trait_points_add (遺伝子特性ポイント) = 2<br>
+・BIOLOGICAL_species_trait_points_add (有機生命種族改良ポイント) = 2<br>
 ・planet_pops_upkeep_mult (POP維持費) = -0.15<br>
 <br>
 custom_tooltip_with_modifiers:<br>
@@ -46565,7 +46569,7 @@ custom_tooltip_with_modifiers:<br>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>評議会:<br>
-・BIOLOGICAL_species_trait_points_add (遺伝子特性ポイント) = 2<br>
+・BIOLOGICAL_species_trait_points_add (有機生命種族改良ポイント) = 2<br>
 ・BIOLOGICAL_species_trait_picks_add (有機生命種族の特性数) = 1<br>
 ・planet_pops_upkeep_mult (POP維持費) = -0.25<br>
 <br>
@@ -47661,7 +47665,7 @@ custom_tooltip_with_modifiers:<br>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>評議会:<br>
-・BIOLOGICAL_species_trait_points_add (遺伝子特性ポイント) = 1<br>
+・BIOLOGICAL_species_trait_points_add (有機生命種族改良ポイント) = 1<br>
 ・BIOLOGICAL_species_trait_picks_add (有機生命種族の特性数) = 1<br>
 ・modify_species_cost_mult (mod_modify_species_cost_mult) = -0.10<br>
 ・pop_growth_speed (POPの成長速度) = -0.15<br>
