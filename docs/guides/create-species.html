@@ -5,13 +5,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.20">
-<title>【Stellaris 3.12.2】ポートレート＆種族の作り方</title>
+<title>【Stellaris 3.12.4】ポートレート＆種族の作り方</title>
 <link rel="stylesheet" href="../css/default.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>【Stellaris 3.12.2】ポートレート＆種族の作り方</h1>
+<h1>【Stellaris 3.12.4】ポートレート＆種族の作り方</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">目次</div>
 <ul class="sectlevel1">
@@ -48,6 +48,7 @@
 <li><a href="#_ロボット製造ができるようになった時や人口生命体の初期ポートレートを指定する">6.3. ロボット製造ができるようになった時や人口生命体の初期ポートレートを指定する</a></li>
 </ul>
 </li>
+<li><a href="#_完成したmodの動作確認を行う">7. 完成したModの動作確認を行う</a></li>
 </ul>
 </div>
 </div>
@@ -1683,6 +1684,20 @@ d-man-lithoids = {
 <img src="images/create-species_6.png" alt="create species 6">
 </div>
 </div>
+<div class="paragraph">
+<p>ちなみに既存の外見に対して追加したい場合は、以下の通り既存定義を新しく定義し直してください。<br>
+setsの部分は新規追加分のみを記載すればOKです。<br></p>
+</div>
+<div class="listingblock">
+<div class="title">common\portrait_categories\d-man_portrait_categories.txt</div>
+<div class="content">
+<pre class="highlight"><code># 既存の「ヒューマノイド」にD言語君のポートレートを追加したい場合
+humanoids = {                  # humanoidsはバニラにもある定義
+	name = HUM                   # ここはバニラのままにしておく
+	sets = { d-man-biologicals } # setsの部分は新規に追加したいものだけを記載する
+}</code></pre>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_ローカライズ定義を必要な内容を追記する">5.6. ローカライズ定義を必要な内容を追記する</h3>
@@ -2424,12 +2439,60 @@ wears_clothes = {
 このサンプルではなく、バニラ本体の記述をベースに追加するようにしましょう。<br>
 /common/scripted_effects/02_machine_age_effects.txt</p>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_完成したmodの動作確認を行う">7. 完成したModの動作確認を行う</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>完成したら、Modの動作確認をして見ましょう。<br>
+StellarisのランチャーのプレイセットにこのMODを入れた上でStellarisを起動し、以下を確認しましょう。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>エラーログ(C:\Users\(ユーザー名)\Documents\Paradox Interactive\Stellaris\logs\error.log)に、エラーが表示されていないこと</p>
+</li>
+<li>
+<p>帝国を新規作成する時の画面の外見にて、このMODで追加したい種族が表示されていること</p>
+</li>
+<li>
+<p>帝国を新規作成する時の画面の名称リストにて、このModで追加したネームリストが意図通り表示されていること</p>
+</li>
+<li>
+<p>帝国を新規作成する時の画面の種族名にて、このModで追加したネームリストを選んだ時の自動命名の機能が動作していること</p>
+</li>
+<li>
+<p>帝国を新規作成する時の画面の統治者の外見にて、統治者の外見を変更してみて一通りポートレートが表示できていること</p>
+</li>
+<li>
+<p>ゲーム開始時にランダム生成される帝国の帝国名や種族名、恒星名が正しく表示されていること</p>
+</li>
+<li>
+<p>Modで追加したポートレートを浸かっている帝国との外交画面にて挨拶用の音声が流れること</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>ランダム生成される帝国の確認は、普通にプレイすると面倒なので
+コンソールコマンドを使うと良いです</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>communications：全帝国と通信が確立済となる</p>
+</li>
+<li>
+<p>survey：全星系を調査済、常に見えている状態にする</p>
+</li>
+</ul>
+</div>
 <div class="paragraph">
 <p>以上</p>
 </div>
 <div id="GotoTop" class="paragraph">
 <p><a href="../">TOPへ戻る</a></p>
-</div>
 </div>
 </div>
 </div>
