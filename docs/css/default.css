@@ -18,7 +18,7 @@ dl dt {
 }
 
 img {
-  max-width: 50em;
+  max-width: 60em;
 }
 
 .listingblock > .content > pre {
@@ -32,4 +32,20 @@ code {
 #GotoTop {
   text-align: center;
   padding-top: 15px;
+}
+
+.listingblock > .content > pre {
+  font-weight: bold;
+}
+
+table {
+  background-color: inherit !important;
+}
+
+tr:nth-of-type(2n) {
+  background-color: inherit !important;
+}
+
+.scrollable {
+  overflow-x: auto;
 }

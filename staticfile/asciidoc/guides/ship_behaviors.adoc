@@ -1,0 +1,240 @@
+= 【Stellaris 3.12.4】艦船の挙動について
+:toc: left
+:toc-title: 目次
+:example-caption: 例
+:sectnums:
+:imagesdir: images
+:icons: font
+:docinfo: private,shared
+:docinfodir: ../../staticfile/meta
+:stem: asciimath
+
+== 始めに
+このガイドは、戦闘時の艦船の挙動についての説明動画の内容を改めて文章にまとめ直したものになります。 +
+3.12.4でHスロット回りの挙動に一部変更があったようですが、その変更点については筆者はあまり細かくは調べられていません。 +
+主に3.11系で調べたときの調査結果を基に記載しているため、一部の記述については情報が古い可能性があります。
+
+[%noheader, cols="2*a", frame="none", grid="none", stripes="none"]
+|===
+| video::-quwCmwrgms/PL80uh3ENsGgbDmt5nZO79Jl8AvbHP8C4s[youtube, width=400, height=225]
+| video::6kbYo06zgT0/PL80uh3ENsGgbDmt5nZO79Jl8AvbHP8C4s[youtube, width=400, height=225]
+| video::ychn1iSpYIM/PL80uh3ENsGgbDmt5nZO79Jl8AvbHP8C4s[youtube, width=400, height=225]
+| video::dHkHec_Q27w/PL80uh3ENsGgbDmt5nZO79Jl8AvbHP8C4s[youtube, width=400, height=225]
+|===
+
+
+== 艦隊戦について
+Stellarisでは、敵対する艦隊同士が一定距離(艦隊毎に設定された交戦距離)に達した場合に自動で戦闘が開始されます。 +
+戦闘時の各艦船の挙動は、戦闘コンピュータに搭載された戦術に応じて変化します。 +
+例えば「知性型戦闘コンピュータ(突進)」の戦闘コンピュータを積んでいる場合は、艦船は突進戦術という戦術に従った動作をします。
+
+image::ship_behaviors_1.png[]
+
+
+== 交戦距離について
+交戦距離は以下の計算式で決まります。
+
+----
+交戦距離 = (装備している武器の最大射程) × (1 + 艦船武器射程の補正値) × (1 + 艦船交戦距離の補正値) × 1.05
+----
+
+例えば以下の組み合わせの空母戦艦の交戦距離は、交戦距離 = 150 × (1 + 0.35) × (1 + 1) × 1.05 = 425.25となります。
+
+* タキオンランス：射程150
+* 砲撃優先Ⅲ：艦船武器射程+35%
+* 知性型戦闘コンピュータ(空母)：艦船交戦距離+100%
+
+ちなみに1.05という数値については``common\defines\00_defines.txt``内の``COMBAT_DETECT_RANGE_MULT``にて定義されています。 +
+Mod等でこの値を別の値に変更している場合には、交戦距離の計算結果も変わります。
+
+
+== 艦船の挙動について
+戦術毎の個別の動作を説明する前に、先に戦闘時の艦船の挙動に関する大まかな概念について説明します。
+
+Stellarisには射程という概念が存在します。そのため、各艦隊は戦闘が始まってもすぐに攻撃ができません。 +
+攻撃をするためには、自分の武器の射程に合わせた距離まで接近する必要があります。 +
+
+image::ship_behaviors_2.png[]
+
+射程内に入るまで接近できれば攻撃は開始でき、これ以上近づく必要はありません。 +
+つまり「敵艦に接近するまで」と「敵艦に接近した後」では動きは変わるはずです。 +
+この2つの動きを、Stellaris世界ではそれぞれ``Passive Move``,``Attack Move``と呼んでいます。
+
+
+=== Passive Move
+``Passive Move``は「敵艦に接近するまで」の動作モードを表す言葉です。 +
+敵艦に接近するまでが目的なので、接近し終えた後は``Attack Move``に移行します。
+
+過去の動画に習って便宜上Bと表記しておきますが、``Passive Move``はこのBの位置まで移動することを目標として動きます。
+
+image::ship_behaviors_3.png[]
+
+
+=== Attack Move
+``Attack Move``は「敵艦に接近した後」の動作モードを表す言葉です。 +
+敵艦に十分近づけており、戦術に応じた攻撃がとどく理想の距離(過去の動画に習って便宜上Aと表記)を維持して戦おうとします。
+
+何かの拍子に距離がCより離れてしまった場合は、また武器の射程のとどく距離まで近づく必要があるため、 +
+動作モードが``Passive Move``に変わります。
+
+image::ship_behaviors_4.png[]
+
+
+=== 各戦術の定義
+各戦術の挙動に影響する定義は、``common\ship_behaviors``内に記載されています。 +
+``Passive Move``,``Attack Move``の説明で記載した距離A,B,Cを決める要素としても扱われています。 +
+
+具体的なパラメータの意味は以下の通りです。 +
+ちゃんと調べていない項目については原文の説明をそのまま載せています。
+
+[cols="2*a", options="autowidth,header"]
+.戦術定義の各パラメータの意味
+|===
+| 項目名                       | 説明
+| name                         | 戦術の名前
+| desc                         | 戦術の説明
+| preferred_attack_range       | Attack Move時の目標距離。 +
+                                 Aはここに記載された値とattack_move_patternの組み合わせに応じて決定される。 +
+                                 固定値または、搭載している武器の射程(min,median,max)を指定可能。
+| formation_distance           | Passive Move時の目標距離。 +
+                                 Bはここに記載された値とpassive_move_patternの組み合わせに応じて決定される。 +
+                                 固定値または、搭載している武器の射程(min,median,max)を指定可能。
+| return_to_formation_distance | Attack MoveからPassive Moveへ切り替わる距離。 +
+                                 Cはここに記載された値となる。 +
+                                 固定値または、搭載している武器の射程(min,median,max)を指定可能。
+| attack_move_pattern          | Attack Move時の動作パターンを指定する。 +
+                                 指定可能な動作パターンは以下の通り。 +
+                                 none/orbit/charge/stay_at_range/maintain_distance/stationary/flee
+| passive_move_pattern         | Passive Move時の動作パターンを指定する。 +
+                                 指定可能な動作パターンは以下の通り。 +
+                                 none/orbit/charge/stay_at_range/maintain_distance/stationary/flee
+| range_components             | 武器の射程(min,median,max)を指定したときの計算対象を指定する。 +
+                                 weapon,strike_craftを指定可能で、default = weapon。
+
+                                 strike_craftが設定されている場合:: Hスロットにセットした武器の交戦距離のみを計算の対象として採用する。
+                                 weaponが設定されている場合::       Hスロット以外の武器の射程を計算の対象として採用する。
+| collision_awareness          | How much we try to avoid other ships
+| collision_strafe             | Allows the ship to move in any direction while colliding with another
+| collision_radius             | Multiplier on the radius specified in the ship size
+| source_target_anchor_factor  | Weight factor where this ship wants to position itself between 'combat_source_anchor' and 'combat_target_anchor', this is the combat position.
+| combat_source_anchor         | What anchor to use for source when calculating the combat position for this ship, this is the actual position of the anchor ship. +
+                                 Valid values are: 'parent', 'root' (where 'parent' is the immediate parent ship and 'root' the fleet leader ship)
+| combat_target_anchor         | What anchor to use for target when calculating the combat position for this ship, this is the combat position of the anchor ship. For `root` this will be the actual target.
+| ignore_combat_movement       |
+|===
+
+上記のパラメータの中で、戦闘時の艦船の挙動に影響する要素は以下の通りです。 +
+厳密には1艦隊内に複数隻いる場合は、collision_xxxxも関係しそうですが、 +
+筆者はこれについては特に調査をしていないので割愛します。
+
+* preferred_attack_range
+* formation_distance
+* return_to_formation_distance
+* attack_move_pattern
+* passive_move_pattern
+* range_components
+
+この6つのパラメータについて、コルベット、駆逐艦などのプレイヤー側の艦船で指定できる戦術の定義を以下の表に示します。
+
+[.scrollable]
+--
+[cols="7*a", options="autowidth,header", role=stretch]
+.各戦術の定義値
+|===
+| name                | preferred_attack_range | formation_distance | return_to_formation_distance | attack_move_pattern | passive_move_pattern | range_components
+| swarm(突進戦術)     | min                    | 10                 | 60                           | orbit               | charge               | -
+| picket(前哨戦術)    | median                 | median             | max                          | stay_at_range       | orbit                | -
+| line(戦列戦術)      | median                 | median             | max                          | stay_at_range       | charge               | -
+| artillery(砲撃戦術) | max                    | median             | max                          | maintain_distance   | stay_at_range        | -
+| carrier(空母戦術)   | max                    | max                | max                          | maintain_distance   | stay_at_range        | strike_craft
+| torpedo(魚雷戦術)   | 10                     | 10                 | max                          | charge              | charge               | -
+|===
+--
+
+=== min/median/maxについて
+min/median/maxの意味はそれぞれ次の通りです。
+
+min::
+艦船に搭載されている武器の射程のうち、一番短い射程の数値が採用される。 +
+例えばガンマ線レーザー(射程40)とディスラプター(射程30)を搭載したコルベットのpreferred_attack_rangeは、30として扱われる。
+
+median::
+艦船に搭載されている武器の射程を低い順に並べ替えたときの真ん中の武装の射程が採用される。 +
+武器の数が偶数個ある場合は、真ん中の2つのうち、数値が大きい方が採用される。 +
+例えば120,30,90,40,100,50の武器を積んでいる艦船の場合は、並べ替えると30,40,50,90,100,120となる。 +
+真ん中の2つの武器の50と90のうち、数値の大きい方90がmedianの値として扱われる。 +
+数学的な意味でのmedianとは偶数の時の扱いが異なるため注意すること。
+
+max::
+艦船に搭載されている武器の射程のうち、一番長い射程の数値が採用される。
+
+いずれの場合も、range_componentsがweaponの場合はHスロット以外の武器の射程が、 +
+range_componentsがstrike_craftの場合はHスロットの交戦距離のみがmin/median/maxの計算対象として扱われます。 +
+なお、range_componentsがweaponの状態でHスロット以外の武器を外したり、 +
+range_componentsがstrike_craftの状態でHスロットに武器をセットしなかったりした場合は、値が0になります。
+
+
+=== 各戦術の挙動のまとめ
+定義値と、実際にゲーム内で動かして確認してみた結果を元に確認した各戦術の挙動について、以下に記載します。
+
+
+==== 突進戦術
+突進戦術は、Bの距離まで前進した後Aの距離をぐるぐる回るような挙動になります。 +
+武器によってはAがCを越えてしまう場合がありますが、その場合は距離10～60の間を絶えず動き回りながら +
+Passive MoveとAttack Moveが切り替わり続けるというような動作になります。 +
+
+image::ship_behaviors_5.png[width=100%]
+
+
+==== 前哨戦術
+前哨戦術は、Bの距離まで移動した後でAの距離まで前進し、停止します。 +
+その後は相手が近づいてきても停止状態のまま動きません。 +
+ただし、距離が離れCの距離を越えた場合は、再びPassive Moveに戻ります。 +
+亜光速移動速度が高い場合、Aの距離で停止しきれず前に出てしまうので注意が必要です。
+
+なお、Bの距離まで移動する際は若干楕円系を描くような動きにはなりますが、 +
+ほぼ直線上なため戦列戦術とあまり動きに違いはありません。 +
+ちなみに、射程延長の補正でAがmedian以上になることはありません。
+
+image::ship_behaviors_6.png[width=100%]
+
+
+==== 戦列戦術
+戦列戦術は、Bの距離まで移動した後でAの距離まで前進し、停止します。 +
+前哨戦術との違いは、Passive Moveが完全に直線的な動きであること1点のみです。 +
+前哨戦術と同じく亜光速移動速度が高い場合、Aの距離で停止しきれず前に出てしまうので注意が必要です。 +
+ちなみに、前哨戦術と同じく射程延長の補正でAがmedian以上になることはありません。
+
+image::ship_behaviors_7.png[width=100%]
+
+
+==== 砲撃戦術
+砲撃戦術はBの距離まで接近した後は、Aの距離を常に保つように動きます。 +
+敵艦が接近してこなければ基本的には静止しますが、接近してくる場合は円を描くように敵から離れようとします。 +
+前哨や戦列と同じく亜光速移動速度が高い場合、Bの距離で停止しきれず前に出てしまうので注意が必要です。 +
+ちなみに、射程延長の補正でAがmedian以上になることはありません。
+
+image::ship_behaviors_8.png[width=100%]
+
+image::ship_behaviors_9.png[width=100%]
+
+
+==== 空母戦術
+空母戦術の基本的な動作は砲撃戦術と同じで、Bの距離まで接近した後は、Aの距離を常に保つように動きます。 +
+ただし、A,B,Cの数値計算の基準がHスロットに指定した武器の艦船交戦距離基準に変化します。 +
+射程延長の補正も効かなくなり、代わりに艦船交戦距離の補正が影響するようになるので、空母を運用する際には注意が必要です。 +
+検証していませんが、射程延長の補正でAがHスロットに指定した武器の艦船交戦距離を越えられない可能性があります。
+
+image::ship_behaviors_10.png[width=100%]
+
+
+==== 突進戦術
+突進戦術は、常に敵艦に向かって一直線に前進します。特記事項は特にありません。
+
+image::ship_behaviors_11.png[width=100%]
+
+
+以上
+
+[[GotoTop]]
+link:../[TOPへ戻る]

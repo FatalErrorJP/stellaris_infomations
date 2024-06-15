@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.20">
+<title>【Stellaris 3.12.4】艦船の挙動について</title>
+<link rel="stylesheet" href="../css/default.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="article toc2 toc-left">
+<div id="header">
+<h1>【Stellaris 3.12.4】艦船の挙動について</h1>
+<div id="toc" class="toc2">
+<div id="toctitle">目次</div>
+<ul class="sectlevel1">
+<li><a href="#_始めに">1. 始めに</a></li>
+<li><a href="#_艦隊戦について">2. 艦隊戦について</a></li>
+<li><a href="#_交戦距離について">3. 交戦距離について</a></li>
+<li><a href="#_艦船の挙動について">4. 艦船の挙動について</a>
+<ul class="sectlevel2">
+<li><a href="#_passive_move">4.1. Passive Move</a></li>
+<li><a href="#_attack_move">4.2. Attack Move</a></li>
+<li><a href="#_各戦術の定義">4.3. 各戦術の定義</a></li>
+<li><a href="#_minmedianmaxについて">4.4. min/median/maxについて</a></li>
+<li><a href="#_各戦術の挙動のまとめ">4.5. 各戦術の挙動のまとめ</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_始めに">1. 始めに</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>このガイドは、戦闘時の艦船の挙動についての説明動画の内容を改めて文章にまとめ直したものになります。<br>
+3.12.4でHスロット回りの挙動に一部変更があったようですが、その変更点については筆者はあまり細かくは調べられていません。<br>
+主に3.11系で調べたときの調査結果を基に記載しているため、一部の記述については情報が古い可能性があります。</p>
+</div>
+<table class="tableblock frame-none grid-none stripes-none stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="videoblock">
+<div class="content">
+<iframe width="400" height="225" src="https://www.youtube.com/embed/-quwCmwrgms?rel=0&amp;list=PL80uh3ENsGgbDmt5nZO79Jl8AvbHP8C4s" frameborder="0" allowfullscreen></iframe>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="videoblock">
+<div class="content">
+<iframe width="400" height="225" src="https://www.youtube.com/embed/6kbYo06zgT0?rel=0&amp;list=PL80uh3ENsGgbDmt5nZO79Jl8AvbHP8C4s" frameborder="0" allowfullscreen></iframe>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="videoblock">
+<div class="content">
+<iframe width="400" height="225" src="https://www.youtube.com/embed/ychn1iSpYIM?rel=0&amp;list=PL80uh3ENsGgbDmt5nZO79Jl8AvbHP8C4s" frameborder="0" allowfullscreen></iframe>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="videoblock">
+<div class="content">
+<iframe width="400" height="225" src="https://www.youtube.com/embed/dHkHec_Q27w?rel=0&amp;list=PL80uh3ENsGgbDmt5nZO79Jl8AvbHP8C4s" frameborder="0" allowfullscreen></iframe>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_艦隊戦について">2. 艦隊戦について</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Stellarisでは、敵対する艦隊同士が一定距離(艦隊毎に設定された交戦距離)に達した場合に自動で戦闘が開始されます。<br>
+戦闘時の各艦船の挙動は、戦闘コンピュータに搭載された戦術に応じて変化します。<br>
+例えば「知性型戦闘コンピュータ(突進)」の戦闘コンピュータを積んでいる場合は、艦船は突進戦術という戦術に従った動作をします。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/ship_behaviors_1.png" alt="ship behaviors 1">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_交戦距離について">3. 交戦距離について</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>交戦距離は以下の計算式で決まります。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>交戦距離 = (装備している武器の最大射程) × (1 + 艦船武器射程の補正値) × (1 + 艦船交戦距離の補正値) × 1.05</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>例えば以下の組み合わせの空母戦艦の交戦距離は、交戦距離 = 150 × (1 + 0.35) × (1 + 1) × 1.05 = 425.25となります。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>タキオンランス：射程150</p>
+</li>
+<li>
+<p>砲撃優先Ⅲ：艦船武器射程+35%</p>
+</li>
+<li>
+<p>知性型戦闘コンピュータ(空母)：艦船交戦距離+100%</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>ちなみに1.05という数値については<code>common\defines\00_defines.txt</code>内の<code>COMBAT_DETECT_RANGE_MULT</code>にて定義されています。<br>
+Mod等でこの値を別の値に変更している場合には、交戦距離の計算結果も変わります。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_艦船の挙動について">4. 艦船の挙動について</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>戦術毎の個別の動作を説明する前に、先に戦闘時の艦船の挙動に関する大まかな概念について説明します。</p>
+</div>
+<div class="paragraph">
+<p>Stellarisには射程という概念が存在します。そのため、各艦隊は戦闘が始まってもすぐに攻撃ができません。<br>
+攻撃をするためには、自分の武器の射程に合わせた距離まで接近する必要があります。<br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/ship_behaviors_2.png" alt="ship behaviors 2">
+</div>
+</div>
+<div class="paragraph">
+<p>射程内に入るまで接近できれば攻撃は開始でき、これ以上近づく必要はありません。<br>
+つまり「敵艦に接近するまで」と「敵艦に接近した後」では動きは変わるはずです。<br>
+この2つの動きを、Stellaris世界ではそれぞれ<code>Passive Move</code>,<code>Attack Move</code>と呼んでいます。</p>
+</div>
+<div class="sect2">
+<h3 id="_passive_move">4.1. Passive Move</h3>
+<div class="paragraph">
+<p><code>Passive Move</code>は「敵艦に接近するまで」の動作モードを表す言葉です。<br>
+敵艦に接近するまでが目的なので、接近し終えた後は<code>Attack Move</code>に移行します。</p>
+</div>
+<div class="paragraph">
+<p>過去の動画に習って便宜上Bと表記しておきますが、<code>Passive Move</code>はこのBの位置まで移動することを目標として動きます。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/ship_behaviors_3.png" alt="ship behaviors 3">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_attack_move">4.2. Attack Move</h3>
+<div class="paragraph">
+<p><code>Attack Move</code>は「敵艦に接近した後」の動作モードを表す言葉です。<br>
+敵艦に十分近づけており、戦術に応じた攻撃がとどく理想の距離(過去の動画に習って便宜上Aと表記)を維持して戦おうとします。</p>
+</div>
+<div class="paragraph">
+<p>何かの拍子に距離がCより離れてしまった場合は、また武器の射程のとどく距離まで近づく必要があるため、<br>
+動作モードが<code>Passive Move</code>に変わります。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/ship_behaviors_4.png" alt="ship behaviors 4">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_各戦術の定義">4.3. 各戦術の定義</h3>
+<div class="paragraph">
+<p>各戦術の挙動に影響する定義は、<code>common\ship_behaviors</code>内に記載されています。<br>
+<code>Passive Move</code>,<code>Attack Move</code>の説明で記載した距離A,B,Cを決める要素としても扱われています。<br></p>
+</div>
+<div class="paragraph">
+<p>具体的なパラメータの意味は以下の通りです。<br>
+ちゃんと調べていない項目については原文の説明をそのまま載せています。</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<caption class="title">Table 1. 戦術定義の各パラメータの意味</caption>
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">項目名</th>
+<th class="tableblock halign-left valign-top">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>name</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>戦術の名前</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>desc</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>戦術の説明</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>preferred_attack_range</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Attack Move時の目標距離。<br>
+                                 Aはここに記載された値とattack_move_patternの組み合わせに応じて決定される。<br>
+                                 固定値または、搭載している武器の射程(min,median,max)を指定可能。</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>formation_distance</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Passive Move時の目標距離。<br>
+                                 Bはここに記載された値とpassive_move_patternの組み合わせに応じて決定される。<br>
+                                 固定値または、搭載している武器の射程(min,median,max)を指定可能。</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>return_to_formation_distance</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Attack MoveからPassive Moveへ切り替わる距離。<br>
+                                 Cはここに記載された値となる。<br>
+                                 固定値または、搭載している武器の射程(min,median,max)を指定可能。</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>attack_move_pattern</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Attack Move時の動作パターンを指定する。<br>
+                                 指定可能な動作パターンは以下の通り。<br>
+                                 none/orbit/charge/stay_at_range/maintain_distance/stationary/flee</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>passive_move_pattern</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Passive Move時の動作パターンを指定する。<br>
+                                 指定可能な動作パターンは以下の通り。<br>
+                                 none/orbit/charge/stay_at_range/maintain_distance/stationary/flee</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>range_components</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>武器の射程(min,median,max)を指定したときの計算対象を指定する。<br>
+                                 weapon,strike_craftを指定可能で、default = weapon。</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">strike_craftが設定されている場合</dt>
+<dd>
+<p>Hスロットにセットした武器の交戦距離のみを計算の対象として採用する。</p>
+</dd>
+<dt class="hdlist1">weaponが設定されている場合</dt>
+<dd>
+<p>Hスロット以外の武器の射程を計算の対象として採用する。</p>
+</dd>
+</dl>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>collision_awareness</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>How much we try to avoid other ships</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>collision_strafe</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Allows the ship to move in any direction while colliding with another</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>collision_radius</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Multiplier on the radius specified in the ship size</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>source_target_anchor_factor</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Weight factor where this ship wants to position itself between 'combat_source_anchor' and 'combat_target_anchor', this is the combat position.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>combat_source_anchor</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>What anchor to use for source when calculating the combat position for this ship, this is the actual position of the anchor ship.<br>
+                                 Valid values are: 'parent', 'root' (where 'parent' is the immediate parent ship and 'root' the fleet leader ship)</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>combat_target_anchor</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>What anchor to use for target when calculating the combat position for this ship, this is the combat position of the anchor ship. For <code>root</code> this will be the actual target.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>ignore_combat_movement</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>上記のパラメータの中で、戦闘時の艦船の挙動に影響する要素は以下の通りです。<br>
+厳密には1艦隊内に複数隻いる場合は、collision_xxxxも関係しそうですが、<br>
+筆者はこれについては特に調査をしていないので割愛します。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>preferred_attack_range</p>
+</li>
+<li>
+<p>formation_distance</p>
+</li>
+<li>
+<p>return_to_formation_distance</p>
+</li>
+<li>
+<p>attack_move_pattern</p>
+</li>
+<li>
+<p>passive_move_pattern</p>
+</li>
+<li>
+<p>range_components</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>この6つのパラメータについて、コルベット、駆逐艦などのプレイヤー側の艦船で指定できる戦術の定義を以下の表に示します。</p>
+</div>
+<div class="openblock scrollable">
+<div class="content">
+<table class="tableblock frame-all grid-all fit-content stretch">
+<caption class="title">Table 2. 各戦術の定義値</caption>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">name</th>
+<th class="tableblock halign-left valign-top">preferred_attack_range</th>
+<th class="tableblock halign-left valign-top">formation_distance</th>
+<th class="tableblock halign-left valign-top">return_to_formation_distance</th>
+<th class="tableblock halign-left valign-top">attack_move_pattern</th>
+<th class="tableblock halign-left valign-top">passive_move_pattern</th>
+<th class="tableblock halign-left valign-top">range_components</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>swarm(突進戦術)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>min</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>10</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>60</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>orbit</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>charge</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>-</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>picket(前哨戦術)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>median</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>median</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>max</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>stay_at_range</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>orbit</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>-</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>line(戦列戦術)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>median</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>median</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>max</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>stay_at_range</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>charge</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>-</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>artillery(砲撃戦術)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>max</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>median</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>max</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>maintain_distance</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>stay_at_range</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>-</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>carrier(空母戦術)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>max</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>max</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>max</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>maintain_distance</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>stay_at_range</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>strike_craft</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>torpedo(魚雷戦術)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>10</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>10</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>max</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>charge</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>charge</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>-</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_minmedianmaxについて">4.4. min/median/maxについて</h3>
+<div class="paragraph">
+<p>min/median/maxの意味はそれぞれ次の通りです。</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">min</dt>
+<dd>
+<p>艦船に搭載されている武器の射程のうち、一番短い射程の数値が採用される。<br>
+例えばガンマ線レーザー(射程40)とディスラプター(射程30)を搭載したコルベットのpreferred_attack_rangeは、30として扱われる。</p>
+</dd>
+<dt class="hdlist1">median</dt>
+<dd>
+<p>艦船に搭載されている武器の射程を低い順に並べ替えたときの真ん中の武装の射程が採用される。<br>
+武器の数が偶数個ある場合は、真ん中の2つのうち、数値が大きい方が採用される。<br>
+例えば120,30,90,40,100,50の武器を積んでいる艦船の場合は、並べ替えると30,40,50,90,100,120となる。<br>
+真ん中の2つの武器の50と90のうち、数値の大きい方90がmedianの値として扱われる。<br>
+数学的な意味でのmedianとは偶数の時の扱いが異なるため注意すること。</p>
+</dd>
+<dt class="hdlist1">max</dt>
+<dd>
+<p>艦船に搭載されている武器の射程のうち、一番長い射程の数値が採用される。</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>いずれの場合も、range_componentsがweaponの場合はHスロット以外の武器の射程が、<br>
+range_componentsがstrike_craftの場合はHスロットの交戦距離のみがmin/median/maxの計算対象として扱われます。<br>
+なお、range_componentsがweaponの状態でHスロット以外の武器を外したり、<br>
+range_componentsがstrike_craftの状態でHスロットに武器をセットしなかったりした場合は、値が0になります。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_各戦術の挙動のまとめ">4.5. 各戦術の挙動のまとめ</h3>
+<div class="paragraph">
+<p>定義値と、実際にゲーム内で動かして確認してみた結果を元に確認した各戦術の挙動について、以下に記載します。</p>
+</div>
+<div class="sect3">
+<h4 id="_突進戦術">4.5.1. 突進戦術</h4>
+<div class="paragraph">
+<p>突進戦術は、Bの距離まで前進した後Aの距離をぐるぐる回るような挙動になります。<br>
+武器によってはAがCを越えてしまう場合がありますが、その場合は距離10～60の間を絶えず動き回りながら<br>
+Passive MoveとAttack Moveが切り替わり続けるというような動作になります。<br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/ship_behaviors_5.png" alt="ship behaviors 5" width="100%">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_前哨戦術">4.5.2. 前哨戦術</h4>
+<div class="paragraph">
+<p>前哨戦術は、Bの距離まで移動した後でAの距離まで前進し、停止します。<br>
+その後は相手が近づいてきても停止状態のまま動きません。<br>
+ただし、距離が離れCの距離を越えた場合は、再びPassive Moveに戻ります。<br>
+亜光速移動速度が高い場合、Aの距離で停止しきれず前に出てしまうので注意が必要です。</p>
+</div>
+<div class="paragraph">
+<p>なお、Bの距離まで移動する際は若干楕円系を描くような動きにはなりますが、<br>
+ほぼ直線上なため戦列戦術とあまり動きに違いはありません。<br>
+ちなみに、射程延長の補正でAがmedian以上になることはありません。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/ship_behaviors_6.png" alt="ship behaviors 6" width="100%">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_戦列戦術">4.5.3. 戦列戦術</h4>
+<div class="paragraph">
+<p>戦列戦術は、Bの距離まで移動した後でAの距離まで前進し、停止します。<br>
+前哨戦術との違いは、Passive Moveが完全に直線的な動きであること1点のみです。<br>
+前哨戦術と同じく亜光速移動速度が高い場合、Aの距離で停止しきれず前に出てしまうので注意が必要です。<br>
+ちなみに、前哨戦術と同じく射程延長の補正でAがmedian以上になることはありません。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/ship_behaviors_7.png" alt="ship behaviors 7" width="100%">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_砲撃戦術">4.5.4. 砲撃戦術</h4>
+<div class="paragraph">
+<p>砲撃戦術はBの距離まで接近した後は、Aの距離を常に保つように動きます。<br>
+敵艦が接近してこなければ基本的には静止しますが、接近してくる場合は円を描くように敵から離れようとします。<br>
+前哨や戦列と同じく亜光速移動速度が高い場合、Bの距離で停止しきれず前に出てしまうので注意が必要です。<br>
+ちなみに、射程延長の補正でAがmedian以上になることはありません。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/ship_behaviors_8.png" alt="ship behaviors 8" width="100%">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/ship_behaviors_9.png" alt="ship behaviors 9" width="100%">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_空母戦術">4.5.5. 空母戦術</h4>
+<div class="paragraph">
+<p>空母戦術の基本的な動作は砲撃戦術と同じで、Bの距離まで接近した後は、Aの距離を常に保つように動きます。<br>
+ただし、A,B,Cの数値計算の基準がHスロットに指定した武器の艦船交戦距離基準に変化します。<br>
+射程延長の補正も効かなくなり、代わりに艦船交戦距離の補正が影響するようになるので、空母を運用する際には注意が必要です。<br>
+検証していませんが、射程延長の補正でAがHスロットに指定した武器の艦船交戦距離を越えられない可能性があります。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/ship_behaviors_10.png" alt="ship behaviors 10" width="100%">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_突進戦術_2">4.5.6. 突進戦術</h4>
+<div class="paragraph">
+<p>突進戦術は、常に敵艦に向かって一直線に前進します。特記事項は特にありません。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/ship_behaviors_11.png" alt="ship behaviors 11" width="100%">
+</div>
+</div>
+<div class="paragraph">
+<p>以上</p>
+</div>
+<div id="GotoTop" class="paragraph">
+<p><a href="../">TOPへ戻る</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  messageStyle: "none",
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    ignoreClass: "nostem|nolatexmath"
+  },
+  asciimath2jax: {
+    delimiters: [["\\$", "\\$"]],
+    ignoreClass: "nostem|noasciimath"
+  },
+  TeX: { equationNumbers: { autoNumber: "none" } }
+})
+MathJax.Hub.Register.StartupHook("AsciiMath Jax Ready", function () {
+  MathJax.InputJax.AsciiMath.postfilterHooks.Add(function (data, node) {
+    if ((node = data.script.parentNode) && (node = node.parentNode) && node.classList.contains("stemblock")) {
+      data.math.root.display = "block"
+    }
+    return data
+  })
+})
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
+<!-- [FC2 Analyzer] //analyzer.fc2.com/  -->
+<script language="javascript" src="//analyzer5.fc2.com/ana/processor.php?uid=1036071" type="text/javascript"></script>
+<noscript><div align="right"><img src="//analyzer5.fc2.com/ana/icon.php?uid=1036071&ref=&href=&wid=0&hei=0&col=0" /></div></noscript>
+<!-- [FC2 Analyzer]  -->
+</body>
+</html>
