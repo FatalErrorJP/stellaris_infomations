@@ -5,15 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.20">
-<meta name="author" content="最終更新日: 2024-06-04 21:34:46 +0900">
-<title>リーダー特性一覧 Ver3.12.4</title>
+<meta name="author" content="最終更新日: 2024-06-18 20:14:34 +0900">
+<title>リーダー特性一覧 Verv3.12.5</title>
 <link rel="stylesheet" href="./css/leader_traits.css">
 </head>
 <body class="article">
 <div id="header">
-<h1>リーダー特性一覧 Ver3.12.4</h1>
+<h1>リーダー特性一覧 Verv3.12.5</h1>
 <div class="details">
-<span id="author" class="author">最終更新日: 2024-06-04 21:34:46 +0900</span><br>
+<span id="author" class="author">最終更新日: 2024-06-18 20:14:34 +0900</span><br>
 </div>
 </div>
 <div id="content">
@@ -13817,7 +13817,7 @@ leader_trait_tyrannical_2<br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>本人(条件あり):<br>
-・条件：{"owner": {"has_relic": "r_the_rulerchip"}, "is_ruler": "yes"}<br>
+・条件：{"exists": "owner", "owner": {"has_relic": "r_the_rulerchip"}, "is_ruler": "yes"}<br>
 ・leader_trait_selection_options_add (リーダーの特性の追加選択肢) = 1<br>
 <br>
 出身地(条件あり):<br>
@@ -31324,12 +31324,18 @@ triggered_desc:<br>
     "has_paragon_dlc": "yes",
     "OR": {
         "has_trait": "subclass_commander_governor"
+    },
+    "exists": "owner",
+    "owner": {
+        "OR": {
+            "has_technology": "tech_robotic_workers",
+            "has_cybernetic_ascension": "yes",
+            "is_individual_machine": "yes"
+        }
     }
 }</p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>人工労働力<br></p>
-</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>yes</p>
@@ -32721,7 +32727,7 @@ leader_trait_collaborator_3<br></p>
 ・ship_astral_rift_speed_mult (天体の裂け目の探索速度) = 0.10<br>
 <br>
 本人(条件あり):<br>
-・条件：{"owner": {"has_edict": "subsidized_identity_backups"}}<br>
+・条件：{"exists": "owner", "owner": {"has_edict": "subsidized_identity_backups"}}<br>
 ・leader_lifespan_add (リーダーの寿命) = 20<br>
 ・species_leader_exp_gain (mod_species_leader_exp_gain) = 0.10<br>
 <br>
