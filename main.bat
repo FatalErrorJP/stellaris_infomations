@@ -28,8 +28,11 @@ rem -a linkcss : CSSを埋め込まない
 rem -a stylesdir : CSSのディレクトリパス
 rem -a stylesheet : CSSファイル名
 rem -D : 出力先ディレクトリ
-call asciidoctor -a nofooter -a linkcss -a stylesdir=./css -a stylesheet=default.css -D docs asciidoc\index.adoc
+call asciidoctor -a nofooter -a linkcss -a stylesdir=./css -a stylesheet=default.css -D docs asciidoc/index.adoc
 call asciidoctor -a nofooter -a linkcss -a stylesdir=./css -a stylesheet=leader_traits.css -D ./docs ./asciidoc/leader_traits.adoc
 call asciidoctor -a nofooter -a linkcss -a stylesdir=../css -a stylesheet=default.css -D ./docs/guides asciidoc/guides/*.adoc
+
+rem Dot(Graphviz) To SVG
+dot -Tsvg asciidoc/tech_tree.dot > ./docs/tech_tree.svg
 
 :ERR

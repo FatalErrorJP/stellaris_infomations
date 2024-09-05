@@ -22,9 +22,9 @@ def _write_leader_trait_file() -> None:
     output_file = os.path.join(settings.OUTPUT_DIR, settings.OUTPUT_LEADER_TRAIT_FILE)
     with open(output_file, 'w', encoding='utf-8') as wf:
         # タイトル行
-        wf.writelines(settings.TEMPLATE_TITLE.format(version=Version.get_version()))
+        wf.writelines(settings.TEMPLATE_TITLE.format(title="リーダー特性一覧", version=Version.get_version()))
         # テーブルヘッダー
-        wf.writelines(settings.TEMPLATE_HEADER)
+        wf.writelines(settings.TEMPLATE_LEADER_TRAITS_HEADER)
         # テーブルデータ
         _write_leader_trait_data(wf)
         # テーブルフッター
@@ -33,7 +33,7 @@ def _write_leader_trait_file() -> None:
 
 def _write_leader_trait_data(wf: TextIO) -> None:
     for key, data in LeaderTraits.get_data().items():
-        wf.writelines(settings.TEMPLATE_DATA.format(
+        wf.writelines(settings.TEMPLATE_LEADER_TRAITS_DATA.format(
             key=key,
             name=Localisations.get_value(key),
             commander=_get_leader_class('commander', data),

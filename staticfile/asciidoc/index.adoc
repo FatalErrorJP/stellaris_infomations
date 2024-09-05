@@ -20,6 +20,7 @@
 
 解析情報::
 * link:./leader_traits.html[リーダー特性一覧]
+* link:./tech_tree.svg[テクノロジーツリー]
 
 
 == 外部リンク

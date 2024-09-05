@@ -1,3 +1,5 @@
-from src.main.output_leader_traits_list import main
+from src.main import output_leader_traits_list
+from src.main import output_technology_list
 
-main()
+output_leader_traits_list.main()
+output_technology_list.main()

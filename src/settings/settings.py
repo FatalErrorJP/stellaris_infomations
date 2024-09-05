@@ -9,22 +9,27 @@
 GAME_BASE_DIR = 'C:/Program Files (x86)/Steam/steamapps/common/Stellaris'
 VERSION_FILE_NAME = 'launcher-settings.json'
 LEADER_TRAIT_DIR = 'common/traits'
+TECHNOLOGY_DIR = 'common/technology'
+SCRIPTED_VARIABLES_DIR = 'common/scripted_variables'
 INLINE_SCRIPTS_DIR = 'common/inline_scripts'
 LOCALISATION_DIR = 'localisation/japanese'
 OUTPUT_DIR = './asciidoc'
 OUTPUT_LEADER_TRAIT_FILE = 'leader_traits.adoc'
+OUTPUT_TECHNOLOGY_FILE = 'tech_tree.dot'
 
 ###############################################################################
 # AsciiDocのテンプレート設定
 ###############################################################################
-TEMPLATE_TITLE = '''= リーダー特性一覧 Ver{version}
+TEMPLATE_TITLE = '''= {title} Ver{version}
 最終更新日: {{docdatetime}}
 :docinfo: private,shared
 :docinfodir: ../staticfile/meta
 :table-caption: 表
 
 '''
-TEMPLATE_HEADER = '''[[GotoTop]]
+
+# leader_traits関連テンプレート
+TEMPLATE_LEADER_TRAITS_HEADER = '''[[GotoTop]]
 link:./[トップへ戻る]
 
 [cols="24*a", separator=＆, options="autowidth,header"]
@@ -36,7 +41,7 @@ link:./[トップへ戻る]
 ＆統治者作成時に設定可能な特性 ＆統治者作成時に設定可能な起源 ＆統治者作成時に設定不可能な起源 ＆統治者作成時に設定可能な志向
 ＆習得条件 ＆前提技術 ＆排他特性 ＆志向特有の運命特性
 '''
-TEMPLATE_DATA = '''＆ {key}
+TEMPLATE_LEADER_TRAITS_DATA = '''＆ {key}
 ＆ {name}
 ＆ {commander}
 ＆ {official}
@@ -62,4 +67,47 @@ TEMPLATE_DATA = '''＆ {key}
 ＆ {ethic_destiny_trait}
 '''
 TEMPLATE_FOOTER = '''|===
+'''
+
+# technology関連テンプレート
+TEMPLATE_TECHNOLOGY_HEADER = '''
+digraph tech_tree {{
+  compound = true;
+  concentrate=true;
+  ranksep = 2;
+  label = "{version}"
+  graph [
+    charset="UTF-8",
+    layout = dot,
+    rankdir="LR",
+    fontname="BIZ UDPGothic",
+    fontsize="12pt",
+    overlap=false,
+    splines=true,
+    remincross=true
+  ];
+  node [
+    fontname="BIZ UDPGothic",
+    shape = "box",
+    fontsize="10pt",
+    margin="0.3,0.1",
+  ];
+  edge [
+    fontname="BIZ UDPGothic",
+  ];
+'''
+TEMPLATE_TECHNOLOGY_DATA_1 = '''
+  subgraph cluster_{key} {{
+    label = "{name}"
+    {key}_info [
+        label = "{area}({category})\\ltier:{tier}\\lcost:{cost}\\lweight:{weight}\\l"
+        tooltip = "weight_modifier:\\n{weight_modifier}"
+    ];
+    tooltip = "前提研究:\\n{prerequisites}\\n\\nその他の条件:\\n{potential}"
+    bgcolor="{color}"
+  }}
+'''
+TEMPLATE_TECHNOLOGY_DATA_2 = '''  {key1}_info->{key2}_info[ltail=cluster_{key1}, lhead=cluster_{key2}];
+'''
+TEMPLATE_TECHNOLOGY_FOOTER = '''}
 '''
