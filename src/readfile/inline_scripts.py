@@ -26,7 +26,7 @@ class InlineScripts:
     @staticmethod
     def __read(inline_scripts: dict) -> dict:
         file = os.path.join(settings.GAME_BASE_DIR, settings.INLINE_SCRIPTS_DIR, inline_scripts['script'] + '.txt')
-        with open(file) as rf:
+        with open(file, encoding='utf_8') as rf:
             return InlineScripts.__read_params(rf, inline_scripts)
 
     @staticmethod

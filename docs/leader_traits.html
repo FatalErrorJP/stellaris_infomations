@@ -5,15 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.20">
-<meta name="author" content="最終更新日: 2024-06-18 20:14:34 +0900">
-<title>リーダー特性一覧 Verv3.12.5</title>
+<meta name="author" content="最終更新日: 2024-09-11 16:39:51 +0900">
+<title>リーダー特性一覧 Verv3.13.0</title>
 <link rel="stylesheet" href="./css/leader_traits.css">
 </head>
 <body class="article">
 <div id="header">
-<h1>リーダー特性一覧 Verv3.12.5</h1>
+<h1>リーダー特性一覧 Verv3.13.0</h1>
 <div class="details">
-<span id="author" class="author">最終更新日: 2024-06-18 20:14:34 +0900</span><br>
+<span id="author" class="author">最終更新日: 2024-09-11 16:39:51 +0900</span><br>
 </div>
 </div>
 <div id="content">
@@ -32628,7 +32628,7 @@ leader_trait_collaborator_3<br></p>
 ・ship_anomaly_generation_chance_mult (アノマリー発見率) = 0.25<br>
 <br>
 本人(条件あり):<br>
-・条件：{"exists": "owner", "owner": {"has_authority": "auth_machine_intelligence", "has_country_flag": "driven_neural_chorus"}}<br>
+・条件：{"exists": "owner", "owner": {"is_machine_empire": "yes", "has_country_flag": "driven_neural_chorus"}}<br>
 ・leaders_upkeep_mult (リーダー維持費) = -0.25<br>
 <br>
 惑星(条件あり):<br>
@@ -49047,7 +49047,7 @@ custom_tooltip_with_modifiers:<br>
 ・diplo_weight_mult (外交発言力) = -0.05<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-・§Y人間§!の帝国の態度が§R-25§!になる。<br>
+・§Y人間§!の帝国の態度が    §R-25§!になる。<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -49074,6 +49074,275 @@ custom_tooltip_with_modifiers:<br>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>leader_trait_storm_rider_commander</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>ストームライダー</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>basic</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>triggered</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>none</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>評議会:<br>
+・ship_speed_mult (亜光速移動速度) = 0.1<br>
+<br>
+本人(条件あり):<br>
+・条件：{"is_councilor": "no", "is_ruler": "no"}<br>
+・species_leader_exp_gain (mod_species_leader_exp_gain) = 0.15<br>
+・leader_lifespan_add (リーダーの寿命) = -10<br>
+<br>
+惑星(条件あり):<br>
+・条件：{"is_ruler": "no"}<br>
+・planet_storm_devastation_mult (宇宙嵐による惑星の荒廃度軽減) = -0.3<br>
+<br>
+セクター(条件あり):<br>
+・条件：{"is_ruler": "no"}<br>
+・planet_storm_devastation_mult (宇宙嵐による惑星の荒廃度軽減) = -0.15<br>
+<br>
+艦隊(条件あり):<br>
+・条件：{"is_councilor": "no", "is_ruler": "no", "is_leader_in_storm": "yes"}<br>
+・ship_evasion_mult (回避) = 0.30<br>
+<br>
+custom_tooltip_with_modifiers:<br>
+・\n    このリーダーは宇宙嵐のなかにいると、 特性の効果が増加する。<br>
+<br></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>{
+    "has_cosmic_storms_dlc": "yes",
+    "exists": "owner",
+    "owner": {
+        "has_origin": "origin_storm_chasers"
+    }
+}</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>leader_trait_storm_rider_scientist</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>ストームライダー</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>basic</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>triggered</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>none</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>評議会:<br>
+・species_leader_exp_gain (mod_species_leader_exp_gain) = 0.10<br>
+<br>
+リーダーアサイン時(条件あり):<br>
+・条件：{"is_councilor": "no", "is_ruler": "no", "is_leader_in_storm": "yes"}<br>
+・ship_archaeological_site_excavation_speed_mult (考古学発掘速度) = 0.15<br>
+・ship_anomaly_research_speed_mult (mod_ship_anomaly_research_speed_mult) = 0.15<br>
+<br>
+本人(条件あり):<br>
+・条件：{"is_councilor": "no", "is_ruler": "no"}<br>
+・species_leader_exp_gain (mod_species_leader_exp_gain) = 0.15<br>
+・leader_lifespan_add (リーダーの寿命) = -10<br>
+<br>
+惑星(条件あり):<br>
+・条件：{"is_councilor": "no", "is_ruler": "no", "is_leader_in_storm": "yes"}<br>
+・planet_jobs_physics_research_produces_mult (£job£ 職業からの£physics_research£ 物理学研究) = 0.07<br>
+・planet_jobs_society_research_produces_mult (£job£ 職業からの£society_research£ 社会学研究) = 0.07<br>
+・planet_jobs_engineering_research_produces_mult (£job£ 職業からの£engineering_research£ 工学研究) = 0.07<br>
+<br>
+セクター(条件あり):<br>
+・条件：{"is_councilor": "no", "is_ruler": "no", "is_leader_in_storm": "yes"}<br>
+・planet_jobs_physics_research_produces_mult (£job£ 職業からの£physics_research£ 物理学研究) = 0.035<br>
+・planet_jobs_society_research_produces_mult (£job£ 職業からの£society_research£ 社会学研究) = 0.035<br>
+・planet_jobs_engineering_research_produces_mult (£job£ 職業からの£engineering_research£ 工学研究) = 00.035<br>
+<br>
+custom_tooltip_with_modifiers:<br>
+・\n    このリーダーは宇宙嵐のなかにいると、 特性の効果が増加する。<br>
+<br></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>{
+    "has_cosmic_storms_dlc": "yes",
+    "exists": "owner",
+    "owner": {
+        "has_origin": "origin_storm_chasers"
+    }
+}</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>leader_trait_storm_rider_official</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>ストームライダー</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>basic</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>triggered</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>none</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>評議会:<br>
+・edicts_upkeep_mult (布告の維持費) = -0.10<br>
+<br>
+本人(条件あり):<br>
+・条件：{"is_councilor": "no", "is_ruler": "no"}<br>
+・species_leader_exp_gain (mod_species_leader_exp_gain) = 0.15<br>
+・leader_lifespan_add (リーダーの寿命) = -10<br>
+<br>
+惑星(条件あり):<br>
+・条件：{"is_councilor": "no", "is_ruler": "no", "is_leader_in_storm": "yes"}<br>
+・pop_job_amenities_mult (£job£ 職業による£amenities£ 快適度) = 0.2<br>
+<br>
+セクター(条件あり):<br>
+・条件：{"is_councilor": "no", "is_ruler": "no", "is_leader_in_storm": "yes"}<br>
+・pop_job_amenities_mult (£job£ 職業による£amenities£ 快適度) = 0.1<br>
+<br>
+銀河共同体(条件あり):<br>
+・条件：{"owner": {"is_galactic_community_member": "yes"}}<br>
+・resolution_category_space_weather_exploitation_stances_vote_strength_mult (§Y宇宙気象の利用§!の決議における票数) = 0.05<br>
+・resolution_category_storm_environmentalists_stances_vote_strength_mult (§Y宇宙嵐保護論者§!の決議における票数) = 0.05<br>
+<br>
+custom_tooltip_with_modifiers:<br>
+・\n    このリーダーは宇宙嵐のなかにいると、 特性の効果が増加する。<br>
+<br></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>{
+    "has_cosmic_storms_dlc": "yes",
+    "owner": {
+        "has_origin": "origin_storm_chasers"
+    }
+}</p>
+</div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">

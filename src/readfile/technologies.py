@@ -30,7 +30,7 @@ class Technologies:
 
     @staticmethod
     def __read(file: str) -> None:
-        with open(file) as rf:
+        with open(file, encoding='utf_8') as rf:
             for line in rf:
                 if not line:  # EOF
                     break
