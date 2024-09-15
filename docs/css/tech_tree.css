@@ -1,0 +1,57 @@
+@import "https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.css";
+
+header {
+  position: fixed;
+  top: 0;
+  z-index: 200;
+  width: 100%;
+  display: flex;
+  display: inline-flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+h2 {
+  padding-left: 10px;
+}
+#slider {
+  font-size: 20px;
+  padding-top: 20px;
+}
+#zoom-string {
+  text-align: center;
+}
+search {
+  padding-top: 20px;
+  padding-right: 20px;
+}
+
+
+#tech-info {
+  position: fixed;
+  top: 0;
+  right: 50px;
+  z-index: 100;
+  font-size: 18px;
+  padding-top: 80px;
+  padding-left: 10px;
+}
+#tech-info th {
+  display: inline-block;
+  width: 150px;
+  text-align: right;
+  padding-right: 10px;
+}
+#tech-info td {
+  width: 250px;
+  white-space: pre;
+}
+
+#tech-tree {
+  width: 98%;
+  height: 5000px;
+  border: 2px solid #000000;
+  margin-top: 80px;
+  margin-left: 1%;
+}

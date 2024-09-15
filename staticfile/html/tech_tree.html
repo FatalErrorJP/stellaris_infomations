@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="./css/tech_tree.css" as="style">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.7/dist/css/autoComplete.02.min.css" as="style">
+  <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.7/dist/autoComplete.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/cytoscape@3.30.2/dist/cytoscape.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/cytoscape-tidytree/dist/cytoscape-tidytree.js" defer></script>
+  <script src="./js/tech_tree_elements.js" defer></script>
+  <script src="./js/tech_tree.js" defer></script>
+  <title>Stellaris TechTree</title>
+</head>
+<body>
+  <header>
+    <h2>Stellaris vx.xx.x TechTree</h2>
+    <div id="slider">
+      <div id="zoom-string">×1</div>
+      <input id="zoom" type="range" min="0.1" max="2" step="0.1">
+    </div>
+    <search>
+      <input id="search-box" type="search" dir="ltr" spellcheck=false autocorrect="off" autocomplete="off" autocapitalize="off" maxlength="100" tabindex="1">
+      <button id="search-button" type="button" tabindex="2">検索</button>
+    </search>
+  </header>
+  <main>
+    <table id="tech-info">
+      <tr><th>id:</th><td>undefined</td></tr>
+      <tr><th>name:</th><td>undefined</td></tr>
+      <tr><th>tier:</th><td>undefined</td></tr>
+      <tr><th>cost:</th><td>undefined</td></tr>
+      <tr><th>area:</th><td>undefined</td></tr>
+      <tr><th>category:</th><td>undefined</td></tr>
+      <tr><th>prerequisites:</th><td>undefined</td></tr>
+      <tr><th>successor:</th><td>undefined</td></tr>
+      <tr><th>weight:</th><td>undefined</td></tr>
+      <tr><th>weight_modifier:</th><td>undefined</td></tr>
+      <tr><th>potential:</th><td>undefined</td></tr>
+    </table>
+    <div id="tech-tree"></div>
+  </main>
+</body>
+</html>

@@ -13,9 +13,10 @@ TECHNOLOGY_DIR = 'common/technology'
 SCRIPTED_VARIABLES_DIR = 'common/scripted_variables'
 INLINE_SCRIPTS_DIR = 'common/inline_scripts'
 LOCALISATION_DIR = 'localisation/japanese'
-OUTPUT_DIR = './asciidoc'
+OUTPUT_DIR = './tmp'
 OUTPUT_LEADER_TRAIT_FILE = 'leader_traits.adoc'
 OUTPUT_TECHNOLOGY_FILE = 'tech_tree.dot'
+OUTPUT_TECHNOLOGY_FILE2 = 'tech_tree_elements.js'
 
 ###############################################################################
 # AsciiDocのテンプレート設定
@@ -110,4 +111,34 @@ TEMPLATE_TECHNOLOGY_DATA_1 = '''
 TEMPLATE_TECHNOLOGY_DATA_2 = '''  {key1}_info->{key2}_info[ltail=cluster_{key1}, lhead=cluster_{key2}];
 '''
 TEMPLATE_TECHNOLOGY_FOOTER = '''}
+'''
+
+TEMPLATE_TECHNOLOGY2_HEADER = '''
+function getVersion() {{
+    return "{version}";
+}}
+
+function getElements() {{
+    return [
+'''
+TEMPLATE_TECHNOLOGY2_DATA_1 = '''{{
+    data: {{
+      id: '{key}',
+      name: '{name}',
+      tier: {tier},
+      cost: {cost},
+      area:'{area}',
+      category: '{category}',
+      weight: {weight},
+      weight_modifier: {weight_modifier},
+      prerequisites: {prerequisites},
+      potential: {potential}
+    }},
+    classes: '{color}'
+}},
+'''
+TEMPLATE_TECHNOLOGY2_DATA_2 = '''{{ data: {{ id: '{key1}_to_{key2}', source: '{key1}', target: '{key2}' }} }},
+'''
+TEMPLATE_TECHNOLOGY2_FOOTER = '''    ];
+}
 '''

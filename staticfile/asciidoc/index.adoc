@@ -20,7 +20,7 @@
 
 解析情報::
 * link:./leader_traits.html[リーダー特性一覧]
-* link:./tech_tree.svg[テクノロジーツリー]
+* テクノロジーツリー (link:./tech_tree.svg[svg版] link:./tech_tree.html[cytoscape.js版])
 
 
 == 外部リンク
