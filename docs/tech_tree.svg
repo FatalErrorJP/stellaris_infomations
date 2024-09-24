@@ -9,7 +9,7 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 22800.75)">
 <title>tech_tree</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-22800.75 3541.15,-22800.75 3541.15,4 -4,4"/>
-<text text-anchor="middle" x="1768.58" y="-5.35" font-family="BIZ UDPGothic" font-size="12.00">v3.13.0</text>
+<text text-anchor="middle" x="1768.58" y="-5.35" font-family="BIZ UDPGothic" font-size="12.00">v3.13.1</text>
 <g id="clust1" class="cluster">
 <title>cluster_tech_solar_panel_network</title>
 <g id="a_clust1"><a xlink:title="前提研究:&#10;星系港の建設&#10;&#10;その他の条件:&#10;{&#10; &#160;&quot;is_gestalt&quot;: &quot;yes&quot;&#10;}">
