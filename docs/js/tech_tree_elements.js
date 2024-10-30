@@ -1,6 +1,6 @@
 
 function getVersion() {
-    return "v3.13.1";
+    return "v3.14.1";
 }
 
 function getElements() {
@@ -827,6 +827,21 @@ function getElements() {
       weight_modifier: {"modifier": {"factor": "1.5", "has_ethic": "ethic_fanatic_militarist"}},
       prerequisites: ["コルベット"],
       potential: {}
+    },
+    classes: 'engineering'
+},
+{
+    data: {
+      id: 'tech_boarding_cables',
+      name: '搭乗ケーブル',
+      tier: 1,
+      cost: 8000,
+      area:'工学',
+      category: '推進システム工学',
+      weight: 0,
+      weight_modifier: {},
+      prerequisites: [],
+      potential: {"has_grand_archive_dlc": "yes"}
     },
     classes: 'engineering'
 },
@@ -2257,6 +2272,156 @@ function getElements() {
 },
 {
     data: {
+      id: 'tech_galactic_archivism',
+      name: '銀河アーカイブ',
+      tier: 2,
+      cost: 4000,
+      area:'社会学',
+      category: '統治学',
+      weight: 85,
+      weight_modifier: {},
+      prerequisites: [],
+      potential: {"has_grand_archive_dlc": "yes", "OR": {"acquired_specimen_count > 0": "", "is_galactic_curators_empire": "yes", "is_beastmasters_empire": "yes"}}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_gravity_wells',
+      name: '重力罠',
+      tier: 2,
+      cost: 4000,
+      area:'物理学',
+      category: '力場操作',
+      weight: 85,
+      weight_modifier: {},
+      prerequisites: [],
+      potential: {"has_grand_archive_dlc": "yes", "OR": {"has_encountered_any_fauna": "yes", "is_beastmasters_empire": "yes"}}
+    },
+    classes: 'physics'
+},
+{
+    data: {
+      id: 'tech_gravity_snare_capacity_1',
+      name: 'マイクロ特異点の強化',
+      tier: 2,
+      cost: 4000,
+      area:'物理学',
+      category: '力場操作',
+      weight: 85,
+      weight_modifier: {},
+      prerequisites: ["重力罠"],
+      potential: {"has_grand_archive_dlc": "yes"}
+    },
+    classes: 'physics'
+},
+{
+    data: {
+      id: 'tech_alien_cloning',
+      name: '人工交配',
+      tier: 2,
+      cost: 4000,
+      area:'社会学',
+      category: '生物学',
+      weight: 85,
+      weight_modifier: {"modifier": {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"any_member": {"has_technology": "tech_alien_cloning"}, "NOT": {"has_federation_law": "fleet_contribution_none"}}}},
+      prerequisites: ["重力罠"],
+      potential: {"has_grand_archive_dlc": "yes", "OR": {"is_beastmasters_empire": "yes", "can_research_technology": "tech_genome_mapping"}}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_improved_incubators',
+      name: '改良インキュベーター',
+      tier: 2,
+      cost: 4000,
+      area:'社会学',
+      category: '生物学',
+      weight: 65,
+      weight_modifier: {"modifier": {"factor": "1.25", "has_tradition": "tr_domestication_adopt"}},
+      prerequisites: ["人工交配"],
+      potential: {"has_grand_archive_dlc": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_controlled_mutations',
+      name: '制御された突然変異',
+      tier: 2,
+      cost: 5000,
+      area:'社会学',
+      category: '生物学',
+      weight: 5000,
+      weight_modifier: {},
+      prerequisites: ["人工交配"],
+      potential: {"has_any_dna": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_thrusters_bio_integration',
+      name: 'スラスター生体統合',
+      tier: 2,
+      cost: 4000,
+      area:'工学',
+      category: '推進システム工学',
+      weight: 0,
+      weight_modifier: {},
+      prerequisites: ["制御された突然変異"],
+      potential: {}
+    },
+    classes: 'engineering'
+},
+{
+    data: {
+      id: 'tech_hyper_drive_bio_integration',
+      name: 'ハイパードライブ生体統合',
+      tier: 2,
+      cost: 4000,
+      area:'物理学',
+      category: '素粒子物理学',
+      weight: 0,
+      weight_modifier: {},
+      prerequisites: ["制御された突然変異"],
+      potential: {}
+    },
+    classes: 'physics'
+},
+{
+    data: {
+      id: 'tech_sensors_bio_integration',
+      name: 'センサー生体統合',
+      tier: 2,
+      cost: 4000,
+      area:'物理学',
+      category: 'コンピュータ',
+      weight: 0,
+      weight_modifier: {},
+      prerequisites: ["制御された突然変異"],
+      potential: {}
+    },
+    classes: 'physics'
+},
+{
+    data: {
+      id: 'tech_combat_computers_bio_integration',
+      name: '戦闘コンピュータ生体統合',
+      tier: 2,
+      cost: 4000,
+      area:'物理学',
+      category: 'コンピュータ',
+      weight: 0,
+      weight_modifier: {},
+      prerequisites: ["制御された突然変異"],
+      potential: {}
+    },
+    classes: 'physics'
+},
+{
+    data: {
       id: 'tech_orbital_arc_furnace',
       name: 'アーク炉',
       tier: 2,
@@ -3188,7 +3353,7 @@ function getElements() {
 {
     data: {
       id: 'tech_amoeba_strike_craft_1',
-      name: 'アメーバ飼育計画',
+      name: '鞭毛の武器化',
       tier: 2,
       cost: 6000,
       area:'社会学',
@@ -3284,7 +3449,7 @@ function getElements() {
       area:'工学',
       category: '材料工学',
       weight: 85,
-      weight_modifier: {"factor": "2", "modifier": {"factor": "0", "NOT": {"any_owned_planet": {"OR": {"has_deposit": "d_industrial_sector"}}, "any_planet_within_border": {"OR": {"has_deposit": "d_rare_crystals_5"}}}}},
+      weight_modifier: {"factor": "2", "modifier": {"add": "1", "has_country_flag": "tech_mine_rare_crystals_culling_boost"}},
       prerequisites: ["宇宙建設"],
       potential: {}
     },
@@ -3934,6 +4099,156 @@ function getElements() {
       potential: {"has_first_contact_dlc": "yes"}
     },
     classes: 'physics'
+},
+{
+    data: {
+      id: 'tech_gravity_snare_capacity_2',
+      name: '重力操作の最適化',
+      tier: 3,
+      cost: 8000,
+      area:'物理学',
+      category: '力場操作',
+      weight: 65,
+      weight_modifier: {"modifier": {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}},
+      prerequisites: ["マイクロ特異点の強化"],
+      potential: {"has_grand_archive_dlc": "yes"}
+    },
+    classes: 'physics'
+},
+{
+    data: {
+      id: 'tech_containment_vessel',
+      name: 'キュレーターの収容プロトコル',
+      tier: 3,
+      cost: 8000,
+      area:'物理学',
+      category: '力場操作',
+      weight: 0,
+      weight_modifier: {"modifier": {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}},
+      prerequisites: ["重力罠"],
+      potential: {"has_grand_archive_dlc": "yes"}
+    },
+    classes: 'physics'
+},
+{
+    data: {
+      id: 'tech_voidworm_immunity',
+      name: 'ボイドワーム免疫',
+      tier: 3,
+      cost: 8000,
+      area:'社会学',
+      category: '生物学',
+      weight: 0,
+      weight_modifier: {},
+      prerequisites: [],
+      potential: {"has_grand_archive_dlc": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_asteroidal_carapace',
+      name: '小惑星型の甲殻',
+      tier: 3,
+      cost: 0,
+      area:'工学',
+      category: '材料工学',
+      weight: 0,
+      weight_modifier: {},
+      prerequisites: [],
+      potential: {"has_grand_archive_dlc": "yes"}
+    },
+    classes: 'engineering'
+},
+{
+    data: {
+      id: 'tech_metabolic_gases',
+      name: '代謝ガス',
+      tier: 3,
+      cost: 8000,
+      area:'社会学',
+      category: '生物学',
+      weight: 45,
+      weight_modifier: {"modifier": {"factor": "1.25", "has_tradition": "tr_domestication_adopt"}},
+      prerequisites: ["改良インキュベーター"],
+      potential: {"has_grand_archive_dlc": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_unique_mutation_space_amoeba',
+      name: 'リーチクラフト',
+      tier: 3,
+      cost: 8000,
+      area:'社会学',
+      category: '生物学',
+      weight: 0,
+      weight_modifier: {},
+      prerequisites: ["高度な制御された突然変異"],
+      potential: {}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_unique_mutation_tiyanki',
+      name: '群歌のコード',
+      tier: 3,
+      cost: 8000,
+      area:'社会学',
+      category: '生物学',
+      weight: 0,
+      weight_modifier: {},
+      prerequisites: ["高度な制御された突然変異"],
+      potential: {}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_unique_mutation_voidworm',
+      name: '強烈な嚢胞',
+      tier: 3,
+      cost: 8000,
+      area:'社会学',
+      category: '生物学',
+      weight: 0,
+      weight_modifier: {},
+      prerequisites: ["高度な制御された突然変異"],
+      potential: {}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_unique_mutation_cutholoid',
+      name: '胃液の噴水',
+      tier: 3,
+      cost: 8000,
+      area:'社会学',
+      category: '生物学',
+      weight: 0,
+      weight_modifier: {},
+      prerequisites: ["高度な制御された突然変異"],
+      potential: {}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_unique_mutation_crystalline_entity',
+      name: '核分裂コア',
+      tier: 3,
+      cost: 8000,
+      area:'社会学',
+      category: '生物学',
+      weight: 0,
+      weight_modifier: {},
+      prerequisites: ["高度な制御された突然変異"],
+      potential: {}
+    },
+    classes: 'society'
 },
 {
     data: {
@@ -5494,6 +5809,66 @@ function getElements() {
       potential: {"has_first_contact_dlc": "yes"}
     },
     classes: 'physics'
+},
+{
+    data: {
+      id: 'tech_gravity_snare_capacity_3',
+      name: '収容システムの改善',
+      tier: 4,
+      cost: 16000,
+      area:'物理学',
+      category: '力場操作',
+      weight: 45,
+      weight_modifier: {"modifier": {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}},
+      prerequisites: ["\"tech_gravity_snare_capacity_2\""],
+      potential: {"has_grand_archive_dlc": "yes"}
+    },
+    classes: 'physics'
+},
+{
+    data: {
+      id: 'tech_controlled_mutations_2',
+      name: '高度な制御された突然変異',
+      tier: 4,
+      cost: 20000,
+      area:'社会学',
+      category: '生物学',
+      weight: 20000,
+      weight_modifier: {},
+      prerequisites: ["制御された突然変異"],
+      potential: {}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_unique_mutation_restorative_enzymes',
+      name: '修復酵素',
+      tier: 4,
+      cost: 16000,
+      area:'社会学',
+      category: '生物学',
+      weight: 0,
+      weight_modifier: {},
+      prerequisites: ["高度な制御された突然変異"],
+      potential: {}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_unique_mutation_starborne_biology',
+      name: 'スターボーン生物学',
+      tier: 4,
+      cost: 16000,
+      area:'社会学',
+      category: '生物学',
+      weight: 0,
+      weight_modifier: {},
+      prerequisites: ["高度な制御された突然変異"],
+      potential: {}
+    },
+    classes: 'society'
 },
 {
     data: {
@@ -8236,6 +8611,14 @@ function getElements() {
 { data: { id: 'tech_shields_2_to_tech_cloaking_1', source: 'tech_shields_2', target: 'tech_cloaking_1' } },
 { data: { id: 'tech_sensors_2_to_tech_detection_array', source: 'tech_sensors_2', target: 'tech_detection_array' } },
 { data: { id: 'tech_detection_array_to_tech_assisted_detection', source: 'tech_detection_array', target: 'tech_assisted_detection' } },
+{ data: { id: 'tech_gravity_wells_to_tech_gravity_snare_capacity_1', source: 'tech_gravity_wells', target: 'tech_gravity_snare_capacity_1' } },
+{ data: { id: 'tech_gravity_wells_to_tech_alien_cloning', source: 'tech_gravity_wells', target: 'tech_alien_cloning' } },
+{ data: { id: 'tech_alien_cloning_to_tech_improved_incubators', source: 'tech_alien_cloning', target: 'tech_improved_incubators' } },
+{ data: { id: 'tech_alien_cloning_to_tech_controlled_mutations', source: 'tech_alien_cloning', target: 'tech_controlled_mutations' } },
+{ data: { id: 'tech_controlled_mutations_to_tech_thrusters_bio_integration', source: 'tech_controlled_mutations', target: 'tech_thrusters_bio_integration' } },
+{ data: { id: 'tech_controlled_mutations_to_tech_hyper_drive_bio_integration', source: 'tech_controlled_mutations', target: 'tech_hyper_drive_bio_integration' } },
+{ data: { id: 'tech_controlled_mutations_to_tech_sensors_bio_integration', source: 'tech_controlled_mutations', target: 'tech_sensors_bio_integration' } },
+{ data: { id: 'tech_controlled_mutations_to_tech_combat_computers_bio_integration', source: 'tech_controlled_mutations', target: 'tech_combat_computers_bio_integration' } },
 { data: { id: 'tech_hyper_drive_2_to_tech_hyper_relays', source: 'tech_hyper_drive_2', target: 'tech_hyper_relays' } },
 { data: { id: 'tech_space_science_2_to_tech_space_science_3', source: 'tech_space_science_2', target: 'tech_space_science_3' } },
 { data: { id: 'tech_space_science_3_to_tech_space_science_4', source: 'tech_space_science_3', target: 'tech_space_science_4' } },
@@ -8342,6 +8725,14 @@ function getElements() {
 { data: { id: 'tech_torpedoes_1_to_tech_torpedoes_2', source: 'tech_torpedoes_1', target: 'tech_torpedoes_2' } },
 { data: { id: 'tech_cloaking_1_to_tech_cloaking_2', source: 'tech_cloaking_1', target: 'tech_cloaking_2' } },
 { data: { id: 'tech_shields_3_to_tech_cloaking_2', source: 'tech_shields_3', target: 'tech_cloaking_2' } },
+{ data: { id: 'tech_gravity_snare_capacity_1_to_tech_gravity_snare_capacity_2', source: 'tech_gravity_snare_capacity_1', target: 'tech_gravity_snare_capacity_2' } },
+{ data: { id: 'tech_gravity_wells_to_tech_containment_vessel', source: 'tech_gravity_wells', target: 'tech_containment_vessel' } },
+{ data: { id: 'tech_improved_incubators_to_tech_metabolic_gases', source: 'tech_improved_incubators', target: 'tech_metabolic_gases' } },
+{ data: { id: 'tech_controlled_mutations_2_to_tech_unique_mutation_space_amoeba', source: 'tech_controlled_mutations_2', target: 'tech_unique_mutation_space_amoeba' } },
+{ data: { id: 'tech_controlled_mutations_2_to_tech_unique_mutation_tiyanki', source: 'tech_controlled_mutations_2', target: 'tech_unique_mutation_tiyanki' } },
+{ data: { id: 'tech_controlled_mutations_2_to_tech_unique_mutation_voidworm', source: 'tech_controlled_mutations_2', target: 'tech_unique_mutation_voidworm' } },
+{ data: { id: 'tech_controlled_mutations_2_to_tech_unique_mutation_cutholoid', source: 'tech_controlled_mutations_2', target: 'tech_unique_mutation_cutholoid' } },
+{ data: { id: 'tech_controlled_mutations_2_to_tech_unique_mutation_crystalline_entity', source: 'tech_controlled_mutations_2', target: 'tech_unique_mutation_crystalline_entity' } },
 { data: { id: 'tech_akx_worm_1_to_tech_akx_worm_3', source: 'tech_akx_worm_1', target: 'tech_akx_worm_3' } },
 { data: { id: 'tech_akx_worm_2_to_tech_akx_worm_3', source: 'tech_akx_worm_2', target: 'tech_akx_worm_3' } },
 { data: { id: 'tech_starbase_3_to_tech_orbital_ring_tier_1', source: 'tech_starbase_3', target: 'tech_orbital_ring_tier_1' } },
@@ -8454,6 +8845,10 @@ function getElements() {
 { data: { id: 'tech_torpedoes_2_to_tech_torpedoes_3', source: 'tech_torpedoes_2', target: 'tech_torpedoes_3' } },
 { data: { id: 'tech_cloaking_2_to_tech_cloaking_3', source: 'tech_cloaking_2', target: 'tech_cloaking_3' } },
 { data: { id: 'tech_shields_4_to_tech_cloaking_3', source: 'tech_shields_4', target: 'tech_cloaking_3' } },
+{ data: { id: 'tech_gravity_snare_capacity_2_to_tech_gravity_snare_capacity_3', source: 'tech_gravity_snare_capacity_2', target: 'tech_gravity_snare_capacity_3' } },
+{ data: { id: 'tech_controlled_mutations_to_tech_controlled_mutations_2', source: 'tech_controlled_mutations', target: 'tech_controlled_mutations_2' } },
+{ data: { id: 'tech_controlled_mutations_2_to_tech_unique_mutation_restorative_enzymes', source: 'tech_controlled_mutations_2', target: 'tech_unique_mutation_restorative_enzymes' } },
+{ data: { id: 'tech_controlled_mutations_2_to_tech_unique_mutation_starborne_biology', source: 'tech_controlled_mutations_2', target: 'tech_unique_mutation_starborne_biology' } },
 { data: { id: 'tech_hyper_drive_3_to_tech_gateway_activation', source: 'tech_hyper_drive_3', target: 'tech_gateway_activation' } },
 { data: { id: 'tech_self_aware_logic_to_tech_sapient_ai', source: 'tech_self_aware_logic', target: 'tech_sapient_ai' } },
 { data: { id: 'tech_self_aware_logic_to_tech_positronic_implants', source: 'tech_self_aware_logic', target: 'tech_positronic_implants' } },
