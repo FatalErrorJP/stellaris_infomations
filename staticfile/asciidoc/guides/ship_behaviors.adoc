@@ -1,4 +1,4 @@
-= 【Stellaris 3.12.4】艦船の挙動について
+= 【Stellaris 3.14.159】艦船の挙動について
 :toc: left
 :toc-title: 目次
 :example-caption: 例
@@ -145,7 +145,7 @@ image::ship_behaviors_4.png[]
 | swarm(突進戦術)     | min                    | 10                 | 60                           | orbit               | charge               | -
 | picket(前哨戦術)    | median                 | median             | max                          | stay_at_range       | orbit                | -
 | line(戦列戦術)      | median                 | median             | max                          | stay_at_range       | charge               | -
-| artillery(砲撃戦術) | max                    | median             | max                          | maintain_distance   | stay_at_range        | -
+| artillery(砲撃戦術) | max                    | max                | max                          | maintain_distance   | stay_at_range        | -
 | carrier(空母戦術)   | max                    | max                | max                          | maintain_distance   | stay_at_range        | strike_craft
 | torpedo(魚雷戦術)   | 10                     | 10                 | max                          | charge              | charge               | -
 |===
@@ -211,10 +211,8 @@ image::ship_behaviors_7.png[width=100%]
 ==== 砲撃戦術
 砲撃戦術はBの距離まで接近した後は、Aの距離を常に保つように動きます。 +
 敵艦が接近してこなければ基本的には静止しますが、接近してくる場合は円を描くように敵から離れようとします。 +
-前哨や戦列と同じく亜光速移動速度が高い場合、Bの距離で停止しきれず前に出てしまうので注意が必要です。 +
-ちなみに、射程延長の補正でAがmedian以上になることはありません。
-
-image::ship_behaviors_8.png[width=100%]
+前哨や戦列と同じく亜光速移動速度が高い場合、Bの距離で停止しきれず前に出てしまうので注意が必要です。
+検証していませんが、射程延長の補正でAがmaxの以上にはならない可能性があります。
 
 image::ship_behaviors_9.png[width=100%]
 
