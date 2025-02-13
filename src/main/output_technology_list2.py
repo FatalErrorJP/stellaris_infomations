@@ -64,7 +64,7 @@ def _get_param(key: str, data: dict, default_value='') -> str:
     if key in data:
         if isinstance(data[key], dict):
             return _get_param('factor', data[key])
-        elif data[key][0] == '@':
+        elif isinstance(data[key], str) and data[key][0] == '@':
             return ScriptedVariables.get_value(data[key])
         else:
             return data[key]

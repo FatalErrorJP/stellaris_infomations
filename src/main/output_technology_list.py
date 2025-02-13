@@ -64,7 +64,7 @@ def _get_param(key: str, data: dict, default_value='') -> str:
     if key in data:
         if isinstance(data[key], dict):
             return _get_param('factor', data[key])
-        elif data[key][0] == '@':
+        elif isinstance(data[key], str) and data[key][0] == '@':
             return ScriptedVariables.get_value(data[key])
         else:
             return data[key]
@@ -110,7 +110,7 @@ def _get_color(key: str, data: dict) -> str:
 
 def _get_json(key: str, data: dict) -> str:
     if key in data:
-        return json.dumps(data[key], indent=2).replace('"', '\\"').replace('\n', '\\n')
+        return json.dumps(data[key], indent=2).replace('"', '\\"').replace('\n', '\\n').replace('\\\\"', '\\"')
     else:
         return ''
 
