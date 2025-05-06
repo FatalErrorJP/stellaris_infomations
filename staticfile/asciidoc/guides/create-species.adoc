@@ -1,4 +1,4 @@
-= 【Stellaris 3.12.4】ポートレート＆種族の作り方
+= 【Stellaris 4.0.2】ポートレート＆種族の作り方
 :toc: left
 :toc-title: 目次
 :example-caption: 例
@@ -229,6 +229,7 @@ C:\Users\(ユーザー名)\Documents\Paradox Interactive\Stellaris\mod\(MODの�
 d-man-biologicals = {
 	playable = { always = yes }
 	randomized = no
+	generate_shipset = no
 	graphical_culture = humanoid_01
 }
 
@@ -236,6 +237,7 @@ d-man-biologicals = {
 d-man-machines = {
 	playable = { always = yes }
 	randomized = no
+	generate_shipset = no
 	graphical_culture = humanoid_01
 }
 
@@ -243,6 +245,7 @@ d-man-machines = {
 d-man-lithoids = {
 	playable = { always = yes }
 	randomized = no
+	generate_shipset = no
 	graphical_culture = humanoid_01
 }
 ----
@@ -1196,6 +1199,9 @@ d-man-biologicals = {
 	# 機械知性は選択不可
 	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
 
+	# 艦船セットを利用しない
+	generate_shipset = no
+
 	# グラフィックカルチャー
 	graphical_culture = humanoid_01
 }
@@ -1259,6 +1265,9 @@ d-man-machines = {
 	leader_age_min = 5
 	leader_age_max = 10
 
+	# 艦船セットを利用しない
+	generate_shipset = no
+
 	# グラフィックカルチャー
 	graphical_culture = synthetics_01
 }
@@ -1285,6 +1294,9 @@ d-man-lithoids = {
 
 	# デフォルト種族特性「岩石」
 	trait = "trait_lithoid"
+
+	# 艦船セットを利用しない
+	generate_shipset = no
 
 	# グラフィックカルチャー
 	graphical_culture = lithoid_01

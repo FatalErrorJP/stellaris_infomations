@@ -5,13 +5,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.23">
-<title>【Stellaris 3.12.4】ポートレート＆種族の作り方</title>
+<title>【Stellaris 4.0.2】ポートレート＆種族の作り方</title>
 <link rel="stylesheet" href="../css/default.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>【Stellaris 3.12.4】ポートレート＆種族の作り方</h1>
+<h1>【Stellaris 4.0.2】ポートレート＆種族の作り方</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">目次</div>
 <ul class="sectlevel1">
@@ -421,6 +421,7 @@ ddsというファイル形式には、フリーソフトであればpaint.net�
 d-man-biologicals = {
 	playable = { always = yes }
 	randomized = no
+	generate_shipset = no
 	graphical_culture = humanoid_01
 }
 
@@ -428,6 +429,7 @@ d-man-biologicals = {
 d-man-machines = {
 	playable = { always = yes }
 	randomized = no
+	generate_shipset = no
 	graphical_culture = humanoid_01
 }
 
@@ -435,6 +437,7 @@ d-man-machines = {
 d-man-lithoids = {
 	playable = { always = yes }
 	randomized = no
+	generate_shipset = no
 	graphical_culture = humanoid_01
 }</code></pre>
 </div>
@@ -1466,6 +1469,9 @@ d-man-biologicals = {
 	# 機械知性は選択不可
 	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
 
+	# 艦船セットを利用しない
+	generate_shipset = no
+
 	# グラフィックカルチャー
 	graphical_culture = humanoid_01
 }
@@ -1529,6 +1535,9 @@ d-man-machines = {
 	leader_age_min = 5
 	leader_age_max = 10
 
+	# 艦船セットを利用しない
+	generate_shipset = no
+
 	# グラフィックカルチャー
 	graphical_culture = synthetics_01
 }
@@ -1555,6 +1564,9 @@ d-man-lithoids = {
 
 	# デフォルト種族特性「岩石」
 	trait = "trait_lithoid"
+
+	# 艦船セットを利用しない
+	generate_shipset = no
 
 	# グラフィックカルチャー
 	graphical_culture = lithoid_01
