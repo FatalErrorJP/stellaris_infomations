@@ -54,10 +54,18 @@ def _write_leader_trait_data(wf: TextIO) -> None:
             if i == int(_get_param('tier', data)):
                 if 'prerequisites' in data:
                     for prerequisites_key in data['prerequisites']:
-                        wf.writelines(settings.TEMPLATE_TECHNOLOGY_DATA_2.format(
-                            key1=prerequisites_key.strip('"'),
-                            key2=key,
-                        ))
+                        prerequisite = data['prerequisites'][prerequisites_key]
+                        if 'OR' in prerequisites_key:
+                            for prerequisite_or_key in prerequisite:
+                                wf.writelines(settings.TEMPLATE_TECHNOLOGY_DATA_2.format(
+                                    key1=prerequisite[prerequisite_or_key].strip('"'),
+                                    key2=key,
+                                ))
+                        else:
+                            wf.writelines(settings.TEMPLATE_TECHNOLOGY_DATA_2.format(
+                                key1=prerequisite.strip('"'),
+                                key2=key,
+                            ))
 
 
 def _get_param(key: str, data: dict, default_value='') -> str:
@@ -80,8 +88,15 @@ def _get_param_category(key: str, data: dict) -> str:
 def _get_param_prerequisites(key: str, data: dict) -> str:
     value = []
     if key in data:
-        for prerequisite in data[key]:
-            value.append(Localisations.get_value(prerequisite))
+        for prerequisites_key in data[key]:
+            prerequisite = data[key][prerequisites_key]
+            if 'OR' in prerequisites_key:
+                value.append('OR = {')
+                for prerequisite_or_key in prerequisite:
+                    value.append('  ' + Localisations.get_value(prerequisite[prerequisite_or_key]))
+                value.append('}')
+            else:
+                value.append(Localisations.get_value(prerequisite))
     return "\n".join(value)
 
 

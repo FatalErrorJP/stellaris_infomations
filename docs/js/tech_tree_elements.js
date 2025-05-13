@@ -1,10 +1,25 @@
 
 function getVersion() {
-    return "v3.14.15926";
+    return "v4.0.6";
 }
 
 function getElements() {
     return [
+{
+    data: {
+      id: 'tech_wilderness_terraform',
+      name: '惑星上発芽',
+      tier: 0,
+      cost: 1000,
+      area:'社会学',
+      category: '新天地',
+      weight: 0,
+      weight_modifier: {},
+      prerequisites: [],
+      potential: {"is_wilderness_empire": "yes"}
+    },
+    classes: 'society'
+},
 {
     data: {
       id: 'tech_solar_panel_network',
@@ -46,7 +61,7 @@ function getElements() {
       weight: 0,
       weight_modifier: {"factor": 1000},
       prerequisites: ["星系港の建設"],
-      potential: {}
+      potential: {"country_uses_bio_ships": "no"}
     },
     classes: 'engineering'
 },
@@ -190,7 +205,7 @@ function getElements() {
       id: 'tech_mass_drivers_1',
       name: 'マスドライバー',
       tier: 0,
-      cost: 0,
+      cost: 1000,
       area:'工学',
       category: '推進システム工学',
       weight: 0,
@@ -226,7 +241,7 @@ function getElements() {
       weight: 0,
       weight_modifier: {},
       prerequisites: [],
-      potential: {}
+      potential: {"OR": {"country_uses_bio_ships": "no", "has_tradition": "tr_nanotech_4", "has_crisis_level": "crisis_level_2", "has_technology": "tech_cosmogenesis_escort"}}
     },
     classes: 'engineering'
 },
@@ -340,7 +355,7 @@ function getElements() {
       id: 'tech_lasers_1',
       name: '赤色レーザー',
       tier: 0,
-      cost: 0,
+      cost: 1000,
       area:'物理学',
       category: '素粒子物理学',
       weight: 0,
@@ -427,6 +442,21 @@ function getElements() {
 },
 {
     data: {
+      id: 'tech_hydroponics',
+      name: '水耕栽培',
+      tier: 0,
+      cost: 0,
+      area:'社会学',
+      category: '生物学',
+      weight: 0,
+      weight_modifier: {"factor": 2, "modifier": {"factor": 2, "country_uses_bio_ships": "yes"}},
+      prerequisites: [],
+      potential: {"is_wilderness_empire": "no"}
+    },
+    classes: 'society'
+},
+{
+    data: {
       id: 'tech_colonization_1',
       name: '新天地プロトコル',
       tier: 0,
@@ -437,6 +467,21 @@ function getElements() {
       weight_modifier: {"factor": 1000},
       prerequisites: ["宇宙探索"],
       potential: {}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_basic_health',
+      name: '医療',
+      tier: 0,
+      cost: 0,
+      area:'社会学',
+      category: '生物学',
+      weight: 0,
+      weight_modifier: {},
+      prerequisites: [],
+      potential: {"is_regular_empire": "yes", "is_individual_machine": "no"}
     },
     classes: 'society'
 },
@@ -496,7 +541,202 @@ function getElements() {
       weight: 0,
       weight_modifier: [],
       prerequisites: [],
-      potential: {"is_hive_empire": "yes"}
+      potential: {"is_hive_empire": "yes", "is_wilderness_empire": "no"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_wilderness_node',
+      name: '存在の中心',
+      tier: 0,
+      cost: 0,
+      area:'社会学',
+      category: '統治学',
+      weight: 0,
+      weight_modifier: [],
+      prerequisites: [],
+      potential: {"is_wilderness_empire": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_maulers',
+      name: 'モーラー',
+      tier: 1,
+      cost: 1000,
+      area:'社会学',
+      category: '生物学',
+      weight: 0,
+      weight_modifier: {"factor": 0},
+      prerequisites: [],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_mauler_build_speed',
+      name: 'モーラ―の孵化の標準化',
+      tier: 1,
+      cost: 2500,
+      area:'社会学',
+      category: '生物学',
+      weight: 95,
+      weight_modifier: [],
+      prerequisites: ["モーラー"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_mauler_growth_1',
+      name: '改良型モーラ―の開発',
+      tier: 1,
+      cost: 2500,
+      area:'社会学',
+      category: '生物学',
+      weight: 95,
+      weight_modifier: {"modifier": {"factor": 1.25, "has_tradition": "tr_supremacy_adopt"}},
+      prerequisites: ["モーラー"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_mauler_growth_2',
+      name: '発展型モーラ―の開発',
+      tier: 1,
+      cost: 3000,
+      area:'社会学',
+      category: '生物学',
+      weight: 90,
+      weight_modifier: {"modifier": {"factor": 1.25, "has_tradition": "tr_supremacy_adopt"}},
+      prerequisites: ["改良型モーラ―の開発"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_weavers',
+      name: 'ウィーヴァー',
+      tier: 1,
+      cost: 2000,
+      area:'社会学',
+      category: '生物学',
+      weight: 100,
+      weight_modifier: {"modifier": {"factor": 1.25, "has_tradition": "tr_supremacy_adopt"}},
+      prerequisites: ["モーラー"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_weaver_build_speed',
+      name: 'ウィーヴァーの孵化の標準化',
+      tier: 1,
+      cost: 2500,
+      area:'社会学',
+      category: '生物学',
+      weight: 95,
+      weight_modifier: [],
+      prerequisites: ["ウィーヴァー"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_weaver_bio_healing_1',
+      name: '胞子投射機',
+      tier: 1,
+      cost: 2000,
+      area:'社会学',
+      category: '生物学',
+      weight: 100,
+      weight_modifier: {},
+      prerequisites: ["ウィーヴァー"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_weaver_bio_evasion_1',
+      name: 'エネルギー・バースター',
+      tier: 1,
+      cost: 2000,
+      area:'社会学',
+      category: '生物学',
+      weight: 100,
+      weight_modifier: {},
+      prerequisites: ["ウィーヴァー"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_weaver_bio_fire_rate_1',
+      name: 'ウィーヴァー・バイオフィールドジェネレーター',
+      tier: 1,
+      cost: 2000,
+      area:'社会学',
+      category: '生物学',
+      weight: 100,
+      weight_modifier: {},
+      prerequisites: ["ウィーヴァー"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_weaver_bio_confuser_1',
+      name: 'グルーム・スポア',
+      tier: 1,
+      cost: 2000,
+      area:'社会学',
+      category: '生物学',
+      weight: 100,
+      weight_modifier: {},
+      prerequisites: ["ウィーヴァー"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_weaver_bio_anti_evasion_1',
+      name: 'ヴェクターロック砲',
+      tier: 1,
+      cost: 2000,
+      area:'社会学',
+      category: '生物学',
+      weight: 100,
+      weight_modifier: {},
+      prerequisites: ["ウィーヴァー"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_weaver_bio_anti_fire_rate_1',
+      name: 'リロードジャマー',
+      tier: 1,
+      cost: 2000,
+      area:'社会学',
+      category: '生物学',
+      weight: 100,
+      weight_modifier: {},
+      prerequisites: ["ウィーヴァー"],
+      potential: {"country_uses_bio_ships": "yes"}
     },
     classes: 'society'
 },
@@ -586,7 +826,7 @@ function getElements() {
       weight: 95,
       weight_modifier: [],
       prerequisites: ["コルベット"],
-      potential: {}
+      potential: {"country_uses_bio_ships": "no"}
     },
     classes: 'engineering'
 },
@@ -601,7 +841,7 @@ function getElements() {
       weight: 90,
       weight_modifier: [],
       prerequisites: ["コルベット"],
-      potential: {}
+      potential: {"country_uses_bio_ships": "no"}
     },
     classes: 'engineering'
 },
@@ -742,6 +982,21 @@ function getElements() {
 },
 {
     data: {
+      id: 'tech_engineering_1',
+      name: 'ナノメカニクス',
+      tier: 1,
+      cost: 3000,
+      area:'工学',
+      category: '材料工学',
+      weight: 90,
+      weight_modifier: {"modifier": {"factor": 1.5, "is_specialist_subject_type": {"TYPE": "scholarium"}}},
+      prerequisites: ["科学的検証"],
+      potential: {"is_wilderness_empire": "no"}
+    },
+    classes: 'engineering'
+},
+{
+    data: {
       id: 'tech_robotic_workers',
       name: '人工労働力',
       tier: 1,
@@ -811,7 +1066,7 @@ function getElements() {
       weight: 95,
       weight_modifier: {"modifier": {"factor": 1.5, "has_ethic": "ethic_fanatic_militarist"}},
       prerequisites: ["核ミサイル", "核融合発電"],
-      potential: {}
+      potential: {"country_uses_bio_ships": "no"}
     },
     classes: 'engineering'
 },
@@ -826,7 +1081,7 @@ function getElements() {
       weight: 95,
       weight_modifier: {"modifier": {"factor": 1.5, "has_ethic": "ethic_fanatic_militarist"}},
       prerequisites: ["コルベット"],
-      potential: {}
+      potential: {"OR": {"country_uses_bio_ships": "no", "has_tradition": "tr_nanotech_4", "has_crisis_level": "crisis_level_2", "has_technology": "tech_cosmogenesis_escort"}}
     },
     classes: 'engineering'
 },
@@ -907,6 +1162,21 @@ function getElements() {
 },
 {
     data: {
+      id: 'tech_physics_1',
+      name: '量子コンピューティング',
+      tier: 1,
+      cost: 3000,
+      area:'物理学',
+      category: '力場操作',
+      weight: 90,
+      weight_modifier: {"modifier": {"factor": 1.5, "is_specialist_subject_type": {"TYPE": "scholarium"}}},
+      prerequisites: ["科学的検証"],
+      potential: {"is_wilderness_empire": "no"}
+    },
+    classes: 'physics'
+},
+{
+    data: {
       id: 'tech_administrative_ai',
       name: '管理AI',
       tier: 1,
@@ -923,7 +1193,7 @@ function getElements() {
 {
     data: {
       id: 'tech_cryostasis_1',
-      name: '人工知能制御のコロニー船',
+      name: '自動コロニー船',
       tier: 1,
       cost: 3000,
       area:'物理学',
@@ -959,7 +1229,7 @@ function getElements() {
       area:'物理学',
       category: 'コンピュータ',
       weight: 90,
-      weight_modifier: {"modifier": {"factor": 2, "has_technology": "tech_battleships"}},
+      weight_modifier: {"modifier": {"factor": 2, "OR": {"has_technology": "tech_stingers"}}},
       prerequisites: ["管理AI"],
       potential: {}
     },
@@ -1019,7 +1289,7 @@ function getElements() {
       area:'物理学',
       category: '素粒子物理学',
       weight: 95,
-      weight_modifier: {"factor": 2, "modifier": {"factor": 2, "has_technology": "tech_destroyers"}},
+      weight_modifier: {"factor": 2, "modifier": {"factor": 2, "OR": {"has_technology": "tech_harbingers"}}},
       prerequisites: ["核分裂発電"],
       potential: {}
     },
@@ -1095,7 +1365,7 @@ function getElements() {
       category: '力場操作',
       weight: 90,
       weight_modifier: {"factor": 2, "modifier": {"factor": 1.5, "is_specialist_subject_type": {"TYPE": "prospectorium"}}},
-      prerequisites: ["高エネルギーコンデンサ"],
+      prerequisites: ["力場調整"],
       potential: {}
     },
     classes: 'physics'
@@ -1139,22 +1409,7 @@ function getElements() {
       area:'社会学',
       category: '生物学',
       weight: 100,
-      weight_modifier: {"modifier": {"factor": 2, "has_relic": "r_pox_sample"}},
-      prerequisites: ["農産業"],
-      potential: {}
-    },
-    classes: 'society'
-},
-{
-    data: {
-      id: 'tech_hydroponics',
-      name: '水耕栽培',
-      tier: 1,
-      cost: 2000,
-      area:'社会学',
-      category: '生物学',
-      weight: 100,
-      weight_modifier: {"factor": 2, "modifier": {"factor": 2, "has_relic": "r_pox_sample"}},
+      weight_modifier: {"modifier": {"factor": 2, "country_uses_bio_ships": "yes"}},
       prerequisites: ["農産業"],
       potential: {}
     },
@@ -1169,9 +1424,24 @@ function getElements() {
       area:'社会学',
       category: '生物学',
       weight: 95,
-      weight_modifier: {"modifier": {"factor": 2, "has_relic": "r_pox_sample"}},
+      weight_modifier: {"modifier": {"factor": 2, "country_uses_bio_ships": "yes"}},
       prerequisites: ["環境シミュレーション"],
       potential: {}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_society_1',
+      name: '宇宙生物学',
+      tier: 1,
+      cost: 3000,
+      area:'社会学',
+      category: '生物学',
+      weight: 90,
+      weight_modifier: {"modifier": {"factor": 2, "has_relic": "r_pox_sample"}},
+      prerequisites: ["科学的検証"],
+      potential: {"is_wilderness_empire": "no"}
     },
     classes: 'society'
 },
@@ -1200,7 +1470,7 @@ function getElements() {
       category: '生物学',
       weight: 95,
       weight_modifier: {"factor": 2, "modifier": {"factor": 2, "has_country_flag": "payback_researching_gene_clinics"}},
-      prerequisites: ["ゲノムマッピング"],
+      prerequisites: ["医療", "ゲノムマッピング"],
       potential: {"is_regular_empire": "yes", "is_individual_machine": "no"}
     },
     classes: 'society'
@@ -1394,9 +1664,9 @@ function getElements() {
       area:'社会学',
       category: '統治学',
       weight: 90,
-      weight_modifier: {"modifier": {"factor": 0, "OR": {"allows_slavery": "no", "NOT": {"any_owned_pop": {"is_enslaved": "yes"}}}}},
+      weight_modifier: {"modifier": {"factor": 2, "count_owned_pop_amount": {"limit": {"OR": {"is_enslaved": "yes", "has_disconnected_drone_citizenship_type": "yes"}}, "count": ">= 3000"}}},
       prerequisites: [],
-      potential: {"is_regular_empire": "yes"}
+      potential: {"is_regular_empire": "yes", "allows_slavery": "yes"}
     },
     classes: 'society'
 },
@@ -1432,6 +1702,21 @@ function getElements() {
 },
 {
     data: {
+      id: 'tech_federation_code',
+      name: '連邦規約',
+      tier: 1,
+      cost: 2500,
+      area:'社会学',
+      category: '統治学',
+      weight: 85,
+      weight_modifier: {"factor": 2, "modifier": {"factor": 0.01, "is_diplomatic": "no"}},
+      prerequisites: ["植民地集権化"],
+      potential: []
+    },
+    classes: 'society'
+},
+{
+    data: {
       id: 'tech_xeno_linguistics',
       name: '異星言語学',
       tier: 1,
@@ -1456,7 +1741,7 @@ function getElements() {
       weight: 100,
       weight_modifier: {"factor": 0.1, "modifier": {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}},
       prerequisites: ["農産業"],
-      potential: {}
+      potential: {"is_wilderness_empire": "no"}
     },
     classes: 'society'
 },
@@ -1582,6 +1867,126 @@ function getElements() {
 },
 {
     data: {
+      id: 'tech_weaver_growth_1',
+      name: '改良型ウィーヴァーの開発',
+      tier: 2,
+      cost: 5000,
+      area:'社会学',
+      category: '生物学',
+      weight: 75,
+      weight_modifier: {"modifier": {"factor": 1.25, "has_tradition": "tr_supremacy_adopt"}},
+      prerequisites: ["ウィーヴァー"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_weaver_growth_2',
+      name: '発展型ウィーヴァーの開発',
+      tier: 2,
+      cost: 6000,
+      area:'社会学',
+      category: '生物学',
+      weight: 70,
+      weight_modifier: {"modifier": {"factor": 1.25, "has_tradition": "tr_supremacy_adopt"}},
+      prerequisites: ["改良型ウィーヴァーの開発"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_weaver_bio_healing_2',
+      name: '改良型胞子投射機',
+      tier: 2,
+      cost: 4000,
+      area:'社会学',
+      category: '生物学',
+      weight: 85,
+      weight_modifier: [],
+      prerequisites: ["胞子投射機"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_weaver_bio_evasion_2',
+      name: 'タングラー胞子投射機',
+      tier: 2,
+      cost: 4000,
+      area:'社会学',
+      category: '生物学',
+      weight: 85,
+      weight_modifier: [],
+      prerequisites: ["エネルギー・バースター"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_weaver_bio_fire_rate_2',
+      name: 'ウィーヴァー・ブースターブラスター',
+      tier: 2,
+      cost: 4000,
+      area:'社会学',
+      category: '生物学',
+      weight: 85,
+      weight_modifier: [],
+      prerequisites: ["ウィーヴァー・バイオフィールドジェネレーター"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_weaver_bio_confuser_2',
+      name: 'タングル・パルス',
+      tier: 2,
+      cost: 4000,
+      area:'社会学',
+      category: '生物学',
+      weight: 85,
+      weight_modifier: [],
+      prerequisites: ["グルーム・スポア"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_weaver_bio_anti_evasion_2',
+      name: '酵素ウェブキャスター',
+      tier: 2,
+      cost: 4000,
+      area:'社会学',
+      category: '生物学',
+      weight: 85,
+      weight_modifier: [],
+      prerequisites: ["ヴェクターロック砲"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_weaver_bio_anti_fire_rate_2',
+      name: '射撃ディスラプター',
+      tier: 2,
+      cost: 4000,
+      area:'社会学',
+      category: '生物学',
+      weight: 85,
+      weight_modifier: [],
+      prerequisites: ["リロードジャマー"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
       id: 'tech_storm_manipulation',
       name: '宇宙嵐の操作',
       tier: 2,
@@ -1606,7 +2011,7 @@ function getElements() {
       weight: 85,
       weight_modifier: {"modifier": {"factor": 2, "OR": {"has_origin": "origin_storm_chasers", "has_storm_attraction_civic": "yes"}}},
       prerequisites: ["惑星規模の嵐対策"],
-      potential: {"has_cosmic_storms_dlc": "yes"}
+      potential: {"has_cosmic_storms_dlc": "yes", "is_wilderness_empire": "no"}
     },
     classes: 'engineering'
 },
@@ -1681,7 +2086,7 @@ function getElements() {
       weight: 85,
       weight_modifier: {"modifier": {"factor": 1.25, "has_tradition": "tr_supremacy_adopt"}},
       prerequisites: ["コルベット"],
-      potential: {}
+      potential: {"country_uses_bio_ships": "no"}
     },
     classes: 'engineering'
 },
@@ -1696,7 +2101,7 @@ function getElements() {
       weight: 70,
       weight_modifier: {"modifier": {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}},
       prerequisites: ["改良型コルベット船体"],
-      potential: {}
+      potential: {"country_uses_bio_ships": "no"}
     },
     classes: 'engineering'
 },
@@ -1711,7 +2116,7 @@ function getElements() {
       weight: 75,
       weight_modifier: [],
       prerequisites: ["駆逐艦"],
-      potential: {}
+      potential: {"country_uses_bio_ships": "no"}
     },
     classes: 'engineering'
 },
@@ -1726,7 +2131,7 @@ function getElements() {
       weight: 70,
       weight_modifier: {"modifier": {"factor": 1.25, "has_tradition": "tr_supremacy_adopt"}},
       prerequisites: ["駆逐艦"],
-      potential: {}
+      potential: {"country_uses_bio_ships": "no"}
     },
     classes: 'engineering'
 },
@@ -1829,7 +2234,7 @@ function getElements() {
       area:'工学',
       category: '推進システム工学',
       weight: 85,
-      weight_modifier: {"factor": 1.25, "modifier": {"factor": 2, "has_technology": "tech_destroyers"}},
+      weight_modifier: {"factor": 1.25, "modifier": {"factor": 2, "OR": {"has_technology": "tech_weavers"}}},
       prerequisites: ["化学スラスター"],
       potential: {}
     },
@@ -1927,6 +2332,21 @@ function getElements() {
 },
 {
     data: {
+      id: 'tech_engineering_2',
+      name: '自己接続回路',
+      tier: 2,
+      cost: 6000,
+      area:'工学',
+      category: '材料工学',
+      weight: 70,
+      weight_modifier: {"modifier": {"factor": 1.5, "is_specialist_subject_type": {"TYPE": "scholarium"}}},
+      prerequisites: ["ナノメカニクス"],
+      potential: {"is_wilderness_empire": "no"}
+    },
+    classes: 'engineering'
+},
+{
+    data: {
       id: 'tech_droid_workers',
       name: '人工専門家',
       tier: 2,
@@ -1966,7 +2386,7 @@ function getElements() {
       weight: 75,
       weight_modifier: {"factor": 1.5},
       prerequisites: [],
-      potential: {}
+      potential: {"is_wilderness_empire": "no"}
     },
     classes: 'engineering'
 },
@@ -2011,7 +2431,7 @@ function getElements() {
       weight: 85,
       weight_modifier: {"modifier": {"factor": 1.5, "has_ethic": "ethic_fanatic_militarist"}},
       prerequisites: ["核融合ミサイル"],
-      potential: {}
+      potential: {"country_uses_bio_ships": "no"}
     },
     classes: 'engineering'
 },
@@ -2025,7 +2445,7 @@ function getElements() {
       category: '推進システム工学',
       weight: 75,
       weight_modifier: {"modifier": {"factor": 1.5, "has_ethic": "ethic_fanatic_militarist"}},
-      prerequisites: ["核融合ミサイル"],
+      prerequisites: ["OR = {", "  ハーヴィンジャー", "  スティンガー", "  核融合ミサイル", "}"],
       potential: {}
     },
     classes: 'engineering'
@@ -2527,6 +2947,21 @@ function getElements() {
 },
 {
     data: {
+      id: 'tech_physics_2',
+      name: '統一場理論',
+      tier: 2,
+      cost: 6000,
+      area:'物理学',
+      category: '力場操作',
+      weight: 70,
+      weight_modifier: {"modifier": {"factor": 1.5, "is_specialist_subject_type": {"TYPE": "scholarium"}}},
+      prerequisites: ["量子コンピューティング"],
+      potential: {"is_wilderness_empire": "no"}
+    },
+    classes: 'physics'
+},
+{
+    data: {
       id: 'tech_self_aware_logic',
       name: '自己進化論理',
       tier: 2,
@@ -2594,7 +3029,7 @@ function getElements() {
       area:'物理学',
       category: '素粒子物理学',
       weight: 75,
-      weight_modifier: {"factor": 2, "modifier": {"factor": 2, "has_technology": "tech_cruisers"}},
+      weight_modifier: {"factor": 2, "modifier": {"factor": 2, "OR": {"has_technology": "tech_harbingers"}}},
       prerequisites: ["核融合発電"],
       potential: {}
     },
@@ -2654,7 +3089,7 @@ function getElements() {
       area:'物理学',
       category: 'コンピュータ',
       weight: 85,
-      weight_modifier: {"modifier": {"factor": 1.25, "has_tradition": "tr_discovery_adopt"}},
+      weight_modifier: {"modifier": {"factor": 1.25, "any_system_within_border": {"is_inside_nebula": "yes"}}},
       prerequisites: [],
       potential: {}
     },
@@ -2699,7 +3134,7 @@ function getElements() {
       area:'物理学',
       category: '素粒子物理学',
       weight: 75,
-      weight_modifier: {"modifier": {"factor": "@eager_explorer_effect", "is_eager_explorer_empire": "yes"}},
+      weight_modifier: {"modifier": {"factor": 10, "mid_game_years_passed": "> 0", "has_country_flag": "chosen_empire"}},
       prerequisites: ["ハイパースペース航行"],
       potential: {}
     },
@@ -2834,9 +3269,24 @@ function getElements() {
       area:'社会学',
       category: '生物学',
       weight: 85,
-      weight_modifier: {"modifier": {"factor": 2, "has_relic": "r_pox_sample"}},
+      weight_modifier: {"modifier": {"factor": 2, "country_uses_bio_ships": "yes"}},
       prerequisites: ["環境シミュレーション"],
-      potential: {}
+      potential: {"is_wilderness_empire": "no"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_society_2',
+      name: '神経の組織化',
+      tier: 2,
+      cost: 6000,
+      area:'社会学',
+      category: '生物学',
+      weight: 70,
+      weight_modifier: {"modifier": {"factor": 2, "has_relic": "r_pox_sample"}},
+      prerequisites: ["宇宙生物学"],
+      potential: {"is_wilderness_empire": "no"}
     },
     classes: 'society'
 },
@@ -2939,7 +3389,7 @@ function getElements() {
       area:'社会学',
       category: '新天地',
       weight: 70,
-      weight_modifier: {"factor": 1.5, "modifier": {"factor": 1.25, "has_origin": "origin_life_seeded"}},
+      weight_modifier: {"factor": 1.5, "modifier": {"add": 5, "has_origin": "origin_wilderness"}},
       prerequisites: ["新天地プロトコル"],
       potential: {}
     },
@@ -2969,9 +3419,9 @@ function getElements() {
       area:'社会学',
       category: '生物学',
       weight: 75,
-      weight_modifier: {"modifier": {"factor": 0, "NOR": {"has_country_flag": "found_presapients", "any_planet_within_border": {"any_owned_pop": {"is_sapient": "no"}}}}},
+      weight_modifier: {"modifier": {"factor": 0, "NOR": {"has_country_flag": "found_presapients", "any_planet_within_border": {"any_owned_pop_group": {"is_sapient": "no", "NOT": {"has_trait": "trait_nascent_stage"}}}}}},
       prerequisites: ["ゲノムマッピング"],
-      potential: {"NOR": {"has_valid_civic": "civic_fanatic_purifiers", "is_natural_design_empire": "yes"}, "OR": {"is_machine_empire": "no", "has_civic": "civic_machine_guided_sapience"}}
+      potential: {"NOR": {"has_valid_civic": "civic_fanatic_purifiers", "is_natural_design_empire": "yes", "is_wilderness_empire": "yes"}, "OR": {"is_machine_empire": "no", "has_civic": "civic_machine_guided_sapience"}}
     },
     classes: 'society'
 },
@@ -2986,7 +3436,7 @@ function getElements() {
       weight: 75,
       weight_modifier: {"factor": 1.5, "modifier": {"factor": 2, "AND": {"is_individual_machine": "yes", "any_owned_species": {"is_organic_species": "yes"}}}},
       prerequisites: ["ゲノムマッピング"],
-      potential: {"OR": {"is_machine_empire": "no", "has_civic": "civic_machine_assimilator"}, "is_natural_design_empire": "no"}
+      potential: {"OR": {"is_machine_empire": "no", "has_civic": "civic_machine_assimilator"}, "is_wilderness_empire": "no", "is_natural_design_empire": "no"}
     },
     classes: 'society'
 },
@@ -3001,7 +3451,7 @@ function getElements() {
       weight: 70,
       weight_modifier: {"factor": 0.5, "modifier": {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}},
       prerequisites: ["クローニング"],
-      potential: {"OR": {"is_machine_empire": "no", "has_civic": "civic_machine_assimilator"}, "is_natural_design_empire": "no"}
+      potential: {"OR": {"is_machine_empire": "no", "is_wilderness_empire": "no", "has_civic": "civic_machine_assimilator"}, "is_natural_design_empire": "no"}
     },
     classes: 'society'
 },
@@ -3256,7 +3706,52 @@ function getElements() {
       weight: 75,
       weight_modifier: [],
       prerequisites: ["シナプス構造体"],
+      potential: {"is_wilderness_empire": "no"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_wilderness_cluster',
+      name: 'クラスタ化シナプス',
+      tier: 2,
+      cost: 5000,
+      area:'社会学',
+      category: '統治学',
+      weight: 75,
+      weight_modifier: [],
+      prerequisites: ["存在の中心"],
       potential: {}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_penal_colonies',
+      name: '流刑地惑星',
+      tier: 2,
+      cost: 6000,
+      area:'社会学',
+      category: '統治学',
+      weight: 70,
+      weight_modifier: {"factor": 0.5, "modifier": {"factor": 0, "num_owned_planets": "< 2"}},
+      prerequisites: ["人工的な倫理規範"],
+      potential: {"is_gestalt": "no"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_resort_colonies',
+      name: 'リゾート惑星',
+      tier: 2,
+      cost: 6000,
+      area:'社会学',
+      category: '統治学',
+      weight: 70,
+      weight_modifier: {"factor": 1.5, "modifier": {"factor": 0, "num_owned_planets": "< 2"}},
+      prerequisites: ["人工的な倫理規範"],
+      potential: {"is_gestalt": "no"}
     },
     classes: 'society'
 },
@@ -3269,7 +3764,7 @@ function getElements() {
       area:'社会学',
       category: '統治学',
       weight: 70,
-      weight_modifier: {"factor": 1, "modifier": {"factor": 0, "OR": {"allows_slavery": "no", "NOT": {"any_owned_pop": {"is_enslaved": "yes"}}}}},
+      weight_modifier: {"factor": 1, "modifier": {"factor": 0, "OR": {"allows_slavery": "no", "NOT": {"any_owned_pop_group": {"is_enslaved": "yes"}}}}},
       prerequisites: ["神経学習"],
       potential: {"is_gestalt": "no"}
     },
@@ -3285,7 +3780,7 @@ function getElements() {
       category: '統治学',
       weight: 85,
       weight_modifier: {"factor": 2, "modifier": {"factor": 0.01, "has_civic": "civic_inwards_perfection"}},
-      prerequisites: ["植民地集権化"],
+      prerequisites: ["連邦規約"],
       potential: {"is_regular_empire": "yes"}
     },
     classes: 'society'
@@ -3314,7 +3809,7 @@ function getElements() {
       area:'社会学',
       category: '統治学',
       weight: 70,
-      weight_modifier: {"modifier": {"factor": 1.5, "any_owned_leader": {"is_councilor": "yes", "is_ruler": "no", "has_skill": ">= 9"}}},
+      weight_modifier: {"modifier": {"factor": 1.5, "any_owned_leader": {"is_councilor": "yes", "is_ruler": "no", "has_base_skill": ">= 9"}}},
       prerequisites: ["植民地集権化"],
       potential: {"is_machine_empire": "yes"}
     },
@@ -3329,7 +3824,7 @@ function getElements() {
       area:'社会学',
       category: '統治学',
       weight: 70,
-      weight_modifier: {"modifier": {"factor": 1.5, "any_owned_leader": {"is_councilor": "yes", "is_ruler": "no", "has_skill": ">= 9"}}},
+      weight_modifier: {"modifier": {"factor": 2, "is_cloning_authority": "yes"}},
       prerequisites: ["植民地集権化"],
       potential: {"is_hive_empire": "yes"}
     },
@@ -3346,7 +3841,7 @@ function getElements() {
       weight: 85,
       weight_modifier: {"factor": 0.1, "modifier": {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}},
       prerequisites: ["バイオリアクター"],
-      potential: {}
+      potential: {"is_wilderness_empire": "no"}
     },
     classes: 'society'
 },
@@ -3356,6 +3851,21 @@ function getElements() {
       name: '鞭毛の武器化',
       tier: 2,
       cost: 6000,
+      area:'社会学',
+      category: '生物学',
+      weight: 0,
+      weight_modifier: {},
+      prerequisites: [],
+      potential: {}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_enhanced_cryosleep_sedatives',
+      name: '改良型冷凍睡眠用鎮静剤',
+      tier: 2,
+      cost: 2000,
       area:'社会学',
       category: '生物学',
       weight: 0,
@@ -3691,7 +4201,187 @@ function getElements() {
       weight: 35,
       weight_modifier: {"modifier": {"factor": 0.85, "has_technology": "tech_archaeo_refinery", "NOT": {"has_ascension_perk": "ap_archaeoengineers"}}},
       prerequisites: ["考古学技術"],
-      potential: {"has_ancrel": "yes"}
+      potential: {"has_ancrel": "yes", "is_wilderness_empire": "no"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_harbingers',
+      name: 'ハーヴィンジャー',
+      tier: 3,
+      cost: 8000,
+      area:'社会学',
+      category: '生物学',
+      weight: 65,
+      weight_modifier: {"modifier": {"factor": 1.25, "has_tradition": "tr_supremacy_adopt"}},
+      prerequisites: ["ウィーヴァー"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_harbinger_build_speed',
+      name: 'ハーヴィンジャーの孵化の標準化',
+      tier: 3,
+      cost: 10000,
+      area:'社会学',
+      category: '生物学',
+      weight: 60,
+      weight_modifier: [],
+      prerequisites: ["ハーヴィンジャー"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_harbinger_growth_1',
+      name: '改良型ハーヴィンジャーの開発',
+      tier: 3,
+      cost: 10000,
+      area:'社会学',
+      category: '生物学',
+      weight: 60,
+      weight_modifier: {"modifier": {"factor": 1.25, "has_tradition": "tr_supremacy_adopt"}},
+      prerequisites: ["ハーヴィンジャー"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_harbinger_growth_2',
+      name: '発展型ハーヴィンジャーの開発',
+      tier: 3,
+      cost: 12000,
+      area:'社会学',
+      category: '生物学',
+      weight: 50,
+      weight_modifier: {"modifier": {"factor": 1.25, "has_tradition": "tr_supremacy_adopt"}},
+      prerequisites: ["改良型ハーヴィンジャーの開発"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_mandibles_2',
+      name: '複合大顎',
+      tier: 3,
+      cost: 10000,
+      area:'工学',
+      category: '材料工学',
+      weight: 60,
+      weight_modifier: {"modifier": {"factor": 1.5, "has_ethic": "ethic_fanatic_militarist"}},
+      prerequisites: ["モーラー"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'engineering'
+},
+{
+    data: {
+      id: 'tech_weaver_bio_healing_3',
+      name: '高度な胞子投射機',
+      tier: 3,
+      cost: 8000,
+      area:'社会学',
+      category: '生物学',
+      weight: 65,
+      weight_modifier: [],
+      prerequisites: ["改良型胞子投射機"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_weaver_bio_evasion_3',
+      name: 'アジャイル・スパイクアレイ',
+      tier: 3,
+      cost: 8000,
+      area:'社会学',
+      category: '生物学',
+      weight: 65,
+      weight_modifier: [],
+      prerequisites: ["タングラー胞子投射機"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_weaver_bio_fire_rate_3',
+      name: 'ウィーヴァー・有機技術増幅器',
+      tier: 3,
+      cost: 8000,
+      area:'社会学',
+      category: '生物学',
+      weight: 65,
+      weight_modifier: [],
+      prerequisites: ["ウィーヴァー・ブースターブラスター"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_weaver_bio_confuser_3',
+      name: 'ニューロ・スカージ',
+      tier: 3,
+      cost: 8000,
+      area:'社会学',
+      category: '生物学',
+      weight: 65,
+      weight_modifier: [],
+      prerequisites: ["タングル・パルス"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_weaver_bio_anti_evasion_3',
+      name: 'シーカー・シャードアレイ',
+      tier: 3,
+      cost: 8000,
+      area:'社会学',
+      category: '生物学',
+      weight: 65,
+      weight_modifier: [],
+      prerequisites: ["酵素ウェブキャスター"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_weaver_bio_anti_fire_rate_3',
+      name: 'マインドミサイル',
+      tier: 3,
+      cost: 8000,
+      area:'社会学',
+      category: '生物学',
+      weight: 65,
+      weight_modifier: [],
+      prerequisites: ["射撃ディスラプター"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_deep_space_citadel',
+      name: '深宇宙シタデル',
+      tier: 3,
+      cost: 12000,
+      area:'社会学',
+      category: '軍事学',
+      weight: 50,
+      weight_modifier: {"factor": 0.25, "modifier": {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}},
+      prerequisites: ["星系軍港の建設"],
+      potential: {"has_biogenesis_dlc": "yes"}
     },
     classes: 'society'
 },
@@ -3751,7 +4441,7 @@ function getElements() {
       weight: 65,
       weight_modifier: {"modifier": {"factor": 1.25, "has_tradition": "tr_supremacy_adopt"}},
       prerequisites: ["駆逐艦"],
-      potential: {}
+      potential: {"country_uses_bio_ships": "no"}
     },
     classes: 'engineering'
 },
@@ -3766,7 +4456,7 @@ function getElements() {
       weight: 65,
       weight_modifier: {"modifier": {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}},
       prerequisites: ["改良型駆逐艦船体"],
-      potential: {}
+      potential: {"country_uses_bio_ships": "no"}
     },
     classes: 'engineering'
 },
@@ -3781,7 +4471,7 @@ function getElements() {
       weight: 60,
       weight_modifier: [],
       prerequisites: ["巡洋艦"],
-      potential: {}
+      potential: {"country_uses_bio_ships": "no"}
     },
     classes: 'engineering'
 },
@@ -3796,7 +4486,7 @@ function getElements() {
       weight: 50,
       weight_modifier: {"modifier": {"factor": 1.25, "has_tradition": "tr_supremacy_adopt"}},
       prerequisites: ["巡洋艦"],
-      potential: {}
+      potential: {"country_uses_bio_ships": "no"}
     },
     classes: 'engineering'
 },
@@ -3826,7 +4516,7 @@ function getElements() {
       weight: 60,
       weight_modifier: {"modifier": {"factor": 1.25, "has_tradition": "tr_expansion_finish"}},
       prerequisites: ["星系軍港の建設"],
-      potential: {"OR": {"has_void_dweller_origin": "yes", "has_origin": "origin_toxic_knights", "host_has_dlc": "Utopia"}}
+      potential: {"is_wilderness_empire": "no", "OR": {"has_void_dweller_origin": "yes", "has_origin": "origin_toxic_knights", "host_has_dlc": "Utopia"}}
     },
     classes: 'engineering'
 },
@@ -3884,7 +4574,7 @@ function getElements() {
       area:'工学',
       category: '推進システム工学',
       weight: 65,
-      weight_modifier: {"factor": 1.25, "modifier": {"factor": 2, "has_technology": "tech_cruisers"}},
+      weight_modifier: {"factor": 1.25, "modifier": {"factor": 2, "OR": {"has_technology": "tech_harbingers"}}},
       prerequisites: ["イオンスラスター"],
       potential: {}
     },
@@ -3952,6 +4642,21 @@ function getElements() {
 },
 {
     data: {
+      id: 'tech_engineering_3',
+      name: '超固体材料',
+      tier: 3,
+      cost: 12000,
+      area:'工学',
+      category: '材料工学',
+      weight: 50,
+      weight_modifier: {"modifier": {"factor": 1.5, "is_specialist_subject_type": {"TYPE": "scholarium"}}},
+      prerequisites: ["自己接続回路"],
+      potential: {"is_wilderness_empire": "no"}
+    },
+    classes: 'engineering'
+},
+{
+    data: {
       id: 'tech_afterburners_2',
       name: '発展型アフターバーナー',
       tier: 3,
@@ -3991,7 +4696,7 @@ function getElements() {
       weight: 65,
       weight_modifier: {"factor": 1.5, "modifier": {"factor": 0, "has_valid_civic": "civic_agrarian_idyll"}},
       prerequisites: ["気象制御システム"],
-      potential: {}
+      potential: {"is_wilderness_empire": "no"}
     },
     classes: 'engineering'
 },
@@ -4066,7 +4771,7 @@ function getElements() {
       weight: 65,
       weight_modifier: {"modifier": {"factor": 1.5, "has_ethic": "ethic_fanatic_militarist"}},
       prerequisites: ["反物質ミサイル"],
-      potential: {}
+      potential: {"country_uses_bio_ships": "no"}
     },
     classes: 'engineering'
 },
@@ -4081,7 +4786,7 @@ function getElements() {
       weight: 60,
       weight_modifier: {"modifier": {"factor": 1.5, "has_ethic": "ethic_fanatic_militarist"}},
       prerequisites: ["宙間魚雷"],
-      potential: {}
+      potential: {"country_uses_bio_ships": "no"}
     },
     classes: 'engineering'
 },
@@ -4381,7 +5086,7 @@ function getElements() {
       weight: 65,
       weight_modifier: {"factor": 1.5, "modifier": {"factor": 1.5, "is_specialist_subject_type": {"TYPE": "scholarium"}}},
       prerequisites: ["エキゾチック物質研究所", "植民地集権化"],
-      potential: {}
+      potential: {"is_wilderness_empire": "no"}
     },
     classes: 'physics'
 },
@@ -4402,6 +5107,21 @@ function getElements() {
 },
 {
     data: {
+      id: 'tech_physics_3',
+      name: '量子重力波',
+      tier: 3,
+      cost: 12000,
+      area:'物理学',
+      category: '力場操作',
+      weight: 50,
+      weight_modifier: {"modifier": {"factor": 1.5, "is_specialist_subject_type": {"TYPE": "scholarium"}}},
+      prerequisites: ["統一場理論"],
+      potential: {"is_wilderness_empire": "no"}
+    },
+    classes: 'physics'
+},
+{
+    data: {
       id: 'tech_cryostasis_2',
       name: '自我をもつコロニー船',
       tier: 3,
@@ -4410,7 +5130,7 @@ function getElements() {
       category: 'コンピュータ',
       weight: 70,
       weight_modifier: [],
-      prerequisites: ["自己進化論理", "人工知能制御のコロニー船"],
+      prerequisites: ["自己進化論理", "自動コロニー船"],
       potential: {}
     },
     classes: 'physics'
@@ -4441,7 +5161,7 @@ function getElements() {
       weight: 65,
       weight_modifier: {"factor": 1.5, "modifier": {"factor": 0.25, "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_curator"}}}},
       prerequisites: ["エキゾチック物質研究所", "統合サイバネティクス"],
-      potential: {"OR": {"is_machine_empire": "no", "has_civic": "civic_machine_assimilator"}}
+      potential: {"is_wilderness_empire": "no", "OR": {"is_machine_empire": "no", "has_civic": "civic_machine_assimilator"}}
     },
     classes: 'physics'
 },
@@ -4454,7 +5174,7 @@ function getElements() {
       area:'物理学',
       category: '素粒子物理学',
       weight: 60,
-      weight_modifier: {"factor": 2, "modifier": {"factor": 2, "has_technology": "tech_battleships"}},
+      weight_modifier: {"factor": 2, "modifier": {"factor": 2, "OR": {"has_technology": "tech_stingers"}}},
       prerequisites: ["常温核融合発電"],
       potential: {}
     },
@@ -4499,7 +5219,7 @@ function getElements() {
       area:'物理学',
       category: 'コンピュータ',
       weight: 65,
-      weight_modifier: {"modifier": {"factor": 1.25, "has_tradition": "tr_discovery_adopt"}},
+      weight_modifier: {"modifier": {"factor": 1.25, "any_system_within_border": {"is_inside_nebula": "yes"}}},
       prerequisites: ["重力センサー"],
       potential: {}
     },
@@ -4544,7 +5264,7 @@ function getElements() {
       area:'物理学',
       category: '素粒子物理学',
       weight: 65,
-      weight_modifier: {"factor": 0.5, "modifier": {"factor": 10, "mid_game_years_passed": "> 0", "exists": "event_target:chosen_empire", "is_same_value": "event_target:chosen_empire"}},
+      weight_modifier: {"factor": 0.5, "modifier": {"factor": 10, "mid_game_years_passed": "> 0", "has_country_flag": "chosen_empire"}},
       prerequisites: ["ハイパーレーン突破点"],
       potential: {}
     },
@@ -4605,7 +5325,7 @@ function getElements() {
       category: '素粒子物理学',
       weight: 50,
       weight_modifier: {"modifier": {"factor": 0.5, "NOT": {"has_technology": "tech_lasers_1"}}},
-      prerequisites: ["宙間魚雷", "X線レーザー"],
+      prerequisites: ["X線レーザー", "OR = {", "  宙間魚雷", "  ハーヴィンジャー", "}"],
       potential: {}
     },
     classes: 'physics'
@@ -4649,9 +5369,9 @@ function getElements() {
       area:'社会学',
       category: '生物学',
       weight: 65,
-      weight_modifier: {"modifier": {"factor": 2, "has_relic": "r_pox_sample"}},
+      weight_modifier: {"modifier": {"factor": 2, "country_uses_bio_ships": "yes"}},
       prerequisites: ["遺伝子改良作物"],
-      potential: {}
+      potential: {"is_wilderness_empire": "no"}
     },
     classes: 'society'
 },
@@ -4664,9 +5384,24 @@ function getElements() {
       area:'社会学',
       category: '生物学',
       weight: 65,
-      weight_modifier: {"factor": 2, "modifier": {"factor": 2, "has_relic": "r_pox_sample"}},
+      weight_modifier: {"factor": 2, "modifier": {"factor": 2, "country_uses_bio_ships": "yes"}},
       prerequisites: ["食品加工"],
       potential: {}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_society_3',
+      name: '生体構造合成',
+      tier: 3,
+      cost: 12000,
+      area:'社会学',
+      category: '生物学',
+      weight: 50,
+      weight_modifier: {"modifier": {"factor": 2, "has_relic": "r_pox_sample"}},
+      prerequisites: ["神経の組織化"],
+      potential: {"is_wilderness_empire": "no"}
     },
     classes: 'society'
 },
@@ -4771,7 +5506,7 @@ function getElements() {
       weight: 60,
       weight_modifier: {"factor": 0.5, "modifier": {"factor": 0.5, "is_individual_machine": "yes", "any_owned_species": {"is_organic_species": "no"}}},
       prerequisites: ["生命活性剤"],
-      potential: {"NOT": {"is_machine_empire": "yes"}}
+      potential: {"is_machine_empire": "no"}
     },
     classes: 'society'
 },
@@ -4889,7 +5624,7 @@ function getElements() {
       area:'社会学',
       category: '超能力',
       weight: 65,
-      weight_modifier: {"factor": 0.5, "modifier": {"factor": 0, "AND": {"is_materialist": "yes", "NOR": {"has_tier1or2or3_in_council": {"TRAIT": "leader_trait_expertise_psionics"}, "has_councilor": {"COUNCILOR": "councilor_shroudwalker_teacher"}, "any_owned_pop": {"OR": {"pop_has_trait": "trait_latent_psionic"}}}}}},
+      weight_modifier: {"factor": 0.5, "modifier": {"factor": 0, "AND": {"is_materialist": "yes", "NOR": {"has_tier1or2or3_in_council": {"TRAIT": "leader_trait_expertise_psionics"}, "has_councilor": {"COUNCILOR": "councilor_shroudwalker_teacher"}, "any_owned_pop_group": {"OR": {"pop_group_has_trait": "trait_latent_psionic"}}}}}},
       prerequisites: [],
       potential: {"OR": {"NOT": {"has_ethic": "ethic_gestalt_consciousness"}, "is_active_resolution": "resolution_galacticstudies_extradimensional_experimentation", "has_relic": "r_zro_crystal"}}
     },
@@ -5071,7 +5806,7 @@ function getElements() {
       weight: 65,
       weight_modifier: [],
       prerequisites: ["管理AI", "植民地集権化"],
-      potential: {"NOR": {"has_ethic": "ethic_fanatic_spiritualist", "has_valid_civic": "civic_machine_servitor"}}
+      potential: {"NOR": {"has_ethic": "ethic_fanatic_spiritualist", "has_valid_civic": "civic_machine_servitor", "is_wilderness_empire": "yes"}}
     },
     classes: 'society'
 },
@@ -5107,6 +5842,21 @@ function getElements() {
 },
 {
     data: {
+      id: 'tech_wilderness_confluence',
+      name: '思考の合流点',
+      tier: 3,
+      cost: 10000,
+      area:'社会学',
+      category: '統治学',
+      weight: 60,
+      weight_modifier: [],
+      prerequisites: ["クラスタ化シナプス", "植民地集権化"],
+      potential: {}
+    },
+    classes: 'society'
+},
+{
+    data: {
       id: 'tech_psionic_barrier',
       name: 'サイオニック・バリア',
       tier: 3,
@@ -5117,36 +5867,6 @@ function getElements() {
       weight_modifier: {"factor": 0},
       prerequisites: ["超能力理論"],
       potential: {}
-    },
-    classes: 'society'
-},
-{
-    data: {
-      id: 'tech_penal_colonies',
-      name: '流刑地惑星',
-      tier: 3,
-      cost: 8000,
-      area:'社会学',
-      category: '統治学',
-      weight: 65,
-      weight_modifier: {"factor": 0.5, "modifier": {"factor": 0, "num_owned_planets": "< 2"}},
-      prerequisites: ["人工的な倫理規範"],
-      potential: {"is_gestalt": "no"}
-    },
-    classes: 'society'
-},
-{
-    data: {
-      id: 'tech_resort_colonies',
-      name: 'リゾート惑星',
-      tier: 3,
-      cost: 6000,
-      area:'社会学',
-      category: '統治学',
-      weight: 70,
-      weight_modifier: {"factor": 1.5, "modifier": {"factor": 0, "num_owned_planets": "< 2"}},
-      prerequisites: ["人工的な倫理規範"],
-      potential: {"is_gestalt": "no"}
     },
     classes: 'society'
 },
@@ -5204,7 +5924,7 @@ function getElements() {
       area:'社会学',
       category: '統治学',
       weight: 50,
-      weight_modifier: {"modifier": {"factor": 1.5, "any_owned_leader": {"is_councilor": "yes", "is_ruler": "no", "has_skill": ">= 9"}}},
+      weight_modifier: {"modifier": {"factor": 1.5, "any_owned_leader": {"is_councilor": "yes", "is_ruler": "no", "has_base_skill": ">= 9"}}},
       prerequisites: ["初歩的なノード再フォーマット"],
       potential: {"is_machine_empire": "yes"}
     },
@@ -5219,9 +5939,24 @@ function getElements() {
       area:'社会学',
       category: '統治学',
       weight: 50,
-      weight_modifier: {"modifier": {"factor": 1.5, "any_owned_leader": {"is_councilor": "yes", "is_ruler": "no", "has_skill": ">= 9"}}},
+      weight_modifier: {"modifier": {"factor": 1.5, "any_owned_leader": {"is_councilor": "yes", "is_ruler": "no", "has_base_skill": ">= 9"}}},
       prerequisites: ["初歩的なノード淘汰"],
       potential: {"is_hive_empire": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_universal_marcophage',
+      name: '万能マクロファージ',
+      tier: 3,
+      cost: 6000,
+      area:'社会学',
+      category: '生物学',
+      weight: 0,
+      weight_modifier: {},
+      prerequisites: [],
+      potential: {}
     },
     classes: 'society'
 },
@@ -5422,6 +6157,201 @@ function getElements() {
 },
 {
     data: {
+      id: 'tech_stingers',
+      name: 'スティンガー',
+      tier: 4,
+      cost: 16000,
+      area:'社会学',
+      category: '生物学',
+      weight: 45,
+      weight_modifier: {"modifier": {"factor": 1.25, "has_tradition": "tr_supremacy_adopt"}},
+      prerequisites: ["ハーヴィンジャー"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_stinger_build_speed',
+      name: 'スティンガーの孵化の標準化',
+      tier: 4,
+      cost: 20000,
+      area:'社会学',
+      category: '生物学',
+      weight: 40,
+      weight_modifier: [],
+      prerequisites: ["スティンガー"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_stinger_growth_1',
+      name: '改良型スティンガーの開発',
+      tier: 4,
+      cost: 20000,
+      area:'社会学',
+      category: '生物学',
+      weight: 40,
+      weight_modifier: {"modifier": {"factor": 1.25, "has_tradition": "tr_supremacy_adopt"}},
+      prerequisites: ["スティンガー"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_stinger_growth_2',
+      name: '発展型スティンガーの開発',
+      tier: 4,
+      cost: 24000,
+      area:'社会学',
+      category: '生物学',
+      weight: 35,
+      weight_modifier: {"modifier": {"factor": 1.25, "has_tradition": "tr_supremacy_adopt"}},
+      prerequisites: ["改良型スティンガーの開発"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_growth_chamber_1',
+      name: '成長チャンバー',
+      tier: 4,
+      cost: 20000,
+      area:'社会学',
+      category: '生物学',
+      weight: 40,
+      weight_modifier: {"factor": 3, "modifier": {"factor": 2, "OR": {"is_militarist": "yes", "is_hive_empire": "yes", "is_wilderness_empire": "yes"}}},
+      prerequisites: ["スティンガー", "OR = {", "  改良型モーラ―の開発", "  改良型スティンガーの開発", "  改良型ウィーヴァーの開発", "  改良型ハーヴィンジャーの開発", "}"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_growth_chamber_2',
+      name: '高度な成長チャンバー',
+      tier: 4,
+      cost: 24000,
+      area:'社会学',
+      category: '生物学',
+      weight: 35,
+      weight_modifier: {"factor": 3, "modifier": {"factor": 2, "OR": {"is_militarist": "yes", "is_hive_empire": "yes", "is_wilderness_empire": "yes"}}},
+      prerequisites: ["成長チャンバー", "OR = {", "  発展型モーラ―の開発", "  発展型スティンガーの開発", "  発展型ウィーヴァーの開発", "  発展型ハーヴィンジャーの開発", "}"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_mandibles_3',
+      name: '結晶質大顎',
+      tier: 4,
+      cost: 20000,
+      area:'工学',
+      category: '材料工学',
+      weight: 40,
+      weight_modifier: {"modifier": {"factor": 1.5, "has_ethic": "ethic_fanatic_militarist"}},
+      prerequisites: ["複合大顎"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'engineering'
+},
+{
+    data: {
+      id: 'tech_weaver_bio_healing_4',
+      name: '適応型胞子投射機',
+      tier: 4,
+      cost: 16000,
+      area:'社会学',
+      category: '生物学',
+      weight: 45,
+      weight_modifier: {"modifier": {"factor": 0, "NOR": {"has_technology": "tech_exotic_gases", "has_country_flag": "has_market_access"}}},
+      prerequisites: ["高度な胞子投射機"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_weaver_bio_evasion_4',
+      name: 'エレクトロ・スプレー',
+      tier: 4,
+      cost: 16000,
+      area:'社会学',
+      category: '生物学',
+      weight: 45,
+      weight_modifier: {"modifier": {"factor": 0, "NOR": {"has_technology": "tech_rare_crystals", "has_country_flag": "has_market_access"}}},
+      prerequisites: ["アジャイル・スパイクアレイ"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_weaver_bio_fire_rate_4',
+      name: 'ウィーヴァー・オーラキャスター',
+      tier: 4,
+      cost: 16000,
+      area:'社会学',
+      category: '生物学',
+      weight: 45,
+      weight_modifier: {"modifier": {"factor": 0, "NOR": {"has_technology": "tech_volatile_motes", "has_country_flag": "has_market_access"}}},
+      prerequisites: ["ウィーヴァー・有機技術増幅器"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_weaver_bio_confuser_4',
+      name: 'ルイン・バーブ',
+      tier: 4,
+      cost: 16000,
+      area:'社会学',
+      category: '生物学',
+      weight: 45,
+      weight_modifier: {"modifier": {"factor": 0, "NOR": {"has_technology": "tech_volatile_motes", "has_country_flag": "has_market_access"}}},
+      prerequisites: ["ニューロ・スカージ"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_weaver_bio_anti_evasion_4',
+      name: 'ピニオン加速砲',
+      tier: 4,
+      cost: 16000,
+      area:'社会学',
+      category: '生物学',
+      weight: 45,
+      weight_modifier: {"modifier": {"factor": 0, "NOR": {"has_technology": "tech_rare_crystals", "has_country_flag": "has_market_access"}}},
+      prerequisites: ["シーカー・シャードアレイ"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_weaver_bio_anti_fire_rate_4',
+      name: '分解ビーム',
+      tier: 4,
+      cost: 16000,
+      area:'社会学',
+      category: '生物学',
+      weight: 45,
+      weight_modifier: {"modifier": {"factor": 0, "NOR": {"has_technology": "tech_volatile_motes", "has_country_flag": "has_market_access"}}},
+      prerequisites: ["マインドミサイル"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
       id: 'tech_neuroregeneration',
       name: '神経再生医療',
       tier: 4,
@@ -5446,7 +6376,7 @@ function getElements() {
       weight: 45,
       weight_modifier: {"modifier": {"factor": 1.25, "has_tradition": "tr_supremacy_adopt"}},
       prerequisites: ["巡洋艦"],
-      potential: {}
+      potential: {"country_uses_bio_ships": "no"}
     },
     classes: 'engineering'
 },
@@ -5461,7 +6391,7 @@ function getElements() {
       weight: 45,
       weight_modifier: {"modifier": {"factor": 1.25, "has_tradition": "tr_supremacy_adopt"}},
       prerequisites: ["改良型巡洋艦船体"],
-      potential: {}
+      potential: {"country_uses_bio_ships": "no"}
     },
     classes: 'engineering'
 },
@@ -5476,7 +6406,7 @@ function getElements() {
       weight: 40,
       weight_modifier: [],
       prerequisites: ["戦艦"],
-      potential: {}
+      potential: {"country_uses_bio_ships": "no"}
     },
     classes: 'engineering'
 },
@@ -5491,7 +6421,7 @@ function getElements() {
       weight: 35,
       weight_modifier: {"modifier": {"factor": 1.25, "has_tradition": "tr_supremacy_adopt"}},
       prerequisites: ["戦艦"],
-      potential: {}
+      potential: {"country_uses_bio_ships": "no"}
     },
     classes: 'engineering'
 },
@@ -5521,7 +6451,7 @@ function getElements() {
       weight: 35,
       weight_modifier: {"modifier": {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}},
       prerequisites: ["軌道上居住地", "星系要塞の建設"],
-      potential: {"OR": {"has_void_dweller_origin": "yes", "host_has_dlc": "Utopia"}}
+      potential: {"is_wilderness_empire": "no", "OR": {"has_void_dweller_origin": "yes", "host_has_dlc": "Utopia"}}
     },
     classes: 'engineering'
 },
@@ -5536,7 +6466,7 @@ function getElements() {
       weight: 35,
       weight_modifier: {"modifier": {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}},
       prerequisites: ["軌道上居住地の拡張", "シタデルの建設"],
-      potential: {"OR": {"is_void_dweller_empire": "yes", "host_has_dlc": "Utopia"}}
+      potential: {"is_wilderness_empire": "no", "OR": {"is_void_dweller_empire": "yes", "host_has_dlc": "Utopia"}}
     },
     classes: 'engineering'
 },
@@ -5594,7 +6524,7 @@ function getElements() {
       area:'工学',
       category: '推進システム工学',
       weight: 45,
-      weight_modifier: {"factor": 1.25, "modifier": {"factor": 2, "has_technology": "tech_battleships"}},
+      weight_modifier: {"factor": 1.25, "modifier": {"factor": 2, "OR": {"has_technology": "tech_stingers"}}},
       prerequisites: ["プラズマスラスター"],
       potential: {}
     },
@@ -5700,7 +6630,7 @@ function getElements() {
       category: '推進システム工学',
       weight: 40,
       weight_modifier: {"modifier": {"factor": 1.5, "has_ethic": "ethic_fanatic_militarist"}},
-      prerequisites: ["発展型レールガン", "戦艦"],
+      prerequisites: ["発展型レールガン", "OR = {", "  戦艦", "  スティンガー", "}"],
       potential: {}
     },
     classes: 'engineering'
@@ -5761,7 +6691,7 @@ function getElements() {
       weight: 40,
       weight_modifier: {"modifier": {"factor": 1.5, "has_ethic": "ethic_fanatic_militarist"}},
       prerequisites: ["量子ミサイル"],
-      potential: {}
+      potential: {"country_uses_bio_ships": "no"}
     },
     classes: 'engineering'
 },
@@ -5791,7 +6721,7 @@ function getElements() {
       weight: 40,
       weight_modifier: {"modifier": {"factor": 1.5, "has_ethic": "ethic_fanatic_militarist"}},
       prerequisites: ["装甲魚雷"],
-      potential: {}
+      potential: {"country_uses_bio_ships": "no"}
     },
     classes: 'engineering'
 },
@@ -6074,7 +7004,7 @@ function getElements() {
       area:'物理学',
       category: '素粒子物理学',
       weight: 40,
-      weight_modifier: {"factor": 2, "modifier": {"factor": 2, "has_technology": "tech_battleships"}},
+      weight_modifier: {"factor": 2, "modifier": {"factor": 2, "OR": {"has_technology": "tech_stingers"}}},
       prerequisites: ["反物質発電"],
       potential: {}
     },
@@ -6104,7 +7034,7 @@ function getElements() {
       area:'物理学',
       category: 'コンピュータ',
       weight: 45,
-      weight_modifier: {"modifier": {"factor": 1.25, "has_tradition": "tr_discovery_adopt"}},
+      weight_modifier: {"modifier": {"factor": 1.25, "any_system_within_border": {"is_inside_nebula": "yes"}}},
       prerequisites: ["亜空間センサー"],
       potential: {}
     },
@@ -6135,7 +7065,7 @@ function getElements() {
       category: '素粒子物理学',
       weight: 40,
       weight_modifier: {"modifier": {"factor": 1.5, "has_ethic": "ethic_fanatic_militarist"}},
-      prerequisites: ["X線レーザー", "戦艦"],
+      prerequisites: ["X線レーザー", "OR = {", "  戦艦", "  スティンガー", "}"],
       potential: {}
     },
     classes: 'physics'
@@ -6180,7 +7110,7 @@ function getElements() {
       category: '素粒子物理学',
       weight: 40,
       weight_modifier: {"modifier": {"factor": 1.5, "has_ethic": "ethic_fanatic_militarist"}},
-      prerequisites: ["位相ディスラプター", "戦艦"],
+      prerequisites: ["位相ディスラプター", "OR = {", "  戦艦", "  スティンガー", "}"],
       potential: {}
     },
     classes: 'physics'
@@ -6269,9 +7199,9 @@ function getElements() {
       area:'社会学',
       category: '生物学',
       weight: 35,
-      weight_modifier: {"modifier": {"factor": 2, "has_relic": "r_pox_sample"}},
+      weight_modifier: {"modifier": {"factor": 2, "country_uses_bio_ships": "yes"}},
       prerequisites: ["ナノ活性化作物"],
-      potential: {"is_machine_empire": "no"}
+      potential: {"is_machine_empire": "no", "is_wilderness_empire": "no"}
     },
     classes: 'society'
 },
@@ -6331,7 +7261,7 @@ function getElements() {
       weight: 45,
       weight_modifier: {"factor": 0.5, "modifier": {"factor": 1.25, "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_spark_of_genius_2"}}}},
       prerequisites: ["エピジェネティック変化の誘発"],
-      potential: {"NOR": {"is_machine_empire": "yes", "is_natural_design_empire": "yes", "is_individual_machine": "yes"}}
+      potential: {"NOR": {"is_machine_empire": "yes", "is_natural_design_empire": "yes", "is_individual_machine": "yes", "is_wilderness_empire": "yes"}}
     },
     classes: 'society'
 },
@@ -6346,7 +7276,7 @@ function getElements() {
       weight: 35,
       weight_modifier: {"factor": 0.5, "modifier": {"factor": 0.5, "is_individual_machine": "yes", "any_owned_species": {"is_organic_species": "no"}}},
       prerequisites: ["血統選別"],
-      potential: {"NOR": {"is_machine_empire": "yes", "is_natural_design_empire": "yes"}}
+      potential: {"is_machine_empire": "no", "is_natural_design_empire": "no"}
     },
     classes: 'society'
 },
@@ -6727,6 +7657,186 @@ function getElements() {
 },
 {
     data: {
+      id: 'tech_weaver_bio_healing_5',
+      name: '知的適応型胞子投射機',
+      tier: 5,
+      cost: 32000,
+      area:'社会学',
+      category: '生物学',
+      weight: 30,
+      weight_modifier: {"modifier": {"factor": 0, "NOR": {"has_technology": "tech_exotic_gases", "has_country_flag": "has_market_access"}}},
+      prerequisites: ["適応型胞子投射機"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_weaver_bio_healing_6',
+      name: '再誕胞子',
+      tier: 5,
+      cost: 70000,
+      area:'社会学',
+      category: '生物学',
+      weight: 20,
+      weight_modifier: {"modifier": {"factor": 0, "NOR": {"is_country_type": "awakened_fallen_empire"}}},
+      prerequisites: ["知的適応型胞子投射機"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_weaver_bio_evasion_5',
+      name: '回避ダーツ',
+      tier: 5,
+      cost: 32000,
+      area:'社会学',
+      category: '生物学',
+      weight: 30,
+      weight_modifier: {"modifier": {"factor": 0, "NOR": {"has_technology": "tech_rare_crystals", "has_country_flag": "has_market_access"}}},
+      prerequisites: ["エレクトロ・スプレー"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_weaver_bio_evasion_6',
+      name: '対応型触手',
+      tier: 5,
+      cost: 70000,
+      area:'社会学',
+      category: '生物学',
+      weight: 20,
+      weight_modifier: {"modifier": {"factor": 0, "NOR": {"is_country_type": "awakened_fallen_empire"}}},
+      prerequisites: ["回避ダーツ"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_weaver_bio_fire_rate_5',
+      name: 'ウィーヴァー・スウィフトシューター',
+      tier: 5,
+      cost: 32000,
+      area:'社会学',
+      category: '生物学',
+      weight: 30,
+      weight_modifier: {"modifier": {"factor": 0, "NOR": {"has_technology": "tech_volatile_motes", "has_country_flag": "has_market_access"}}},
+      prerequisites: ["ウィーヴァー・オーラキャスター"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_weaver_bio_fire_rate_6',
+      name: 'ウィーヴァー・ウェーブメイカー',
+      tier: 5,
+      cost: 70000,
+      area:'社会学',
+      category: '生物学',
+      weight: 20,
+      weight_modifier: {"modifier": {"factor": 0, "NOR": {"is_country_type": "awakened_fallen_empire"}}},
+      prerequisites: ["ウィーヴァー・スウィフトシューター"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_weaver_bio_confuser_5',
+      name: 'スネアダーツ',
+      tier: 5,
+      cost: 32000,
+      area:'社会学',
+      category: '生物学',
+      weight: 30,
+      weight_modifier: {"modifier": {"factor": 0, "NOR": {"has_technology": "tech_volatile_motes", "has_country_flag": "has_market_access"}}},
+      prerequisites: ["ルイン・バーブ"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_weaver_bio_confuser_6',
+      name: 'ハヴォックストーム',
+      tier: 5,
+      cost: 70000,
+      area:'社会学',
+      category: '生物学',
+      weight: 20,
+      weight_modifier: {"modifier": {"factor": 0, "NOR": {"is_country_type": "awakened_fallen_empire"}}},
+      prerequisites: ["スネアダーツ"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_weaver_bio_anti_evasion_5',
+      name: '獲物追跡砲',
+      tier: 5,
+      cost: 32000,
+      area:'社会学',
+      category: '生物学',
+      weight: 30,
+      weight_modifier: {"modifier": {"factor": 0, "NOR": {"has_technology": "tech_rare_crystals", "has_country_flag": "has_market_access"}}},
+      prerequisites: ["ピニオン加速砲"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_weaver_bio_anti_evasion_6',
+      name: '精密ランサー',
+      tier: 5,
+      cost: 70000,
+      area:'社会学',
+      category: '生物学',
+      weight: 20,
+      weight_modifier: {"modifier": {"factor": 0, "NOR": {"is_country_type": "awakened_fallen_empire"}}},
+      prerequisites: ["獲物追跡砲"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_weaver_bio_anti_fire_rate_5',
+      name: 'フィーンド・ディスエーブラー',
+      tier: 5,
+      cost: 32000,
+      area:'社会学',
+      category: '生物学',
+      weight: 30,
+      weight_modifier: {"modifier": {"factor": 0, "NOR": {"has_technology": "tech_volatile_motes", "has_country_flag": "has_market_access"}}},
+      prerequisites: ["分解ビーム"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_weaver_bio_anti_fire_rate_6',
+      name: 'トラッカー・ストッパー',
+      tier: 5,
+      cost: 70000,
+      area:'社会学',
+      category: '生物学',
+      weight: 20,
+      weight_modifier: {"modifier": {"factor": 0, "NOR": {"is_country_type": "awakened_fallen_empire"}}},
+      prerequisites: ["フィーンド・ディスエーブラー"],
+      potential: {"country_uses_bio_ships": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
       id: 'tech_nanite_repair_system',
       name: 'ナノマシン修復システム',
       tier: 5,
@@ -6780,7 +7890,7 @@ function getElements() {
       category: '宇宙工学',
       weight: 30,
       weight_modifier: {"modifier": {"factor": 1.25, "has_tradition": "tr_supremacy_adopt"}},
-      prerequisites: ["戦艦"],
+      prerequisites: ["OR = {", "  戦艦", "  発展型スティンガーの開発", "}"],
       potential: {"host_has_dlc": "Apocalypse"}
     },
     classes: 'engineering'
@@ -6795,7 +7905,7 @@ function getElements() {
       category: '宇宙工学',
       weight: 20,
       weight_modifier: {"factor": 0.25, "modifier": {"factor": 1.25, "has_technology": "tech_titans"}},
-      prerequisites: ["シタデルの建設", "戦艦"],
+      prerequisites: ["シタデルの建設", "OR = {", "  戦艦", "  発展型ハーヴィンジャーの開発", "}"],
       potential: {"host_has_dlc": "Federations"}
     },
     classes: 'engineering'
@@ -6811,7 +7921,7 @@ function getElements() {
       weight: 30,
       weight_modifier: {"modifier": {"factor": 1.25, "has_tradition": "tr_supremacy_adopt"}},
       prerequisites: ["改良型戦艦船体"],
-      potential: {}
+      potential: {"country_uses_bio_ships": "no"}
     },
     classes: 'engineering'
 },
@@ -7015,7 +8125,7 @@ function getElements() {
       id: 'tech_dark_matter_deflector',
       name: 'ダークマターデフレクター',
       tier: 5,
-      cost: 50000,
+      cost: 70000,
       area:'物理学',
       category: '力場操作',
       weight: 1,
@@ -7030,7 +8140,7 @@ function getElements() {
       id: 'tech_dark_matter_power_core',
       name: 'ダークマター発電',
       tier: 5,
-      cost: 50000,
+      cost: 70000,
       area:'物理学',
       category: '素粒子物理学',
       weight: 1,
@@ -7045,7 +8155,7 @@ function getElements() {
       id: 'tech_dark_matter_propulsion',
       name: 'ダークマター推進',
       tier: 5,
-      cost: 50000,
+      cost: 70000,
       area:'工学',
       category: '推進システム工学',
       weight: 1,
@@ -7060,11 +8170,11 @@ function getElements() {
       id: 'tech_fe_affluence_1',
       name: '富の中心地',
       tier: 5,
-      cost: 50000,
+      cost: 70000,
       area:'工学',
       category: '産業学',
       weight: 20,
-      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "num_pops": "> 50"}}},
+      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "pop_amount": "> 5000"}}},
       prerequisites: [],
       potential: {}
     },
@@ -7075,7 +8185,7 @@ function getElements() {
       id: 'tech_fe_affluence_2',
       name: '富裕センター',
       tier: 5,
-      cost: 50000,
+      cost: 70000,
       area:'工学',
       category: '産業学',
       weight: 20,
@@ -7090,11 +8200,11 @@ function getElements() {
       id: 'tech_fe_nourishment_1',
       name: '栄養物施設',
       tier: 5,
-      cost: 50000,
+      cost: 70000,
       area:'社会学',
       category: '生物学',
       weight: 20,
-      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "num_pops": "> 50"}}},
+      weight_modifier: {"modifier": {"factor": 2, "country_uses_bio_ships": "yes"}},
       prerequisites: [],
       potential: {}
     },
@@ -7105,7 +8215,7 @@ function getElements() {
       id: 'tech_fe_nourishment_2',
       name: '栄養物センター',
       tier: 5,
-      cost: 50000,
+      cost: 70000,
       area:'社会学',
       category: '生物学',
       weight: 20,
@@ -7120,11 +8230,11 @@ function getElements() {
       id: 'tech_fe_fabricator_1',
       name: '次元複製器',
       tier: 5,
-      cost: 50000,
+      cost: 70000,
       area:'工学',
       category: '材料工学',
       weight: 20,
-      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "num_pops": "> 50"}}},
+      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "pop_amount": "> 5000"}}},
       prerequisites: [],
       potential: {}
     },
@@ -7135,7 +8245,7 @@ function getElements() {
       id: 'tech_fe_fabricator_2',
       name: '次元ファブリケーター',
       tier: 5,
-      cost: 50000,
+      cost: 70000,
       area:'工学',
       category: '材料工学',
       weight: 20,
@@ -7150,11 +8260,11 @@ function getElements() {
       id: 'tech_fe_singularity_1',
       name: '第3級時空特異点',
       tier: 5,
-      cost: 50000,
+      cost: 70000,
       area:'物理学',
       category: '素粒子物理学',
       weight: 20,
-      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "num_pops": "> 50"}}},
+      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "pop_amount": "> 5000"}}},
       prerequisites: [],
       potential: {}
     },
@@ -7165,7 +8275,7 @@ function getElements() {
       id: 'tech_fe_singularity_2',
       name: '第4級時空特異点',
       tier: 5,
-      cost: 50000,
+      cost: 70000,
       area:'物理学',
       category: '素粒子物理学',
       weight: 20,
@@ -7180,11 +8290,11 @@ function getElements() {
       id: 'tech_fe_forge_1',
       name: '超級鋳造所',
       tier: 5,
-      cost: 50000,
+      cost: 70000,
       area:'工学',
       category: '産業学',
       weight: 20,
-      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "num_pops": "> 50"}}},
+      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "pop_amount": "> 5000"}}},
       prerequisites: [],
       potential: {}
     },
@@ -7195,7 +8305,7 @@ function getElements() {
       id: 'tech_fe_forge_2',
       name: '自動溶鉱炉',
       tier: 5,
-      cost: 50000,
+      cost: 70000,
       area:'工学',
       category: '産業学',
       weight: 20,
@@ -7210,11 +8320,11 @@ function getElements() {
       id: 'tech_fe_dome_1',
       name: '上空ドローン',
       tier: 5,
-      cost: 50000,
+      cost: 70000,
       area:'社会学',
       category: '統治学',
       weight: 20,
-      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "num_pops": "> 50"}}},
+      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "pop_amount": "> 5000"}}},
       prerequisites: [],
       potential: {}
     },
@@ -7225,7 +8335,7 @@ function getElements() {
       id: 'tech_fe_dome_2',
       name: '最高天のドーム',
       tier: 5,
-      cost: 50000,
+      cost: 70000,
       area:'社会学',
       category: '統治学',
       weight: 20,
@@ -7240,11 +8350,11 @@ function getElements() {
       id: 'tech_fe_fortress_1',
       name: 'アスピスの砦',
       tier: 5,
-      cost: 50000,
+      cost: 70000,
       area:'社会学',
       category: '軍事学',
       weight: 20,
-      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "num_pops": "> 50"}}},
+      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "pop_amount": "> 5000"}}},
       prerequisites: [],
       potential: {}
     },
@@ -7255,7 +8365,7 @@ function getElements() {
       id: 'tech_fe_fortress_2',
       name: 'イージス施設',
       tier: 5,
-      cost: 50000,
+      cost: 70000,
       area:'社会学',
       category: '軍事学',
       weight: 20,
@@ -7270,11 +8380,11 @@ function getElements() {
       id: 'tech_fe_administration_1',
       name: 'フラクタル行政プロセス',
       tier: 5,
-      cost: 50000,
+      cost: 70000,
       area:'社会学',
       category: '統治学',
       weight: 20,
-      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "num_pops": "> 50"}}},
+      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "pop_amount": "> 5000"}}},
       prerequisites: [],
       potential: {}
     },
@@ -7285,7 +8395,7 @@ function getElements() {
       id: 'tech_fe_administration_2',
       name: '量子行政プロセス',
       tier: 5,
-      cost: 50000,
+      cost: 70000,
       area:'社会学',
       category: '統治学',
       weight: 20,
@@ -7300,11 +8410,11 @@ function getElements() {
       id: 'tech_fe_assembly_1',
       name: 'ロボット製造結合体',
       tier: 5,
-      cost: 50000,
+      cost: 70000,
       area:'工学',
       category: '産業学',
       weight: 20,
-      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "num_pops": "> 50"}}},
+      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "pop_amount": "> 5000"}}},
       prerequisites: [],
       potential: {}
     },
@@ -7315,7 +8425,7 @@ function getElements() {
       id: 'tech_fe_assembly_2',
       name: 'ロボット量子生産拠点',
       tier: 5,
-      cost: 50000,
+      cost: 70000,
       area:'工学',
       category: '産業学',
       weight: 20,
@@ -7330,11 +8440,11 @@ function getElements() {
       id: 'tech_fe_clinic_1',
       name: '分子再活性化機関',
       tier: 5,
-      cost: 50000,
+      cost: 70000,
       area:'社会学',
       category: '生物学',
       weight: 20,
-      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "num_pops": "> 50"}}},
+      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "pop_amount": "> 5000"}}},
       prerequisites: [],
       potential: {}
     },
@@ -7345,7 +8455,7 @@ function getElements() {
       id: 'tech_fe_clinic_2',
       name: '生体再生機関',
       tier: 5,
-      cost: 50000,
+      cost: 70000,
       area:'社会学',
       category: '生物学',
       weight: 20,
@@ -7360,11 +8470,11 @@ function getElements() {
       id: 'tech_fe_security_1',
       name: '司法施設',
       tier: 5,
-      cost: 50000,
+      cost: 70000,
       area:'社会学',
       category: '統治学',
       weight: 20,
-      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "num_pops": "> 50"}}},
+      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "pop_amount": "> 5000"}}},
       prerequisites: [],
       potential: {}
     },
@@ -7375,7 +8485,7 @@ function getElements() {
       id: 'tech_fe_security_2',
       name: '司法のジグラット',
       tier: 5,
-      cost: 50000,
+      cost: 70000,
       area:'社会学',
       category: '統治学',
       weight: 20,
@@ -7390,11 +8500,11 @@ function getElements() {
       id: 'tech_fe_market_1',
       name: '銀河商取引拠点',
       tier: 5,
-      cost: 50000,
+      cost: 70000,
       area:'社会学',
       category: '統治学',
       weight: 20,
-      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "num_pops": "> 50"}}},
+      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "pop_amount": "> 5000"}}},
       prerequisites: [],
       potential: {}
     },
@@ -7405,7 +8515,7 @@ function getElements() {
       id: 'tech_fe_market_2',
       name: '星間商取引結合体',
       tier: 5,
-      cost: 50000,
+      cost: 70000,
       area:'社会学',
       category: '統治学',
       weight: 20,
@@ -7420,11 +8530,11 @@ function getElements() {
       id: 'tech_fe_silo_1',
       name: '縮小宇宙補給所',
       tier: 5,
-      cost: 50000,
+      cost: 70000,
       area:'物理学',
       category: '力場操作',
       weight: 20,
-      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "num_pops": "> 50"}}},
+      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "pop_amount": "> 5000"}}},
       prerequisites: [],
       potential: {}
     },
@@ -7435,7 +8545,7 @@ function getElements() {
       id: 'tech_fe_silo_2',
       name: '異次元補給所',
       tier: 5,
-      cost: 50000,
+      cost: 70000,
       area:'物理学',
       category: '力場操作',
       weight: 20,
@@ -7450,11 +8560,11 @@ function getElements() {
       id: 'tech_fe_entertainment_1',
       name: '仮想天福広場',
       tier: 5,
-      cost: 50000,
+      cost: 70000,
       area:'社会学',
       category: '統治学',
       weight: 20,
-      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "num_pops": "> 50"}}},
+      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "pop_amount": "> 5000"}}},
       prerequisites: [],
       potential: {}
     },
@@ -7465,7 +8575,7 @@ function getElements() {
       id: 'tech_fe_entertainment_2',
       name: '万物天福結合体',
       tier: 5,
-      cost: 50000,
+      cost: 70000,
       area:'社会学',
       category: '統治学',
       weight: 20,
@@ -7480,11 +8590,11 @@ function getElements() {
       id: 'tech_fe_lab_1',
       name: '量子革新結合体',
       tier: 5,
-      cost: 50000,
+      cost: 70000,
       area:'物理学',
       category: 'コンピュータ',
       weight: 20,
-      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "num_pops": "> 50"}}},
+      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "pop_amount": "> 5000"}}},
       prerequisites: [],
       potential: {}
     },
@@ -7495,7 +8605,7 @@ function getElements() {
       id: 'tech_fe_lab_2',
       name: '超越的革新部門',
       tier: 5,
-      cost: 50000,
+      cost: 70000,
       area:'物理学',
       category: 'コンピュータ',
       weight: 20,
@@ -7510,11 +8620,11 @@ function getElements() {
       id: 'tech_fe_mine_1',
       name: '量子掘削所',
       tier: 5,
-      cost: 50000,
+      cost: 70000,
       area:'工学',
       category: '材料工学',
       weight: 20,
-      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "num_pops": "> 50"}}},
+      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "pop_amount": "> 5000"}}},
       prerequisites: [],
       potential: {}
     },
@@ -7525,7 +8635,7 @@ function getElements() {
       id: 'tech_fe_mine_2',
       name: '量子掘削拠点',
       tier: 5,
-      cost: 50000,
+      cost: 70000,
       area:'工学',
       category: '材料工学',
       weight: 20,
@@ -7540,7 +8650,7 @@ function getElements() {
       id: 'tech_cloaking_dark_matter',
       name: 'ダークマター・クロークフィールド',
       tier: 5,
-      cost: 50000,
+      cost: 70000,
       area:'物理学',
       category: '力場操作',
       weight: 25,
@@ -7585,7 +8695,7 @@ function getElements() {
       id: 'tech_dragon_armor',
       name: '人工竜鱗',
       tier: 5,
-      cost: 50000,
+      cost: 60000,
       area:'工学',
       category: '材料工学',
       weight: 0,
@@ -7600,7 +8710,7 @@ function getElements() {
       id: 'tech_enigmatic_encoder',
       name: '不可解なエンコーダー',
       tier: 5,
-      cost: 50000,
+      cost: 60000,
       area:'物理学',
       category: 'コンピュータ',
       weight: 0,
@@ -7615,7 +8725,7 @@ function getElements() {
       id: 'tech_enigmatic_decoder',
       name: '不可解なデコーダー',
       tier: 5,
-      cost: 50000,
+      cost: 60000,
       area:'物理学',
       category: 'コンピュータ',
       weight: 0,
@@ -7720,7 +8830,7 @@ function getElements() {
       id: 'tech_cosmogenesis_escort',
       name: 'リドル護衛艦',
       tier: 5,
-      cost: 50000,
+      cost: 70000,
       area:'工学',
       category: '宇宙工学',
       weight: 0,
@@ -7735,7 +8845,7 @@ function getElements() {
       id: 'tech_cosmogenesis_battlecruiser',
       name: 'エニグマ巡洋戦艦',
       tier: 5,
-      cost: 50000,
+      cost: 70000,
       area:'工学',
       category: '宇宙工学',
       weight: 0,
@@ -7750,7 +8860,7 @@ function getElements() {
       id: 'tech_cosmogenesis_FE_titan',
       name: 'パラドックスタイタン',
       tier: 5,
-      cost: 50000,
+      cost: 70000,
       area:'工学',
       category: '宇宙工学',
       weight: 0,
@@ -7784,7 +8894,7 @@ function getElements() {
       area:'物理学',
       category: 'コンピュータ',
       weight: 30,
-      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "num_pops": ">= 100"}}},
+      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "pop_amount": ">= 10000"}}},
       prerequisites: [],
       potential: {"has_machine_age_dlc": "yes", "has_ascension_perk": "ap_cosmogenesis", "has_technology": "tech_cosmogenesis_world"}
     },
@@ -7799,7 +8909,7 @@ function getElements() {
       area:'物理学',
       category: 'コンピュータ',
       weight: 30,
-      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "num_pops": ">= 100"}}},
+      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "pop_amount": ">= 10000"}}},
       prerequisites: [],
       potential: {"has_machine_age_dlc": "yes", "has_ascension_perk": "ap_cosmogenesis", "has_technology": "tech_cosmogenesis_world"}
     },
@@ -7814,7 +8924,7 @@ function getElements() {
       area:'社会学',
       category: '生物学',
       weight: 30,
-      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "num_pops": ">= 100"}}},
+      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "pop_amount": ">= 10000"}}},
       prerequisites: [],
       potential: {"has_machine_age_dlc": "yes", "has_ascension_perk": "ap_cosmogenesis", "has_technology": "tech_cosmogenesis_world"}
     },
@@ -7829,7 +8939,7 @@ function getElements() {
       area:'社会学',
       category: '生物学',
       weight: 30,
-      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "num_pops": ">= 100"}}},
+      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "pop_amount": ">= 10000"}}},
       prerequisites: [],
       potential: {"has_machine_age_dlc": "yes", "has_ascension_perk": "ap_cosmogenesis", "has_technology": "tech_cosmogenesis_world"}
     },
@@ -7844,7 +8954,7 @@ function getElements() {
       area:'社会学',
       category: '軍事学',
       weight: 30,
-      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "num_pops": ">= 100"}}},
+      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "pop_amount": ">= 10000"}}},
       prerequisites: [],
       potential: {"has_machine_age_dlc": "yes", "has_ascension_perk": "ap_cosmogenesis", "has_technology": "tech_cosmogenesis_world"}
     },
@@ -7859,7 +8969,7 @@ function getElements() {
       area:'物理学',
       category: 'コンピュータ',
       weight: 30,
-      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "num_pops": ">= 100"}}},
+      weight_modifier: {"modifier": {"factor": 2, "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world", "pop_amount": ">= 10000"}}},
       prerequisites: [],
       potential: {"has_machine_age_dlc": "yes", "has_ascension_perk": "ap_cosmogenesis", "has_technology": "tech_cosmogenesis_world"}
     },
@@ -7890,7 +9000,7 @@ function getElements() {
       category: '宇宙工学',
       weight: 20,
       weight_modifier: {"factor": 0.25, "modifier": {"factor": 20, "OR": {"has_any_megastructure_in_empire": "yes", "has_origin": "origin_shattered_ring"}}},
-      prerequisites: ["シタデルの建設", "戦艦", "ゼロポイント発電"],
+      prerequisites: ["シタデルの建設", "ゼロポイント発電", "OR = {", "  戦艦", "  スティンガー", "}"],
       potential: {}
     },
     classes: 'engineering'
@@ -8026,7 +9136,7 @@ function getElements() {
       weight: 20,
       weight_modifier: {"factor": 0},
       prerequisites: ["メガエンジニアリング"],
-      potential: {"host_has_dlc": "Utopia"}
+      potential: {"host_has_dlc": "Utopia", "is_wilderness_empire": "no"}
     },
     classes: 'engineering'
 },
@@ -8167,51 +9277,6 @@ function getElements() {
 },
 {
     data: {
-      id: 'tech_lithoid_transgenesis',
-      name: 'ケイ素形質導入',
-      tier: 5,
-      cost: 32000,
-      area:'社会学',
-      category: '生物学',
-      weight: 30,
-      weight_modifier: {"factor": 2, "modifier": {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}},
-      prerequisites: [],
-      potential: {}
-    },
-    classes: 'society'
-},
-{
-    data: {
-      id: 'tech_plantoid_transgenesis',
-      name: '植物形質導入',
-      tier: 5,
-      cost: 32000,
-      area:'社会学',
-      category: '生物学',
-      weight: 30,
-      weight_modifier: {"factor": 2, "modifier": {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}},
-      prerequisites: [],
-      potential: {}
-    },
-    classes: 'society'
-},
-{
-    data: {
-      id: 'tech_leviathan_transgenesis',
-      name: 'リヴァイアサン形質導入',
-      tier: 5,
-      cost: 32000,
-      area:'社会学',
-      category: '生物学',
-      weight: 30,
-      weight_modifier: {"factor": 2, "modifier": {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}},
-      prerequisites: [],
-      potential: {}
-    },
-    classes: 'society'
-},
-{
-    data: {
       id: 'tech_doctrine_fleet_size_5',
       name: '無敵艦隊戦闘ドクトリン',
       tier: 5,
@@ -8242,6 +9307,21 @@ function getElements() {
 },
 {
     data: {
+      id: 'tech_existential_campaigns',
+      name: '存亡を賭けた戦役',
+      tier: 5,
+      cost: 48000,
+      area:'社会学',
+      category: '軍事学',
+      weight: 20,
+      weight_modifier: {"modifier": {"factor": 0, "has_ethic": "ethic_fanatic_pacifist"}},
+      prerequisites: ["銀河戦役"],
+      potential: {}
+    },
+    classes: 'society'
+},
+{
+    data: {
       id: 'tech_psionic_shield',
       name: 'サイオニック・シールド',
       tier: 5,
@@ -8260,7 +9340,7 @@ function getElements() {
       id: 'tech_covenant_composer',
       name: '作曲家の印',
       tier: 5,
-      cost: 50000,
+      cost: 60000,
       area:'社会学',
       category: '超能力',
       weight: 0,
@@ -8275,7 +9355,7 @@ function getElements() {
       id: 'tech_covenant_eater',
       name: '喰らうものの印',
       tier: 5,
-      cost: 50000,
+      cost: 60000,
       area:'社会学',
       category: '超能力',
       weight: 0,
@@ -8290,7 +9370,7 @@ function getElements() {
       id: 'tech_covenant_instrument',
       name: '道具の印',
       tier: 5,
-      cost: 50000,
+      cost: 60000,
       area:'社会学',
       category: '超能力',
       weight: 0,
@@ -8305,7 +9385,7 @@ function getElements() {
       id: 'tech_covenant_whisperers',
       name: '囁き手の印',
       tier: 5,
-      cost: 50000,
+      cost: 60000,
       area:'社会学',
       category: '超能力',
       weight: 0,
@@ -8326,7 +9406,7 @@ function getElements() {
       weight: 25,
       weight_modifier: {"factor": "@repatableTechFactor"},
       prerequisites: ["遺伝子改良作物"],
-      potential: {}
+      potential: {"is_wilderness_empire": "no"}
     },
     classes: 'society'
 },
@@ -8518,6 +9598,17 @@ function getElements() {
 { data: { id: 'tech_starbase_1_to_tech_space_defense_station_1', source: 'tech_starbase_1', target: 'tech_space_defense_station_1' } },
 { data: { id: 'tech_fission_power_to_tech_reactor_boosters_1', source: 'tech_fission_power', target: 'tech_reactor_boosters_1' } },
 { data: { id: 'tech_space_exploration_to_tech_colonization_1', source: 'tech_space_exploration', target: 'tech_colonization_1' } },
+{ data: { id: 'tech_maulers_to_tech_mauler_build_speed', source: 'tech_maulers', target: 'tech_mauler_build_speed' } },
+{ data: { id: 'tech_maulers_to_tech_mauler_growth_1', source: 'tech_maulers', target: 'tech_mauler_growth_1' } },
+{ data: { id: 'tech_mauler_growth_1_to_tech_mauler_growth_2', source: 'tech_mauler_growth_1', target: 'tech_mauler_growth_2' } },
+{ data: { id: 'tech_maulers_to_tech_weavers', source: 'tech_maulers', target: 'tech_weavers' } },
+{ data: { id: 'tech_weavers_to_tech_weaver_build_speed', source: 'tech_weavers', target: 'tech_weaver_build_speed' } },
+{ data: { id: 'tech_weavers_to_tech_weaver_bio_healing_1', source: 'tech_weavers', target: 'tech_weaver_bio_healing_1' } },
+{ data: { id: 'tech_weavers_to_tech_weaver_bio_evasion_1', source: 'tech_weavers', target: 'tech_weaver_bio_evasion_1' } },
+{ data: { id: 'tech_weavers_to_tech_weaver_bio_fire_rate_1', source: 'tech_weavers', target: 'tech_weaver_bio_fire_rate_1' } },
+{ data: { id: 'tech_weavers_to_tech_weaver_bio_confuser_1', source: 'tech_weavers', target: 'tech_weaver_bio_confuser_1' } },
+{ data: { id: 'tech_weavers_to_tech_weaver_bio_anti_evasion_1', source: 'tech_weavers', target: 'tech_weaver_bio_anti_evasion_1' } },
+{ data: { id: 'tech_weavers_to_tech_weaver_bio_anti_fire_rate_1', source: 'tech_weavers', target: 'tech_weaver_bio_anti_fire_rate_1' } },
 { data: { id: 'tech_industrial_storm_protection_to_tech_storm_prediction_1', source: 'tech_industrial_storm_protection', target: 'tech_storm_prediction_1' } },
 { data: { id: 'tech_storm_prediction_1_to_tech_ship_hull_storm_breaker_1', source: 'tech_storm_prediction_1', target: 'tech_ship_hull_storm_breaker_1' } },
 { data: { id: 'tech_storm_prediction_1_to_tech_ship_storm_weapons_1', source: 'tech_storm_prediction_1', target: 'tech_ship_storm_weapons_1' } },
@@ -8532,6 +9623,7 @@ function getElements() {
 { data: { id: 'tech_mining_1_to_tech_mineral_purification_1', source: 'tech_mining_1', target: 'tech_mineral_purification_1' } },
 { data: { id: 'tech_basic_industry_to_tech_alloys_1', source: 'tech_basic_industry', target: 'tech_alloys_1' } },
 { data: { id: 'tech_basic_industry_to_tech_luxuries_1', source: 'tech_basic_industry', target: 'tech_luxuries_1' } },
+{ data: { id: 'tech_basic_science_lab_1_to_tech_engineering_1', source: 'tech_basic_science_lab_1', target: 'tech_engineering_1' } },
 { data: { id: 'tech_powered_exoskeletons_to_tech_robotic_workers', source: 'tech_powered_exoskeletons', target: 'tech_robotic_workers' } },
 { data: { id: 'tech_thrusters_1_to_tech_afterburners_1', source: 'tech_thrusters_1', target: 'tech_afterburners_1' } },
 { data: { id: 'tech_mass_drivers_1_to_tech_mass_drivers_2', source: 'tech_mass_drivers_1', target: 'tech_mass_drivers_2' } },
@@ -8541,6 +9633,7 @@ function getElements() {
 { data: { id: 'tech_basic_science_lab_1_to_tech_basic_science_lab_2', source: 'tech_basic_science_lab_1', target: 'tech_basic_science_lab_2' } },
 { data: { id: 'tech_space_construction_to_tech_space_science_1', source: 'tech_space_construction', target: 'tech_space_science_1' } },
 { data: { id: 'tech_space_science_1_to_tech_space_science_2', source: 'tech_space_science_1', target: 'tech_space_science_2' } },
+{ data: { id: 'tech_basic_science_lab_1_to_tech_physics_1', source: 'tech_basic_science_lab_1', target: 'tech_physics_1' } },
 { data: { id: 'tech_basic_science_lab_1_to_tech_administrative_ai', source: 'tech_basic_science_lab_1', target: 'tech_administrative_ai' } },
 { data: { id: 'tech_administrative_ai_to_tech_cryostasis_1', source: 'tech_administrative_ai', target: 'tech_cryostasis_1' } },
 { data: { id: 'tech_colonization_1_to_tech_cryostasis_1', source: 'tech_colonization_1', target: 'tech_cryostasis_1' } },
@@ -8555,12 +9648,13 @@ function getElements() {
 { data: { id: 'tech_reactor_boosters_2_to_tech_reactor_boosters_3', source: 'tech_reactor_boosters_2', target: 'tech_reactor_boosters_3' } },
 { data: { id: 'tech_shields_1_to_tech_shields_2', source: 'tech_shields_1', target: 'tech_shields_2' } },
 { data: { id: 'tech_power_plant_1_to_tech_power_plant_2', source: 'tech_power_plant_1', target: 'tech_power_plant_2' } },
-{ data: { id: 'tech_power_plant_1_to_tech_power_hub_1', source: 'tech_power_plant_1', target: 'tech_power_hub_1' } },
+{ data: { id: 'tech_power_plant_2_to_tech_power_hub_1', source: 'tech_power_plant_2', target: 'tech_power_hub_1' } },
 { data: { id: 'tech_lasers_1_to_tech_lasers_2', source: 'tech_lasers_1', target: 'tech_lasers_2' } },
 { data: { id: 'tech_interplanetary_commerce_to_tech_space_trading', source: 'tech_interplanetary_commerce', target: 'tech_space_trading' } },
 { data: { id: 'tech_industrial_farming_to_tech_eco_simulation', source: 'tech_industrial_farming', target: 'tech_eco_simulation' } },
-{ data: { id: 'tech_industrial_farming_to_tech_hydroponics', source: 'tech_industrial_farming', target: 'tech_hydroponics' } },
 { data: { id: 'tech_eco_simulation_to_tech_food_processing_1', source: 'tech_eco_simulation', target: 'tech_food_processing_1' } },
+{ data: { id: 'tech_basic_science_lab_1_to_tech_society_1', source: 'tech_basic_science_lab_1', target: 'tech_society_1' } },
+{ data: { id: 'tech_basic_health_to_tech_frontier_health', source: 'tech_basic_health', target: 'tech_frontier_health' } },
 { data: { id: 'tech_genome_mapping_to_tech_frontier_health', source: 'tech_genome_mapping', target: 'tech_frontier_health' } },
 { data: { id: 'tech_colonization_1_to_tech_dense_jungle', source: 'tech_colonization_1', target: 'tech_dense_jungle' } },
 { data: { id: 'tech_colonization_1_to_tech_quicksand_basin', source: 'tech_colonization_1', target: 'tech_quicksand_basin' } },
@@ -8573,9 +9667,18 @@ function getElements() {
 { data: { id: 'tech_planetary_unification_to_tech_adaptive_bureaucracy', source: 'tech_planetary_unification', target: 'tech_adaptive_bureaucracy' } },
 { data: { id: 'tech_holo_entertainment_to_tech_hyper_entertainment_forum', source: 'tech_holo_entertainment', target: 'tech_hyper_entertainment_forum' } },
 { data: { id: 'tech_cultural_heritage_to_tech_heritage_site', source: 'tech_cultural_heritage', target: 'tech_heritage_site' } },
+{ data: { id: 'tech_colonial_centralization_to_tech_federation_code', source: 'tech_colonial_centralization', target: 'tech_federation_code' } },
 { data: { id: 'tech_industrial_farming_to_tech_bio_reactor', source: 'tech_industrial_farming', target: 'tech_bio_reactor' } },
 { data: { id: 'tech_powered_exoskeletons_to_tech_robomodding_m', source: 'tech_powered_exoskeletons', target: 'tech_robomodding_m' } },
 { data: { id: 'tech_robotic_workers_to_tech_robomodding', source: 'tech_robotic_workers', target: 'tech_robomodding' } },
+{ data: { id: 'tech_weavers_to_tech_weaver_growth_1', source: 'tech_weavers', target: 'tech_weaver_growth_1' } },
+{ data: { id: 'tech_weaver_growth_1_to_tech_weaver_growth_2', source: 'tech_weaver_growth_1', target: 'tech_weaver_growth_2' } },
+{ data: { id: 'tech_weaver_bio_healing_1_to_tech_weaver_bio_healing_2', source: 'tech_weaver_bio_healing_1', target: 'tech_weaver_bio_healing_2' } },
+{ data: { id: 'tech_weaver_bio_evasion_1_to_tech_weaver_bio_evasion_2', source: 'tech_weaver_bio_evasion_1', target: 'tech_weaver_bio_evasion_2' } },
+{ data: { id: 'tech_weaver_bio_fire_rate_1_to_tech_weaver_bio_fire_rate_2', source: 'tech_weaver_bio_fire_rate_1', target: 'tech_weaver_bio_fire_rate_2' } },
+{ data: { id: 'tech_weaver_bio_confuser_1_to_tech_weaver_bio_confuser_2', source: 'tech_weaver_bio_confuser_1', target: 'tech_weaver_bio_confuser_2' } },
+{ data: { id: 'tech_weaver_bio_anti_evasion_1_to_tech_weaver_bio_anti_evasion_2', source: 'tech_weaver_bio_anti_evasion_1', target: 'tech_weaver_bio_anti_evasion_2' } },
+{ data: { id: 'tech_weaver_bio_anti_fire_rate_1_to_tech_weaver_bio_anti_fire_rate_2', source: 'tech_weaver_bio_anti_fire_rate_1', target: 'tech_weaver_bio_anti_fire_rate_2' } },
 { data: { id: 'tech_industrial_storm_protection_to_tech_storm_manipulation', source: 'tech_industrial_storm_protection', target: 'tech_storm_manipulation' } },
 { data: { id: 'tech_industrial_storm_protection_to_tech_advanced_industrial_storm_protection', source: 'tech_industrial_storm_protection', target: 'tech_advanced_industrial_storm_protection' } },
 { data: { id: 'tech_ship_hull_storm_breaker_1_to_tech_ship_hull_storm_breaker_2', source: 'tech_ship_hull_storm_breaker_1', target: 'tech_ship_hull_storm_breaker_2' } },
@@ -8600,6 +9703,7 @@ function getElements() {
 { data: { id: 'tech_colonial_centralization_to_tech_mineral_purification_2', source: 'tech_colonial_centralization', target: 'tech_mineral_purification_2' } },
 { data: { id: 'tech_alloys_1_to_tech_advanced_metallurgy_1', source: 'tech_alloys_1', target: 'tech_advanced_metallurgy_1' } },
 { data: { id: 'tech_ship_armor_2_to_tech_advanced_metallurgy_1', source: 'tech_ship_armor_2', target: 'tech_advanced_metallurgy_1' } },
+{ data: { id: 'tech_engineering_1_to_tech_engineering_2', source: 'tech_engineering_1', target: 'tech_engineering_2' } },
 { data: { id: 'tech_robotic_workers_to_tech_droid_workers', source: 'tech_robotic_workers', target: 'tech_droid_workers' } },
 { data: { id: 'tech_colonial_centralization_to_tech_droid_workers', source: 'tech_colonial_centralization', target: 'tech_droid_workers' } },
 { data: { id: 'tech_powered_exoskeletons_to_tech_integrated_cybernetics', source: 'tech_powered_exoskeletons', target: 'tech_integrated_cybernetics' } },
@@ -8607,6 +9711,8 @@ function getElements() {
 { data: { id: 'tech_mass_drivers_2_to_tech_mass_drivers_3', source: 'tech_mass_drivers_2', target: 'tech_mass_drivers_3' } },
 { data: { id: 'tech_mass_drivers_2_to_tech_autocannons_1', source: 'tech_mass_drivers_2', target: 'tech_autocannons_1' } },
 { data: { id: 'tech_missiles_2_to_tech_missiles_3', source: 'tech_missiles_2', target: 'tech_missiles_3' } },
+{ data: { id: 'tech_harbingers_to_tech_swarmer_missiles_1', source: 'tech_harbingers', target: 'tech_swarmer_missiles_1' } },
+{ data: { id: 'tech_stingers_to_tech_swarmer_missiles_1', source: 'tech_stingers', target: 'tech_swarmer_missiles_1' } },
 { data: { id: 'tech_missiles_2_to_tech_swarmer_missiles_1', source: 'tech_missiles_2', target: 'tech_swarmer_missiles_1' } },
 { data: { id: 'tech_shields_2_to_tech_cloaking_1', source: 'tech_shields_2', target: 'tech_cloaking_1' } },
 { data: { id: 'tech_sensors_2_to_tech_detection_array', source: 'tech_sensors_2', target: 'tech_detection_array' } },
@@ -8622,6 +9728,7 @@ function getElements() {
 { data: { id: 'tech_hyper_drive_2_to_tech_hyper_relays', source: 'tech_hyper_drive_2', target: 'tech_hyper_relays' } },
 { data: { id: 'tech_space_science_2_to_tech_space_science_3', source: 'tech_space_science_2', target: 'tech_space_science_3' } },
 { data: { id: 'tech_space_science_3_to_tech_space_science_4', source: 'tech_space_science_3', target: 'tech_space_science_4' } },
+{ data: { id: 'tech_physics_1_to_tech_physics_2', source: 'tech_physics_1', target: 'tech_physics_2' } },
 { data: { id: 'tech_administrative_ai_to_tech_self_aware_logic', source: 'tech_administrative_ai', target: 'tech_self_aware_logic' } },
 { data: { id: 'tech_luxuries_1_to_tech_consumer_good_refinement_1', source: 'tech_luxuries_1', target: 'tech_consumer_good_refinement_1' } },
 { data: { id: 'tech_administrative_ai_to_tech_consumer_good_refinement_1', source: 'tech_administrative_ai', target: 'tech_consumer_good_refinement_1' } },
@@ -8642,6 +9749,7 @@ function getElements() {
 { data: { id: 'tech_lasers_2_to_tech_disruptors_1', source: 'tech_lasers_2', target: 'tech_disruptors_1' } },
 { data: { id: 'tech_pd_tracking_1_to_tech_pd_tracking_2', source: 'tech_pd_tracking_1', target: 'tech_pd_tracking_2' } },
 { data: { id: 'tech_eco_simulation_to_tech_gene_crops', source: 'tech_eco_simulation', target: 'tech_gene_crops' } },
+{ data: { id: 'tech_society_1_to_tech_society_2', source: 'tech_society_1', target: 'tech_society_2' } },
 { data: { id: 'tech_colonization_1_to_tech_colonization_2', source: 'tech_colonization_1', target: 'tech_colonization_2' } },
 { data: { id: 'tech_colonization_2_to_tech_colonization_3', source: 'tech_colonization_2', target: 'tech_colonization_3' } },
 { data: { id: 'tech_frontier_health_to_tech_frontier_hospital', source: 'tech_frontier_health', target: 'tech_frontier_hospital' } },
@@ -8668,8 +9776,11 @@ function getElements() {
 { data: { id: 'tech_colonial_centralization_to_tech_autonomous_agents', source: 'tech_colonial_centralization', target: 'tech_autonomous_agents' } },
 { data: { id: 'tech_cultural_heritage_to_tech_holographic_rituals', source: 'tech_cultural_heritage', target: 'tech_holographic_rituals' } },
 { data: { id: 'tech_hive_node_to_tech_hive_cluster', source: 'tech_hive_node', target: 'tech_hive_cluster' } },
+{ data: { id: 'tech_wilderness_node_to_tech_wilderness_cluster', source: 'tech_wilderness_node', target: 'tech_wilderness_cluster' } },
+{ data: { id: 'tech_artificial_moral_codes_to_tech_penal_colonies', source: 'tech_artificial_moral_codes', target: 'tech_penal_colonies' } },
+{ data: { id: 'tech_artificial_moral_codes_to_tech_resort_colonies', source: 'tech_artificial_moral_codes', target: 'tech_resort_colonies' } },
 { data: { id: 'tech_neural_implants_to_tech_slave_colonies', source: 'tech_neural_implants', target: 'tech_slave_colonies' } },
-{ data: { id: 'tech_colonial_centralization_to_tech_xeno_diplomacy', source: 'tech_colonial_centralization', target: 'tech_xeno_diplomacy' } },
+{ data: { id: 'tech_federation_code_to_tech_xeno_diplomacy', source: 'tech_federation_code', target: 'tech_xeno_diplomacy' } },
 { data: { id: 'tech_planetary_unification_to_tech_capital_productivity_1', source: 'tech_planetary_unification', target: 'tech_capital_productivity_1' } },
 { data: { id: 'tech_colonial_centralization_to_tech_node_reformatting_1', source: 'tech_colonial_centralization', target: 'tech_node_reformatting_1' } },
 { data: { id: 'tech_colonial_centralization_to_tech_node_culling_1', source: 'tech_colonial_centralization', target: 'tech_node_culling_1' } },
@@ -8694,6 +9805,18 @@ function getElements() {
 { data: { id: 'tech_archaeostudies_to_tech_archaeo_rampart', source: 'tech_archaeostudies', target: 'tech_archaeo_rampart' } },
 { data: { id: 'tech_archaeostudies_to_tech_archaeo_overcharger', source: 'tech_archaeostudies', target: 'tech_archaeo_overcharger' } },
 { data: { id: 'tech_archaeostudies_to_tech_archaeo_refinery', source: 'tech_archaeostudies', target: 'tech_archaeo_refinery' } },
+{ data: { id: 'tech_weavers_to_tech_harbingers', source: 'tech_weavers', target: 'tech_harbingers' } },
+{ data: { id: 'tech_harbingers_to_tech_harbinger_build_speed', source: 'tech_harbingers', target: 'tech_harbinger_build_speed' } },
+{ data: { id: 'tech_harbingers_to_tech_harbinger_growth_1', source: 'tech_harbingers', target: 'tech_harbinger_growth_1' } },
+{ data: { id: 'tech_harbinger_growth_1_to_tech_harbinger_growth_2', source: 'tech_harbinger_growth_1', target: 'tech_harbinger_growth_2' } },
+{ data: { id: 'tech_maulers_to_tech_mandibles_2', source: 'tech_maulers', target: 'tech_mandibles_2' } },
+{ data: { id: 'tech_weaver_bio_healing_2_to_tech_weaver_bio_healing_3', source: 'tech_weaver_bio_healing_2', target: 'tech_weaver_bio_healing_3' } },
+{ data: { id: 'tech_weaver_bio_evasion_2_to_tech_weaver_bio_evasion_3', source: 'tech_weaver_bio_evasion_2', target: 'tech_weaver_bio_evasion_3' } },
+{ data: { id: 'tech_weaver_bio_fire_rate_2_to_tech_weaver_bio_fire_rate_3', source: 'tech_weaver_bio_fire_rate_2', target: 'tech_weaver_bio_fire_rate_3' } },
+{ data: { id: 'tech_weaver_bio_confuser_2_to_tech_weaver_bio_confuser_3', source: 'tech_weaver_bio_confuser_2', target: 'tech_weaver_bio_confuser_3' } },
+{ data: { id: 'tech_weaver_bio_anti_evasion_2_to_tech_weaver_bio_anti_evasion_3', source: 'tech_weaver_bio_anti_evasion_2', target: 'tech_weaver_bio_anti_evasion_3' } },
+{ data: { id: 'tech_weaver_bio_anti_fire_rate_2_to_tech_weaver_bio_anti_fire_rate_3', source: 'tech_weaver_bio_anti_fire_rate_2', target: 'tech_weaver_bio_anti_fire_rate_3' } },
+{ data: { id: 'tech_starbase_3_to_tech_deep_space_citadel', source: 'tech_starbase_3', target: 'tech_deep_space_citadel' } },
 { data: { id: 'tech_storm_manipulation_to_tech_advanced_storm_manipulation', source: 'tech_storm_manipulation', target: 'tech_advanced_storm_manipulation' } },
 { data: { id: 'tech_storm_prediction_1_to_tech_storm_prediction_2', source: 'tech_storm_prediction_1', target: 'tech_storm_prediction_2' } },
 { data: { id: 'tech_destroyers_to_tech_cruisers', source: 'tech_destroyers', target: 'tech_cruisers' } },
@@ -8713,6 +9836,7 @@ function getElements() {
 { data: { id: 'tech_colonial_centralization_to_tech_alloys_2', source: 'tech_colonial_centralization', target: 'tech_alloys_2' } },
 { data: { id: 'tech_luxuries_1_to_tech_luxuries_2', source: 'tech_luxuries_1', target: 'tech_luxuries_2' } },
 { data: { id: 'tech_colonial_centralization_to_tech_luxuries_2', source: 'tech_colonial_centralization', target: 'tech_luxuries_2' } },
+{ data: { id: 'tech_engineering_2_to_tech_engineering_3', source: 'tech_engineering_2', target: 'tech_engineering_3' } },
 { data: { id: 'tech_afterburners_1_to_tech_afterburners_2', source: 'tech_afterburners_1', target: 'tech_afterburners_2' } },
 { data: { id: 'tech_thrusters_3_to_tech_afterburners_2', source: 'tech_thrusters_3', target: 'tech_afterburners_2' } },
 { data: { id: 'tech_assembly_pattern_to_tech_construction_templates', source: 'tech_assembly_pattern', target: 'tech_construction_templates' } },
@@ -8743,6 +9867,7 @@ function getElements() {
 { data: { id: 'tech_basic_science_lab_2_to_tech_global_research_initiative', source: 'tech_basic_science_lab_2', target: 'tech_global_research_initiative' } },
 { data: { id: 'tech_colonial_centralization_to_tech_global_research_initiative', source: 'tech_colonial_centralization', target: 'tech_global_research_initiative' } },
 { data: { id: 'tech_space_science_4_to_tech_space_science_5', source: 'tech_space_science_4', target: 'tech_space_science_5' } },
+{ data: { id: 'tech_physics_2_to_tech_physics_3', source: 'tech_physics_2', target: 'tech_physics_3' } },
 { data: { id: 'tech_self_aware_logic_to_tech_cryostasis_2', source: 'tech_self_aware_logic', target: 'tech_cryostasis_2' } },
 { data: { id: 'tech_cryostasis_1_to_tech_cryostasis_2', source: 'tech_cryostasis_1', target: 'tech_cryostasis_2' } },
 { data: { id: 'tech_combat_computers_1_to_tech_combat_computers_2', source: 'tech_combat_computers_1', target: 'tech_combat_computers_2' } },
@@ -8759,11 +9884,13 @@ function getElements() {
 { data: { id: 'tech_lasers_3_to_tech_lasers_4', source: 'tech_lasers_3', target: 'tech_lasers_4' } },
 { data: { id: 'tech_plasma_1_to_tech_plasma_2', source: 'tech_plasma_1', target: 'tech_plasma_2' } },
 { data: { id: 'tech_disruptors_1_to_tech_disruptors_2', source: 'tech_disruptors_1', target: 'tech_disruptors_2' } },
-{ data: { id: 'tech_torpedoes_1_to_tech_energy_torpedoes_1', source: 'tech_torpedoes_1', target: 'tech_energy_torpedoes_1' } },
 { data: { id: 'tech_lasers_4_to_tech_energy_torpedoes_1', source: 'tech_lasers_4', target: 'tech_energy_torpedoes_1' } },
+{ data: { id: 'tech_torpedoes_1_to_tech_energy_torpedoes_1', source: 'tech_torpedoes_1', target: 'tech_energy_torpedoes_1' } },
+{ data: { id: 'tech_harbingers_to_tech_energy_torpedoes_1', source: 'tech_harbingers', target: 'tech_energy_torpedoes_1' } },
 { data: { id: 'tech_space_trading_to_tech_interstellar_economics', source: 'tech_space_trading', target: 'tech_interstellar_economics' } },
 { data: { id: 'tech_gene_crops_to_tech_nano_vitality_crops', source: 'tech_gene_crops', target: 'tech_nano_vitality_crops' } },
 { data: { id: 'tech_food_processing_1_to_tech_food_processing_2', source: 'tech_food_processing_1', target: 'tech_food_processing_2' } },
+{ data: { id: 'tech_society_2_to_tech_society_3', source: 'tech_society_2', target: 'tech_society_3' } },
 { data: { id: 'tech_colonization_3_to_tech_colonization_4', source: 'tech_colonization_3', target: 'tech_colonization_4' } },
 { data: { id: 'tech_colonization_3_to_tech_tomb_world_adaption', source: 'tech_colonization_3', target: 'tech_tomb_world_adaption' } },
 { data: { id: 'tech_terrestrial_sculpting_to_tech_ecological_adaptation', source: 'tech_terrestrial_sculpting', target: 'tech_ecological_adaptation' } },
@@ -8795,9 +9922,9 @@ function getElements() {
 { data: { id: 'tech_colonial_centralization_to_tech_consecration_fields', source: 'tech_colonial_centralization', target: 'tech_consecration_fields' } },
 { data: { id: 'tech_hive_cluster_to_tech_hive_confluence', source: 'tech_hive_cluster', target: 'tech_hive_confluence' } },
 { data: { id: 'tech_colonial_centralization_to_tech_hive_confluence', source: 'tech_colonial_centralization', target: 'tech_hive_confluence' } },
+{ data: { id: 'tech_wilderness_cluster_to_tech_wilderness_confluence', source: 'tech_wilderness_cluster', target: 'tech_wilderness_confluence' } },
+{ data: { id: 'tech_colonial_centralization_to_tech_wilderness_confluence', source: 'tech_colonial_centralization', target: 'tech_wilderness_confluence' } },
 { data: { id: 'tech_psionic_theory_to_tech_psionic_barrier', source: 'tech_psionic_theory', target: 'tech_psionic_barrier' } },
-{ data: { id: 'tech_artificial_moral_codes_to_tech_penal_colonies', source: 'tech_artificial_moral_codes', target: 'tech_penal_colonies' } },
-{ data: { id: 'tech_artificial_moral_codes_to_tech_resort_colonies', source: 'tech_artificial_moral_codes', target: 'tech_resort_colonies' } },
 { data: { id: 'tech_xeno_diplomacy_to_tech_xeno_relations', source: 'tech_xeno_diplomacy', target: 'tech_xeno_relations' } },
 { data: { id: 'tech_galactic_administration_to_tech_xeno_relations', source: 'tech_galactic_administration', target: 'tech_xeno_relations' } },
 { data: { id: 'tech_colonial_centralization_to_tech_capital_productivity_2', source: 'tech_colonial_centralization', target: 'tech_capital_productivity_2' } },
@@ -8811,6 +9938,27 @@ function getElements() {
 { data: { id: 'tech_micro_replicators_to_tech_self_assembling_components', source: 'tech_micro_replicators', target: 'tech_self_assembling_components' } },
 { data: { id: 'tech_archaeostudies_to_tech_archaeo_detection_scrambler', source: 'tech_archaeostudies', target: 'tech_archaeo_detection_scrambler' } },
 { data: { id: 'tech_archaeostudies_to_tech_archaeo_titan_beam', source: 'tech_archaeostudies', target: 'tech_archaeo_titan_beam' } },
+{ data: { id: 'tech_harbingers_to_tech_stingers', source: 'tech_harbingers', target: 'tech_stingers' } },
+{ data: { id: 'tech_stingers_to_tech_stinger_build_speed', source: 'tech_stingers', target: 'tech_stinger_build_speed' } },
+{ data: { id: 'tech_stingers_to_tech_stinger_growth_1', source: 'tech_stingers', target: 'tech_stinger_growth_1' } },
+{ data: { id: 'tech_stinger_growth_1_to_tech_stinger_growth_2', source: 'tech_stinger_growth_1', target: 'tech_stinger_growth_2' } },
+{ data: { id: 'tech_stingers_to_tech_growth_chamber_1', source: 'tech_stingers', target: 'tech_growth_chamber_1' } },
+{ data: { id: 'tech_mauler_growth_1_to_tech_growth_chamber_1', source: 'tech_mauler_growth_1', target: 'tech_growth_chamber_1' } },
+{ data: { id: 'tech_stinger_growth_1_to_tech_growth_chamber_1', source: 'tech_stinger_growth_1', target: 'tech_growth_chamber_1' } },
+{ data: { id: 'tech_weaver_growth_1_to_tech_growth_chamber_1', source: 'tech_weaver_growth_1', target: 'tech_growth_chamber_1' } },
+{ data: { id: 'tech_harbinger_growth_1_to_tech_growth_chamber_1', source: 'tech_harbinger_growth_1', target: 'tech_growth_chamber_1' } },
+{ data: { id: 'tech_growth_chamber_1_to_tech_growth_chamber_2', source: 'tech_growth_chamber_1', target: 'tech_growth_chamber_2' } },
+{ data: { id: 'tech_mauler_growth_2_to_tech_growth_chamber_2', source: 'tech_mauler_growth_2', target: 'tech_growth_chamber_2' } },
+{ data: { id: 'tech_stinger_growth_2_to_tech_growth_chamber_2', source: 'tech_stinger_growth_2', target: 'tech_growth_chamber_2' } },
+{ data: { id: 'tech_weaver_growth_2_to_tech_growth_chamber_2', source: 'tech_weaver_growth_2', target: 'tech_growth_chamber_2' } },
+{ data: { id: 'tech_harbinger_growth_2_to_tech_growth_chamber_2', source: 'tech_harbinger_growth_2', target: 'tech_growth_chamber_2' } },
+{ data: { id: 'tech_mandibles_2_to_tech_mandibles_3', source: 'tech_mandibles_2', target: 'tech_mandibles_3' } },
+{ data: { id: 'tech_weaver_bio_healing_3_to_tech_weaver_bio_healing_4', source: 'tech_weaver_bio_healing_3', target: 'tech_weaver_bio_healing_4' } },
+{ data: { id: 'tech_weaver_bio_evasion_3_to_tech_weaver_bio_evasion_4', source: 'tech_weaver_bio_evasion_3', target: 'tech_weaver_bio_evasion_4' } },
+{ data: { id: 'tech_weaver_bio_fire_rate_3_to_tech_weaver_bio_fire_rate_4', source: 'tech_weaver_bio_fire_rate_3', target: 'tech_weaver_bio_fire_rate_4' } },
+{ data: { id: 'tech_weaver_bio_confuser_3_to_tech_weaver_bio_confuser_4', source: 'tech_weaver_bio_confuser_3', target: 'tech_weaver_bio_confuser_4' } },
+{ data: { id: 'tech_weaver_bio_anti_evasion_3_to_tech_weaver_bio_anti_evasion_4', source: 'tech_weaver_bio_anti_evasion_3', target: 'tech_weaver_bio_anti_evasion_4' } },
+{ data: { id: 'tech_weaver_bio_anti_fire_rate_3_to_tech_weaver_bio_anti_fire_rate_4', source: 'tech_weaver_bio_anti_fire_rate_3', target: 'tech_weaver_bio_anti_fire_rate_4' } },
 { data: { id: 'tech_cruisers_to_tech_battleships', source: 'tech_cruisers', target: 'tech_battleships' } },
 { data: { id: 'tech_cruiser_hull_1_to_tech_cruiser_hull_2', source: 'tech_cruiser_hull_1', target: 'tech_cruiser_hull_2' } },
 { data: { id: 'tech_battleships_to_tech_battleship_build_speed', source: 'tech_battleships', target: 'tech_battleship_build_speed' } },
@@ -8836,6 +9984,7 @@ function getElements() {
 { data: { id: 'tech_kinetic_artillery_1_to_tech_kinetic_artillery_2', source: 'tech_kinetic_artillery_1', target: 'tech_kinetic_artillery_2' } },
 { data: { id: 'tech_mass_drivers_4_to_tech_mass_accelerator_1', source: 'tech_mass_drivers_4', target: 'tech_mass_accelerator_1' } },
 { data: { id: 'tech_battleships_to_tech_mass_accelerator_1', source: 'tech_battleships', target: 'tech_mass_accelerator_1' } },
+{ data: { id: 'tech_stingers_to_tech_mass_accelerator_1', source: 'tech_stingers', target: 'tech_mass_accelerator_1' } },
 { data: { id: 'tech_mass_drivers_5_to_tech_mass_accelerator_2', source: 'tech_mass_drivers_5', target: 'tech_mass_accelerator_2' } },
 { data: { id: 'tech_mass_accelerator_1_to_tech_mass_accelerator_2', source: 'tech_mass_accelerator_1', target: 'tech_mass_accelerator_2' } },
 { data: { id: 'tech_autocannons_2_to_tech_autocannons_3', source: 'tech_autocannons_2', target: 'tech_autocannons_3' } },
@@ -8867,11 +10016,13 @@ function getElements() {
 { data: { id: 'tech_lasers_4_to_tech_lasers_5', source: 'tech_lasers_4', target: 'tech_lasers_5' } },
 { data: { id: 'tech_lasers_4_to_tech_energy_lance_1', source: 'tech_lasers_4', target: 'tech_energy_lance_1' } },
 { data: { id: 'tech_battleships_to_tech_energy_lance_1', source: 'tech_battleships', target: 'tech_energy_lance_1' } },
+{ data: { id: 'tech_stingers_to_tech_energy_lance_1', source: 'tech_stingers', target: 'tech_energy_lance_1' } },
 { data: { id: 'tech_lasers_5_to_tech_energy_lance_2', source: 'tech_lasers_5', target: 'tech_energy_lance_2' } },
 { data: { id: 'tech_energy_lance_1_to_tech_energy_lance_2', source: 'tech_energy_lance_1', target: 'tech_energy_lance_2' } },
 { data: { id: 'tech_plasma_2_to_tech_plasma_3', source: 'tech_plasma_2', target: 'tech_plasma_3' } },
 { data: { id: 'tech_disruptors_3_to_tech_arc_emitter_1', source: 'tech_disruptors_3', target: 'tech_arc_emitter_1' } },
 { data: { id: 'tech_battleships_to_tech_arc_emitter_1', source: 'tech_battleships', target: 'tech_arc_emitter_1' } },
+{ data: { id: 'tech_stingers_to_tech_arc_emitter_1', source: 'tech_stingers', target: 'tech_arc_emitter_1' } },
 { data: { id: 'tech_arc_emitter_1_to_tech_arc_emitter_2', source: 'tech_arc_emitter_1', target: 'tech_arc_emitter_2' } },
 { data: { id: 'tech_disruptors_2_to_tech_disruptors_3', source: 'tech_disruptors_2', target: 'tech_disruptors_3' } },
 { data: { id: 'tech_energy_torpedoes_1_to_tech_energy_torpedoes_2', source: 'tech_energy_torpedoes_1', target: 'tech_energy_torpedoes_2' } },
@@ -8914,9 +10065,23 @@ function getElements() {
 { data: { id: 'tech_colossus_to_tech_pk_neutron', source: 'tech_colossus', target: 'tech_pk_neutron' } },
 { data: { id: 'tech_colossus_to_tech_pk_godray', source: 'tech_colossus', target: 'tech_pk_godray' } },
 { data: { id: 'tech_colossus_to_tech_pk_nanobots', source: 'tech_colossus', target: 'tech_pk_nanobots' } },
+{ data: { id: 'tech_weaver_bio_healing_4_to_tech_weaver_bio_healing_5', source: 'tech_weaver_bio_healing_4', target: 'tech_weaver_bio_healing_5' } },
+{ data: { id: 'tech_weaver_bio_healing_5_to_tech_weaver_bio_healing_6', source: 'tech_weaver_bio_healing_5', target: 'tech_weaver_bio_healing_6' } },
+{ data: { id: 'tech_weaver_bio_evasion_4_to_tech_weaver_bio_evasion_5', source: 'tech_weaver_bio_evasion_4', target: 'tech_weaver_bio_evasion_5' } },
+{ data: { id: 'tech_weaver_bio_evasion_5_to_tech_weaver_bio_evasion_6', source: 'tech_weaver_bio_evasion_5', target: 'tech_weaver_bio_evasion_6' } },
+{ data: { id: 'tech_weaver_bio_fire_rate_4_to_tech_weaver_bio_fire_rate_5', source: 'tech_weaver_bio_fire_rate_4', target: 'tech_weaver_bio_fire_rate_5' } },
+{ data: { id: 'tech_weaver_bio_fire_rate_5_to_tech_weaver_bio_fire_rate_6', source: 'tech_weaver_bio_fire_rate_5', target: 'tech_weaver_bio_fire_rate_6' } },
+{ data: { id: 'tech_weaver_bio_confuser_4_to_tech_weaver_bio_confuser_5', source: 'tech_weaver_bio_confuser_4', target: 'tech_weaver_bio_confuser_5' } },
+{ data: { id: 'tech_weaver_bio_confuser_5_to_tech_weaver_bio_confuser_6', source: 'tech_weaver_bio_confuser_5', target: 'tech_weaver_bio_confuser_6' } },
+{ data: { id: 'tech_weaver_bio_anti_evasion_4_to_tech_weaver_bio_anti_evasion_5', source: 'tech_weaver_bio_anti_evasion_4', target: 'tech_weaver_bio_anti_evasion_5' } },
+{ data: { id: 'tech_weaver_bio_anti_evasion_5_to_tech_weaver_bio_anti_evasion_6', source: 'tech_weaver_bio_anti_evasion_5', target: 'tech_weaver_bio_anti_evasion_6' } },
+{ data: { id: 'tech_weaver_bio_anti_fire_rate_4_to_tech_weaver_bio_anti_fire_rate_5', source: 'tech_weaver_bio_anti_fire_rate_4', target: 'tech_weaver_bio_anti_fire_rate_5' } },
+{ data: { id: 'tech_weaver_bio_anti_fire_rate_5_to_tech_weaver_bio_anti_fire_rate_6', source: 'tech_weaver_bio_anti_fire_rate_5', target: 'tech_weaver_bio_anti_fire_rate_6' } },
 { data: { id: 'tech_battleships_to_tech_titans', source: 'tech_battleships', target: 'tech_titans' } },
+{ data: { id: 'tech_stinger_growth_2_to_tech_titans', source: 'tech_stinger_growth_2', target: 'tech_titans' } },
 { data: { id: 'tech_starbase_5_to_tech_juggernaut', source: 'tech_starbase_5', target: 'tech_juggernaut' } },
 { data: { id: 'tech_battleships_to_tech_juggernaut', source: 'tech_battleships', target: 'tech_juggernaut' } },
+{ data: { id: 'tech_harbinger_growth_2_to_tech_juggernaut', source: 'tech_harbinger_growth_2', target: 'tech_juggernaut' } },
 { data: { id: 'tech_battleship_hull_1_to_tech_battleship_hull_2', source: 'tech_battleship_hull_1', target: 'tech_battleship_hull_2' } },
 { data: { id: 'tech_titans_to_tech_titan_hull_1', source: 'tech_titans', target: 'tech_titan_hull_1' } },
 { data: { id: 'tech_titan_hull_1_to_tech_titan_hull_2', source: 'tech_titan_hull_1', target: 'tech_titan_hull_2' } },
@@ -8956,8 +10121,9 @@ function getElements() {
 { data: { id: 'tech_detection_array_to_tech_dark_matter_detection', source: 'tech_detection_array', target: 'tech_dark_matter_detection' } },
 { data: { id: 'tech_mine_dark_matter_to_tech_dark_matter_detection', source: 'tech_mine_dark_matter', target: 'tech_dark_matter_detection' } },
 { data: { id: 'tech_starbase_5_to_tech_mega_engineering', source: 'tech_starbase_5', target: 'tech_mega_engineering' } },
-{ data: { id: 'tech_battleships_to_tech_mega_engineering', source: 'tech_battleships', target: 'tech_mega_engineering' } },
 { data: { id: 'tech_zero_point_power_to_tech_mega_engineering', source: 'tech_zero_point_power', target: 'tech_mega_engineering' } },
+{ data: { id: 'tech_battleships_to_tech_mega_engineering', source: 'tech_battleships', target: 'tech_mega_engineering' } },
+{ data: { id: 'tech_stingers_to_tech_mega_engineering', source: 'tech_stingers', target: 'tech_mega_engineering' } },
 { data: { id: 'tech_mega_engineering_to_tech_science_nexus', source: 'tech_mega_engineering', target: 'tech_science_nexus' } },
 { data: { id: 'tech_mega_engineering_to_tech_sentry_array', source: 'tech_mega_engineering', target: 'tech_sentry_array' } },
 { data: { id: 'tech_mega_engineering_to_tech_strategic_coordination', source: 'tech_mega_engineering', target: 'tech_strategic_coordination' } },
@@ -8978,6 +10144,7 @@ function getElements() {
 { data: { id: 'tech_lasers_2_to_tech_repeatable_weapon_type_energy_fire_rate', source: 'tech_lasers_2', target: 'tech_repeatable_weapon_type_energy_fire_rate' } },
 { data: { id: 'tech_doctrine_fleet_size_4_to_tech_doctrine_fleet_size_5', source: 'tech_doctrine_fleet_size_4', target: 'tech_doctrine_fleet_size_5' } },
 { data: { id: 'tech_precognition_interface_to_tech_psi_jump_drive_1', source: 'tech_precognition_interface', target: 'tech_psi_jump_drive_1' } },
+{ data: { id: 'tech_galactic_campaigns_to_tech_existential_campaigns', source: 'tech_galactic_campaigns', target: 'tech_existential_campaigns' } },
 { data: { id: 'tech_psionic_theory_to_tech_psionic_shield', source: 'tech_psionic_theory', target: 'tech_psionic_shield' } },
 { data: { id: 'tech_psionic_theory_to_tech_covenant_composer', source: 'tech_psionic_theory', target: 'tech_covenant_composer' } },
 { data: { id: 'tech_psionic_theory_to_tech_covenant_eater', source: 'tech_psionic_theory', target: 'tech_covenant_eater' } },

@@ -115,7 +115,7 @@ weight: ${node.data("weight")}`
                           + '<tr><th>cost:</th><td>'            + node.data('cost')            + '</td></tr>'
                           + '<tr><th>area:</th><td>'            + node.data('area')            + '</td></tr>'
                           + '<tr><th>category:</th><td>'        + node.data('category')        + '</td></tr>'
-                          + '<tr><th>prerequisites:</th><td>'   + node.incomers().nodes().map(item => item.data('name')).join('<br>') + '</td></tr>'
+                          + '<tr><th>prerequisites:</th><td>'   + JSON.stringify(node.data('prerequisites'), null, 2) + '</td></tr>'
                           + '<tr><th>successor:</th><td>'       + node.outgoers().nodes().map(item => item.data('name')).join('<br>') + '</td></tr>'
                           + '<tr><th>weight:</th><td>'          + node.data('weight')          + '</td></tr>'
                           + '<tr><th>weight_modifier:</th><td>' + JSON.stringify(node.data('weight_modifier'), null, 2) + '</td></tr>'

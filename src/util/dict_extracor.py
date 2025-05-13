@@ -41,7 +41,7 @@ class DictExtractor:
         name = modifier.value['name']
         desc = modifier.value['desc']
 
-        if name in data:
+        if name in data and data[name]:
             result += desc
 
             if modifier in (ModifierType.Custom_tooltip, ModifierType.Custom_tooltip_with_modifiers):
@@ -55,6 +55,7 @@ class DictExtractor:
                     else:
                         result += '・' + Localisations.get_value(value) + ' +\n'
             else:
+
                 for key, value in data[name].items():
                     if key == 'potential':
                         result += '・条件：' + json.dumps(value) + ' +\n'

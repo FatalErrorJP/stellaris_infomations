@@ -87,6 +87,10 @@ class ReadFile:
                         if 'inline_script' in start:
                             data.extend(ReadFile.read_inline_script_file(rf, end, replace_params))
                             break
+                        elif 'prerequisites' in start:
+                            data.append('prerequisites:')
+                            data.extend(ReadFile.read_prerequisites(rf, end, replace_params))
+                            break
                         else:
                             data.append(start + ":")
                     # valueのみ
@@ -100,6 +104,84 @@ class ReadFile:
                     line = end
 
             return data
+
+    @staticmethod
+    def read_inline_script_file(rf: TextIO, end: str, replace_params: dict) -> list:
+        if '{' == end:
+            params = {}
+
+            for line in rf:
+                if not line:  # EOF
+                    break
+                if '}' in line:
+                    break
+
+                # 読み込んだ内容から、コメント行と改行を削除する
+                line = line.split('#')[0].strip()
+                if not line:
+                    continue
+
+                # inline_scriptsの変数名で置換する
+                for key, value in replace_params.items():
+                    line = line.replace('$' + key + '$', value)
+
+                key, value = line.split('=', 1)
+                params.update({key.strip().strip('"'): value.strip().strip('"')})
+
+            file = os.path.join(settings.GAME_BASE_DIR, settings.INLINE_SCRIPTS_DIR, params['script'] + '.txt')
+            return ReadFile.__read(file, params)
+
+        else:
+            file = os.path.join(settings.GAME_BASE_DIR, settings.INLINE_SCRIPTS_DIR, end.strip().strip('"') + '.txt')
+            return ReadFile.__read(file)
+
+    @staticmethod
+    def read_prerequisites(rf: TextIO, text: str, replace_params: dict) -> list:
+        data = []
+
+        if text.count('{') - text.count('}') == 0:
+            for i, value in enumerate(text.split()):
+                value = value.strip()
+                if '=' == value:
+                    pass
+                elif '{' == value or '}' == value:
+                    data.append(value)
+                elif 'OR' == value.upper():
+                    data.append('{}OR:'.format(i))
+                else:
+                    data.append('{}:'.format(i))
+                    data.append(value)
+
+            return data
+
+        for line in rf:
+            if not line:  # EOF
+                break
+
+            # 読み込んだ内容から、コメント行と改行を削除する
+            line = line.split('#')[0].strip()
+            if not line:
+                continue
+            # inline_scriptsの変数名で置換する
+            for key, value in replace_params.items():
+                line = line.replace('$' + key + '$', value)
+            text += ' ' + line
+
+            if text.count('{') - text.count('}') == 0:
+                for i, value in enumerate(text.split()):
+                    value = value.strip()
+                    if '=' == value:
+                        pass
+                    elif '{' == value or '}' == value:
+                        data.append(value)
+                    elif 'OR' == value.upper():
+                        data.append('OR{}:'.format(i))
+                    else:
+                        data.append('{}:'.format(i))
+                        data.append(value)
+                break
+
+        return data
 
     @staticmethod
     def __convert_to_hjson(data: list) -> str:
@@ -157,33 +239,3 @@ class ReadFile:
             index += 1
 
         return '\n'.join(hjson_text)
-
-    @staticmethod
-    def read_inline_script_file(rf: TextIO, end: str, replace_params: dict) -> list:
-        if '{' == end:
-            params = {}
-
-            for line in rf:
-                if not line:  # EOF
-                    break
-                if '}' in line:
-                    break
-
-                # 読み込んだ内容から、コメント行と改行を削除する
-                line = line.split('#')[0].strip()
-                if not line:
-                    continue
-
-                # inline_scriptsの変数名で置換する
-                for key, value in replace_params.items():
-                    line = line.replace('$' + key + '$', value)
-
-                key, value = line.split('=', 1)
-                params.update({key.strip().strip('"'): value.strip().strip('"')})
-
-            file = os.path.join(settings.GAME_BASE_DIR, settings.INLINE_SCRIPTS_DIR, params['script'] + '.txt')
-            return ReadFile.__read(file, params)
-
-        else:
-            file = os.path.join(settings.GAME_BASE_DIR, settings.INLINE_SCRIPTS_DIR, end.strip().strip('"') + '.txt')
-            return ReadFile.__read(file)

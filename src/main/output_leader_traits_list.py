@@ -56,7 +56,7 @@ def _write_leader_trait_data(wf: TextIO) -> None:
             forbidden_origins=DictExtractor.get_param_list('forbidden_origins', data),
             allowed_ethics=DictExtractor.get_param_list('allowed_ethics', data),
             leader_potential_add=DictExtractor.get_param_json('leader_potential_add', data),
-            prerequisites=DictExtractor.get_param_list('prerequisites', data),
+            prerequisites=_get_prerequisites('prerequisites', data),
             opposites=DictExtractor.get_param_list('opposites', data),
             ethic_destiny_trait=DictExtractor.get_param('ethic_destiny_trait', data, 'no'),
         ))
@@ -74,6 +74,21 @@ def _get_leader_class(key: str, data: dict) -> str:
         return 'yes'
     else:
         return ''
+
+
+def _get_prerequisites(key: str, data: dict) -> str:
+    result = ''
+    if key in data:
+        for prerequisites_key in data[key]:
+            prerequisite = data[key][prerequisites_key]
+            if 'OR' in prerequisites_key:
+                result += 'OR = { +\n'
+                for prerequisite_or_key in prerequisite:
+                    result += '  ' + Localisations.get_value(prerequisite[prerequisite_or_key]) + ' +\n'
+                result += '} +\n'
+            else:
+                result += Localisations.get_value(prerequisite) + ' +\n'
+    return result
 
 
 if __name__ == "__main__":
