@@ -9,7 +9,7 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 25357.75)">
 <title>tech_tree</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-25357.75 4311.1,-25357.75 4311.1,4 -4,4"/>
-<text text-anchor="middle" x="2153.55" y="-5.35" font-family="BIZ UDPGothic" font-size="12.00">v4.0.6</text>
+<text text-anchor="middle" x="2153.55" y="-5.35" font-family="BIZ UDPGothic" font-size="12.00">v4.0.7</text>
 <g id="clust1" class="cluster">
 <title>cluster_tech_wilderness_terraform</title>
 <g id="a_clust1"><a xlink:title="前提研究:&#10;&#10;&#10;その他の条件:&#10;{&#10; &#160;&quot;is_wilderness_empire&quot;: &quot;yes&quot;&#10;}">
