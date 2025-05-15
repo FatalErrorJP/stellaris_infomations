@@ -9,7 +9,7 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 25357.75)">
 <title>tech_tree</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-25357.75 4311.1,-25357.75 4311.1,4 -4,4"/>
-<text text-anchor="middle" x="2153.55" y="-5.35" font-family="BIZ UDPGothic" font-size="12.00">v4.0.7</text>
+<text text-anchor="middle" x="2153.55" y="-5.35" font-family="BIZ UDPGothic" font-size="12.00">v4.0.10</text>
 <g id="clust1" class="cluster">
 <title>cluster_tech_wilderness_terraform</title>
 <g id="a_clust1"><a xlink:title="前提研究:&#10;&#10;&#10;その他の条件:&#10;{&#10; &#160;&quot;is_wilderness_empire&quot;: &quot;yes&quot;&#10;}">
@@ -3868,7 +3868,7 @@
 </g>
 <g id="clust483" class="cluster">
 <title>cluster_tech_gene_seed_purification</title>
-<g id="a_clust483"><a xlink:title="前提研究:&#10;遺伝子改変&#10;&#10;その他の条件:&#10;{&#10; &#160;&quot;NOR&quot;: {&#10; &#160;&#160;&#160;&quot;is_machine_empire&quot;: &quot;yes&quot;,&#10; &#160;&#160;&#160;&quot;is_natural_design_empire&quot;: &quot;yes&quot;,&#10; &#160;&#160;&#160;&quot;is_individual_machine&quot;: &quot;yes&quot;&#10; &#160;}&#10;}">
+<g id="a_clust483"><a xlink:title="前提研究:&#10;遺伝子改変&#10;&#10;その他の条件:&#10;{&#10; &#160;&quot;NOR&quot;: {&#10; &#160;&#160;&#160;&quot;is_machine_empire&quot;: &quot;yes&quot;,&#10; &#160;&#160;&#160;&quot;is_natural_design_empire&quot;: &quot;yes&quot;,&#10; &#160;&#160;&#160;&quot;is_individual_machine&quot;: &quot;yes&quot;,&#10; &#160;&#160;&#160;&quot;is_wilderness_empire&quot;: &quot;yes&quot;&#10; &#160;}&#10;}">
 <polygon fill="#9370db" stroke="black" points="1608.92,-3543.75 1608.92,-3636.75 1737.12,-3636.75 1737.12,-3543.75 1608.92,-3543.75"/>
 <text text-anchor="middle" x="1673.02" y="-3621.35" font-family="BIZ UDPGothic" font-size="12.00">遺伝子シード精製</text>
 </a>

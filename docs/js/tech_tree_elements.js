@@ -1,6 +1,6 @@
 
 function getVersion() {
-    return "v4.0.7";
+    return "v4.0.10";
 }
 
 function getElements() {
@@ -7246,7 +7246,7 @@ function getElements() {
       weight: 45,
       weight_modifier: {"modifier": {"factor": 2, "AND": {"is_individual_machine": "yes", "any_owned_species": {"is_organic_species": "yes"}}}},
       prerequisites: ["遺伝子改変"],
-      potential: {"NOR": {"is_machine_empire": "yes", "is_natural_design_empire": "yes", "is_individual_machine": "yes"}}
+      potential: {"NOR": {"is_machine_empire": "yes", "is_natural_design_empire": "yes", "is_individual_machine": "yes", "is_wilderness_empire": "yes"}}
     },
     classes: 'society'
 },
