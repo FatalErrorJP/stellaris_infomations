@@ -1,6 +1,6 @@
 
 function getVersion() {
-    return "v4.0.10";
+    return "v4.0.11";
 }
 
 function getElements() {
@@ -5806,7 +5806,7 @@ function getElements() {
       weight: 65,
       weight_modifier: [],
       prerequisites: ["管理AI", "植民地集権化"],
-      potential: {"NOR": {"has_ethic": "ethic_fanatic_spiritualist", "has_valid_civic": "civic_machine_servitor", "is_wilderness_empire": "yes"}}
+      potential: {"NOR": {"has_ethic": "ethic_fanatic_spiritualist", "is_wilderness_empire": "yes"}}
     },
     classes: 'society'
 },

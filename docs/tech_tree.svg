@@ -9,7 +9,7 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 25357.75)">
 <title>tech_tree</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-25357.75 4311.1,-25357.75 4311.1,4 -4,4"/>
-<text text-anchor="middle" x="2153.55" y="-5.35" font-family="BIZ UDPGothic" font-size="12.00">v4.0.10</text>
+<text text-anchor="middle" x="2153.55" y="-5.35" font-family="BIZ UDPGothic" font-size="12.00">v4.0.11</text>
 <g id="clust1" class="cluster">
 <title>cluster_tech_wilderness_terraform</title>
 <g id="a_clust1"><a xlink:title="前提研究:&#10;&#10;&#10;その他の条件:&#10;{&#10; &#160;&quot;is_wilderness_empire&quot;: &quot;yes&quot;&#10;}">
@@ -3100,7 +3100,7 @@
 </g>
 <g id="clust387" class="cluster">
 <title>cluster_tech_autocurating_vault</title>
-<g id="a_clust387"><a xlink:title="前提研究:&#10;管理AI&#10;植民地集権化&#10;&#10;その他の条件:&#10;{&#10; &#160;&quot;NOR&quot;: {&#10; &#160;&#160;&#160;&quot;has_ethic&quot;: &quot;ethic_fanatic_spiritualist&quot;,&#10; &#160;&#160;&#160;&quot;has_valid_civic&quot;: &quot;civic_machine_servitor&quot;,&#10; &#160;&#160;&#160;&quot;is_wilderness_empire&quot;: &quot;yes&quot;&#10; &#160;}&#10;}">
+<g id="a_clust387"><a xlink:title="前提研究:&#10;管理AI&#10;植民地集権化&#10;&#10;その他の条件:&#10;{&#10; &#160;&quot;NOR&quot;: {&#10; &#160;&#160;&#160;&quot;has_ethic&quot;: &quot;ethic_fanatic_spiritualist&quot;,&#10; &#160;&#160;&#160;&quot;is_wilderness_empire&quot;: &quot;yes&quot;&#10; &#160;}&#10;}">
 <polygon fill="#90ee90" stroke="black" points="1594.65,-2836.75 1594.65,-2929.75 1752.4,-2929.75 1752.4,-2836.75 1594.65,-2836.75"/>
 <text text-anchor="middle" x="1673.52" y="-2914.35" font-family="BIZ UDPGothic" font-size="12.00">自動キュレートアルゴリズム</text>
 </a>
