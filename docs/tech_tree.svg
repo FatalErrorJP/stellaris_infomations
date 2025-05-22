@@ -9,7 +9,7 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 25357.75)">
 <title>tech_tree</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-25357.75 4311.1,-25357.75 4311.1,4 -4,4"/>
-<text text-anchor="middle" x="2153.55" y="-5.35" font-family="BIZ UDPGothic" font-size="12.00">v4.0.11</text>
+<text text-anchor="middle" x="2153.55" y="-5.35" font-family="BIZ UDPGothic" font-size="12.00">v4.0.13</text>
 <g id="clust1" class="cluster">
 <title>cluster_tech_wilderness_terraform</title>
 <g id="a_clust1"><a xlink:title="前提研究:&#10;&#10;&#10;その他の条件:&#10;{&#10; &#160;&quot;is_wilderness_empire&quot;: &quot;yes&quot;&#10;}">
@@ -916,7 +916,7 @@
 </g>
 <g id="clust114" class="cluster">
 <title>cluster_tech_federation_code</title>
-<g id="a_clust114"><a xlink:title="前提研究:&#10;植民地集権化&#10;&#10;その他の条件:&#10;[]">
+<g id="a_clust114"><a xlink:title="前提研究:&#10;植民地集権化&#10;&#10;その他の条件:&#10;{&#10; &#160;&quot;OR&quot;: {&#10; &#160;&#160;&#160;&quot;days_passed&quot;: 0,&#10; &#160;&#160;&#160;&quot;any_relation&quot;: {&#10; &#160;&#160;&#160;&#160;&#160;&quot;can_form_federation_with_empire&quot;: &quot;yes&quot;&#10; &#160;&#160;&#160;}&#10; &#160;}&#10;}">
 <polygon fill="#90ee90" stroke="black" points="1608.92,-5522.75 1608.92,-5615.75 1737.12,-5615.75 1737.12,-5522.75 1608.92,-5522.75"/>
 <text text-anchor="middle" x="1673.02" y="-5600.35" font-family="BIZ UDPGothic" font-size="12.00">連邦規約</text>
 </a>
@@ -7489,7 +7489,7 @@
 <!-- tech_mineral_purification_1_info -->
 <g id="node63" class="node">
 <title>tech_mineral_purification_1_info</title>
-<g id="a_node63"><a xlink:title="weight_modifier:&#10;{&#10; &#160;&quot;modifier&quot;: {&#10; &#160;&#160;&#160;&quot;factor&quot;: 1.5,&#10; &#160;&#160;&#160;&quot;is_specialist_subject_type&quot;: {&#10; &#160;&#160;&#160;&#160;&#160;&quot;TYPE&quot;: &quot;prospectorium&quot;&#10; &#160;&#160;&#160;}&#10; &#160;}&#10;}">
+<g id="a_node63"><a xlink:title="weight_modifier:&#10;{&#10; &#160;&quot;factor&quot;: 2,&#10; &#160;&quot;modifier&quot;: {&#10; &#160;&#160;&#160;&quot;factor&quot;: 5,&#10; &#160;&#160;&#160;&quot;OR&quot;: {&#10; &#160;&#160;&#160;&#160;&#160;&quot;num_districts&quot;: {&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: &quot;district_generator_uncapped value: &quot;&gt; 0 &quot;&quot;&#10; &#160;&#160;&#160;&#160;&#160;}&#10; &#160;&#160;&#160;}&#10; &#160;}&#10;}">
 <polygon fill="none" stroke="black" points="1412.25,-4294.95 1309.8,-4294.95 1309.8,-4238.55 1412.25,-4238.55 1412.25,-4294.95"/>
 <text text-anchor="start" x="1331.4" y="-4278.25" font-family="BIZ UDPGothic" font-size="10.00">工学(産業学)</text>
 <text text-anchor="start" x="1331.4" y="-4267.75" font-family="BIZ UDPGothic" font-size="10.00">tier:1</text>
@@ -8240,7 +8240,7 @@
 <!-- tech_power_hub_1_info -->
 <g id="node91" class="node">
 <title>tech_power_hub_1_info</title>
-<g id="a_node91"><a xlink:title="weight_modifier:&#10;{&#10; &#160;&quot;factor&quot;: 2,&#10; &#160;&quot;modifier&quot;: {&#10; &#160;&#160;&#160;&quot;factor&quot;: 1.5,&#10; &#160;&#160;&#160;&quot;is_specialist_subject_type&quot;: {&#10; &#160;&#160;&#160;&#160;&#160;&quot;TYPE&quot;: &quot;prospectorium&quot;&#10; &#160;&#160;&#160;}&#10; &#160;}&#10;}">
+<g id="a_node91"><a xlink:title="weight_modifier:&#10;{&#10; &#160;&quot;factor&quot;: 2,&#10; &#160;&quot;modifier&quot;: {&#10; &#160;&#160;&#160;&quot;factor&quot;: 5,&#10; &#160;&#160;&#160;&quot;OR&quot;: {&#10; &#160;&#160;&#160;&#160;&#160;&quot;num_districts&quot;: {&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: &quot;district_generator_uncapped value: &quot;&gt; 0 &quot;&quot;&#10; &#160;&#160;&#160;&#160;&#160;}&#10; &#160;&#160;&#160;}&#10; &#160;}&#10;}">
 <polygon fill="none" stroke="black" points="1422,-3847.95 1300.05,-3847.95 1300.05,-3791.55 1422,-3791.55 1422,-3847.95"/>
 <text text-anchor="start" x="1321.65" y="-3831.25" font-family="BIZ UDPGothic" font-size="10.00">物理学(力場操作)</text>
 <text text-anchor="start" x="1321.65" y="-3820.75" font-family="BIZ UDPGothic" font-size="10.00">tier:1</text>
@@ -8384,7 +8384,7 @@
 <!-- tech_food_processing_1_info -->
 <g id="node95" class="node">
 <title>tech_food_processing_1_info</title>
-<g id="a_node95"><a xlink:title="weight_modifier:&#10;{&#10; &#160;&quot;modifier&quot;: {&#10; &#160;&#160;&#160;&quot;factor&quot;: 2,&#10; &#160;&#160;&#160;&quot;country_uses_bio_ships&quot;: &quot;yes&quot;&#10; &#160;}&#10;}">
+<g id="a_node95"><a xlink:title="weight_modifier:&#10;{&#10; &#160;&quot;modifier&quot;: {&#10; &#160;&#160;&#160;&quot;factor&quot;: 2,&#10; &#160;&#160;&#160;&quot;has_relic&quot;: &quot;r_pox_sample&quot;&#10; &#160;}&#10;}">
 <polygon fill="none" stroke="black" points="815.07,-11075.95 702.87,-11075.95 702.87,-11019.55 815.07,-11019.55 815.07,-11075.95"/>
 <text text-anchor="start" x="724.47" y="-11059.25" font-family="BIZ UDPGothic" font-size="10.00">社会学(生物学)</text>
 <text text-anchor="start" x="724.47" y="-11048.75" font-family="BIZ UDPGothic" font-size="10.00">tier:1</text>
@@ -8810,7 +8810,7 @@
 <!-- tech_federation_code_info -->
 <g id="node114" class="node">
 <title>tech_federation_code_info</title>
-<g id="a_node114"><a xlink:title="weight_modifier:&#10;{&#10; &#160;&quot;factor&quot;: 2,&#10; &#160;&quot;modifier&quot;: {&#10; &#160;&#160;&#160;&quot;factor&quot;: 0.01,&#10; &#160;&#160;&#160;&quot;is_diplomatic&quot;: &quot;no&quot;&#10; &#160;}&#10;}">
+<g id="a_node114"><a xlink:title="weight_modifier:&#10;{&#10; &#160;&quot;factor&quot;: 2,&#10; &#160;&quot;modifier&quot;: {&#10; &#160;&#160;&#160;&quot;factor&quot;: 0.25,&#10; &#160;&#160;&#160;&quot;has_ethic&quot;: &quot;ethic_fanatic_xenophobe&quot;&#10; &#160;}&#10;}">
 <polygon fill="none" stroke="black" points="1729.12,-5586.95 1616.92,-5586.95 1616.92,-5530.55 1729.12,-5530.55 1729.12,-5586.95"/>
 <text text-anchor="start" x="1638.52" y="-5570.25" font-family="BIZ UDPGothic" font-size="10.00">社会学(統治学)</text>
 <text text-anchor="start" x="1638.52" y="-5559.75" font-family="BIZ UDPGothic" font-size="10.00">tier:1</text>

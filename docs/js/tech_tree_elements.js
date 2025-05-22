@@ -1,6 +1,6 @@
 
 function getVersion() {
-    return "v4.0.11";
+    return "v4.0.13";
 }
 
 function getElements() {
@@ -944,7 +944,7 @@ function getElements() {
       area:'工学',
       category: '産業学',
       weight: 90,
-      weight_modifier: {"modifier": {"factor": 1.5, "is_specialist_subject_type": {"TYPE": "prospectorium"}}},
+      weight_modifier: {"factor": 2, "modifier": {"factor": 5, "OR": {"num_districts": {"type": "district_generator_uncapped value: \"> 0 \""}}}},
       prerequisites: ["地熱水圧破砕"],
       potential: {}
     },
@@ -1364,7 +1364,7 @@ function getElements() {
       area:'物理学',
       category: '力場操作',
       weight: 90,
-      weight_modifier: {"factor": 2, "modifier": {"factor": 1.5, "is_specialist_subject_type": {"TYPE": "prospectorium"}}},
+      weight_modifier: {"factor": 2, "modifier": {"factor": 5, "OR": {"num_districts": {"type": "district_generator_uncapped value: \"> 0 \""}}}},
       prerequisites: ["力場調整"],
       potential: {}
     },
@@ -1424,7 +1424,7 @@ function getElements() {
       area:'社会学',
       category: '生物学',
       weight: 95,
-      weight_modifier: {"modifier": {"factor": 2, "country_uses_bio_ships": "yes"}},
+      weight_modifier: {"modifier": {"factor": 2, "has_relic": "r_pox_sample"}},
       prerequisites: ["環境シミュレーション"],
       potential: {}
     },
@@ -1709,9 +1709,9 @@ function getElements() {
       area:'社会学',
       category: '統治学',
       weight: 85,
-      weight_modifier: {"factor": 2, "modifier": {"factor": 0.01, "is_diplomatic": "no"}},
+      weight_modifier: {"factor": 2, "modifier": {"factor": 0.25, "has_ethic": "ethic_fanatic_xenophobe"}},
       prerequisites: ["植民地集権化"],
-      potential: []
+      potential: {"OR": {"days_passed": 0, "any_relation": {"can_form_federation_with_empire": "yes"}}}
     },
     classes: 'society'
 },
