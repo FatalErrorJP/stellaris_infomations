@@ -1,6 +1,6 @@
 
 function getVersion() {
-    return "v4.0.13";
+    return "v4.0.14";
 }
 
 function getElements() {
@@ -31,7 +31,7 @@ function getElements() {
       weight: 0,
       weight_modifier: {},
       prerequisites: ["星系港の建設"],
-      potential: {"is_gestalt": "yes"}
+      potential: {}
     },
     classes: 'engineering'
 },

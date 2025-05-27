@@ -88,8 +88,9 @@ class ReadFile:
                             data.extend(ReadFile.read_inline_script_file(rf, end, replace_params))
                             break
                         elif 'prerequisites' in start:
-                            data.append('prerequisites:')
-                            data.extend(ReadFile.read_prerequisites(rf, end, replace_params))
+                            if end != '{}':
+                                data.append('prerequisites:')
+                                data.extend(ReadFile.read_prerequisites(rf, end, replace_params))
                             break
                         else:
                             data.append(start + ":")
@@ -232,10 +233,20 @@ class ReadFile:
 
             # }の前にデータがあるとHJSONは}を文字列と認識して閉じ括弧の数が足りなくなるので、行を分ける
             elif value[-1] == '}' and len(value) > 1:
+                hjson_text += value[:-1].split()
+                hjson_text.append('}')
+
+            elif '"' in value:
+                hjson_text.append(value)
+
+            elif 'event_target:' in value:
+                if value[-1] == ':':
+                    hjson_text.append('"' + value[:-1] + '":')
+                else:
+                    hjson_text.append('"' + value + '"')
+            else:
                 hjson_text += value.split()
 
-            else:
-                hjson_text.append(value)
             index += 1
 
         return '\n'.join(hjson_text)
