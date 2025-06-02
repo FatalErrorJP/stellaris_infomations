@@ -1,110 +1,88 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-import json
+import glob
 import os
 from typing import TextIO
 
-from src.readfile.localisations import Localisations
-from src.readfile.scripted_variables import ScriptedVariables
-from src.readfile.technologies import Technologies
+from src.parser.technology_parser import TechnologyParser
 from src.readfile.version import Version
 from src.settings import settings
+from src.vo.technology import Technology
 
 
 def main() -> None:
     if not os.path.exists(settings.OUTPUT_DIR):
         os.mkdir(settings.OUTPUT_DIR)
 
-    _write_technology_list()
+    technologies = _read_file()
+    _write_file(technologies)
 
 
-def _write_technology_list() -> None:
+def _read_file() -> list[Technology]:
+    technology_dir = os.path.join(settings.GAME_BASE_DIR, settings.TECHNOLOGY_DIR)
+    files = glob.glob('*.txt', root_dir=technology_dir)
+
+    technology_list = []
+    for file in files:
+        file_path = os.path.join(technology_dir, file)
+        print("=====" + file_path)
+
+        # 種族特性とリーダー特性があるので、リーダー特性のみを抽出する
+        parser = TechnologyParser()
+        technologies = parser.parse_file(file_path)
+        technology_list.extend(technologies)
+
+        for technology in technologies:
+            if technology.extra_properties:
+                print([technology.obj_id, technology.extra_properties])
+
+    return technology_list
+
+
+def _write_file(technologies: list[Technology]) -> None:
     output_file = os.path.join(settings.OUTPUT_DIR, settings.OUTPUT_TECHNOLOGY_FILE2)
+    #output_file = os.path.join(settings.OUTPUT_DIR, 'tech_tree_elements2.js')
     with open(output_file, 'w', encoding='utf-8') as wf:
         # ヘッダー
         wf.writelines(settings.TEMPLATE_TECHNOLOGY2_HEADER.format(version=Version.get_version()))
         # データ
-        _write_leader_trait_data(wf)
+        _write_data(wf, technologies)
         # フッター
         wf.writelines(settings.TEMPLATE_TECHNOLOGY2_FOOTER)
 
 
-def _write_leader_trait_data(wf: TextIO) -> None:
+def _write_data(wf: TextIO, technologies: list[Technology]) -> None:
     # ノード
     for i in range(0, 10):
-        for key, data in Technologies.get_data().items():
-            if i == int(_get_param('tier', data)):
+        for technology in technologies:
+            if str(i) == technology.tier:
                 wf.writelines(settings.TEMPLATE_TECHNOLOGY2_DATA_1.format(
-                    key=key,
-                    name=Localisations.get_value(key),
-                    area=Localisations.get_value(_get_param('area', data)),
-                    category=_get_param_category('category', data),
-                    tier=_get_param('tier', data),
-                    cost=_get_param('cost', data, '0'),
-                    weight=_get_param('weight', data, '0'),
-                    weight_modifier=_get_json('weight_modifier', data),
-                    prerequisites=_get_param_prerequisites('prerequisites', data),
-                    color=_get_param('area', data),
-                    potential=_get_json('potential', data)
+                    key=technology.obj_id,
+                    name=technology.name,
+                    area=technology.area,
+                    category=technology.category,
+                    tier=technology.tier,
+                    cost=technology.cost or '0',
+                    weight=technology.weight or '0',
+                    weight_modifier=technology.weight_modifier2,
+                    prerequisites=technology.prerequisites2,
+                    color=technology._area or '',
+                    potential=technology.potential2,
                 ))
 
     # ノード間の繋がり
     for i in range(0, 10):
-        for key, data in Technologies.get_data().items():
-            if i == int(_get_param('tier', data)):
-                if 'prerequisites' in data:
-                    for prerequisites_key in data['prerequisites']:
-                        prerequisite = data['prerequisites'][prerequisites_key]
-                        if 'OR' in prerequisites_key:
-                            for prerequisite_or_key in prerequisite:
-                                wf.writelines(settings.TEMPLATE_TECHNOLOGY2_DATA_2.format(
-                                    key1=prerequisite[prerequisite_or_key].strip('"'),
-                                    key2=key,
-                                ))
-                        else:
+        for technology in technologies:
+            if str(i) == technology.tier:
+                if technology._prerequisites:
+                    for technology_prerequisites in technology._prerequisites.split('\n'):
+                        for prerequisite in technology_prerequisites.strip().replace('"', '').split(' '):
+                            if prerequisite in ['OR', '=', '{', '}']:
+                                continue
                             wf.writelines(settings.TEMPLATE_TECHNOLOGY2_DATA_2.format(
-                                key1=prerequisite.strip('"'),
-                                key2=key,
+                                key1=prerequisite.strip(''),
+                                key2=technology.obj_id,
                             ))
-
-
-def _get_param(key: str, data: dict, default_value='') -> str:
-    if key in data:
-        if isinstance(data[key], dict):
-            return _get_param('factor', data[key])
-        elif isinstance(data[key], str) and data[key][0] == '@':
-            return ScriptedVariables.get_value(data[key])
-        else:
-            return data[key]
-    return default_value
-
-
-def _get_param_category(key: str, data: dict) -> str:
-    if key in data:
-        return Localisations.get_value(data[key][0])
-    return ''
-
-
-def _get_param_prerequisites(key: str, data: dict) -> str:
-    value = []
-    if key in data:
-        for prerequisites_key in data[key]:
-            prerequisite = data[key][prerequisites_key]
-            if 'OR' in prerequisites_key:
-                value.append('OR = {')
-                for prerequisite_or_key in prerequisite:
-                    value.append('  ' + Localisations.get_value(prerequisite[prerequisite_or_key]))
-                value.append('}')
-            else:
-                value.append(Localisations.get_value(prerequisite))
-    return json.dumps(value, ensure_ascii=False)
-
-
-def _get_json(key: str, data: dict) -> str:
-    if key in data:
-        return json.dumps(data[key])
-    else:
-        return '{}'
 
 
 if __name__ == "__main__":

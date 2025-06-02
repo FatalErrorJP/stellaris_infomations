@@ -35,6 +35,7 @@ call asciidoctor -a nofooter -a linkcss -a stylesdir=../css -a stylesheet=defaul
 
 rem Dot(Graphviz) To SVG
 dot -Tsvg tmp/tech_tree.dot > ./docs/tech_tree.svg
+
 robocopy tmp docs/js tech_tree_elements.js /S
 
 :ERR
