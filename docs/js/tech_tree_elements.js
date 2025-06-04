@@ -1,6 +1,6 @@
 
 function getVersion() {
-    return "v4.0.14";
+    return "v4.0.15";
 }
 
 function getElements() {
@@ -8174,7 +8174,7 @@ function getElements() {
       area:'工学',
       category: '産業学',
       weight: 20,
-      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_crisis_level": "crisis_cosmogenesis_level_5", "has_ascension_perk": "ap_enigmatic_engineering"}}, {"factor": "0", "NOT": {"has_ascension_perk": "ap_cosmogenesis"}, "calc_true_if": {"has_technology": "tech_fe_mine_1"}}, {"factor": "@EnigmaticEngineeringDraw", "NOT": {"has_crisis_level": "crisis_cosmogenesis_level_5"}}, {"factor": "1.5", "has_ascension_perk": "ap_enigmatic_engineering"}, {"factor": "2", "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world"}}]}],
+      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_crisis_level": "crisis_cosmogenesis_level_5", "has_ascension_perk": "ap_enigmatic_engineering"}}, {"factor": "0", "country_uses_consumer_goods": "no"}, {"factor": "@EnigmaticEngineeringDraw", "NOT": {"has_crisis_level": "crisis_cosmogenesis_level_5"}}, {"factor": "1.5", "has_ascension_perk": "ap_enigmatic_engineering"}, {"factor": "2", "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world"}}, {"factor": "@ap_technological_ascendancy_rare_tech", "has_ascension_perk": "ap_technological_ascendancy"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_fe_affluence_1"}}}, {"factor": "@dimensional_worship_rare_tech", "is_dimensional_worship_empire": "yes"}, {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}]}],
       prerequisites: [],
       potential: {}
     },
@@ -8189,7 +8189,7 @@ function getElements() {
       area:'工学',
       category: '産業学',
       weight: 20,
-      weight_modifier: [],
+      weight_modifier: [{"modifier": [{"factor": "0", "NOT": {"has_ascension_perk": "ap_cosmogenesis"}}, {"factor": "0", "country_uses_consumer_goods": "no"}, {"factor": "@ap_technological_ascendancy_rare_tech", "has_ascension_perk": "ap_technological_ascendancy"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_fe_affluence_2"}}}, {"factor": "@dimensional_worship_rare_tech", "is_dimensional_worship_empire": "yes"}, {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}]}],
       prerequisites: ["富の中心地"],
       potential: {}
     },
@@ -8204,7 +8204,7 @@ function getElements() {
       area:'社会学',
       category: '生物学',
       weight: 20,
-      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_crisis_level": "crisis_cosmogenesis_level_2", "has_ascension_perk": "ap_enigmatic_engineering"}}, {"factor": "0", "NOT": {"has_ascension_perk": "ap_cosmogenesis"}, "calc_true_if": {"has_technology": "tech_fe_mine_1"}}, {"factor": "@EnigmaticEngineeringDraw", "NOT": {"has_crisis_level": "crisis_cosmogenesis_level_2"}}, {"factor": "1.5", "has_ascension_perk": "ap_enigmatic_engineering"}, {"factor": "2", "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world"}}, {"factor": "2", "country_uses_bio_ships": "yes"}]}],
+      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_crisis_level": "crisis_cosmogenesis_level_2", "has_ascension_perk": "ap_enigmatic_engineering"}}, {"factor": "0", "country_uses_food": "no"}, {"factor": "@EnigmaticEngineeringDraw", "NOT": {"has_crisis_level": "crisis_cosmogenesis_level_2"}}, {"factor": "1.5", "has_ascension_perk": "ap_enigmatic_engineering"}, {"factor": "2", "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world"}}, {"factor": "2", "country_uses_bio_ships": "yes"}, {"factor": "@ap_technological_ascendancy_rare_tech", "has_ascension_perk": "ap_technological_ascendancy"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_fe_nourishment_1"}}}, {"factor": "@dimensional_worship_rare_tech", "is_dimensional_worship_empire": "yes"}, {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}]}],
       prerequisites: [],
       potential: {}
     },
@@ -8219,7 +8219,7 @@ function getElements() {
       area:'社会学',
       category: '生物学',
       weight: 20,
-      weight_modifier: [],
+      weight_modifier: [{"modifier": [{"factor": "0", "NOT": {"has_ascension_perk": "ap_cosmogenesis"}}, {"factor": "0", "country_uses_food": "no"}, {"factor": "2", "country_uses_bio_ships": "yes"}, {"factor": "@ap_technological_ascendancy_rare_tech", "has_ascension_perk": "ap_technological_ascendancy"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_fe_nourishment_2"}}}, {"factor": "@dimensional_worship_rare_tech", "is_dimensional_worship_empire": "yes"}, {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}]}],
       prerequisites: ["栄養物施設"],
       potential: {}
     },
@@ -8234,7 +8234,7 @@ function getElements() {
       area:'工学',
       category: '材料工学',
       weight: 20,
-      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_crisis_level": "crisis_cosmogenesis_level_4", "has_ascension_perk": "ap_enigmatic_engineering"}}, {"factor": "0", "NOT": {"has_ascension_perk": "ap_cosmogenesis"}, "calc_true_if": {"has_technology": "tech_fe_mine_1"}}, {"factor": "@EnigmaticEngineeringDraw", "NOT": {"has_crisis_level": "crisis_cosmogenesis_level_4"}}, {"factor": "1.5", "has_ascension_perk": "ap_enigmatic_engineering"}, {"factor": "2", "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world"}}]}],
+      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_crisis_level": "crisis_cosmogenesis_level_4", "has_ascension_perk": "ap_enigmatic_engineering"}}, {"factor": "@EnigmaticEngineeringDraw", "NOT": {"has_crisis_level": "crisis_cosmogenesis_level_4"}}, {"factor": "1.5", "has_ascension_perk": "ap_enigmatic_engineering"}, {"factor": "2", "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world"}}, {"factor": "@ap_technological_ascendancy_rare_tech", "has_ascension_perk": "ap_technological_ascendancy"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_fe_fabricator_1"}}}, {"factor": "@dimensional_worship_rare_tech", "is_dimensional_worship_empire": "yes"}, {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}]}],
       prerequisites: [],
       potential: {}
     },
@@ -8249,7 +8249,7 @@ function getElements() {
       area:'工学',
       category: '材料工学',
       weight: 20,
-      weight_modifier: [],
+      weight_modifier: [{"modifier": [{"factor": "0", "NOT": {"has_ascension_perk": "ap_cosmogenesis"}}, {"factor": "@ap_technological_ascendancy_rare_tech", "has_ascension_perk": "ap_technological_ascendancy"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_fe_fabricator_2"}}}, {"factor": "@dimensional_worship_rare_tech", "is_dimensional_worship_empire": "yes"}, {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}]}],
       prerequisites: ["次元複製器"],
       potential: {}
     },
@@ -8264,7 +8264,7 @@ function getElements() {
       area:'物理学',
       category: '素粒子物理学',
       weight: 20,
-      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_crisis_level": "crisis_cosmogenesis_level_2", "has_ascension_perk": "ap_enigmatic_engineering"}}, {"factor": "0", "NOT": {"has_ascension_perk": "ap_cosmogenesis"}, "calc_true_if": {"has_technology": "tech_fe_mine_1"}}, {"factor": "@EnigmaticEngineeringDraw", "NOT": {"has_crisis_level": "crisis_cosmogenesis_level_2"}}, {"factor": "1.5", "has_ascension_perk": "ap_enigmatic_engineering"}, {"factor": "2", "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world"}}]}],
+      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_crisis_level": "crisis_cosmogenesis_level_2", "has_ascension_perk": "ap_enigmatic_engineering"}}, {"factor": "@EnigmaticEngineeringDraw", "NOT": {"has_crisis_level": "crisis_cosmogenesis_level_2"}}, {"factor": "1.5", "has_ascension_perk": "ap_enigmatic_engineering"}, {"factor": "2", "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world"}}, {"factor": "@ap_technological_ascendancy_rare_tech", "has_ascension_perk": "ap_technological_ascendancy"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_fe_singularity_1"}}}, {"factor": "@dimensional_worship_rare_tech", "is_dimensional_worship_empire": "yes"}, {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}]}],
       prerequisites: [],
       potential: {}
     },
@@ -8279,7 +8279,7 @@ function getElements() {
       area:'物理学',
       category: '素粒子物理学',
       weight: 20,
-      weight_modifier: [],
+      weight_modifier: [{"modifier": [{"factor": "0", "NOT": {"has_ascension_perk": "ap_cosmogenesis"}}, {"factor": "@ap_technological_ascendancy_rare_tech", "has_ascension_perk": "ap_technological_ascendancy"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_fe_singularity_2"}}}, {"factor": "@dimensional_worship_rare_tech", "is_dimensional_worship_empire": "yes"}, {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}]}],
       prerequisites: ["第3級時空特異点"],
       potential: {}
     },
@@ -8294,7 +8294,7 @@ function getElements() {
       area:'工学',
       category: '産業学',
       weight: 20,
-      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_crisis_level": "crisis_cosmogenesis_level_5", "has_ascension_perk": "ap_enigmatic_engineering"}}, {"factor": "0", "NOT": {"has_ascension_perk": "ap_cosmogenesis"}, "calc_true_if": {"has_technology": "tech_fe_mine_1"}}, {"factor": "@EnigmaticEngineeringDraw", "NOT": {"has_crisis_level": "crisis_cosmogenesis_level_5"}}, {"factor": "1.5", "has_ascension_perk": "ap_enigmatic_engineering"}, {"factor": "2", "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world"}}]}],
+      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_crisis_level": "crisis_cosmogenesis_level_5", "has_ascension_perk": "ap_enigmatic_engineering"}}, {"factor": "@EnigmaticEngineeringDraw", "NOT": {"has_crisis_level": "crisis_cosmogenesis_level_5"}}, {"factor": "1.5", "has_ascension_perk": "ap_enigmatic_engineering"}, {"factor": "2", "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world"}}, {"factor": "@ap_technological_ascendancy_rare_tech", "has_ascension_perk": "ap_technological_ascendancy"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_fe_forge_1"}}}, {"factor": "@dimensional_worship_rare_tech", "is_dimensional_worship_empire": "yes"}, {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}]}],
       prerequisites: [],
       potential: {}
     },
@@ -8309,7 +8309,7 @@ function getElements() {
       area:'工学',
       category: '産業学',
       weight: 20,
-      weight_modifier: [],
+      weight_modifier: [{"modifier": [{"factor": "0", "NOT": {"has_ascension_perk": "ap_cosmogenesis"}}, {"factor": "@ap_technological_ascendancy_rare_tech", "has_ascension_perk": "ap_technological_ascendancy"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_fe_forge_2"}}}, {"factor": "@dimensional_worship_rare_tech", "is_dimensional_worship_empire": "yes"}, {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}]}],
       prerequisites: ["超級鋳造所"],
       potential: {}
     },
@@ -8324,7 +8324,7 @@ function getElements() {
       area:'社会学',
       category: '統治学',
       weight: 20,
-      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_crisis_level": "crisis_cosmogenesis_level_1", "has_ascension_perk": "ap_enigmatic_engineering"}}, {"factor": "0", "NOT": {"has_ascension_perk": "ap_cosmogenesis"}, "calc_true_if": {"has_technology": "tech_fe_mine_1"}}, {"factor": "@EnigmaticEngineeringDraw", "NOT": {"has_crisis_level": "crisis_cosmogenesis_level_1"}}, {"factor": "1.5", "has_ascension_perk": "ap_enigmatic_engineering"}, {"factor": "2", "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world"}}]}],
+      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_crisis_level": "crisis_cosmogenesis_level_1", "has_ascension_perk": "ap_enigmatic_engineering"}}, {"factor": "@EnigmaticEngineeringDraw", "NOT": {"has_crisis_level": "crisis_cosmogenesis_level_1"}}, {"factor": "1.5", "has_ascension_perk": "ap_enigmatic_engineering"}, {"factor": "1.5", "has_valid_civic": "civic_machine_servitor"}, {"factor": "2", "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world"}}, {"factor": "@ap_technological_ascendancy_rare_tech", "has_ascension_perk": "ap_technological_ascendancy"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_fe_dome_1"}}}, {"factor": "@dimensional_worship_rare_tech", "is_dimensional_worship_empire": "yes"}, {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}]}],
       prerequisites: [],
       potential: {}
     },
@@ -8339,7 +8339,7 @@ function getElements() {
       area:'社会学',
       category: '統治学',
       weight: 20,
-      weight_modifier: [],
+      weight_modifier: [{"modifier": [{"factor": "0", "NOT": {"has_ascension_perk": "ap_cosmogenesis"}}, {"factor": "@ap_technological_ascendancy_rare_tech", "has_ascension_perk": "ap_technological_ascendancy"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_fe_dome_2"}}}, {"factor": "@dimensional_worship_rare_tech", "is_dimensional_worship_empire": "yes"}, {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}]}],
       prerequisites: ["上空ドローン"],
       potential: {}
     },
@@ -8354,7 +8354,7 @@ function getElements() {
       area:'社会学',
       category: '軍事学',
       weight: 20,
-      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_crisis_level": "crisis_cosmogenesis_level_3", "has_ascension_perk": "ap_enigmatic_engineering"}}, {"factor": "0", "NOT": {"has_ascension_perk": "ap_cosmogenesis"}, "calc_true_if": {"has_technology": "tech_fe_mine_1"}}, {"factor": "@EnigmaticEngineeringDraw", "NOT": {"has_crisis_level": "crisis_cosmogenesis_level_3"}}, {"factor": "1.5", "has_ascension_perk": "ap_enigmatic_engineering"}, {"factor": "2", "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world"}}]}],
+      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_crisis_level": "crisis_cosmogenesis_level_3", "has_ascension_perk": "ap_enigmatic_engineering"}}, {"factor": "@EnigmaticEngineeringDraw", "NOT": {"has_crisis_level": "crisis_cosmogenesis_level_3"}}, {"factor": "1.5", "has_ascension_perk": "ap_enigmatic_engineering"}, {"factor": "2", "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world"}}, {"factor": "@ap_technological_ascendancy_rare_tech", "has_ascension_perk": "ap_technological_ascendancy"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_fe_fortress_1"}}}, {"factor": "@dimensional_worship_rare_tech", "is_dimensional_worship_empire": "yes"}, {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}]}],
       prerequisites: [],
       potential: {}
     },
@@ -8369,7 +8369,7 @@ function getElements() {
       area:'社会学',
       category: '軍事学',
       weight: 20,
-      weight_modifier: [],
+      weight_modifier: [{"modifier": [{"factor": "0", "NOT": {"has_ascension_perk": "ap_cosmogenesis"}}, {"factor": "@ap_technological_ascendancy_rare_tech", "has_ascension_perk": "ap_technological_ascendancy"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_fe_fortress_2"}}}, {"factor": "@dimensional_worship_rare_tech", "is_dimensional_worship_empire": "yes"}, {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}]}],
       prerequisites: ["アスピスの砦"],
       potential: {}
     },
@@ -8384,7 +8384,7 @@ function getElements() {
       area:'社会学',
       category: '統治学',
       weight: 20,
-      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_crisis_level": "crisis_cosmogenesis_level_3", "has_ascension_perk": "ap_enigmatic_engineering"}}, {"factor": "0", "NOT": {"has_ascension_perk": "ap_cosmogenesis"}, "calc_true_if": {"has_technology": "tech_fe_mine_1"}}, {"factor": "@EnigmaticEngineeringDraw", "NOT": {"has_crisis_level": "crisis_cosmogenesis_level_3"}}, {"factor": "1.5", "has_ascension_perk": "ap_enigmatic_engineering"}, {"factor": "2", "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world"}}]}],
+      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_crisis_level": "crisis_cosmogenesis_level_3", "has_ascension_perk": "ap_enigmatic_engineering"}}, {"factor": "@EnigmaticEngineeringDraw", "NOT": {"has_crisis_level": "crisis_cosmogenesis_level_3"}}, {"factor": "1.5", "has_ascension_perk": "ap_enigmatic_engineering"}, {"factor": "2", "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world"}}, {"factor": "@ap_technological_ascendancy_rare_tech", "has_ascension_perk": "ap_technological_ascendancy"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_fe_administration_1"}}}, {"factor": "@dimensional_worship_rare_tech", "is_dimensional_worship_empire": "yes"}, {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}]}],
       prerequisites: [],
       potential: {}
     },
@@ -8399,7 +8399,7 @@ function getElements() {
       area:'社会学',
       category: '統治学',
       weight: 20,
-      weight_modifier: [],
+      weight_modifier: [{"modifier": [{"factor": "0", "NOT": {"has_ascension_perk": "ap_cosmogenesis"}}, {"factor": "@ap_technological_ascendancy_rare_tech", "has_ascension_perk": "ap_technological_ascendancy"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_fe_administration_2"}}}, {"factor": "@dimensional_worship_rare_tech", "is_dimensional_worship_empire": "yes"}, {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}]}],
       prerequisites: ["フラクタル行政プロセス"],
       potential: {}
     },
@@ -8414,7 +8414,7 @@ function getElements() {
       area:'工学',
       category: '産業学',
       weight: 20,
-      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_crisis_level": "crisis_cosmogenesis_level_4", "has_ascension_perk": "ap_enigmatic_engineering"}}, {"factor": "0", "NOT": {"has_ascension_perk": "ap_cosmogenesis"}, "calc_true_if": {"has_technology": "tech_fe_mine_1"}}, {"factor": "@EnigmaticEngineeringDraw", "NOT": {"has_crisis_level": "crisis_cosmogenesis_level_4"}}, {"factor": "0", "is_hive_empire": "yes"}, {"factor": "1.5", "has_ascension_perk": "ap_enigmatic_engineering"}, {"factor": "2", "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world"}}]}],
+      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_crisis_level": "crisis_cosmogenesis_level_4", "has_ascension_perk": "ap_enigmatic_engineering"}}, {"factor": "@EnigmaticEngineeringDraw", "NOT": {"has_crisis_level": "crisis_cosmogenesis_level_4"}}, {"factor": "0", "is_hive_empire": "yes"}, {"factor": "1.5", "has_ascension_perk": "ap_enigmatic_engineering"}, {"factor": "2", "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world"}}, {"factor": "@ap_technological_ascendancy_rare_tech", "has_ascension_perk": "ap_technological_ascendancy"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_fe_assembly_1"}}}, {"factor": "@dimensional_worship_rare_tech", "is_dimensional_worship_empire": "yes"}, {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}]}],
       prerequisites: [],
       potential: {}
     },
@@ -8429,7 +8429,7 @@ function getElements() {
       area:'工学',
       category: '産業学',
       weight: 20,
-      weight_modifier: [],
+      weight_modifier: [{"modifier": [{"factor": "0", "NOT": {"has_ascension_perk": "ap_cosmogenesis"}}, {"factor": "@ap_technological_ascendancy_rare_tech", "has_ascension_perk": "ap_technological_ascendancy"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_fe_assembly_1"}}}, {"factor": "@dimensional_worship_rare_tech", "is_dimensional_worship_empire": "yes"}, {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}]}],
       prerequisites: ["ロボット製造結合体"],
       potential: {}
     },
@@ -8444,7 +8444,7 @@ function getElements() {
       area:'社会学',
       category: '生物学',
       weight: 20,
-      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_crisis_level": "crisis_cosmogenesis_level_4", "has_ascension_perk": "ap_enigmatic_engineering"}}, {"factor": "0", "NOT": {"has_ascension_perk": "ap_cosmogenesis"}, "calc_true_if": {"has_technology": "tech_fe_mine_1"}}, {"factor": "@EnigmaticEngineeringDraw", "NOT": {"has_crisis_level": "crisis_cosmogenesis_level_4"}}, {"factor": "0", "is_machine_empire": "yes"}, {"factor": "1.5", "has_ascension_perk": "ap_enigmatic_engineering"}, {"factor": "2", "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world"}}]}],
+      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_crisis_level": "crisis_cosmogenesis_level_4", "has_ascension_perk": "ap_enigmatic_engineering"}}, {"factor": "@EnigmaticEngineeringDraw", "NOT": {"has_crisis_level": "crisis_cosmogenesis_level_4"}}, {"factor": "0", "is_machine_empire": "yes"}, {"factor": "1.5", "has_ascension_perk": "ap_enigmatic_engineering"}, {"factor": "2", "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world"}}, {"factor": "@ap_technological_ascendancy_rare_tech", "has_ascension_perk": "ap_technological_ascendancy"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_fe_clinic_1"}}}, {"factor": "@dimensional_worship_rare_tech", "is_dimensional_worship_empire": "yes"}, {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}]}],
       prerequisites: [],
       potential: {}
     },
@@ -8459,7 +8459,7 @@ function getElements() {
       area:'社会学',
       category: '生物学',
       weight: 20,
-      weight_modifier: [],
+      weight_modifier: [{"modifier": [{"factor": "0", "NOT": {"has_ascension_perk": "ap_cosmogenesis"}}, {"factor": "@ap_technological_ascendancy_rare_tech", "has_ascension_perk": "ap_technological_ascendancy"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_fe_clinic_1"}}}, {"factor": "@dimensional_worship_rare_tech", "is_dimensional_worship_empire": "yes"}, {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}]}],
       prerequisites: ["分子再活性化機関"],
       potential: {}
     },
@@ -8474,7 +8474,7 @@ function getElements() {
       area:'社会学',
       category: '統治学',
       weight: 20,
-      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_crisis_level": "crisis_cosmogenesis_level_1", "has_ascension_perk": "ap_enigmatic_engineering"}}, {"factor": "0", "NOT": {"has_ascension_perk": "ap_cosmogenesis"}, "calc_true_if": {"has_technology": "tech_fe_mine_1"}}, {"factor": "@EnigmaticEngineeringDraw", "NOT": {"has_crisis_level": "crisis_cosmogenesis_level_1"}}, {"factor": "1.5", "has_ascension_perk": "ap_enigmatic_engineering"}, {"factor": "2", "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world"}}]}],
+      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_crisis_level": "crisis_cosmogenesis_level_1", "has_ascension_perk": "ap_enigmatic_engineering"}}, {"factor": "@EnigmaticEngineeringDraw", "NOT": {"has_crisis_level": "crisis_cosmogenesis_level_1"}}, {"factor": "1.5", "has_ascension_perk": "ap_enigmatic_engineering"}, {"factor": "2", "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world"}}, {"factor": "@ap_technological_ascendancy_rare_tech", "has_ascension_perk": "ap_technological_ascendancy"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_fe_security_1"}}}, {"factor": "@dimensional_worship_rare_tech", "is_dimensional_worship_empire": "yes"}, {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}]}],
       prerequisites: [],
       potential: {}
     },
@@ -8489,7 +8489,7 @@ function getElements() {
       area:'社会学',
       category: '統治学',
       weight: 20,
-      weight_modifier: [],
+      weight_modifier: [{"modifier": [{"factor": "0", "NOT": {"has_ascension_perk": "ap_cosmogenesis"}}, {"factor": "@ap_technological_ascendancy_rare_tech", "has_ascension_perk": "ap_technological_ascendancy"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_fe_security_2"}}}, {"factor": "@dimensional_worship_rare_tech", "is_dimensional_worship_empire": "yes"}, {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}]}],
       prerequisites: ["司法施設"],
       potential: {}
     },
@@ -8504,7 +8504,7 @@ function getElements() {
       area:'社会学',
       category: '統治学',
       weight: 20,
-      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_crisis_level": "crisis_cosmogenesis_level_3", "has_ascension_perk": "ap_enigmatic_engineering"}}, {"factor": "0", "NOT": {"has_ascension_perk": "ap_cosmogenesis"}, "calc_true_if": {"has_technology": "tech_fe_mine_1"}}, {"factor": "@EnigmaticEngineeringDraw", "NOT": {"has_crisis_level": "crisis_cosmogenesis_level_3"}}, {"factor": "0", "is_gestalt": "yes"}, {"factor": "1.5", "has_ascension_perk": "ap_enigmatic_engineering"}, {"factor": "2", "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world"}}]}],
+      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_crisis_level": "crisis_cosmogenesis_level_3", "has_ascension_perk": "ap_enigmatic_engineering"}}, {"factor": "@EnigmaticEngineeringDraw", "NOT": {"has_crisis_level": "crisis_cosmogenesis_level_3"}}, {"factor": "1.5", "has_ascension_perk": "ap_enigmatic_engineering"}, {"factor": "2", "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world"}}, {"factor": "@ap_technological_ascendancy_rare_tech", "has_ascension_perk": "ap_technological_ascendancy"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_fe_market_1"}}}, {"factor": "@dimensional_worship_rare_tech", "is_dimensional_worship_empire": "yes"}, {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}]}],
       prerequisites: [],
       potential: {}
     },
@@ -8519,7 +8519,7 @@ function getElements() {
       area:'社会学',
       category: '統治学',
       weight: 20,
-      weight_modifier: [],
+      weight_modifier: [{"modifier": [{"factor": "0", "NOT": {"has_ascension_perk": "ap_cosmogenesis"}}, {"factor": "@ap_technological_ascendancy_rare_tech", "has_ascension_perk": "ap_technological_ascendancy"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_fe_market_2"}}}, {"factor": "@dimensional_worship_rare_tech", "is_dimensional_worship_empire": "yes"}, {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}]}],
       prerequisites: ["銀河商取引拠点"],
       potential: {}
     },
@@ -8534,7 +8534,7 @@ function getElements() {
       area:'物理学',
       category: '力場操作',
       weight: 20,
-      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_crisis_level": "crisis_cosmogenesis_level_1", "has_ascension_perk": "ap_enigmatic_engineering"}}, {"factor": "0", "NOT": {"has_ascension_perk": "ap_cosmogenesis"}, "calc_true_if": {"has_technology": "tech_fe_mine_1"}}, {"factor": "@EnigmaticEngineeringDraw", "NOT": {"has_crisis_level": "crisis_cosmogenesis_level_1"}}, {"factor": "1.5", "has_ascension_perk": "ap_enigmatic_engineering"}, {"factor": "2", "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world"}}]}],
+      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_crisis_level": "crisis_cosmogenesis_level_1", "has_ascension_perk": "ap_enigmatic_engineering"}}, {"factor": "@EnigmaticEngineeringDraw", "NOT": {"has_crisis_level": "crisis_cosmogenesis_level_1"}}, {"factor": "1.5", "has_ascension_perk": "ap_enigmatic_engineering"}, {"factor": "2", "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world"}}, {"factor": "@ap_technological_ascendancy_rare_tech", "has_ascension_perk": "ap_technological_ascendancy"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_fe_silo_1"}}}, {"factor": "@dimensional_worship_rare_tech", "is_dimensional_worship_empire": "yes"}, {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}]}],
       prerequisites: [],
       potential: {}
     },
@@ -8549,7 +8549,7 @@ function getElements() {
       area:'物理学',
       category: '力場操作',
       weight: 20,
-      weight_modifier: [],
+      weight_modifier: [{"modifier": [{"factor": "0", "NOT": {"has_ascension_perk": "ap_cosmogenesis"}}, {"factor": "@ap_technological_ascendancy_rare_tech", "has_ascension_perk": "ap_technological_ascendancy"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_fe_silo_2"}}}, {"factor": "@dimensional_worship_rare_tech", "is_dimensional_worship_empire": "yes"}, {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}]}],
       prerequisites: ["縮小宇宙補給所"],
       potential: {}
     },
@@ -8564,7 +8564,7 @@ function getElements() {
       area:'社会学',
       category: '統治学',
       weight: 20,
-      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_crisis_level": "crisis_cosmogenesis_level_4", "has_ascension_perk": "ap_enigmatic_engineering"}}, {"factor": "0", "NOT": {"has_ascension_perk": "ap_cosmogenesis"}, "calc_true_if": {"has_technology": "tech_fe_mine_1"}}, {"factor": "@EnigmaticEngineeringDraw", "NOT": {"has_crisis_level": "crisis_cosmogenesis_level_4"}}, {"factor": "0", "is_gestalt": "yes"}, {"factor": "1.5", "has_ascension_perk": "ap_enigmatic_engineering"}, {"factor": "2", "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world"}}]}],
+      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_crisis_level": "crisis_cosmogenesis_level_4", "has_ascension_perk": "ap_enigmatic_engineering"}}, {"factor": "@EnigmaticEngineeringDraw", "NOT": {"has_crisis_level": "crisis_cosmogenesis_level_4"}}, {"factor": "0", "is_gestalt": "yes"}, {"factor": "1.5", "has_ascension_perk": "ap_enigmatic_engineering"}, {"factor": "2", "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world"}}, {"factor": "@ap_technological_ascendancy_rare_tech", "has_ascension_perk": "ap_technological_ascendancy"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_fe_entertainment_1"}}}, {"factor": "@dimensional_worship_rare_tech", "is_dimensional_worship_empire": "yes"}, {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}]}],
       prerequisites: [],
       potential: {}
     },
@@ -8579,7 +8579,7 @@ function getElements() {
       area:'社会学',
       category: '統治学',
       weight: 20,
-      weight_modifier: [],
+      weight_modifier: [{"modifier": [{"factor": "0", "NOT": {"has_ascension_perk": "ap_cosmogenesis"}}, {"factor": "@ap_technological_ascendancy_rare_tech", "has_ascension_perk": "ap_technological_ascendancy"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_fe_entertainment_2"}}}, {"factor": "@dimensional_worship_rare_tech", "is_dimensional_worship_empire": "yes"}, {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}]}],
       prerequisites: ["仮想天福広場"],
       potential: {}
     },
@@ -8594,7 +8594,7 @@ function getElements() {
       area:'物理学',
       category: 'コンピュータ',
       weight: 20,
-      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_crisis_level": "crisis_cosmogenesis_level_5", "has_ascension_perk": "ap_enigmatic_engineering"}}, {"factor": "0", "NOT": {"has_ascension_perk": "ap_cosmogenesis"}, "calc_true_if": {"has_technology": "tech_fe_mine_1"}}, {"factor": "@EnigmaticEngineeringDraw", "NOT": {"has_crisis_level": "crisis_cosmogenesis_level_5"}}, {"factor": "1.5", "has_ascension_perk": "ap_enigmatic_engineering"}, {"factor": "2", "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world"}}]}],
+      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_crisis_level": "crisis_cosmogenesis_level_5", "has_ascension_perk": "ap_enigmatic_engineering"}}, {"factor": "@EnigmaticEngineeringDraw", "NOT": {"has_crisis_level": "crisis_cosmogenesis_level_5"}}, {"factor": "1.5", "has_ascension_perk": "ap_enigmatic_engineering"}, {"factor": "2", "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world"}}, {"factor": "@ap_technological_ascendancy_rare_tech", "has_ascension_perk": "ap_technological_ascendancy"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_fe_lab_1"}}}, {"factor": "@dimensional_worship_rare_tech", "is_dimensional_worship_empire": "yes"}, {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}]}],
       prerequisites: [],
       potential: {}
     },
@@ -8609,7 +8609,7 @@ function getElements() {
       area:'物理学',
       category: 'コンピュータ',
       weight: 20,
-      weight_modifier: [],
+      weight_modifier: [{"modifier": [{"factor": "0", "NOT": {"has_ascension_perk": "ap_cosmogenesis"}}, {"factor": "@ap_technological_ascendancy_rare_tech", "has_ascension_perk": "ap_technological_ascendancy"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_fe_lab_2"}}}, {"factor": "@dimensional_worship_rare_tech", "is_dimensional_worship_empire": "yes"}, {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}]}],
       prerequisites: ["量子革新結合体"],
       potential: {}
     },
@@ -8624,7 +8624,7 @@ function getElements() {
       area:'工学',
       category: '材料工学',
       weight: 20,
-      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_crisis_level": "crisis_cosmogenesis_level_2", "has_ascension_perk": "ap_enigmatic_engineering"}}, {"factor": "0", "NOT": {"has_ascension_perk": "ap_cosmogenesis"}, "calc_true_if": {"has_technology": "tech_fe_mine_1"}}, {"factor": "@EnigmaticEngineeringDraw", "NOT": {"has_crisis_level": "crisis_cosmogenesis_level_2"}}, {"factor": "1.5", "has_ascension_perk": "ap_enigmatic_engineering"}, {"factor": "2", "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world"}}]}],
+      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_crisis_level": "crisis_cosmogenesis_level_2", "has_ascension_perk": "ap_enigmatic_engineering"}}, {"factor": "@EnigmaticEngineeringDraw", "NOT": {"has_crisis_level": "crisis_cosmogenesis_level_2"}}, {"factor": "1.5", "has_ascension_perk": "ap_enigmatic_engineering"}, {"factor": "2", "any_owned_planet": {"is_planet_class": "pc_cosmogenesis_world"}}, {"factor": "@ap_technological_ascendancy_rare_tech", "has_ascension_perk": "ap_technological_ascendancy"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_fe_mine_1"}}}, {"factor": "@dimensional_worship_rare_tech", "is_dimensional_worship_empire": "yes"}, {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}]}],
       prerequisites: [],
       potential: {}
     },
@@ -8639,7 +8639,7 @@ function getElements() {
       area:'工学',
       category: '材料工学',
       weight: 20,
-      weight_modifier: [],
+      weight_modifier: [{"modifier": [{"factor": "0", "NOT": {"has_ascension_perk": "ap_cosmogenesis"}}, {"factor": "@ap_technological_ascendancy_rare_tech", "has_ascension_perk": "ap_technological_ascendancy"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_fe_mine_2"}}}, {"factor": "@dimensional_worship_rare_tech", "is_dimensional_worship_empire": "yes"}, {"factor": "@auth_cyber_dictatorial_collectivist_tech", "is_dictatorial_authority": "yes", "has_country_flag": "cyber_collectivist", "ruler": {"leader_class": "scientist"}}]}],
       prerequisites: ["量子掘削所"],
       potential: {}
     },
