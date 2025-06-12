@@ -5,15 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.23">
-<meta name="author" content="最終更新日: 2025-06-04 22:29:58 +0900">
-<title>リーダー特性一覧 Verv4.0.15</title>
+<meta name="author" content="最終更新日: 2025-06-12 19:43:28 +0900">
+<title>リーダー特性一覧 Verv4.0.18</title>
 <link rel="stylesheet" href="./css/leader_traits.css">
 </head>
 <body class="article">
 <div id="header">
-<h1>リーダー特性一覧 Verv4.0.15</h1>
+<h1>リーダー特性一覧 Verv4.0.18</h1>
 <div class="details">
-<span id="author" class="author">最終更新日: 2025-06-04 22:29:58 +0900</span><br>
+<span id="author" class="author">最終更新日: 2025-06-12 19:43:28 +0900</span><br>
 </div>
 </div>
 <div id="content">
@@ -7190,7 +7190,7 @@ custom_tooltip_with_modifiers:<br>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>custom_tooltip:<br>
-§Y評議員§!がもたらす£empire£ §Y帝国§!§E効果§!：\n    すべての[Leader.GetLeaderSoldierJobType]：\n        宇宙軍許容量：§G+2§!\n        惑星防衛軍：§G+1§!</p>
+§Y評議員§!がもたらす£empire£ §Y帝国§!§E効果§!：\n    100[Leader.GetLeaderSoldierJobType]あたり：\n        宇宙軍許容量：§G+2§!\n        惑星防衛軍: §G+1§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -15803,10 +15803,10 @@ custom_tooltip:<br>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>惑星:<br>
-・psionic_pop_bonus_workforce_mult(職業の効率の行先： Psionic Pops) = 0.25<br>
+・psionic_pop_bonus_workforce_mult(超能力POP職業の効率の行先：) = 0.25<br>
 <br>
 セクター:<br>
-・psionic_pop_bonus_workforce_mult(職業の効率の行先： Psionic Pops) = 0.125<br>
+・psionic_pop_bonus_workforce_mult(超能力POP職業の効率の行先：) = 0.125<br>
 <br>
 custom_tooltip_with_modifiers:<br>
     §Y10年§!ごとに§Y100§! £pop£ §HPOP§!に§Y潜在的超能力者§!の特性を付与する。</p>
@@ -23134,15 +23134,15 @@ triggered_desc:<br>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>惑星:<br>
-・robotic_pop_bonus_workforce_mult(職業の効率の行先： Mechanical and Machine Pops) = 0.2<br>
+・robotic_pop_bonus_workforce_mult(職業の効率の行先：機械POPと機械知性POP) = 0.2<br>
 ・planet_pops_robotics_upkeep_mult(ロボットの維持費) = -0.2<br>
-・cyborg_pop_bonus_workforce_mult(職業の効率の行先： Cybernetic Pops) = 0.2<br>
+・cyborg_pop_bonus_workforce_mult(職業の効率の行先：サイバネティックPOP) = 0.2<br>
 ・planet_pops_cyborgs_upkeep_mult(サイボーグの維持費) = -0.2<br>
 <br>
 セクター:<br>
-・robotic_pop_bonus_workforce_mult(職業の効率の行先： Mechanical and Machine Pops) = 0.1<br>
+・robotic_pop_bonus_workforce_mult(職業の効率の行先：機械POPと機械知性POP) = 0.1<br>
 ・planet_pops_robotics_upkeep_mult(ロボットの維持費) = -0.1<br>
-・cyborg_pop_bonus_workforce_mult(職業の効率の行先： Cybernetic Pops) = 0.1<br>
+・cyborg_pop_bonus_workforce_mult(職業の効率の行先：サイバネティックPOP) = 0.1<br>
 ・planet_pops_cyborgs_upkeep_mult(サイボーグの維持費) = -0.1<br>
 <br></p>
 </div></div></td>
@@ -23470,12 +23470,12 @@ triggered_desc:<br>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>惑星:<br>
-・psionic_pop_bonus_workforce_mult(職業の効率の行先： Psionic Pops) = 0.25<br>
+・psionic_pop_bonus_workforce_mult(超能力POP職業の効率の行先：) = 0.25<br>
 ・pop_job_amenities_mult(£job£ 職業による£amenities£ 快適度) = 0.20<br>
 ・pop_ethic_spiritualist_attraction_mult(精神主義志向への魅力) = 0.50<br>
 <br>
 セクター:<br>
-・psionic_pop_bonus_workforce_mult(職業の効率の行先： Psionic Pops) = 0.125<br>
+・psionic_pop_bonus_workforce_mult(超能力POP職業の効率の行先：) = 0.125<br>
 ・pop_job_amenities_mult(£job£ 職業による£amenities£ 快適度) = 0.10<br>
 ・pop_ethic_spiritualist_attraction_mult(精神主義志向への魅力) = 0.25<br>
 <br></p>
@@ -24438,11 +24438,11 @@ leader_trait_collaborator_3<br></p>
 <br>
 惑星(条件あり):<br>
 ・条件：{"is_ruler": "no"}<br>
-・robotic_pop_bonus_workforce_mult(職業の効率の行先： Mechanical and Machine Pops) = 0.05<br>
+・robotic_pop_bonus_workforce_mult(職業の効率の行先：機械POPと機械知性POP) = 0.05<br>
 <br>
 セクター(条件あり):<br>
 ・条件：{"is_ruler": "no"}<br>
-・robotic_pop_bonus_workforce_mult(職業の効率の行先： Mechanical and Machine Pops) = 0.025<br>
+・robotic_pop_bonus_workforce_mult(職業の効率の行先：機械POPと機械知性POP) = 0.025<br>
 <br>
 艦隊(条件あり):<br>
 ・条件：{"is_ruler": "no", "leader_class": "commander"}<br>
@@ -39928,7 +39928,7 @@ custom_tooltip_with_modifiers:<br>
 ・country_trade_produces_mult(月間£trade£ 交易) = 0.05<br>
 <br>
 ・条件：{"has_leader_flag": "defeated_mammalian_evopred"}<br>
-・founder_species_growth_mult(POPの成長 (または製造) 速度) = 0.05<br>
+・founder_species_growth_mult(['concept_founder_species_growth_mult']) = 0.05<br>
 <br>
 ・条件：{"has_leader_flag": "defeated_reptilian_evopred"}<br>
 ・ship_shield_hardening_add(シールド強化) = 0.05<br>
