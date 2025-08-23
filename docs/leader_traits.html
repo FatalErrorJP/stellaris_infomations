@@ -5,15 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.23">
-<meta name="author" content="最終更新日: 2025-06-12 19:43:28 +0900">
-<title>リーダー特性一覧 Verv4.0.18</title>
+<meta name="author" content="最終更新日: 2025-08-23 17:31:36 +0900">
+<title>リーダー特性一覧 Verv4.0.22</title>
 <link rel="stylesheet" href="./css/leader_traits.css">
 </head>
 <body class="article">
 <div id="header">
-<h1>リーダー特性一覧 Verv4.0.18</h1>
+<h1>リーダー特性一覧 Verv4.0.22</h1>
 <div class="details">
-<span id="author" class="author">最終更新日: 2025-06-12 19:43:28 +0900</span><br>
+<span id="author" class="author">最終更新日: 2025-08-23 17:31:36 +0900</span><br>
 </div>
 </div>
 <div id="content">
@@ -8433,7 +8433,7 @@ leader_trait_stubborn_2<br></p>
 ・job_technician_add([technician.GetName]の職業枠) = 200<br>
 <br>
 ・条件：{"exists": "FROM", "FROM": {"exists": "owner", "owner": {"is_same_value": "root.owner"}}, "trait_is_gestalt_check": "yes"}<br>
-・job_technician_drone_add([Owner.GetTechnician]の職業枠) = 200<br>
+・job_technician_drone_add([technician_drone.GetName]の職業枠) = 200<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -8510,7 +8510,7 @@ leader_trait_stubborn_2<br></p>
 ・job_technician_add([technician.GetName]の職業枠) = 400<br>
 <br>
 ・条件：{"exists": "FROM", "FROM": {"exists": "owner", "owner": {"is_same_value": "root.owner"}}, "trait_is_gestalt_check": "yes"}<br>
-・job_technician_drone_add([Owner.GetTechnician]の職業枠) = 400<br>
+・job_technician_drone_add([technician_drone.GetName]の職業枠) = 400<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -8569,7 +8569,7 @@ leader_trait_stubborn_2<br></p>
 ・job_miner_add([miner.GetName]の職業枠) = 200<br>
 <br>
 ・条件：{"exists": "FROM", "FROM": {"exists": "owner", "owner": {"is_same_value": "root.owner"}}, "trait_is_gestalt_check": "yes"}<br>
-・job_mining_drone_add([Owner.GetMiner]の職業枠) = 200<br>
+・job_mining_drone_add([mining_drone.GetName]の職業枠) = 200<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -8646,13 +8646,13 @@ leader_trait_stubborn_2<br></p>
 ・job_miner_add([miner.GetName]の職業枠) = 400<br>
 <br>
 ・条件：{"exists": "FROM", "FROM": {"exists": "owner", "owner": {"is_same_value": "root.owner"}, "NOT": {"is_planet_class": "pc_shattered_ring_habitable"}}, "trait_is_gestalt_check": "yes"}<br>
-・job_mining_drone_add([Owner.GetMiner]の職業枠) = 400<br>
+・job_mining_drone_add([mining_drone.GetName]の職業枠) = 400<br>
 <br>
 ・条件：{"exists": "FROM", "FROM": {"exists": "owner", "owner": {"is_same_value": "root.owner"}, "is_planet_class": "pc_shattered_ring_habitable"}, "trait_is_gestalt_check": "no"}<br>
 ・job_miner_add([miner.GetName]の職業枠) = 400<br>
 <br>
 ・条件：{"exists": "FROM", "FROM": {"exists": "owner", "owner": {"is_same_value": "root.owner"}, "is_planet_class": "pc_shattered_ring_habitable"}, "trait_is_gestalt_check": "yes"}<br>
-・job_mining_drone_add([Owner.GetMiner]の職業枠) = 400<br>
+・job_mining_drone_add([mining_drone.GetName]の職業枠) = 400<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -8711,7 +8711,7 @@ leader_trait_stubborn_2<br></p>
 ・job_farmer_add([farmer.GetName]の職業枠) = 200<br>
 <br>
 ・条件：{"exists": "FROM", "FROM": {"artisan_is_pearl_diver_trigger": "no"}, "trait_is_gestalt_check": "yes"}<br>
-・job_agri_drone_add([Owner.GetFarmer]の職業枠) = 200<br>
+・job_agri_drone_add([agri_drone.GetName]の職業枠) = 200<br>
 <br>
 ・条件：{"exists": "FROM", "FROM": {"artisan_is_pearl_diver_trigger": "yes"}, "trait_is_gestalt_check": "no"}<br>
 ・job_farmer_add([farmer.GetName]の職業枠) = 100<br>
@@ -8796,7 +8796,7 @@ leader_trait_stubborn_2<br></p>
 ・job_farmer_add([farmer.GetName]の職業枠) = 400<br>
 <br>
 ・条件：{"exists": "FROM", "FROM": {"artisan_is_pearl_diver_trigger": "no"}, "trait_is_gestalt_check": "yes"}<br>
-・job_agri_drone_add([Owner.GetFarmer]の職業枠) = 400<br>
+・job_agri_drone_add([agri_drone.GetName]の職業枠) = 400<br>
 <br>
 ・条件：{"exists": "FROM", "FROM": {"artisan_is_pearl_diver_trigger": "yes"}, "trait_is_gestalt_check": "no"}<br>
 ・job_farmer_add([farmer.GetName]の職業枠) = 200<br>
@@ -12737,8 +12737,7 @@ leader_trait_insider_trading_2<br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>評議会:<br>
-・planet_buildings_cost_mult(建造物コスト) = -0.10<br>
-・planet_districts_cost_mult(区域コスト) = -0.10<br>
+・planet_structures_cost_mult(惑星のインフラコスト) = -0.10<br>
 ・planet_building_build_speed_mult(惑星のインフラの建造速度) = 0.15<br>
 <br></p>
 </div></div></td>
@@ -12793,10 +12792,8 @@ leader_trait_insider_trading_2<br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>評議会:<br>
-・planet_buildings_cost_mult(建造物コスト) = -0.1<br>
-・planet_districts_cost_mult(区域コスト) = -0.1<br>
-・planet_buildings_upkeep_mult(建造物維持費) = -0.05<br>
-・planet_districts_upkeep_mult(区域維持費) = -0.05<br>
+・planet_structures_cost_mult(惑星のインフラコスト) = -0.1<br>
+・planet_structures_upkeep_mult(惑星のインフラ維持費) = -0.05<br>
 ・planet_building_build_speed_mult(惑星のインフラの建造速度) = 0.25<br>
 <br></p>
 </div></div></td>
@@ -12846,10 +12843,8 @@ leader_trait_insider_trading_2<br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>評議会:<br>
-・planet_buildings_cost_mult(建造物コスト) = -0.15<br>
-・planet_districts_cost_mult(区域コスト) = -0.15<br>
-・planet_buildings_upkeep_mult(建造物維持費) = -0.1<br>
-・planet_districts_upkeep_mult(区域維持費) = -0.1<br>
+・planet_structures_cost_mult(惑星のインフラコスト) = -0.15<br>
+・planet_structures_upkeep_mult(惑星のインフラ維持費) = -0.1<br>
 ・planet_building_build_speed_mult(惑星のインフラの建造速度) = 0.33<br>
 <br></p>
 </div></div></td>
@@ -14882,13 +14877,11 @@ custom_tooltip_with_modifiers:<br>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>惑星:<br>
 ・empire_size_districts_mult(区域からの帝国規模) = -0.75<br>
-・planet_buildings_upkeep_mult(建造物維持費) = -0.5<br>
-・planet_districts_upkeep_mult(区域維持費) = -0.5<br>
+・planet_structures_upkeep_mult(惑星のインフラ維持費) = -0.5<br>
 <br>
 セクター:<br>
 ・empire_size_districts_mult(区域からの帝国規模) = -0.375<br>
-・planet_buildings_upkeep_mult(建造物維持費) = -0.25<br>
-・planet_districts_upkeep_mult(区域維持費) = -0.25<br>
+・planet_structures_upkeep_mult(惑星のインフラ維持費) = -0.25<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -15726,7 +15719,7 @@ custom_tooltip_with_modifiers:<br>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>惑星(条件あり):<br>
 ・条件：{"exists": "planet"}<br>
-・entertainer_jobs_bonus_workforce_mult(エンターテイナー職の職業の効率の行先：) = 0.02<br>
+・influential_jobs_bonus_workforce_mult(影響力ある職業の職業の効率の行先：) = 0.02<br>
 ・mult = planet.value:species_on_planet<br>
 <br>
 ・条件：{"exists": "planet"}<br>
@@ -15735,7 +15728,7 @@ custom_tooltip_with_modifiers:<br>
 <br>
 セクター(条件あり):<br>
 ・条件：{"exists": "planet"}<br>
-・entertainer_jobs_bonus_workforce_mult(エンターテイナー職の職業の効率の行先：) = 0.01<br>
+・influential_jobs_bonus_workforce_mult(影響力ある職業の職業の効率の行先：) = 0.01<br>
 ・mult = planet.value:species_on_planet<br>
 <br>
 ・条件：{"exists": "planet"}<br>
@@ -15743,7 +15736,7 @@ custom_tooltip_with_modifiers:<br>
 ・mult = planet.value:species_on_planet<br>
 <br>
 custom_tooltip:<br>
-£planet£ §Y惑星総督§! §E効果§!:\n    職業の効率の行先：惑星に存在する種族1種につき、 ['concept_planet_entertainers']に§G2%§!\n    惑星に存在する種族1種につき、 §Y幸福度§!を§G2%§!増やす\n\n£sector£ §Yセクター総督§! §E効果§!：\n    職業の効率の行先：各惑星に存在する種族1種につき、 ['concept_planet_entertainers']に§G1%§!\n    各惑星に存在する種族1種につき、 §Y幸福度§!を§G1%§!増やす</p>
+£planet£ §Y惑星総督§! §E効果§!：\n    ['concept_planet_influential']の職業の効率の行先：が惑星に存在する種族1種につき§G2%§!\n    §Y幸福度§!が惑星に存在する種族1種につき§G2%§!増加\n\n£sector£ §Yセクター総督§! §E効果§!：\n    ['concept_planet_influential']の職業の効率の行先：が惑星に存在する種族1種につき§G1%§!\n    §Y幸福度§!が惑星に存在する種族1種につき§G1%§!増加</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -29566,6 +29559,7 @@ custom_tooltip_with_modifiers:<br>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>評議会:<br>
+・commercial_pact_mult(通商条約の効果) = 0.05<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -29627,6 +29621,7 @@ custom_tooltip_with_modifiers:<br>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>評議会:<br>
+・commercial_pact_mult(通商条約の効果) = 0.15<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -29675,6 +29670,7 @@ custom_tooltip_with_modifiers:<br>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>評議会:<br>
+・commercial_pact_mult(通商条約の効果) = 0.25<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -30055,7 +30051,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_commerce_vote_strength_mult(§Y銀河的商取引§!決議における票数) = @t1_mult<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_1|0%§!</p>
+このカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_1|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -30117,7 +30113,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_commerce_vote_strength_mult(§Y銀河的商取引§!決議における票数) = @t2_mult<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_2|0%§!</p>
+このカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_2|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -30168,7 +30164,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_commerce_vote_strength_mult(§Y銀河的商取引§!決議における票数) = @t3_mult<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_3|0%§!</p>
+このカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_3|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -30223,7 +30219,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_industry_vote_strength_mult(§Y産業の発展§!決議における票数) = @t1_mult<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_1|0%§!</p>
+このカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_1|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -30285,7 +30281,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_industry_vote_strength_mult(§Y産業の発展§!決議における票数) = @t2_mult<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_2|0%§!</p>
+このカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_2|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -30336,7 +30332,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_industry_vote_strength_mult(§Y産業の発展§!決議における票数) = @t3_mult<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_3|0%§!</p>
+このカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_3|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -30394,7 +30390,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_politics_tradition_4_vote_strength_mult(§Y銀河脅威対策委員会§!決議における票数) = @t1_mult<br>
 <br>
 custom_tooltip:<br>
-£diplo_weight£ GALCOM_NAME|Y§Y使者§!§E効果§!\n    - §Y政略の伝統§!決議における票数： §G+5%§!\n    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_1|0%§!</p>
+£diplo_weight£ GALCOM_NAME|Y§Y使者§!の§E効果§!\n    - §Y政略の伝統§!決議における票数： §G+5%§!\nこのカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_1|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -30459,7 +30455,7 @@ custom_tooltip:<br>
 ・resolution_category_politics_tradition_4_vote_strength_mult(§Y銀河脅威対策委員会§!決議における票数) = @t2_mult<br>
 <br>
 custom_tooltip:<br>
-£diplo_weight£ GALCOM_NAME|Y§Y使者§!§E効果§!\n    - §Y政略の伝統§!決議における票数： §G+15%§!\n    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_2|0%§!</p>
+£diplo_weight£ GALCOM_NAME|Y§Y使者§!の§E効果§!\n    - §Y政略の伝統§!決議における票数： §G+15%§!\nこのカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_2|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -30513,7 +30509,7 @@ custom_tooltip:<br>
 ・resolution_category_politics_tradition_4_vote_strength_mult(§Y銀河脅威対策委員会§!決議における票数) = @t3_mult<br>
 <br>
 custom_tooltip:<br>
-£diplo_weight£ GALCOM_NAME|Y§Y使者§!§E効果§!\n    - §Y政略の伝統§!決議における票数： §G+25%§!\n    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_3|0%§!</p>
+£diplo_weight£ GALCOM_NAME|Y§Y使者§!の§E効果§!\n    - §Y政略の伝統§!決議における票数： §G+25%§!\nこのカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_3|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -30568,7 +30564,7 @@ custom_tooltip:<br>
 ・resolution_category_greatergood_vote_strength_mult(§Y大いなる善§!決議における票数) = @t1_mult<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_1|0%§!</p>
+このカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_1|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -30630,7 +30626,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_greatergood_vote_strength_mult(§Y大いなる善§!決議における票数) = @t2_mult<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_2|0%§!</p>
+このカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_2|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -30681,7 +30677,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_greatergood_vote_strength_mult(§Y大いなる善§!決議における票数) = @t3_mult<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_3|0%§!</p>
+このカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_3|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -30751,7 +30747,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_foreign_relations_vote_strength_mult(§Y対外関係§!決議における票数) = @t1_mult<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_1|0%§!</p>
+このカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_1|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -30828,7 +30824,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_foreign_relations_vote_strength_mult(§Y対外関係§!決議における票数) = @t2_mult<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_2|0%§!</p>
+このカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_2|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -30894,7 +30890,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_foreign_relations_vote_strength_mult(§Y対外関係§!決議における票数) = @t3_mult<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_3|0%§!</p>
+このカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_3|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -30949,7 +30945,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_ecology_vote_strength_mult(§Y環境保護§!決議における票数) = @t1_mult<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_1|0%§!</p>
+このカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_1|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -31011,7 +31007,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_ecology_vote_strength_mult(§Y環境保護§!決議における票数) = @t2_mult<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_2|0%§!</p>
+このカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_2|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -31062,7 +31058,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_ecology_vote_strength_mult(§Y環境保護§!決議における票数) = @t3_mult<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_3|0%§!</p>
+このカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_3|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -31117,7 +31113,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_galacticstudies_vote_strength_mult(§Y制約されざる知識§!決議における票数) = @t1_mult<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_1|0%§!</p>
+このカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_1|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -31179,7 +31175,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_galacticstudies_vote_strength_mult(§Y制約されざる知識§!決議における票数) = @t2_mult<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_2|0%§!</p>
+このカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_2|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -31230,7 +31226,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_galacticstudies_vote_strength_mult(§Y制約されざる知識§!決議における票数) = @t3_mult<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_3|0%§!</p>
+このカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_3|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -31285,7 +31281,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_divinity_vote_strength_mult(§Y生命の神性§!決議における票数) = @t1_mult<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_1|0%§!</p>
+このカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_1|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -31347,7 +31343,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_divinity_vote_strength_mult(§Y生命の神性§!決議における票数) = @t2_mult<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_2|0%§!</p>
+このカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_2|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -31398,7 +31394,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_divinity_vote_strength_mult(§Y生命の神性§!決議における票数) = @t3_mult<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_3|0%§!</p>
+このカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_3|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -31453,7 +31449,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_mutualdefense_vote_strength_mult(§Y相互防衛§!決議における票数) = @t1_mult<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_1|0%§!</p>
+このカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_1|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -31515,7 +31511,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_mutualdefense_vote_strength_mult(§Y相互防衛§!決議における票数) = @t2_mult<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_2|0%§!</p>
+このカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_2|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -31566,7 +31562,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_mutualdefense_vote_strength_mult(§Y相互防衛§!決議における票数) = @t3_mult<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_3|0%§!</p>
+このカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_3|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -31621,7 +31617,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_rulesofwar_vote_strength_mult(§Y交戦規定§!決議における票数) = @t1_mult<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_1|0%§!</p>
+このカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_1|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -31683,7 +31679,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_rulesofwar_vote_strength_mult(§Y交戦規定§!決議における票数) = @t2_mult<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_2|0%§!</p>
+このカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_2|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -31734,7 +31730,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_rulesofwar_vote_strength_mult(§Y交戦規定§!決議における票数) = @t3_mult<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_3|0%§!</p>
+このカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_3|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -31789,7 +31785,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_defenseprivatization_vote_strength_mult(§Y防衛の民営化§!決議における票数) = @t1_mult<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_1|0%§!</p>
+このカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_1|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -31852,7 +31848,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_defenseprivatization_vote_strength_mult(§Y防衛の民営化§!決議における票数) = @t2_mult<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_2|0%§!</p>
+このカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_2|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -31903,7 +31899,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_defenseprivatization_vote_strength_mult(§Y防衛の民営化§!決議における票数) = @t3_mult<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_3|0%§!</p>
+このカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_3|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -31958,7 +31954,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_intergalacticdirective_vote_strength_mult(§Y銀河間指導§!決議における票数) = @t1_mult<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_1|0%§!</p>
+このカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_1|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -32021,7 +32017,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_intergalacticdirective_vote_strength_mult(§Y銀河間指導§!決議における票数) = @t2_mult<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_2|0%§!</p>
+このカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_2|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -32072,7 +32068,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_intergalacticdirective_vote_strength_mult(§Y銀河間指導§!決議における票数) = @t3_mult<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_3|0%§!</p>
+このカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_3|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -32127,7 +32123,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_bureaucraticsurveillance_vote_strength_mult(§Y官僚監視§!決議における票数) = @t1_mult<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_1|0%§!</p>
+このカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_1|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -32190,7 +32186,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_bureaucraticsurveillance_vote_strength_mult(§Y官僚監視§!決議における票数) = @t2_mult<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_2|0%§!</p>
+このカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_2|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -32241,7 +32237,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_bureaucraticsurveillance_vote_strength_mult(§Y官僚監視§!決議における票数) = @t3_mult<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_3|0%§!</p>
+このカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_3|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -32296,7 +32292,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_pre_ftl_stances_vote_strength_mult(§Y対前FTL文明スタンス§!決議における票数) = @t1_mult<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_1|0%§!</p>
+このカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_1|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -32359,7 +32355,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_pre_ftl_stances_vote_strength_mult(§Y対前FTL文明スタンス§!決議における票数) = @t2_mult<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_2|0%§!</p>
+このカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_2|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -32410,7 +32406,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_pre_ftl_stances_vote_strength_mult(§Y対前FTL文明スタンス§!決議における票数) = @t3_mult<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_3|0%§!</p>
+このカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_3|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -32468,7 +32464,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_sanctions_defense_war_vote_strength_mult(§Y制裁：防衛と戦争§!決議における票数) = @t1_mult<br>
 <br>
 custom_tooltip:<br>
-£diplo_weight£ GALCOM_NAME|Y§Y使者§!§E効果§!\n    - §Y銀河的制裁§!決議における票数：§G+100%§!\n    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_1|0%§!</p>
+£diplo_weight£ GALCOM_NAME|Y§Y使者§!の§E効果§!\n    - §Y銀河的制裁§!決議における票数：§G+100%§!\nこのカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_1|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -32533,7 +32529,7 @@ custom_tooltip:<br>
 ・resolution_category_sanctions_defense_war_vote_strength_mult(§Y制裁：防衛と戦争§!決議における票数) = @t2_mult<br>
 <br>
 custom_tooltip:<br>
-£diplo_weight£ GALCOM_NAME|Y§Y使者§!§E効果§!\n    - §Y銀河的制裁§!決議における票数：§G+200%§!\n    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_2|0%§!</p>
+£diplo_weight£ GALCOM_NAME|Y§Y使者§!の§E効果§!\n    - §Y銀河的制裁§!決議における票数：§G+200%§!\nこのカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_2|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -32587,7 +32583,7 @@ custom_tooltip:<br>
 ・resolution_category_sanctions_defense_war_vote_strength_mult(§Y制裁：防衛と戦争§!決議における票数) = @t3_mult<br>
 <br>
 custom_tooltip:<br>
-£diplo_weight£ GALCOM_NAME|Y§Y使者§!§E効果§!\n    - §Y銀河的制裁§!決議における票数：§G+500%§!\n    - このカテゴリーで可決された決議を支持すると：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_3|0%§!</p>
+£diplo_weight£ GALCOM_NAME|Y§Y使者§!の§E効果§!\n    - §Y銀河的制裁§!決議における票数：§G+500%§!\nこのカテゴリーで可決された決議を支持した場合：\n        一定確率で提案した帝国の§Y好意§!を1獲得： §G+@resolution_focus_amt_3|0%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -39928,7 +39924,7 @@ custom_tooltip_with_modifiers:<br>
 ・country_trade_produces_mult(月間£trade£ 交易) = 0.05<br>
 <br>
 ・条件：{"has_leader_flag": "defeated_mammalian_evopred"}<br>
-・founder_species_growth_mult(['concept_founder_species_growth_mult']) = 0.05<br>
+・founder_species_growth_mult(POPの成長 (または製造) 速度) = 0.05<br>
 <br>
 ・条件：{"has_leader_flag": "defeated_reptilian_evopred"}<br>
 ・ship_shield_hardening_add(シールド強化) = 0.05<br>
