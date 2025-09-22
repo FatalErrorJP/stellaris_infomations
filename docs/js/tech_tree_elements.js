@@ -1,6 +1,6 @@
 
 function getVersion() {
-    return "v4.0.22";
+    return "v4.1.0";
 }
 
 function getElements() {
@@ -512,21 +512,6 @@ function getElements() {
       weight_modifier: [],
       prerequisites: [],
       potential: {"is_gestalt": "no"}
-    },
-    classes: 'society'
-},
-{
-    data: {
-      id: 'tech_cultural_heritage',
-      name: '社会文化史',
-      tier: 0,
-      cost: 0,
-      area:'社会学',
-      category: '統治学',
-      weight: 0,
-      weight_modifier: [],
-      prerequisites: [],
-      potential: {"OR": {"is_hive_empire": "no", "is_memorialist_empire": "yes"}}
     },
     classes: 'society'
 },
@@ -1084,6 +1069,21 @@ function getElements() {
       potential: {"OR": {"country_uses_bio_ships": "no", "has_tradition": "tr_nanotech_4", "has_crisis_level": "crisis_level_2", "has_technology": "tech_cosmogenesis_escort"}}
     },
     classes: 'engineering'
+},
+{
+    data: {
+      id: 'tech_living_test_subjects',
+      name: '生きた実験体',
+      tier: 1,
+      cost: 2000,
+      area:'社会学',
+      category: '生物学',
+      weight: 0,
+      weight_modifier: [],
+      prerequisites: [],
+      potential: {"has_shroud_dlc": "yes"}
+    },
+    classes: 'society'
 },
 {
     data: {
@@ -1687,15 +1687,15 @@ function getElements() {
 },
 {
     data: {
-      id: 'tech_heritage_site',
-      name: '星界遺産',
+      id: 'tech_cultural_heritage',
+      name: '社会文化史',
       tier: 1,
-      cost: 3000,
+      cost: 2500,
       area:'社会学',
       category: '統治学',
-      weight: 90,
-      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_technology": "tech_rare_crystals", "has_country_flag": "has_market_access"}}]}],
-      prerequisites: ["社会文化史"],
+      weight: 0,
+      weight_modifier: [],
+      prerequisites: ["惑星統一"],
       potential: {}
     },
     classes: 'society'
@@ -2452,6 +2452,66 @@ function getElements() {
 },
 {
     data: {
+      id: 'tech_pyroclastic_resonation',
+      name: '火砕共鳴',
+      tier: 2,
+      cost: 4000,
+      area:'工学',
+      category: '産業学',
+      weight: 0,
+      weight_modifier: [],
+      prerequisites: [],
+      potential: {"has_shroud_dlc": "yes"}
+    },
+    classes: 'engineering'
+},
+{
+    data: {
+      id: 'tech_alloy_fossilization',
+      name: '合金化',
+      tier: 2,
+      cost: 4000,
+      area:'工学',
+      category: '材料工学',
+      weight: 0,
+      weight_modifier: [],
+      prerequisites: [],
+      potential: {"has_shroud_dlc": "yes"}
+    },
+    classes: 'engineering'
+},
+{
+    data: {
+      id: 'tech_orbital_maneuvers',
+      name: '高度な軌道推進操作',
+      tier: 2,
+      cost: 4000,
+      area:'物理学',
+      category: 'コンピュータ',
+      weight: 0,
+      weight_modifier: [],
+      prerequisites: [],
+      potential: {"has_shroud_dlc": "yes"}
+    },
+    classes: 'physics'
+},
+{
+    data: {
+      id: 'tech_cryovault',
+      name: '氷結惑星の軌道上居住地',
+      tier: 2,
+      cost: 4000,
+      area:'社会学',
+      category: '新天地',
+      weight: 0,
+      weight_modifier: [],
+      prerequisites: [],
+      potential: {"has_shroud_dlc": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
       id: 'tech_cloaking_1',
       name: '基礎クロークフィールド',
       tier: 2,
@@ -2776,7 +2836,7 @@ function getElements() {
       weight: 5000,
       weight_modifier: [],
       prerequisites: ["人工交配"],
-      potential: {"has_any_dna": "yes"}
+      potential: {"OR": {"is_beastmasters_empire": "yes", "has_any_dna": "yes"}}
     },
     classes: 'society'
 },
@@ -3262,6 +3322,21 @@ function getElements() {
 },
 {
     data: {
+      id: 'tech_psionic_suppression',
+      name: '超能力の抑制',
+      tier: 2,
+      cost: 4000,
+      area:'社会学',
+      category: '超能力',
+      weight: 85,
+      weight_modifier: [{"modifier": [{"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_psionic_suppression"}}}, {"factor": "0", "has_origin": "origin_mindwardens"}]}],
+      prerequisites: [],
+      potential: {"has_shroud_dlc": "yes", "has_encountered_psionic_auras": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
       id: 'tech_gene_crops',
       name: '遺伝子改良作物',
       tier: 2,
@@ -3682,6 +3757,21 @@ function getElements() {
 },
 {
     data: {
+      id: 'tech_heritage_site',
+      name: '星界遺産',
+      tier: 2,
+      cost: 5000,
+      area:'社会学',
+      category: '統治学',
+      weight: 90,
+      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_technology": "tech_rare_crystals", "has_country_flag": "has_market_access"}}]}],
+      prerequisites: ["社会文化史"],
+      potential: {}
+    },
+    classes: 'society'
+},
+{
+    data: {
       id: 'tech_holographic_rituals',
       name: 'ホログラフィック儀式',
       tier: 2,
@@ -3690,7 +3780,7 @@ function getElements() {
       category: '統治学',
       weight: 75,
       weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_technology": "tech_rare_crystals", "has_country_flag": "has_market_access"}}]}],
-      prerequisites: ["社会文化史"],
+      prerequisites: ["惑星政府"],
       potential: {"OR": {"has_ethic": "ethic_fanatic_spiritualist", "AND": {"is_gestalt": "no", "has_make_spiritualist_perk": "yes"}}}
     },
     classes: 'society'
@@ -4792,6 +4882,21 @@ function getElements() {
 },
 {
     data: {
+      id: 'tech_georadiation_terraforming',
+      name: '惑星照射テラフォーミング',
+      tier: 3,
+      cost: 8000,
+      area:'社会学',
+      category: '新天地',
+      weight: 0,
+      weight_modifier: [],
+      prerequisites: [],
+      potential: {"has_shroud_dlc": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
       id: 'tech_cloaking_2',
       name: '発展型クロークフィールド',
       tier: 3,
@@ -5332,6 +5437,51 @@ function getElements() {
 },
 {
     data: {
+      id: 'tech_psionic_aura',
+      name: 'サイオニック・オーラ',
+      tier: 3,
+      cost: 8000,
+      area:'社会学',
+      category: '超能力',
+      weight: 0,
+      weight_modifier: [],
+      prerequisites: [],
+      potential: {"has_shroud_dlc": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_aura_resonation',
+      name: 'オーラの共鳴',
+      tier: 3,
+      cost: 8000,
+      area:'社会学',
+      category: '超能力',
+      weight: 0,
+      weight_modifier: [],
+      prerequisites: ["サイオニック・オーラ"],
+      potential: {"has_shroud_dlc": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_materiality_engine',
+      name: '物質化エンジン',
+      tier: 3,
+      cost: 32000,
+      area:'社会学',
+      category: '超能力',
+      weight: 0,
+      weight_modifier: [],
+      prerequisites: [],
+      potential: {"has_shroud_dlc": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
       id: 'tech_interstellar_economics',
       name: '恒星間経済',
       tier: 3,
@@ -5624,9 +5774,9 @@ function getElements() {
       area:'社会学',
       category: '超能力',
       weight: 65,
-      weight_modifier: [{"factor": "0.5", "modifier": [{"factor": "0", "has_ethic": "ethic_gestalt_consciousness"}, {"factor": "0.5", "is_spiritualist": "no"}, {"factor": "2", "has_ethic": "\"ethic_fanatic_spiritualist\""}, {"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_whisperers_chosen"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_psionic_theory"}}}, {"factor": "2", "any_owned_pop_group": {"pop_group_has_trait": "trait_psionic"}}, {"factor": "1.25", "any_owned_pop_group": {"pop_group_has_trait": "trait_latent_psionic"}, "NOT": {"any_owned_pop_group": {"pop_group_has_trait": "trait_psionic"}}}, {"factor": "2", "has_paragon_dlc": "no", "any_owned_leader": {"has_trait": "leader_trait_shroudwalker"}}, {"factor": "0", "AND": {"is_materialist": "yes", "NOR": {"has_tier1or2or3_in_council": {"TRAIT": "leader_trait_expertise_psionics"}, "has_councilor": {"COUNCILOR": "\"councilor_shroudwalker_teacher\""}, "any_owned_pop_group": {"OR": {"pop_group_has_trait": "trait_latent_psionic"}}}}}]}],
+      weight_modifier: [{"factor": "0.5", "modifier": [{"factor": "0", "has_shroud_dlc": "no", "has_ethic": "ethic_gestalt_consciousness"}, {"factor": "0.5", "is_spiritualist": "no"}, {"factor": "2", "has_ethic": "\"ethic_fanatic_spiritualist\""}, {"factor": "2", "any_country": {"has_origin": "origin_mindwardens", "NOT": {"is_same_value": "prev"}}}, {"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_whisperers_chosen"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_psionic_theory"}}}, {"factor": "2", "any_owned_pop_group": {"is_psionic_species": "yes"}}, {"factor": "1.25", "any_owned_pop_group": {"is_latent_psionic_species": "yes"}, "NOT": {"any_owned_pop_group": {"is_psionic_species": "yes"}}}, {"factor": "2", "has_paragon_dlc": "no", "any_owned_leader": {"has_trait": "leader_trait_shroudwalker"}}, {"factor": "0", "AND": {"is_materialist": "yes", "NOR": {"has_tier1or2or3_in_council": {"TRAIT": "leader_trait_expertise_psionics"}, "has_councilor": {"COUNCILOR": "\"councilor_shroudwalker_teacher\""}, "any_owned_pop_group": {"has_psionic_species_trait": "yes"}}}}, {"factor": "0", "has_origin": "origin_endbringers"}]}],
       prerequisites: [],
-      potential: {"OR": {"NOT": {"has_ethic": "ethic_gestalt_consciousness"}, "is_active_resolution": "resolution_galacticstudies_extradimensional_experimentation", "has_relic": "r_zro_crystal"}}
+      potential: {"OR": {"has_shroud_dlc": "yes", "NOT": {"has_ethic": "ethic_gestalt_consciousness"}, "is_active_resolution": "resolution_galacticstudies_extradimensional_experimentation", "has_relic": "r_zro_crystal"}, "NOT": {"has_origin": "origin_mindwardens"}}
     },
     classes: 'society'
 },
@@ -5639,9 +5789,9 @@ function getElements() {
       area:'社会学',
       category: '超能力',
       weight: 50,
-      weight_modifier: [{"factor": "0.5", "modifier": [{"factor": "0", "host_has_dlc": "\"Utopia\"", "NOT": {"has_ascension_perk": "ap_mind_over_matter"}}, {"factor": "0.50", "NOT": {"has_trait_in_council": {"TRAIT": "leader_trait_expertise_psionics"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_telepathy"}}}, {"factor": "2", "has_ethic": "\"ethic_spiritualist\""}, {"factor": "3", "has_ethic": "\"ethic_fanatic_spiritualist\""}, {"factor": "3", "has_paragon_dlc": "no", "any_owned_leader": {"has_trait": "leader_trait_shroudwalker"}}, {"factor": "4", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}]}],
+      weight_modifier: [{"factor": "0.5", "modifier": [{"factor": "0", "OR": {"has_utopia": "yes", "has_shroud_dlc": "yes"}, "has_psionic_ascension": "yes"}, {"factor": "0.50", "NOT": {"has_trait_in_council": {"TRAIT": "leader_trait_expertise_psionics"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_telepathy"}}}, {"factor": "2", "has_ethic": "\"ethic_spiritualist\""}, {"factor": "3", "has_ethic": "\"ethic_fanatic_spiritualist\""}, {"factor": "3", "has_paragon_dlc": "no", "any_owned_leader": {"has_trait": "leader_trait_shroudwalker"}}, {"factor": "4", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}]}],
       prerequisites: ["超能力理論"],
-      potential: {"NOT": {"has_ethic": "ethic_gestalt_consciousness"}}
+      potential: {"OR": {"has_shroud_dlc": "yes", "NOT": {"has_ethic": "ethic_gestalt_consciousness"}}}
     },
     classes: 'society'
 },
@@ -5785,7 +5935,7 @@ function getElements() {
       id: 'tech_hypercomms_forum',
       name: '地域超空間通信',
       tier: 3,
-      cost: 8000,
+      cost: 10000,
       area:'社会学',
       category: '統治学',
       weight: 65,
@@ -5800,7 +5950,7 @@ function getElements() {
       id: 'tech_autocurating_vault',
       name: '自動キュレートアルゴリズム',
       tier: 3,
-      cost: 8000,
+      cost: 10000,
       area:'社会学',
       category: '統治学',
       weight: 65,
@@ -5969,7 +6119,7 @@ function getElements() {
       area:'社会学',
       category: '超能力',
       weight: 60,
-      weight_modifier: [{"modifier": [{"factor": "0.10", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_curator"}}}, {"factor": "0.10", "NOT": {"has_technology": "\"tech_psionic_theory\""}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_mine_zro"}}}, {"factor": "2", "any_owned_pop_group": {"pop_group_has_trait": "trait_psionic"}}, {"factor": "1.25", "any_owned_pop_group": {"pop_group_has_trait": "trait_latent_psionic"}, "NOT": {"any_owned_pop_group": {"pop_group_has_trait": "trait_psionic"}}}, {"factor": "2", "has_paragon_dlc": "no", "any_owned_leader": {"has_trait": "leader_trait_shroudwalker"}}, {"factor": "2", "has_trait_in_council": {"TRAIT": "leader_trait_expertise_psionics"}}]}],
+      weight_modifier: [{"modifier": [{"factor": "0.10", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_curator"}}}, {"factor": "0.10", "NOT": {"has_technology": "\"tech_psionic_theory\""}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_mine_zro"}}}, {"factor": "2", "any_owned_pop_group": {"is_psionic_species": "yes"}}, {"factor": "1.25", "any_owned_pop_group": {"is_latent_psionic_species": "yes"}, "NOT": {"any_owned_pop_group": {"is_psionic_species": "yes"}}}, {"factor": "2", "has_paragon_dlc": "no", "any_owned_leader": {"has_trait": "leader_trait_shroudwalker"}}, {"factor": "2", "has_trait_in_council": {"TRAIT": "leader_trait_expertise_psionics"}}]}],
       prerequisites: ["亜空間センサー"],
       potential: {}
     },
@@ -7177,6 +7327,21 @@ function getElements() {
 },
 {
     data: {
+      id: 'tech_aura_intensification',
+      name: 'サイオニック・オーラの強化',
+      tier: 4,
+      cost: 16000,
+      area:'社会学',
+      category: '超能力',
+      weight: 0,
+      weight_modifier: [],
+      prerequisites: ["サイオニック・オーラ"],
+      potential: {"has_shroud_dlc": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
       id: 'tech_galactic_markets',
       name: '銀河市場',
       tier: 4,
@@ -7321,7 +7486,7 @@ function getElements() {
       weight: 40,
       weight_modifier: [{"factor": "0.5", "modifier": [{"factor": "0", "host_has_dlc": "\"Utopia\""}, {"factor": "0.50", "NOT": {"has_trait_in_council": {"TRAIT": "leader_trait_expertise_psionics"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_precognition_interface"}}}, {"factor": "2", "has_ethic": "\"ethic_spiritualist\""}, {"factor": "3", "has_ethic": "\"ethic_fanatic_spiritualist\""}, {"factor": "3", "has_paragon_dlc": "no", "any_owned_leader": {"has_trait": "leader_trait_shroudwalker"}}, {"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}]}],
       prerequisites: ["テレパシー"],
-      potential: {"NOT": {"has_ethic": "ethic_gestalt_consciousness"}}
+      potential: {"OR": {"has_shroud_dlc": "yes", "NOT": {"has_ethic": "ethic_gestalt_consciousness"}}}
     },
     classes: 'society'
 },
@@ -7334,9 +7499,9 @@ function getElements() {
       area:'社会学',
       category: '超能力',
       weight: 40,
-      weight_modifier: [{"factor": "0.5", "modifier": [{"factor": "0", "host_has_dlc": "\"Utopia\"", "NOT": {"has_ascension_perk": "ap_mind_over_matter"}}, {"factor": "0.50", "NOT": {"has_trait_in_council": {"TRAIT": "leader_trait_expertise_psionics"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_thought_enforcement"}}}, {"factor": "2", "is_spiritualist": "yes", "has_ethic": "ethic_authoritarian"}, {"factor": "3", "is_spiritualist": "yes", "has_ethic": "ethic_fanatic_authoritarian"}, {"factor": "2", "has_valid_civic": "civic_police_state"}, {"factor": "3", "has_paragon_dlc": "no", "any_owned_leader": {"has_trait": "leader_trait_shroudwalker"}}, {"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}]}],
+      weight_modifier: [{"factor": "0.5", "modifier": [{"factor": "0", "has_psionic_ascension": "no"}, {"factor": "0.50", "NOT": {"has_trait_in_council": {"TRAIT": "leader_trait_expertise_psionics"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_thought_enforcement"}}}, {"factor": "2", "is_spiritualist": "yes", "has_ethic": "ethic_authoritarian"}, {"factor": "3", "is_spiritualist": "yes", "has_ethic": "ethic_fanatic_authoritarian"}, {"factor": "2", "has_valid_civic": "civic_police_state"}, {"factor": "3", "has_paragon_dlc": "no", "any_owned_leader": {"has_trait": "leader_trait_shroudwalker"}}, {"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "2", "has_shroud_dlc": "yes", "is_gestalt": "yes"}]}],
       prerequisites: ["テレパシー"],
-      potential: {"NOT": {"has_ethic": "ethic_gestalt_consciousness"}}
+      potential: {"OR": {"has_shroud_dlc": "yes", "NOT": {"has_ethic": "ethic_gestalt_consciousness"}}}
     },
     classes: 'society'
 },
@@ -7606,7 +7771,7 @@ function getElements() {
       weight: 20,
       weight_modifier: [{"factor": "0.50", "modifier": [{"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_pk_neutron"}}}, {"factor": "0.20", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_expertise_particles"}}}, {"factor": "2", "is_materialist": "yes"}]}],
       prerequisites: ["コロッサス"],
-      potential: {"host_has_dlc": "\"Apocalypse\"", "has_country_flag": "colossus_project", "OR": {"is_spiritualist": "no", "NOR": {"AND": {"host_has_dlc": "\"Utopia\"", "OR": {"has_ascension_perk": "ap_mind_over_matter", "has_origin": "origin_shroudwalker_apprentice"}}}}, "is_pacifist": "no"}
+      potential: {"host_has_dlc": "\"Apocalypse\"", "has_country_flag": "colossus_project", "OR": {"is_spiritualist": "no", "NOR": {"AND": {"OR": {"host_has_dlc": "\"Utopia\"", "has_shroud_dlc": "yes"}, "has_psionic_ascension": "yes"}}}, "is_pacifist": "no"}
     },
     classes: 'physics'
 },
@@ -7621,7 +7786,7 @@ function getElements() {
       weight: 20,
       weight_modifier: [{"factor": "0.50", "modifier": [{"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_pk_godray"}}}, {"factor": "0.20", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_expertise_psionics"}}}]}],
       prerequisites: ["コロッサス"],
-      potential: {"host_has_dlc": "\"Apocalypse\"", "has_country_flag": "colossus_project", "is_spiritualist": "yes", "OR": {"AND": {"host_has_dlc": "\"Utopia\"", "OR": {"has_ascension_perk": "ap_mind_over_matter", "has_origin": "origin_shroudwalker_apprentice"}}}}
+      potential: {"host_has_dlc": "\"Apocalypse\"", "has_country_flag": "colossus_project", "is_spiritualist": "yes", "OR": {"AND": {"OR": {"host_has_dlc": "\"Utopia\"", "has_shroud_dlc": "yes"}, "has_psionic_ascension": "yes"}}}
     },
     classes: 'society'
 },
@@ -9329,11 +9494,71 @@ function getElements() {
       area:'物理学',
       category: '素粒子物理学',
       weight: 0,
-      weight_modifier: [{"factor": "10", "modifier": [{"factor": "0", "NOT": {"has_modifier": "covenant_end_of_the_cycle"}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_extradimensional_weapon_1"}}}]}],
+      weight_modifier: [{"factor": "10", "modifier": [{"factor": "0", "NOT": {"has_country_flag": "covenant_end_of_the_cycle"}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_extradimensional_weapon_1"}}}]}],
       prerequisites: [],
       potential: {}
     },
     classes: 'physics'
+},
+{
+    data: {
+      id: 'tech_psionic_bombers',
+      name: 'サイオニック爆撃機',
+      tier: 5,
+      cost: 40000,
+      area:'社会学',
+      category: '超能力',
+      weight: 0,
+      weight_modifier: [],
+      prerequisites: [],
+      potential: {"has_shroud_dlc": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_psionic_lightning',
+      name: 'サイオニック・ライトニング',
+      tier: 5,
+      cost: 40000,
+      area:'社会学',
+      category: '超能力',
+      weight: 0,
+      weight_modifier: [],
+      prerequisites: [],
+      potential: {"has_shroud_dlc": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_psionic_disruptor',
+      name: 'サイオニック・ディスラプター',
+      tier: 5,
+      cost: 40000,
+      area:'社会学',
+      category: '超能力',
+      weight: 0,
+      weight_modifier: [],
+      prerequisites: [],
+      potential: {"has_shroud_dlc": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_zro_launcher',
+      name: 'ズィロ投射機',
+      tier: 5,
+      cost: 40000,
+      area:'社会学',
+      category: '超能力',
+      weight: 0,
+      weight_modifier: [],
+      prerequisites: [],
+      potential: {"has_shroud_dlc": "yes"}
+    },
+    classes: 'society'
 },
 {
     data: {
@@ -9359,9 +9584,9 @@ function getElements() {
       area:'社会学',
       category: '超能力',
       weight: 25,
-      weight_modifier: [{"factor": "0.1", "modifier": [{"factor": "0", "host_has_dlc": "\"Utopia\""}, {"factor": "0.1", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_psi_jump_drive_1"}}}, {"factor": "@ap_grasp_the_void_travel_tech", "has_ascension_perk": "ap_grasp_the_void"}, {"factor": "@eager_explorer_effect", "is_eager_explorer_empire": "yes"}, {"factor": "@ap_grasp_the_void_travel_tech", "has_country_flag": "jaunted_traveler_secret_revealed"}]}],
+      weight_modifier: [{"factor": "0.1", "modifier": [{"factor": "0", "OR": {"has_utopia": "yes", "has_shroud_dlc": "yes"}}, {"factor": "0.1", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_psi_jump_drive_1"}}}, {"factor": "@ap_grasp_the_void_travel_tech", "has_ascension_perk": "ap_grasp_the_void"}, {"factor": "@eager_explorer_effect", "is_eager_explorer_empire": "yes"}, {"factor": "@ap_grasp_the_void_travel_tech", "has_country_flag": "jaunted_traveler_secret_revealed"}]}],
       prerequisites: ["予知型インターフェース"],
-      potential: {"NOT": {"has_ethic": "ethic_gestalt_consciousness"}}
+      potential: {"OR": {"has_shroud_dlc": "yes", "NOT": {"has_ethic": "ethic_gestalt_consciousness"}}}
     },
     classes: 'society'
 },
@@ -9429,6 +9654,21 @@ function getElements() {
     data: {
       id: 'tech_covenant_instrument',
       name: '道具の印',
+      tier: 5,
+      cost: 60000,
+      area:'社会学',
+      category: '超能力',
+      weight: 0,
+      weight_modifier: [{"factor": "0"}],
+      prerequisites: ["超能力理論"],
+      potential: {}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_covenant_cradle',
+      name: 'ゆりかごの印',
       tier: 5,
       cost: 60000,
       area:'社会学',
@@ -9726,7 +9966,7 @@ function getElements() {
 { data: { id: 'tech_planetary_government_to_tech_planetary_unification', source: 'tech_planetary_government', target: 'tech_planetary_unification' } },
 { data: { id: 'tech_planetary_unification_to_tech_adaptive_bureaucracy', source: 'tech_planetary_unification', target: 'tech_adaptive_bureaucracy' } },
 { data: { id: 'tech_holo_entertainment_to_tech_hyper_entertainment_forum', source: 'tech_holo_entertainment', target: 'tech_hyper_entertainment_forum' } },
-{ data: { id: 'tech_cultural_heritage_to_tech_heritage_site', source: 'tech_cultural_heritage', target: 'tech_heritage_site' } },
+{ data: { id: 'tech_planetary_unification_to_tech_cultural_heritage', source: 'tech_planetary_unification', target: 'tech_cultural_heritage' } },
 { data: { id: 'tech_colonial_centralization_to_tech_federation_code', source: 'tech_colonial_centralization', target: 'tech_federation_code' } },
 { data: { id: 'tech_industrial_farming_to_tech_bio_reactor', source: 'tech_industrial_farming', target: 'tech_bio_reactor' } },
 { data: { id: 'tech_powered_exoskeletons_to_tech_robomodding_m', source: 'tech_powered_exoskeletons', target: 'tech_robomodding_m' } },
@@ -9834,7 +10074,8 @@ function getElements() {
 { data: { id: 'tech_adaptive_bureaucracy_to_tech_colonial_bureaucracy', source: 'tech_adaptive_bureaucracy', target: 'tech_colonial_bureaucracy' } },
 { data: { id: 'tech_colonial_centralization_to_tech_living_state', source: 'tech_colonial_centralization', target: 'tech_living_state' } },
 { data: { id: 'tech_colonial_centralization_to_tech_autonomous_agents', source: 'tech_colonial_centralization', target: 'tech_autonomous_agents' } },
-{ data: { id: 'tech_cultural_heritage_to_tech_holographic_rituals', source: 'tech_cultural_heritage', target: 'tech_holographic_rituals' } },
+{ data: { id: 'tech_cultural_heritage_to_tech_heritage_site', source: 'tech_cultural_heritage', target: 'tech_heritage_site' } },
+{ data: { id: 'tech_planetary_government_to_tech_holographic_rituals', source: 'tech_planetary_government', target: 'tech_holographic_rituals' } },
 { data: { id: 'tech_hive_node_to_tech_hive_cluster', source: 'tech_hive_node', target: 'tech_hive_cluster' } },
 { data: { id: 'tech_wilderness_node_to_tech_wilderness_cluster', source: 'tech_wilderness_node', target: 'tech_wilderness_cluster' } },
 { data: { id: 'tech_artificial_moral_codes_to_tech_penal_colonies', source: 'tech_artificial_moral_codes', target: 'tech_penal_colonies' } },
@@ -9947,6 +10188,7 @@ function getElements() {
 { data: { id: 'tech_lasers_4_to_tech_energy_torpedoes_1', source: 'tech_lasers_4', target: 'tech_energy_torpedoes_1' } },
 { data: { id: 'tech_torpedoes_1_to_tech_energy_torpedoes_1', source: 'tech_torpedoes_1', target: 'tech_energy_torpedoes_1' } },
 { data: { id: 'tech_harbingers_to_tech_energy_torpedoes_1', source: 'tech_harbingers', target: 'tech_energy_torpedoes_1' } },
+{ data: { id: 'tech_psionic_aura_to_tech_aura_resonation', source: 'tech_psionic_aura', target: 'tech_aura_resonation' } },
 { data: { id: 'tech_space_trading_to_tech_interstellar_economics', source: 'tech_space_trading', target: 'tech_interstellar_economics' } },
 { data: { id: 'tech_gene_crops_to_tech_nano_vitality_crops', source: 'tech_gene_crops', target: 'tech_nano_vitality_crops' } },
 { data: { id: 'tech_food_processing_1_to_tech_food_processing_2', source: 'tech_food_processing_1', target: 'tech_food_processing_2' } },
@@ -10087,6 +10329,7 @@ function getElements() {
 { data: { id: 'tech_disruptors_2_to_tech_disruptors_3', source: 'tech_disruptors_2', target: 'tech_disruptors_3' } },
 { data: { id: 'tech_energy_torpedoes_1_to_tech_energy_torpedoes_2', source: 'tech_energy_torpedoes_1', target: 'tech_energy_torpedoes_2' } },
 { data: { id: 'tech_pd_tracking_2_to_tech_pd_tracking_3', source: 'tech_pd_tracking_2', target: 'tech_pd_tracking_3' } },
+{ data: { id: 'tech_psionic_aura_to_tech_aura_intensification', source: 'tech_psionic_aura', target: 'tech_aura_intensification' } },
 { data: { id: 'tech_colonial_centralization_to_tech_galactic_markets', source: 'tech_colonial_centralization', target: 'tech_galactic_markets' } },
 { data: { id: 'tech_interstellar_economics_to_tech_galactic_markets', source: 'tech_interstellar_economics', target: 'tech_galactic_markets' } },
 { data: { id: 'tech_nano_vitality_crops_to_tech_nutrient_replication', source: 'tech_nano_vitality_crops', target: 'tech_nutrient_replication' } },
@@ -10213,6 +10456,7 @@ function getElements() {
 { data: { id: 'tech_psionic_theory_to_tech_covenant_composer', source: 'tech_psionic_theory', target: 'tech_covenant_composer' } },
 { data: { id: 'tech_psionic_theory_to_tech_covenant_eater', source: 'tech_psionic_theory', target: 'tech_covenant_eater' } },
 { data: { id: 'tech_psionic_theory_to_tech_covenant_instrument', source: 'tech_psionic_theory', target: 'tech_covenant_instrument' } },
+{ data: { id: 'tech_psionic_theory_to_tech_covenant_cradle', source: 'tech_psionic_theory', target: 'tech_covenant_cradle' } },
 { data: { id: 'tech_psionic_theory_to_tech_covenant_whisperers', source: 'tech_psionic_theory', target: 'tech_covenant_whisperers' } },
 { data: { id: 'tech_gene_crops_to_tech_repeatable_improved_tile_food_output', source: 'tech_gene_crops', target: 'tech_repeatable_improved_tile_food_output' } },
 { data: { id: 'tech_galactic_bureaucracy_to_tech_repeatable_improved_core_system_cap', source: 'tech_galactic_bureaucracy', target: 'tech_repeatable_improved_core_system_cap' } },

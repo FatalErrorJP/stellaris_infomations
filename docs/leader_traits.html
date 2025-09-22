@@ -5,15 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.23">
-<meta name="author" content="最終更新日: 2025-08-23 17:31:36 +0900">
-<title>リーダー特性一覧 Verv4.0.22</title>
+<meta name="author" content="最終更新日: 2025-09-23 01:30:00 +0900">
+<title>リーダー特性一覧 Verv4.1.0</title>
 <link rel="stylesheet" href="./css/leader_traits.css">
 </head>
 <body class="article">
 <div id="header">
-<h1>リーダー特性一覧 Verv4.0.22</h1>
+<h1>リーダー特性一覧 Verv4.1.0</h1>
 <div class="details">
-<span id="author" class="author">最終更新日: 2025-08-23 17:31:36 +0900</span><br>
+<span id="author" class="author">最終更新日: 2025-09-23 01:30:00 +0900</span><br>
 </div>
 </div>
 <div id="content">
@@ -4340,20 +4340,20 @@ custom_tooltip_with_modifiers:<br>
 <br>
 惑星(条件あり):<br>
 ・条件：{"trait_is_gestalt_check": "no"}<br>
-・planet_telepaths_unity_produces_add(100 £job_telepath£ テレパスあたりの£unity£ 統合力) = 3<br>
+・planet_telepaths_unity_produces_add(£unity£ ：100あたりの産出： [GetTelepathSwapPluralWithIcon]) = 3<br>
 <br>
 ・条件：{"trait_is_gestalt_check": "yes", "trait_is_wilderness_check": "no"}<br>
-・planet_bureaucrats_unity_produces_add(100[GetBureaucratPluralWithIcon]あたりの£unity£ 統合力) = 2<br>
+・planet_bureaucrats_unity_produces_add(£unity£ ：100あたりの産出： [GetBureaucratSwapPluralWithIcon]) = 2<br>
 <br>
 ・条件：{"trait_is_wilderness_check": "yes"}<br>
 ・planet_jobs_unity_produces_mult(£job£ 職業からの£unity£ 統合力) = 0.1<br>
 <br>
 セクター(条件あり):<br>
 ・条件：{"trait_is_gestalt_check": "no"}<br>
-・planet_telepaths_unity_produces_add(100 £job_telepath£ テレパスあたりの£unity£ 統合力) = 1<br>
+・planet_telepaths_unity_produces_add(£unity£ ：100あたりの産出： [GetTelepathSwapPluralWithIcon]) = 1<br>
 <br>
 ・条件：{"trait_is_gestalt_check": "yes", "trait_is_wilderness_check": "no"}<br>
-・planet_bureaucrats_unity_produces_add(100[GetBureaucratPluralWithIcon]あたりの£unity£ 統合力) = 1<br>
+・planet_bureaucrats_unity_produces_add(£unity£ ：100あたりの産出： [GetBureaucratSwapPluralWithIcon]) = 1<br>
 <br>
 ・条件：{"trait_is_wilderness_check": "yes"}<br>
 ・planet_jobs_unity_produces_mult(£job£ 職業からの£unity£ 統合力) = 0.05<br>
@@ -4458,7 +4458,7 @@ custom_tooltip_with_modifiers:<br>
 <br>
 評議会(条件あり):<br>
 ・条件：{"trait_is_wilderness_check": "no"}<br>
-・planet_researchers_upkeep_mult([GetResearcherPluralWithIcon]維持費) = 0.10<br>
+・planet_researchers_upkeep_mult([GetResearcherPluralWithIcon]の維持費) = 0.10<br>
 <br>
 ・条件：{"trait_is_wilderness_check": "yes"}<br>
 ・planet_research_buildings_upkeep_mult(惑星研究施設維持費) = 0.10<br>
@@ -4515,10 +4515,10 @@ custom_tooltip_with_modifiers:<br>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>惑星:<br>
-・planet_jobs_trade_produces_mult(£job£ 職業からの£trade£ 交易) = 0.10<br>
+・planet_jobs_trade_produces_mult(£job£職業からの£trade£ 交易) = 0.10<br>
 <br>
 セクター:<br>
-・planet_jobs_trade_produces_mult(£job£ 職業からの£trade£ 交易) = 0.05<br>
+・planet_jobs_trade_produces_mult(£job£職業からの£trade£ 交易) = 0.05<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -4568,11 +4568,11 @@ custom_tooltip_with_modifiers:<br>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>惑星:<br>
 ・planet_jobs_exotic_gases_produces_mult(£job£ 職業からの£exotic_gases£ エキゾチックガス) = 0.25<br>
-・planet_jobs_trade_produces_mult(£job£ 職業からの£trade£ 交易) = 0.10<br>
+・planet_jobs_trade_produces_mult(£job£職業からの£trade£ 交易) = 0.10<br>
 <br>
 セクター:<br>
 ・planet_jobs_exotic_gases_produces_mult(£job£ 職業からの£exotic_gases£ エキゾチックガス) = 0.10<br>
-・planet_jobs_trade_produces_mult(£job£ 職業からの£trade£ 交易) = 0.05<br>
+・planet_jobs_trade_produces_mult(£job£職業からの£trade£ 交易) = 0.05<br>
 <br>
 本人(条件あり):<br>
 ・条件：{"leader_class": "commander"}<br>
@@ -4632,11 +4632,11 @@ custom_tooltip_with_modifiers:<br>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>惑星:<br>
 ・planet_jobs_volatile_motes_produces_mult(£job£ 職業からの£volatile_motes£ 揮発性粉末) = 0.25<br>
-・planet_jobs_trade_produces_mult(£job£ 職業からの£trade£ 交易) = 0.10<br>
+・planet_jobs_trade_produces_mult(£job£職業からの£trade£ 交易) = 0.10<br>
 <br>
 セクター:<br>
 ・planet_jobs_volatile_motes_produces_mult(£job£ 職業からの£volatile_motes£ 揮発性粉末) = 0.10<br>
-・planet_jobs_trade_produces_mult(£job£ 職業からの£trade£ 交易) = 0.05<br>
+・planet_jobs_trade_produces_mult(£job£職業からの£trade£ 交易) = 0.05<br>
 <br>
 本人(条件あり):<br>
 ・条件：{"leader_class": "commander"}<br>
@@ -4696,11 +4696,11 @@ custom_tooltip_with_modifiers:<br>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>惑星:<br>
 ・planet_jobs_rare_crystals_produces_mult(£job£ 職業からの£rare_crystals£ レアクリスタル) = 0.25<br>
-・planet_jobs_trade_produces_mult(£job£ 職業からの£trade£ 交易) = 0.10<br>
+・planet_jobs_trade_produces_mult(£job£職業からの£trade£ 交易) = 0.10<br>
 <br>
 セクター:<br>
 ・planet_jobs_rare_crystals_produces_mult(£job£ 職業からの£rare_crystals£ レアクリスタル) = 0.10<br>
-・planet_jobs_trade_produces_mult(£job£ 職業からの£trade£ 交易) = 0.05<br>
+・planet_jobs_trade_produces_mult(£job£職業からの£trade£ 交易) = 0.05<br>
 <br>
 本人(条件あり):<br>
 ・条件：{"leader_class": "commander"}<br>
@@ -6661,23 +6661,23 @@ leader_trait_lawless_2<br></p>
 <br>
 惑星(条件あり):<br>
 ・条件：{"exists": "owner", "owner": {"country_uses_food": "yes"}}<br>
-・planet_soldiers_energy_produces_add(100[soldier.GetIcon][GetSoldierPlural]あたりの£energy£エネルギー通貨) = 2<br>
-・planet_soldiers_minerals_produces_add(100[soldier.GetIcon][GetSoldierPlural]あたりの£minerals£鉱物) = 2<br>
-・planet_soldiers_food_produces_add(100[soldier.GetIcon][GetSoldierPlural]あたりの£food£食料) = 2<br>
+・planet_soldiers_energy_produces_add(£energy£ ：100あたりの産出： [GetSoldierSwapPluralWithIcon]) = 2<br>
+・planet_soldiers_minerals_produces_add(£minerals£ ：100あたりの産出： [GetSoldierSwapPluralWithIcon]) = 2<br>
+・planet_soldiers_food_produces_add(£food£ ：100あたりの産出： [GetSoldierSwapPluralWithIcon]) = 2<br>
 <br>
 ・条件：{"exists": "owner", "owner": {"country_uses_food": "no"}}<br>
-・planet_soldiers_energy_produces_add(100[soldier.GetIcon][GetSoldierPlural]あたりの£energy£エネルギー通貨) = 3<br>
-・planet_soldiers_minerals_produces_add(100[soldier.GetIcon][GetSoldierPlural]あたりの£minerals£鉱物) = 3<br>
+・planet_soldiers_energy_produces_add(£energy£ ：100あたりの産出： [GetSoldierSwapPluralWithIcon]) = 3<br>
+・planet_soldiers_minerals_produces_add(£minerals£ ：100あたりの産出： [GetSoldierSwapPluralWithIcon]) = 3<br>
 <br>
 セクター(条件あり):<br>
 ・条件：{"exists": "owner", "owner": {"country_uses_food": "yes"}}<br>
-・planet_soldiers_energy_produces_add(100[soldier.GetIcon][GetSoldierPlural]あたりの£energy£エネルギー通貨) = 1<br>
-・planet_soldiers_minerals_produces_add(100[soldier.GetIcon][GetSoldierPlural]あたりの£minerals£鉱物) = 1<br>
-・planet_soldiers_food_produces_add(100[soldier.GetIcon][GetSoldierPlural]あたりの£food£食料) = 1<br>
+・planet_soldiers_energy_produces_add(£energy£ ：100あたりの産出： [GetSoldierSwapPluralWithIcon]) = 1<br>
+・planet_soldiers_minerals_produces_add(£minerals£ ：100あたりの産出： [GetSoldierSwapPluralWithIcon]) = 1<br>
+・planet_soldiers_food_produces_add(£food£ ：100あたりの産出： [GetSoldierSwapPluralWithIcon]) = 1<br>
 <br>
 ・条件：{"exists": "owner", "owner": {"country_uses_food": "no"}}<br>
-・planet_soldiers_energy_produces_add(100[soldier.GetIcon][GetSoldierPlural]あたりの£energy£エネルギー通貨) = 1.5<br>
-・planet_soldiers_minerals_produces_add(100[soldier.GetIcon][GetSoldierPlural]あたりの£minerals£鉱物) = 1.5<br>
+・planet_soldiers_energy_produces_add(£energy£ ：100あたりの産出： [GetSoldierSwapPluralWithIcon]) = 1.5<br>
+・planet_soldiers_minerals_produces_add(£minerals£ ：100あたりの産出： [GetSoldierSwapPluralWithIcon]) = 1.5<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -6931,18 +6931,18 @@ custom_tooltip_with_modifiers:<br>
 <p>惑星:<br>
 ・job_researcher_naval_cap_add(100 £job_researcher£ [GetResearcher]職業枠あたりの£mod_country_naval_cap_add£ 宇宙軍許容量) = 4<br>
 ・planet_jobs_engineering_research_produces_mult(£job£ 職業からの£engineering_research£ 工学研究) = 0.10<br>
-・planet_soldiers_engineering_research_produces_add(100[soldier.GetIcon][GetSoldierPlural]あたりの£engineering_research£工学研究) = 1<br>
-・planet_physicists_alloys_upkeep_add(100[physicist.GetIcon][physicist.GetNamePlural]あたりの£alloys£ 合金維持費) = 1<br>
-・planet_biologists_alloys_upkeep_add(100[biologist.GetIcon][biologist.GetNamePlural]あたりの£alloys£ 合金維持費) = 1<br>
-・planet_engineers_alloys_upkeep_add(100[engineer.GetIcon][engineer.GetNamePlural]あたりの£alloys£ 合金維持費) = 1<br>
+・planet_soldiers_engineering_research_produces_add(£engineering_research£ ：100あたりの産出： [GetSoldierSwapPluralWithIcon]) = 1<br>
+・planet_physicists_alloys_upkeep_add(£alloys£ ：100あたりの維持費： [GetPhysicistSwapPluralWithIcon]) = 1<br>
+・planet_biologists_alloys_upkeep_add(£alloys£ ：100あたりの維持費： [GetBiologistSwapPluralWithIcon]) = 1<br>
+・planet_engineers_alloys_upkeep_add(£alloys£ ：100あたりの維持費： [GetEngineerSwapPluralWithIcon]) = 1<br>
 <br>
 セクター:<br>
 ・job_researcher_naval_cap_add(100 £job_researcher£ [GetResearcher]職業枠あたりの£mod_country_naval_cap_add£ 宇宙軍許容量) = 2<br>
 ・planet_jobs_engineering_research_produces_mult(£job£ 職業からの£engineering_research£ 工学研究) = 0.05<br>
-・planet_soldiers_engineering_research_produces_add(100[soldier.GetIcon][GetSoldierPlural]あたりの£engineering_research£工学研究) = 0.5<br>
-・planet_physicists_alloys_upkeep_add(100[physicist.GetIcon][physicist.GetNamePlural]あたりの£alloys£ 合金維持費) = 0.5<br>
-・planet_biologists_alloys_upkeep_add(100[biologist.GetIcon][biologist.GetNamePlural]あたりの£alloys£ 合金維持費) = 0.5<br>
-・planet_engineers_alloys_upkeep_add(100[engineer.GetIcon][engineer.GetNamePlural]あたりの£alloys£ 合金維持費) = 0.5<br>
+・planet_soldiers_engineering_research_produces_add(£engineering_research£ ：100あたりの産出： [GetSoldierSwapPluralWithIcon]) = 0.5<br>
+・planet_physicists_alloys_upkeep_add(£alloys£ ：100あたりの維持費： [GetPhysicistSwapPluralWithIcon]) = 0.5<br>
+・planet_biologists_alloys_upkeep_add(£alloys£ ：100あたりの維持費： [GetBiologistSwapPluralWithIcon]) = 0.5<br>
+・planet_engineers_alloys_upkeep_add(£alloys£ ：100あたりの維持費： [GetEngineerSwapPluralWithIcon]) = 0.5<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -8423,10 +8423,10 @@ leader_trait_stubborn_2<br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>惑星:<br>
-・planet_technician_energy_produces_mult([technician.GetIcon][GetTechnicianPlural]からの£energy£エネルギー通貨) = 0.05<br>
+・planet_technician_energy_produces_mult(£energy£ 産出： [GetTechnicianSwapPluralWithIcon]) = 0.05<br>
 <br>
 セクター:<br>
-・planet_technician_energy_produces_mult([technician.GetIcon][GetTechnicianPlural]からの£energy£エネルギー通貨) = 0.025<br>
+・planet_technician_energy_produces_mult(£energy£ 産出： [GetTechnicianSwapPluralWithIcon]) = 0.025<br>
 <br>
 出身地(条件あり):<br>
 ・条件：{"exists": "FROM", "FROM": {"exists": "owner", "owner": {"is_same_value": "root.owner"}}, "trait_is_gestalt_check": "no"}<br>
@@ -8500,10 +8500,10 @@ leader_trait_stubborn_2<br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>惑星:<br>
-・planet_technician_energy_produces_mult([technician.GetIcon][GetTechnicianPlural]からの£energy£エネルギー通貨) = 0.10<br>
+・planet_technician_energy_produces_mult(£energy£ 産出： [GetTechnicianSwapPluralWithIcon]) = 0.10<br>
 <br>
 セクター:<br>
-・planet_technician_energy_produces_mult([technician.GetIcon][GetTechnicianPlural]からの£energy£エネルギー通貨) = 0.05<br>
+・planet_technician_energy_produces_mult(£energy£ 産出： [GetTechnicianSwapPluralWithIcon]) = 0.05<br>
 <br>
 出身地(条件あり):<br>
 ・条件：{"exists": "FROM", "FROM": {"exists": "owner", "owner": {"is_same_value": "root.owner"}}, "trait_is_gestalt_check": "no"}<br>
@@ -8559,10 +8559,10 @@ leader_trait_stubborn_2<br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>惑星:<br>
-・planet_miners_minerals_produces_mult([miner.GetIcon][GetMinerPlural]からの£minerals£鉱物) = 0.05<br>
+・planet_miners_minerals_produces_mult(£minerals£ 産出： [GetMinerSwapPluralWithIcon]) = 0.05<br>
 <br>
 セクター:<br>
-・planet_miners_minerals_produces_mult([miner.GetIcon][GetMinerPlural]からの£minerals£鉱物) = 0.025<br>
+・planet_miners_minerals_produces_mult(£minerals£ 産出： [GetMinerSwapPluralWithIcon]) = 0.025<br>
 <br>
 出身地(条件あり):<br>
 ・条件：{"exists": "FROM", "FROM": {"exists": "owner", "owner": {"is_same_value": "root.owner"}}, "trait_is_gestalt_check": "no"}<br>
@@ -8636,10 +8636,10 @@ leader_trait_stubborn_2<br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>惑星:<br>
-・planet_miners_minerals_produces_mult([miner.GetIcon][GetMinerPlural]からの£minerals£鉱物) = 0.10<br>
+・planet_miners_minerals_produces_mult(£minerals£ 産出： [GetMinerSwapPluralWithIcon]) = 0.10<br>
 <br>
 セクター:<br>
-・planet_miners_minerals_produces_mult([miner.GetIcon][GetMinerPlural]からの£minerals£鉱物) = 0.05<br>
+・planet_miners_minerals_produces_mult(£minerals£ 産出： [GetMinerSwapPluralWithIcon]) = 0.05<br>
 <br>
 出身地(条件あり):<br>
 ・条件：{"exists": "FROM", "FROM": {"exists": "owner", "owner": {"is_same_value": "root.owner"}, "NOT": {"is_planet_class": "pc_shattered_ring_habitable"}}, "trait_is_gestalt_check": "no"}<br>
@@ -8701,10 +8701,10 @@ leader_trait_stubborn_2<br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>惑星:<br>
-・planet_farmers_food_produces_mult([farmer.GetIcon][GetFarmerPlural]からの£food£食料) = 0.05<br>
+・planet_farmers_food_produces_mult(£food£ 産出： [GetFarmerSwapPluralWithIcon]) = 0.05<br>
 <br>
 セクター:<br>
-・planet_farmers_food_produces_mult([farmer.GetIcon][GetFarmerPlural]からの£food£食料) = 0.025<br>
+・planet_farmers_food_produces_mult(£food£ 産出： [GetFarmerSwapPluralWithIcon]) = 0.025<br>
 <br>
 出身地(条件あり):<br>
 ・条件：{"exists": "FROM", "FROM": {"artisan_is_pearl_diver_trigger": "yes"}, "trait_is_gestalt_check": "no"}<br>
@@ -8786,10 +8786,10 @@ leader_trait_stubborn_2<br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>惑星:<br>
-・planet_farmers_food_produces_mult([farmer.GetIcon][GetFarmerPlural]からの£food£食料) = 0.10<br>
+・planet_farmers_food_produces_mult(£food£ 産出： [GetFarmerSwapPluralWithIcon]) = 0.10<br>
 <br>
 セクター:<br>
-・planet_farmers_food_produces_mult([farmer.GetIcon][GetFarmerPlural]からの£food£食料) = 0.05<br>
+・planet_farmers_food_produces_mult(£food£ 産出： [GetFarmerSwapPluralWithIcon]) = 0.05<br>
 <br>
 出身地(条件あり):<br>
 ・条件：{"exists": "FROM", "FROM": {"artisan_is_pearl_diver_trigger": "no"}, "trait_is_gestalt_check": "no"}<br>
@@ -9074,10 +9074,10 @@ leader_trait_tyrannical_2<br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>惑星:<br>
-・planet_metallurgists_alloys_produces_mult([foundry.GetIcon][GetAlloyProducerPlural]からの£alloys£合金) = 0.05<br>
+・planet_metallurgists_alloys_produces_mult(£alloys£ 産出： [GetFoundrySwapPluralWithIcon]) = 0.05<br>
 <br>
 セクター:<br>
-・planet_metallurgists_alloys_produces_mult([foundry.GetIcon][GetAlloyProducerPlural]からの£alloys£合金) = 0.025<br>
+・planet_metallurgists_alloys_produces_mult(£alloys£ 産出： [GetFoundrySwapPluralWithIcon]) = 0.025<br>
 <br>
 出身地(条件あり):<br>
 ・条件：{"trait_is_gestalt_check": "no"}<br>
@@ -9157,10 +9157,10 @@ leader_trait_tyrannical_2<br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>惑星:<br>
-・planet_metallurgists_alloys_produces_mult([foundry.GetIcon][GetAlloyProducerPlural]からの£alloys£合金) = 0.10<br>
+・planet_metallurgists_alloys_produces_mult(£alloys£ 産出： [GetFoundrySwapPluralWithIcon]) = 0.10<br>
 <br>
 セクター:<br>
-・planet_metallurgists_alloys_produces_mult([foundry.GetIcon][GetAlloyProducerPlural]からの£alloys£合金) = 0.05<br>
+・planet_metallurgists_alloys_produces_mult(£alloys£ 産出： [GetFoundrySwapPluralWithIcon]) = 0.05<br>
 <br>
 出身地(条件あり):<br>
 ・条件：{"trait_is_gestalt_check": "no"}<br>
@@ -9222,10 +9222,10 @@ leader_trait_tyrannical_2<br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>惑星:<br>
-・planet_artisans_consumer_goods_produces_mult([GetArtisanIcon] [GetArtisanPlural]からの£consumer_goods£ 消費財) = 0.05<br>
+・planet_artisans_consumer_goods_produces_mult(£consumer_goods£ 産出： [GetFactorySwapPluralWithIcon]) = 0.05<br>
 <br>
 セクター:<br>
-・planet_artisans_consumer_goods_produces_mult([GetArtisanIcon] [GetArtisanPlural]からの£consumer_goods£ 消費財) = 0.025<br>
+・planet_artisans_consumer_goods_produces_mult(£consumer_goods£ 産出： [GetFactorySwapPluralWithIcon]) = 0.025<br>
 <br>
 出身地(条件あり):<br>
 ・条件：{"exists": "FROM", "FROM": {"exists": "owner", "owner": {"is_same_value": "root.owner"}}, "trait_is_gestalt_check": "no"}<br>
@@ -9302,10 +9302,10 @@ leader_trait_tyrannical_2<br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>惑星:<br>
-・planet_artisans_consumer_goods_produces_mult([GetArtisanIcon] [GetArtisanPlural]からの£consumer_goods£ 消費財) = 0.10<br>
+・planet_artisans_consumer_goods_produces_mult(£consumer_goods£ 産出： [GetFactorySwapPluralWithIcon]) = 0.10<br>
 <br>
 セクター:<br>
-・planet_artisans_consumer_goods_produces_mult([GetArtisanIcon] [GetArtisanPlural]からの£consumer_goods£ 消費財) = 0.05<br>
+・planet_artisans_consumer_goods_produces_mult(£consumer_goods£ 産出： [GetFactorySwapPluralWithIcon]) = 0.05<br>
 <br>
 出身地(条件あり):<br>
 ・条件：{"exists": "FROM", "FROM": {"exists": "owner", "owner": {"is_same_value": "root.owner"}}, "trait_is_gestalt_check": "no"}<br>
@@ -12187,10 +12187,10 @@ leader_trait_procrastinator_2<br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>惑星:<br>
-・planet_jobs_trade_produces_mult(£job£ 職業からの£trade£ 交易) = 0.15<br>
+・planet_jobs_trade_produces_mult(£job£職業からの£trade£ 交易) = 0.15<br>
 <br>
 セクター:<br>
-・planet_jobs_trade_produces_mult(£job£ 職業からの£trade£ 交易) = 0.075<br>
+・planet_jobs_trade_produces_mult(£job£職業からの£trade£ 交易) = 0.075<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -12249,10 +12249,10 @@ leader_trait_insider_trading_2<br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>惑星:<br>
-・planet_jobs_trade_produces_mult(£job£ 職業からの£trade£ 交易) = 0.25<br>
+・planet_jobs_trade_produces_mult(£job£職業からの£trade£ 交易) = 0.25<br>
 <br>
 セクター:<br>
-・planet_jobs_trade_produces_mult(£job£ 職業からの£trade£ 交易) = 0.125<br>
+・planet_jobs_trade_produces_mult(£job£職業からの£trade£ 交易) = 0.125<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -12561,7 +12561,7 @@ leader_trait_insider_trading_2<br></p>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>評議会(条件あり):<br>
 ・条件：{"trait_is_gestalt_check": "no"}<br>
-・planet_jobs_trade_produces_mult(£job£ 職業からの£trade£ 交易) = 0.1<br>
+・planet_jobs_trade_produces_mult(£job£職業からの£trade£ 交易) = 0.1<br>
 <br>
 ・条件：{"trait_is_gestalt_check": "yes"}<br>
 ・planet_jobs_produces_mult(£job£ 職業からの資源) = 0.025<br>
@@ -12622,7 +12622,7 @@ leader_trait_insider_trading_2<br></p>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>評議会(条件あり):<br>
 ・条件：{"trait_is_gestalt_check": "no"}<br>
-・planet_jobs_trade_produces_mult(£job£ 職業からの£trade£ 交易) = 0.15<br>
+・planet_jobs_trade_produces_mult(£job£職業からの£trade£ 交易) = 0.15<br>
 <br>
 ・条件：{"trait_is_gestalt_check": "yes"}<br>
 ・planet_jobs_produces_mult(£job£ 職業からの資源) = 0.05<br>
@@ -12678,7 +12678,7 @@ leader_trait_insider_trading_2<br></p>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>評議会(条件あり):<br>
 ・条件：{"trait_is_gestalt_check": "no"}<br>
-・planet_jobs_trade_produces_mult(£job£ 職業からの£trade£ 交易) = 0.20<br>
+・planet_jobs_trade_produces_mult(£job£職業からの£trade£ 交易) = 0.20<br>
 <br>
 ・条件：{"trait_is_gestalt_check": "yes"}<br>
 ・planet_jobs_produces_mult(£job£ 職業からの資源) = 0.1<br>
@@ -15305,18 +15305,18 @@ custom_tooltip_with_modifiers:<br>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>惑星:<br>
-・planet_metallurgists_upkeep_mult([GetAlloyProducer]維持費) = -0.05<br>
+・planet_metallurgists_upkeep_mult([GetFoundrySwapPluralWithIcon]の維持費) = -0.05<br>
 <br>
 セクター:<br>
-・planet_metallurgists_upkeep_mult([GetAlloyProducer]維持費) = -0.025<br>
+・planet_metallurgists_upkeep_mult([GetFoundrySwapPluralWithIcon]の維持費) = -0.025<br>
 <br>
 惑星(条件あり):<br>
 ・条件：{"owner": {"country_uses_consumer_goods": "yes"}}<br>
-・planet_artisans_upkeep_mult([GetArtisan]維持費) = -0.05<br>
+・planet_artisans_upkeep_mult([GetFactorySwapPluralWithIcon]の維持費) = -0.05<br>
 <br>
 セクター(条件あり):<br>
 ・条件：{"owner": {"country_uses_consumer_goods": "yes"}}<br>
-・planet_artisans_upkeep_mult([GetArtisan]維持費) = -0.025<br>
+・planet_artisans_upkeep_mult([GetFactorySwapPluralWithIcon]の維持費) = -0.025<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -15369,18 +15369,18 @@ custom_tooltip_with_modifiers:<br>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>惑星:<br>
-・planet_metallurgists_upkeep_mult([GetAlloyProducer]維持費) = -0.1<br>
+・planet_metallurgists_upkeep_mult([GetFoundrySwapPluralWithIcon]の維持費) = -0.1<br>
 <br>
 セクター:<br>
-・planet_metallurgists_upkeep_mult([GetAlloyProducer]維持費) = -0.05<br>
+・planet_metallurgists_upkeep_mult([GetFoundrySwapPluralWithIcon]の維持費) = -0.05<br>
 <br>
 惑星(条件あり):<br>
 ・条件：{"owner": {"country_uses_consumer_goods": "yes"}}<br>
-・planet_artisans_upkeep_mult([GetArtisan]維持費) = -0.1<br>
+・planet_artisans_upkeep_mult([GetFactorySwapPluralWithIcon]の維持費) = -0.1<br>
 <br>
 セクター(条件あり):<br>
 ・条件：{"owner": {"country_uses_consumer_goods": "yes"}}<br>
-・planet_artisans_upkeep_mult([GetArtisan]維持費) = -0.05<br>
+・planet_artisans_upkeep_mult([GetFactorySwapPluralWithIcon]の維持費) = -0.05<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -15429,18 +15429,18 @@ custom_tooltip_with_modifiers:<br>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>惑星:<br>
-・planet_metallurgists_upkeep_mult([GetAlloyProducer]維持費) = -0.2<br>
+・planet_metallurgists_upkeep_mult([GetFoundrySwapPluralWithIcon]の維持費) = -0.2<br>
 <br>
 セクター:<br>
-・planet_metallurgists_upkeep_mult([GetAlloyProducer]維持費) = -0.1<br>
+・planet_metallurgists_upkeep_mult([GetFoundrySwapPluralWithIcon]の維持費) = -0.1<br>
 <br>
 惑星(条件あり):<br>
 ・条件：{"owner": {"country_uses_consumer_goods": "yes"}}<br>
-・planet_artisans_upkeep_mult([GetArtisan]維持費) = -0.2<br>
+・planet_artisans_upkeep_mult([GetFactorySwapPluralWithIcon]の維持費) = -0.2<br>
 <br>
 セクター(条件あり):<br>
 ・条件：{"owner": {"country_uses_consumer_goods": "yes"}}<br>
-・planet_artisans_upkeep_mult([GetArtisan]維持費) = -0.1<br>
+・planet_artisans_upkeep_mult([GetFactorySwapPluralWithIcon]の維持費) = -0.1<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -15995,13 +15995,13 @@ leader_trait_reclusive_2<br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>惑星:<br>
-・pop_category_workers_unity_produces_add(£pop_cat_worker£ 労働者からの£unity£ 統合力) = 0.5<br>
+・pop_category_workers_unity_produces_add(£pop_cat_worker£ 労働者からの£unity£ 統合力) = 0.5<br>
 ・pop_category_specialists_unity_produces_add(£pop_cat_specialist£ 専門家からの£unity£ 統合力) = 0.5<br>
 ・pop_category_rulers_unity_produces_add(£pop_cat_ruler£ 精鋭からの£unity£ 統合力) = 0.5<br>
 ・pop_happiness(POP幸福度が VALUE|Y COMPAREである) = 0.05<br>
 <br>
 セクター:<br>
-・pop_category_workers_unity_produces_add(£pop_cat_worker£ 労働者からの£unity£ 統合力) = 0.25<br>
+・pop_category_workers_unity_produces_add(£pop_cat_worker£ 労働者からの£unity£ 統合力) = 0.25<br>
 ・pop_category_specialists_unity_produces_add(£pop_cat_specialist£ 専門家からの£unity£ 統合力) = 0.25<br>
 ・pop_category_rulers_unity_produces_add(£pop_cat_ruler£ 精鋭からの£unity£ 統合力) = 0.25<br>
 ・pop_happiness(POP幸福度が VALUE|Y COMPAREである) = 0.05<br>
@@ -16677,14 +16677,14 @@ leader_trait_righteous_2<br></p>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>惑星(条件あり):<br>
 ・条件：{"trait_is_gestalt_check": "no"}<br>
-・planet_jobs_trade_produces_mult(£job£ 職業からの£trade£ 交易) = -0.10<br>
+・planet_jobs_trade_produces_mult(£job£職業からの£trade£ 交易) = -0.10<br>
 <br>
 ・条件：{"trait_is_gestalt_check": "yes"}<br>
 ・planet_jobs_produces_mult(£job£ 職業からの資源) = -0.05<br>
 <br>
 セクター(条件あり):<br>
 ・条件：{"trait_is_gestalt_check": "no"}<br>
-・planet_jobs_trade_produces_mult(£job£ 職業からの£trade£ 交易) = -0.05<br>
+・planet_jobs_trade_produces_mult(£job£職業からの£trade£ 交易) = -0.05<br>
 <br>
 ・条件：{"trait_is_gestalt_check": "yes"}<br>
 ・planet_jobs_produces_mult(£job£ 職業からの資源) = -0.025<br>
@@ -16745,14 +16745,14 @@ leader_trait_righteous_2<br></p>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>惑星(条件あり):<br>
 ・条件：{"trait_is_gestalt_check": "no"}<br>
-・planet_jobs_trade_produces_mult(£job£ 職業からの£trade£ 交易) = -0.25<br>
+・planet_jobs_trade_produces_mult(£job£職業からの£trade£ 交易) = -0.25<br>
 <br>
 ・条件：{"trait_is_gestalt_check": "yes"}<br>
 ・planet_jobs_produces_mult(£job£ 職業からの資源) = -0.10<br>
 <br>
 セクター(条件あり):<br>
 ・条件：{"trait_is_gestalt_check": "no"}<br>
-・planet_jobs_trade_produces_mult(£job£ 職業からの£trade£ 交易) = -0.125<br>
+・planet_jobs_trade_produces_mult(£job£職業からの£trade£ 交易) = -0.125<br>
 <br>
 ・条件：{"trait_is_gestalt_check": "yes"}<br>
 ・planet_jobs_produces_mult(£job£ 職業からの資源) = -0.05<br>
@@ -16887,6 +16887,110 @@ leader_trait_righteous_2<br></p>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>造船者<br></p>
 </div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>leader_trait_shroud_prophet</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>シュラウドの預言者</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>basic</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>リーダーアサイン時:<br>
+・planet_crime_no_happiness_mult(逸脱性) = 0.1<br>
+・planet_jobs_unity_produces_mult(£job£ 職業からの£unity£ 統合力) = 0.1<br>
+・planet_jobs_physics_research_produces_mult(£job£ 職業からの£physics_research£ 物理学研究) = 0.1<br>
+・planet_jobs_society_research_produces_mult(£job£ 職業からの£society_research£ 社会学研究) = 0.1<br>
+<br></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>leader_trait_zealot</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>敬虔なる者</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>basic</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>リーダーアサイン時:<br>
+・planet_stability_add(安定度) = 10<br>
+・planet_crime_add([GetCrimeDeviancy]) = -10<br>
+・pop_government_ethic_attraction(統治志向の魅力) = 0.20<br>
+・planet_bureaucrats_unity_produces_mult(£unity£ 産出： [GetBureaucratSwapPluralWithIcon]) = 0.10<br>
+<br></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
 </div></div></td>
@@ -19021,14 +19125,14 @@ custom_tooltip_with_modifiers:<br>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>惑星(条件あり):<br>
 ・条件：{"trait_is_wilderness_check": "no"}<br>
-・planet_miners_minerals_produces_add(100[miner.GetIcon][GetMinerPlural]あたりの£minerals£鉱物) = 0.25<br>
+・planet_miners_minerals_produces_add(£minerals£ ：100あたりの産出： [GetMinerSwapPluralWithIcon]) = 0.25<br>
 <br>
 ・条件：{"trait_is_wilderness_check": "yes"}<br>
 ・planet_jobs_minerals_produces_mult(£job£ 職業からの£minerals£ 鉱物) = 0.025<br>
 <br>
 セクター(条件あり):<br>
 ・条件：{"trait_is_wilderness_check": "no"}<br>
-・planet_miners_minerals_produces_add(100[miner.GetIcon][GetMinerPlural]あたりの£minerals£鉱物) = 0.125<br>
+・planet_miners_minerals_produces_add(£minerals£ ：100あたりの産出： [GetMinerSwapPluralWithIcon]) = 0.125<br>
 <br>
 ・条件：{"trait_is_wilderness_check": "yes"}<br>
 ・planet_jobs_minerals_produces_mult(£job£ 職業からの£minerals£ 鉱物) = 0.015<br>
@@ -19084,14 +19188,14 @@ custom_tooltip_with_modifiers:<br>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>惑星(条件あり):<br>
 ・条件：{"trait_is_wilderness_check": "no"}<br>
-・planet_miners_minerals_produces_add(100[miner.GetIcon][GetMinerPlural]あたりの£minerals£鉱物) = 0.5<br>
+・planet_miners_minerals_produces_add(£minerals£ ：100あたりの産出： [GetMinerSwapPluralWithIcon]) = 0.5<br>
 <br>
 ・条件：{"trait_is_wilderness_check": "yes"}<br>
 ・planet_jobs_minerals_produces_mult(£job£ 職業からの£minerals£ 鉱物) = 0.05<br>
 <br>
 セクター(条件あり):<br>
 ・条件：{"trait_is_wilderness_check": "no"}<br>
-・planet_miners_minerals_produces_add(100[miner.GetIcon][GetMinerPlural]あたりの£minerals£鉱物) = 0.25<br>
+・planet_miners_minerals_produces_add(£minerals£ ：100あたりの産出： [GetMinerSwapPluralWithIcon]) = 0.25<br>
 <br>
 ・条件：{"trait_is_wilderness_check": "yes"}<br>
 ・planet_jobs_minerals_produces_mult(£job£ 職業からの£minerals£ 鉱物) = 0.03<br>
@@ -19144,14 +19248,14 @@ custom_tooltip_with_modifiers:<br>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>惑星(条件あり):<br>
 ・条件：{"trait_is_wilderness_check": "no"}<br>
-・planet_miners_minerals_produces_add(100[miner.GetIcon][GetMinerPlural]あたりの£minerals£鉱物) = 1<br>
+・planet_miners_minerals_produces_add(£minerals£ ：100あたりの産出： [GetMinerSwapPluralWithIcon]) = 1<br>
 <br>
 ・条件：{"trait_is_wilderness_check": "yes"}<br>
 ・planet_jobs_minerals_produces_mult(£job£ 職業からの£minerals£ 鉱物) = 0.075<br>
 <br>
 セクター(条件あり):<br>
 ・条件：{"trait_is_wilderness_check": "no"}<br>
-・planet_miners_minerals_produces_add(100[miner.GetIcon][GetMinerPlural]あたりの£minerals£鉱物) = 0.5<br>
+・planet_miners_minerals_produces_add(£minerals£ ：100あたりの産出： [GetMinerSwapPluralWithIcon]) = 0.5<br>
 <br>
 ・条件：{"trait_is_wilderness_check": "yes"}<br>
 ・planet_jobs_minerals_produces_mult(£job£ 職業からの£minerals£ 鉱物) = 0.045<br>
@@ -21736,9 +21840,7 @@ triggered_desc:<br>
       }
     },
     "species": {
-      "OR": {
-        "has_trait": "trait_psionic"
-      }
+      "has_psionic_species_trait": "yes"
     }
   }
 }</p>
@@ -22862,14 +22964,14 @@ triggered_desc:<br>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>惑星:<br>
-・planet_technician_physics_research_produces_add(100[technician.GetIcon][GetTechnicianPlural]あたりの£physics£物理学研究) = @trait_surveyor_amt<br>
-・planet_farmers_society_research_produces_add(100[farmer.GetIcon][GetFarmerPlural]あたりの£society£社会学研究) = @trait_surveyor_amt<br>
-・planet_miners_engineering_research_produces_add(100[miner.GetIcon][GetMinerPlural]あたりの£engineering_research£工学研究) = @trait_surveyor_amt<br>
+・planet_technician_physics_research_produces_add(£physics_research£ ：100あたりの産出： [GetTechnicianSwapPluralWithIcon]) = @trait_surveyor_amt<br>
+・planet_farmers_society_research_produces_add(£society_research£ ：100あたりの産出： [GetFarmerSwapPluralWithIcon]) = @trait_surveyor_amt<br>
+・planet_miners_engineering_research_produces_add(£engineering_research£ ：100あたりの産出： [GetMinerSwapPluralWithIcon]) = @trait_surveyor_amt<br>
 <br>
 セクター:<br>
-・planet_technician_physics_research_produces_add(100[technician.GetIcon][GetTechnicianPlural]あたりの£physics£物理学研究) = @trait_surveyor_sector_amt<br>
-・planet_farmers_society_research_produces_add(100[farmer.GetIcon][GetFarmerPlural]あたりの£society£社会学研究) = @trait_surveyor_sector_amt<br>
-・planet_miners_engineering_research_produces_add(100[miner.GetIcon][GetMinerPlural]あたりの£engineering_research£工学研究) = @trait_surveyor_sector_amt<br>
+・planet_technician_physics_research_produces_add(£physics_research£ ：100あたりの産出： [GetTechnicianSwapPluralWithIcon]) = @trait_surveyor_sector_amt<br>
+・planet_farmers_society_research_produces_add(£society_research£ ：100あたりの産出： [GetFarmerSwapPluralWithIcon]) = @trait_surveyor_sector_amt<br>
+・planet_miners_engineering_research_produces_add(£engineering_research£ ：100あたりの産出： [GetMinerSwapPluralWithIcon]) = @trait_surveyor_sector_amt<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -24160,6 +24262,57 @@ leader_trait_collaborator_3<br></p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>leader_trait_guided</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>導かれし者</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>basic</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>リーダーアサイン時:<br>
+・science_ship_survey_speed = 0.2<br>
+・ship_anomaly_research_speed_mult = 0.1<br>
+・ship_anomaly_generation_chance_mult(アノマリー発見率) = 0.05<br>
+<br></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>leader_trait_shroud_age</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -24387,7 +24540,7 @@ leader_trait_collaborator_3<br></p>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>博学<br>
-選ばれし者<br>
+[GetChosenName]<br>
 限定的サイボーグ<br>
 超能力者<br>
 人工生命体<br></p>
@@ -24482,7 +24635,7 @@ leader_trait_collaborator_3<br></p>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>博学<br>
-選ばれし者<br>
+[GetChosenName]<br>
 サイボーグ<br>
 限定的サイボーグ<br>
 超能力者<br></p>
@@ -24514,135 +24667,76 @@ leader_trait_collaborator_3<br></p>
 <p>リーダーアサイン時(条件あり):<br>
 ・条件：{"is_ruler": "no", "leader_class": "scientist"}<br>
 ・science_ship_survey_speed = 0.10<br>
-・ship_archaeological_site_clues_add(考古学スキル) = 1<br>
+・ship_anomaly_generation_chance_mult(アノマリー発見率) = 0.05<br>
+・mult = value:transcended_psionic_multiplier<br>
 <br>
-・条件：{"has_astral_planes_dlc": "yes", "is_ruler": "no", "leader_class": "scientist"}<br>
+・条件：{"is_ruler": "no", "leader_class": "scientist", "exists": "owner", "owner": {"has_active_tradition": "tr_psionics_shroud_psychometry"}}<br>
+・ship_archaeological_site_clues_add(考古学スキル) = 1<br>
+・mult = value:transcended_psionic_multiplier<br>
+<br>
+・条件：{"has_astral_planes_dlc": "yes", "is_ruler": "no", "leader_class": "scientist", "exists": "owner", "owner": {"has_active_tradition": "tr_psionics_shroud_psychometry"}}<br>
 ・ship_astral_rift_clues_add(天体の裂け目のスキル) = 1<br>
+・mult = value:transcended_psionic_multiplier<br>
+<br>
+本人(条件あり):<br>
+・条件：{"exists": "owner", "owner": {"is_transcendent_authority": "yes"}}<br>
+・leader_lifespan_add(リーダーの寿命) = 60<br>
 <br>
 惑星(条件あり):<br>
 ・条件：{"is_ruler": "no"}<br>
 ・planet_jobs_unity_produces_mult(£job£ 職業からの£unity£ 統合力) = 0.10<br>
+・mult = value:transcended_psionic_multiplier<br>
 <br>
 セクター(条件あり):<br>
 ・条件：{"is_ruler": "no"}<br>
 ・planet_jobs_unity_produces_mult(£job£ 職業からの£unity£ 統合力) = 0.05<br>
+・mult = value:transcended_psionic_multiplier<br>
 <br>
 艦隊(条件あり):<br>
 ・条件：{"is_ruler": "no", "leader_class": "commander"}<br>
 ・ship_weapon_damage(艦船武器ダメージ) = 0.10<br>
 ・ship_shield_hardening_add(シールド強化) = 0.10<br>
+・mult = value:transcended_psionic_multiplier<br>
+<br>
+・条件：{"is_ruler": "no", "leader_class": "commander", "exists": "owner", "owner": {"has_tradition": "tr_psionics_shroud_clairvoyance", "has_country_flag": "psionic_traditions_unlocked"}}<br>
+・ship_sensor_range_add(センサー範囲) = @clairvoyance_sensor_range<br>
+・mult = value:transcended_psionic_multiplier<br>
 <br>
 地上軍(条件あり):<br>
 ・条件：{"is_ruler": "no", "leader_class": "commander"}<br>
 ・army_morale(地上軍の士気) = 0.10<br>
 ・army_morale_damage_mult(地上軍士気ダメージ) = 0.10<br>
+・mult = value:transcended_psionic_multiplier<br>
 <br>
 銀河共同体(条件あり):<br>
 ・条件：{"is_ruler": "no", "leader_class": "official"}<br>
 ・resolutions_cost_mult(銀河共同体決議アクションコスト) = -0.10<br>
+・mult = value:transcended_psionic_multiplier<br>
 <br>
 連邦(条件あり):<br>
 ・条件：{"is_ruler": "no", "leader_class": "official"}<br>
 ・federation_experience_add(毎月の連邦経験値) = 1<br>
+・mult = value:transcended_psionic_multiplier<br>
 <br>
 評議会(条件あり):<br>
-・条件：{"is_ruler": "yes"}<br>
+・条件：{"is_ruler": "yes", "exists": "owner", "owner": {"is_gestalt": "no"}}<br>
 ・pop_government_ethic_attraction(統治志向の魅力) = 0.10<br>
-・country_ruler_influence_produces_add(毎月の影響力) = 0.5<br>
-<br></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>no</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>no</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>no</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>no</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>サイボーグ<br>
-限定的サイボーグ<br>
-人工生命体<br></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>no</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>leader_trait_chosen</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>選ばれし者</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>yes</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>yes</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>yes</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>basic</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>リーダーアサイン時(条件あり):<br>
-・条件：{"is_ruler": "no", "leader_class": "scientist"}<br>
-・science_ship_survey_speed = 0.20<br>
-・ship_archaeological_site_clues_add(考古学スキル) = 2<br>
+・mult = value:transcended_psionic_multiplier<br>
 <br>
-・条件：{"has_astral_planes_dlc": "yes", "is_ruler": "no", "leader_class": "scientist"}<br>
-・ship_astral_rift_clues_add(天体の裂け目のスキル) = 2<br>
+・条件：{"is_ruler": "yes", "exists": "owner", "owner": {"is_gestalt": "yes"}}<br>
+・planet_crime_no_happiness_add(逸脱性) = -10<br>
+・mult = value:transcended_psionic_multiplier<br>
 <br>
-惑星(条件あり):<br>
-・条件：{"is_ruler": "no"}<br>
-・planet_jobs_unity_produces_mult(£job£ 職業からの£unity£ 統合力) = 0.20<br>
-<br>
-セクター(条件あり):<br>
-・条件：{"is_ruler": "no"}<br>
-・planet_jobs_unity_produces_mult(£job£ 職業からの£unity£ 統合力) = 0.10<br>
-<br>
-艦隊(条件あり):<br>
-・条件：{"is_ruler": "no", "leader_class": "commander"}<br>
-・ship_weapon_damage(艦船武器ダメージ) = 0.20<br>
-・ship_shield_hardening_add(シールド強化) = 0.20<br>
-<br>
-地上軍(条件あり):<br>
-・条件：{"is_ruler": "no", "leader_class": "commander"}<br>
-・army_morale(地上軍の士気) = 0.20<br>
-・army_morale_damage_mult(地上軍士気ダメージ) = 0.20<br>
-<br>
-銀河共同体(条件あり):<br>
-・条件：{"is_ruler": "no", "leader_class": "official"}<br>
-・resolutions_cost_mult(銀河共同体決議アクションコスト) = -0.20<br>
-<br>
-連邦(条件あり):<br>
-・条件：{"is_ruler": "no", "leader_class": "official"}<br>
-・federation_experience_add(毎月の連邦経験値) = 1<br>
-・cohesion_ethics_penalty_mult = -0.25<br>
-<br>
-評議会(条件あり):<br>
 ・条件：{"is_ruler": "yes"}<br>
-・pop_government_ethic_attraction(統治志向の魅力) = 0.20<br>
-・country_ruler_influence_produces_add(毎月の影響力) = 1.0<br>
+・country_ruler_influence_produces_add(毎月の影響力) = 0.5<br>
+・mult = value:transcended_psionic_multiplier<br>
+<br>
+・条件：{"exists": "owner", "owner": {"is_transcendent_authority": "yes"}}<br>
+・council_agenda_progress_speed(評議会の方針の進行速度) = @transcendent_psionic_leader_speed_mult<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>yes</p>
+<p>no</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
@@ -24830,8 +24924,13 @@ leader_trait_collaborator_3<br></p>
 <br>
 評議会(条件あり):<br>
 ・条件：{"is_ruler": "yes"}<br>
+・planet_jobs_trade_produces_mult(£job£職業からの£trade£ 交易) = 0.20<br>
+<br>
+・条件：{"is_ruler": "yes", "exists": "owner", "owner": {"is_gestalt": "no"}}<br>
 ・pop_happiness(POP幸福度が VALUE|Y COMPAREである) = 0.20<br>
-・planet_jobs_trade_produces_mult(£job£ 職業からの£trade£ 交易) = 0.20<br>
+<br>
+・条件：{"is_ruler": "yes", "exists": "owner", "owner": {"is_gestalt": "no"}}<br>
+・planet_stability_mult(安定度) = 0.02<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -24958,6 +25057,104 @@ leader_trait_collaborator_3<br></p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>leader_trait_cradle_chosen</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>ゆりかごに選ばれし者</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>basic</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>リーダーアサイン時(条件あり):<br>
+・条件：{"is_ruler": "no", "leader_class": "scientist"}<br>
+・science_ship_survey_speed = 0.20<br>
+<br>
+惑星(条件あり):<br>
+・条件：{"is_ruler": "no"}<br>
+・pop_political_power(POPの政治力) = 5<br>
+<br>
+・条件：{"is_ruler": "no", "is_gestalt": "no"}<br>
+・pop_happiness(POP幸福度が VALUE|Y COMPAREである) = 0.15<br>
+<br>
+・条件：{"is_ruler": "no", "is_gestalt": "yes"}<br>
+・planet_crime_no_happiness_mult(逸脱性) = -0.2<br>
+<br>
+セクター(条件あり):<br>
+・条件：{"is_ruler": "no"}<br>
+・pop_political_power(POPの政治力) = 2.5<br>
+<br>
+・条件：{"is_ruler": "no", "is_gestalt": "no"}<br>
+・pop_happiness(POP幸福度が VALUE|Y COMPAREである) = 0.075<br>
+<br>
+・条件：{"is_ruler": "no", "is_gestalt": "yes"}<br>
+・planet_crime_no_happiness_mult(逸脱性) = -0.1<br>
+<br>
+艦隊(条件あり):<br>
+・条件：{"is_ruler": "no", "leader_class": "commander"}<br>
+・ship_friendly_territory_fire_rate_mult(友好的な星系の艦船連射レート) = 0.3<br>
+・ship_friendly_territory_hull_mult(友好的な星系の船体値) = 0.3<br>
+<br>
+地上軍(条件あり):<br>
+・条件：{"is_ruler": "no", "leader_class": "commander"}<br>
+・army_collateral_damage_mult(地上軍副次損害) = -0.8<br>
+・army_health(£ship_stats_hitpoints£ VALUE) = 0.4<br>
+<br>
+銀河共同体(条件あり):<br>
+・条件：{"is_ruler": "no", "leader_class": "official"}<br>
+・resolution_category_rulesofwar_vote_strength_mult(§Y交戦規定§!決議における票数) = 0.5<br>
+・resolutions_cost_mult(銀河共同体決議アクションコスト) = -0.2<br>
+<br>
+連邦(条件あり):<br>
+・条件：{"is_ruler": "no", "leader_class": "official"}<br>
+・federation_experience_add(毎月の連邦経験値) = 2<br>
+・cohesion_ethics_penalty_mult = -0.5<br>
+<br>
+評議会(条件あり):<br>
+・条件：{"is_ruler": "yes"}<br>
+・pop_factions_produces_mult(派閥の資源産出) = 0.3<br>
+・diplo_action_acceptance_add(外交許諾値) = 10<br>
+<br></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>サイボーグ<br>
+人工生命体<br></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>leader_trait_whisperers_chosen</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -25018,7 +25215,7 @@ leader_trait_collaborator_3<br></p>
 <br>
 評議会(条件あり):<br>
 ・条件：{"is_ruler": "yes"}<br>
-・espionage_operation_cost_mult(作戦コスト) = -0.20<br>
+・espionage_operation_cost_mult(作戦浸透コスト) = -0.20<br>
 ・country_ruler_influence_produces_add(毎月の影響力) = 1<br>
 ・intel_encryption_add(暗号力) = 1<br>
 <br></p>
@@ -27096,11 +27293,11 @@ custom_tooltip_with_modifiers:<br>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>惑星:<br>
-・planet_jobs_trade_produces_mult(£job£ 職業からの£trade£ 交易) = 0.10<br>
+・planet_jobs_trade_produces_mult(£job£職業からの£trade£ 交易) = 0.10<br>
 ・planet_pops_consumer_goods_upkeep_mult(POP消費財維持費) = -0.10<br>
 <br>
 セクター:<br>
-・planet_jobs_trade_produces_mult(£job£ 職業からの£trade£ 交易) = 0.05<br>
+・planet_jobs_trade_produces_mult(£job£職業からの£trade£ 交易) = 0.05<br>
 ・planet_pops_consumer_goods_upkeep_mult(POP消費財維持費) = -0.05<br>
 <br></p>
 </div></div></td>
@@ -27951,14 +28148,14 @@ custom_tooltip_with_modifiers:<br>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>惑星:<br>
-・planet_chemists_volatile_motes_produces_mult([chemist.GetIcon][Root.Chemists]の産出) = 0.25<br>
-・planet_refiners_exotic_gases_produces_mult([gas_refiner.GetIcon][Root.Refiners]の産出) = 0.25<br>
-・planet_translucers_rare_crystals_produces_mult([translucer.GetIcon][Root.Translucers]の産出) = 0.25<br>
+・planet_chemists_volatile_motes_produces_mult(£volatile_motes£ 産出： [GetChemistSwapPluralWithIcon]) = 0.25<br>
+・planet_refiners_exotic_gases_produces_mult(£exotic_gases£ 産出： [GetRefinerSwapPluralWithIcon]) = 0.25<br>
+・planet_translucers_rare_crystals_produces_mult(£rare_crystals£ 産出： [GetTranslucerSwapPluralWithIcon]) = 0.25<br>
 <br>
 セクター:<br>
-・planet_chemists_volatile_motes_produces_mult([chemist.GetIcon][Root.Chemists]の産出) = 0.125<br>
-・planet_refiners_exotic_gases_produces_mult([gas_refiner.GetIcon][Root.Refiners]の産出) = 0.125<br>
-・planet_translucers_rare_crystals_produces_mult([translucer.GetIcon][Root.Translucers]の産出) = 0.125<br>
+・planet_chemists_volatile_motes_produces_mult(£volatile_motes£ 産出： [GetChemistSwapPluralWithIcon]) = 0.125<br>
+・planet_refiners_exotic_gases_produces_mult(£exotic_gases£ 産出： [GetRefinerSwapPluralWithIcon]) = 0.125<br>
+・planet_translucers_rare_crystals_produces_mult(£rare_crystals£ 産出： [GetTranslucerSwapPluralWithIcon]) = 0.125<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -34458,7 +34655,7 @@ custom_tooltip_with_modifiers:<br>
 <p>評議会:<br>
 ・pop_amenities_usage_mult(POPの快適度使用量) = -0.1<br>
 ・pop_housing_usage_mult(POPの住居使用量) = -0.1<br>
-・planet_bureaucrats_society_research_produces_add(100[GetBureaucratPluralWithIcon]あたりの£society£ 社会学研究) = 0.5<br>
+・planet_bureaucrats_society_research_produces_add(£society_research£ ：100あたりの産出： [GetBureaucratSwapPluralWithIcon]) = 0.5<br>
 <br>
 custom_tooltip_with_modifiers:<br>
 "leader_trait_legendary_origin_desc"</p>
@@ -34516,7 +34713,7 @@ custom_tooltip_with_modifiers:<br>
 <p>評議会:<br>
 ・pop_amenities_usage_mult(POPの快適度使用量) = -0.15<br>
 ・pop_housing_usage_mult(POPの住居使用量) = -0.15<br>
-・planet_bureaucrats_society_research_produces_add(100[GetBureaucratPluralWithIcon]あたりの£society£ 社会学研究) = 1<br>
+・planet_bureaucrats_society_research_produces_add(£society_research£ ：100あたりの産出： [GetBureaucratSwapPluralWithIcon]) = 1<br>
 <br>
 custom_tooltip_with_modifiers:<br>
 "leader_trait_legendary_origin_desc"</p>
@@ -34571,7 +34768,7 @@ custom_tooltip_with_modifiers:<br>
 <p>評議会:<br>
 ・pop_amenities_usage_mult(POPの快適度使用量) = -0.20<br>
 ・pop_housing_usage_mult(POPの住居使用量) = -0.20<br>
-・planet_bureaucrats_society_research_produces_add(100[GetBureaucratPluralWithIcon]あたりの£society£ 社会学研究) = 2<br>
+・planet_bureaucrats_society_research_produces_add(£society_research£ ：100あたりの産出： [GetBureaucratSwapPluralWithIcon]) = 2<br>
 <br>
 custom_tooltip_with_modifiers:<br>
 "leader_trait_legendary_origin_desc"</p>
@@ -35792,7 +35989,7 @@ custom_tooltip_with_modifiers:<br>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>評議会:<br>
 ・planet_pop_assembly_mult(機械POP製造速度) = 0.05<br>
-・planet_pop_assemblers_engineering_research_produces_add(100 [GetPopAssemblersPlural]あたりの£engineering£ §Y工学研究§!) = 0.5<br>
+・planet_pop_assemblers_engineering_research_produces_add(£engineering_research£ ：100あたりの産出： [GetPopAssemblersPluralWithIcon]) = 0.5<br>
 <br>
 custom_tooltip_with_modifiers:<br>
 "leader_trait_legendary_great_inventor_tt"</p>
@@ -35849,7 +36046,7 @@ custom_tooltip_with_modifiers:<br>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>評議会:<br>
 ・planet_pop_assembly_mult(機械POP製造速度) = 0.1<br>
-・planet_pop_assemblers_engineering_research_produces_add(100 [GetPopAssemblersPlural]あたりの£engineering£ §Y工学研究§!) = 1<br>
+・planet_pop_assemblers_engineering_research_produces_add(£engineering_research£ ：100あたりの産出： [GetPopAssemblersPluralWithIcon]) = 1<br>
 <br>
 custom_tooltip_with_modifiers:<br>
 "leader_trait_legendary_great_inventor_2_tt"</p>
@@ -35903,7 +36100,7 @@ custom_tooltip_with_modifiers:<br>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>評議会:<br>
 ・planet_pop_assembly_mult(機械POP製造速度) = 0.15<br>
-・planet_pop_assemblers_engineering_research_produces_add(100 [GetPopAssemblersPlural]あたりの£engineering£ §Y工学研究§!) = 2<br>
+・planet_pop_assemblers_engineering_research_produces_add(£engineering_research£ ：100あたりの産出： [GetPopAssemblersPluralWithIcon]) = 2<br>
 <br>
 custom_tooltip_with_modifiers:<br>
 "leader_trait_legendary_great_inventor_3_tt"</p>
@@ -36411,7 +36608,7 @@ custom_tooltip_with_modifiers:<br>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>評議会:<br>
 ・planet_jobs_worker_produces_mult([GetWorker]POPの資源産出) = -0.1<br>
-・planet_researchers_upkeep_mult([GetResearcherPluralWithIcon]維持費) = 0.2<br>
+・planet_researchers_upkeep_mult([GetResearcherPluralWithIcon]の維持費) = 0.2<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -37289,11 +37486,11 @@ custom_tooltip_with_modifiers:<br>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>惑星:<br>
-・planet_jobs_trade_produces_mult(£job£ 職業からの£trade£ 交易) = 0.15<br>
+・planet_jobs_trade_produces_mult(£job£職業からの£trade£ 交易) = 0.15<br>
 ・planet_pops_consumer_goods_upkeep_mult(POP消費財維持費) = -0.05<br>
 <br>
 セクター:<br>
-・planet_jobs_trade_produces_mult(£job£ 職業からの£trade£ 交易) = 0.075<br>
+・planet_jobs_trade_produces_mult(£job£職業からの£trade£ 交易) = 0.075<br>
 ・planet_pops_consumer_goods_upkeep_mult(POP消費財維持費) = -0.025<br>
 <br></p>
 </div></div></td>
@@ -37346,13 +37543,13 @@ custom_tooltip_with_modifiers:<br>
 ・planet_stability_add(安定度) = 10<br>
 ・planet_crime_add([GetCrimeDeviancy]) = -10<br>
 ・pop_government_ethic_attraction(統治志向の魅力) = 0.20<br>
-・planet_bureaucrats_unity_produces_mult([GetBureaucratPluralWithIcon]からの£unity£ 統合力) = 0.10<br>
+・planet_bureaucrats_unity_produces_mult(£unity£ 産出： [GetBureaucratSwapPluralWithIcon]) = 0.10<br>
 <br>
 セクター:<br>
 ・planet_stability_add(安定度) = 5<br>
 ・planet_crime_add([GetCrimeDeviancy]) = -5<br>
 ・pop_government_ethic_attraction(統治志向の魅力) = 0.10<br>
-・planet_bureaucrats_unity_produces_mult([GetBureaucratPluralWithIcon]からの£unity£ 統合力) = 0.05<br>
+・planet_bureaucrats_unity_produces_mult(£unity£ 産出： [GetBureaucratSwapPluralWithIcon]) = 0.05<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -38527,7 +38724,7 @@ custom_tooltip_with_modifiers:<br>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>超能力者<br>
-選ばれし者<br></p>
+[GetChosenName]<br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -38562,7 +38759,7 @@ custom_tooltip_with_modifiers:<br>
 ・pop_engineer_bonus_workforce_mult([engineer.GetNamePlural]の職業の効率) = 0.05<br>
 ・pop_bureaucrat_bonus_workforce_mult([bureaucrat.GetNamePlural]の職業の効率) = 0.05<br>
 ・pop_coordinator_bonus_workforce_mult([coordinator.GetNamePlural]の職業の効率) = 0.05<br>
-・pop_synapse_drone_bonus_workforce_mult(job_synapse_drone_physicist_pluralの職業の効率) = 0.05<br>
+・pop_synapse_drone_bonus_workforce_mult([synapse_drone.GetNamePlural]の職業の効率) = 0.05<br>
 ・council_agenda_progress_speed(評議会の方針の進行速度) = -0.1<br>
 <br></p>
 </div></div></td>
@@ -38673,7 +38870,7 @@ custom_tooltip_with_modifiers:<br>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>超能力者<br>
-選ばれし者<br>
+[GetChosenName]<br>
 サイボーグ<br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -39013,7 +39210,7 @@ custom_tooltip_with_modifiers:<br>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>評議会:<br>
-・deposit_increase_on_survey_chance_mult(調査完了時：一定確率で資源鉱床規模が上昇) = 0.1<br>
+・deposit_increase_on_survey_chance_mult(調査完了時：\n    一定確率で資源鉱床規模が上昇) = 0.1<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -39064,7 +39261,7 @@ custom_tooltip_with_modifiers:<br>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>評議会:<br>
-・deposit_increase_on_survey_chance_mult(調査完了時：一定確率で資源鉱床規模が上昇) = 0.2<br>
+・deposit_increase_on_survey_chance_mult(調査完了時：\n    一定確率で資源鉱床規模が上昇) = 0.2<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -39115,7 +39312,7 @@ custom_tooltip_with_modifiers:<br>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>評議会:<br>
-・deposit_increase_on_survey_chance_mult(調査完了時：一定確率で資源鉱床規模が上昇) = 0.3<br>
+・deposit_increase_on_survey_chance_mult(調査完了時：\n    一定確率で資源鉱床規模が上昇) = 0.3<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -40058,6 +40255,216 @@ custom_tooltip_with_modifiers:<br>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>leader_trait_altered_metabolism</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>変異した代謝機能</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>basic</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>本人:<br>
+・leader_lifespan_add(リーダーの寿命) = 15<br>
+<br></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>leader_trait_hardened_survivalist</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>サバイバルの達人</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>destiny</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>リーダーアサイン時:<br>
+・science_ship_survey_speed_uninhabitable = 0.25<br>
+・ship_anomaly_research_speed_mult_uninhabitable = 0.25<br>
+・ship_anomaly_generation_chance_mult_uninhabitable = 0.25<br>
+<br></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>leader_trait_judicial_subjugation</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>法による従属化</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>destiny</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>惑星:<br>
+・planet_crime_add([GetCrimeDeviancy]) = -30<br>
+・planet_stability_add(安定度) = 10<br>
+<br>
+セクター:<br>
+・planet_crime_add([GetCrimeDeviancy]) = -15<br>
+・planet_stability_add(安定度) = 5<br>
+<br>
+惑星(条件あり):<br>
+・条件：{"exists": "owner", "owner": {"is_gestalt": "no"}}<br>
+・pop_happiness(POP幸福度が VALUE|Y COMPAREである) = -0.10<br>
+<br>
+セクター(条件あり):<br>
+・条件：{"exists": "owner", "owner": {"is_gestalt": "no"}}<br>
+・pop_happiness(POP幸福度が VALUE|Y COMPAREである) = -0.05<br>
+<br></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>leader_trait_judicial_execution</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>死刑執行ルーチン</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>destiny</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>custom_tooltip:<br>
+£planet£ §E惑星総督の効果：§!\n    £pops£ §Y浄化された有機生命体POP§!から得られる資源：§G+100%§!\n\</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>leader_trait_unplugged_cybernetic_positives_3</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -40194,6 +40601,916 @@ custom_tooltip_with_modifiers:<br>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>強制リセット<br></p>
 </div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>leader_trait_whispering_mind</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>ささやく精神</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>basic</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>本人:<br>
+・species_leader_exp_gain = 0.2<br>
+・leader_lifespan_add(リーダーの寿命) = -10<br>
+<br>
+リーダーアサイン時(条件あり):<br>
+・条件：{"leader_class": "scientist"}<br>
+・ship_anomaly_generation_chance_mult(アノマリー発見率) = 0.1<br>
+・ship_anomaly_research_speed_mult = 0.1<br>
+<br>
+惑星(条件あり):<br>
+・条件：{"leader_class": "official"}<br>
+・planet_researchers_produces_mult([GetResearcherPluralWithIcon]が生産する資源) = 0.05<br>
+・planet_structures_cost_mult(惑星のインフラコスト) = -0.05<br>
+<br>
+艦隊(条件あり):<br>
+・条件：{"leader_class": "commander"}<br>
+・ship_tracking_mult(追尾) = 0.1<br>
+・ship_accuracy_mult(命中) = 0.05<br>
+<br></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>{
+  "has_shroud_dlc": "yes",
+  "exists": "from",
+  "from": {
+    "has_country_flag": "knowledge_accord"
+  }
+}</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>leader_trait_whispering_mind_2</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>leader_trait_whispering_mind_2</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>basic</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>本人:<br>
+・species_leader_exp_gain = 0.4<br>
+・leader_lifespan_add(リーダーの寿命) = -20<br>
+<br>
+リーダーアサイン時(条件あり):<br>
+・条件：{"leader_class": "scientist"}<br>
+・ship_anomaly_generation_chance_mult(アノマリー発見率) = 0.15<br>
+・ship_anomaly_research_speed_mult = 0.15<br>
+<br>
+惑星(条件あり):<br>
+・条件：{"leader_class": "official"}<br>
+・planet_researchers_produces_mult([GetResearcherPluralWithIcon]が生産する資源) = 0.1<br>
+・planet_structures_cost_mult(惑星のインフラコスト) = -0.1<br>
+<br>
+艦隊(条件あり):<br>
+・条件：{"leader_class": "commander"}<br>
+・ship_tracking_mult(追尾) = 0.15<br>
+・ship_accuracy_mult(命中) = 0.1<br>
+<br></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>ささやく精神<br></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>{
+  "has_shroud_dlc": "yes",
+  "exists": "from",
+  "from": {
+    "has_country_flag": "knowledge_accord"
+  }
+}</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>leader_trait_whispering_mind_3</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>leader_trait_whispering_mind_3</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>basic</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>本人:<br>
+・species_leader_exp_gain = 0.6<br>
+・leader_lifespan_add(リーダーの寿命) = -30<br>
+<br>
+リーダーアサイン時(条件あり):<br>
+・条件：{"leader_class": "scientist"}<br>
+・ship_anomaly_generation_chance_mult(アノマリー発見率) = 0.2<br>
+・ship_anomaly_research_speed_mult = 0.2<br>
+<br>
+惑星(条件あり):<br>
+・条件：{"leader_class": "official"}<br>
+・planet_researchers_produces_mult([GetResearcherPluralWithIcon]が生産する資源) = 0.15<br>
+・planet_structures_cost_mult(惑星のインフラコスト) = -0.15<br>
+<br>
+艦隊(条件あり):<br>
+・条件：{"leader_class": "commander"}<br>
+・ship_tracking_mult(追尾) = 0.2<br>
+・ship_accuracy_mult(命中) = 0.15<br>
+<br></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>leader_trait_whispering_mind_2<br></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>{
+  "has_shroud_dlc": "yes",
+  "exists": "from",
+  "from": {
+    "has_country_flag": "knowledge_accord"
+  }
+}</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>leader_trait_shroud_warped</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>シュラウド変質体</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>basic</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>本人:<br>
+・leader_lifespan_add(リーダーの寿命) = 20<br>
+<br>
+惑星:<br>
+・planet_pops_psionic_unity_produces_add(超能力POPからの£unity£ 統合力) = 0.5<br>
+・psionic_pop_bonus_workforce_mult(超能力POP職業の効率の行先：) = 0.1<br>
+<br>
+セクター:<br>
+・planet_pops_psionic_unity_produces_add(超能力POPからの£unity£ 統合力) = 0.25<br>
+・psionic_pop_bonus_workforce_mult(超能力POP職業の効率の行先：) = 0.05<br>
+<br>
+リーダーアサイン時(条件あり):<br>
+・条件：{"leader_class": "scientist"}<br>
+・ship_archaeological_site_excavation_speed_mult(考古学発掘速度) = 0.25<br>
+<br>
+・条件：{"has_astral_planes_dlc": "yes", "leader_class": "scientist"}<br>
+・ship_astral_rift_speed_mult(天体の裂け目の探索速度) = 0.25<br>
+<br>
+地上軍(条件あり):<br>
+・条件：{"leader_class": "commander"}<br>
+・army_morale_damage_mult(地上軍士気ダメージ) = 0.15<br>
+・custom_tooltip = leader_trait_shroud_warped_invasion_effect(侵略に勝利するたびに、 敵帝国に関する情報値§G+@shroud_warped_intel|0§!)<br>
+・show_only_custom_tooltip = no(いいえ)<br>
+<br>
+銀河共同体(条件あり):<br>
+・条件：{"leader_class": "official"}<br>
+・diplo_weight_mult(外交発言力) = 0.1<br>
+<br>
+連邦(条件あり):<br>
+・条件：{"leader_class": "official"}<br>
+・federation_experience_add(毎月の連邦経験値) = 0.5<br>
+<br></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>leader_trait_shroudshaper</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>シュラウドシェイパー</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>basic</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>惑星:<br>
+・planet_jobs_upkeep_mult(£job£ 職業の維持費) = -0.10<br>
+・job_telepath_per_pop(VALUEPOPにつき[telepath.GetName]の職業枠§G+1§!) = 0.04<br>
+<br>
+セクター:<br>
+・planet_jobs_upkeep_mult(£job£ 職業の維持費) = -0.05<br>
+・job_telepath_per_pop(VALUEPOPにつき[telepath.GetName]の職業枠§G+1§!) = 0.02<br>
+<br>
+評議会:<br>
+・all_technology_research_speed = 0.05<br>
+・country_naval_cap_mult(宇宙軍許容量) = 0.05<br>
+・diplo_weight_mult(外交発言力) = 0.05<br>
+<br>
+リーダーアサイン時(条件あり):<br>
+・条件：{"is_ruler": "no", "leader_class": "scientist"}<br>
+・science_ship_survey_speed = 0.10<br>
+・ship_anomaly_generation_chance_mult(アノマリー発見率) = 0.05<br>
+<br>
+艦隊(条件あり):<br>
+・条件：{"leader_class": "commander"}<br>
+・ship_speed_mult(亜光速移動速度) = 0.20<br>
+・ship_fire_rate_mult(艦船連射レート) = 0.20<br>
+・ship_sensor_range_add(センサー範囲) = 2<br>
+<br>
+地上軍(条件あり):<br>
+・条件：{"leader_class": "commander"}<br>
+・army_morale_damage_mult(地上軍士気ダメージ) = 0.20<br>
+・army_morale(地上軍の士気) = 0.20<br>
+・army_health(£ship_stats_hitpoints£ VALUE) = 0.20<br>
+・army_damage_mult(地上軍ダメージ) = 0.20<br>
+<br>
+銀河共同体(条件あり):<br>
+・条件：{"leader_class": "official"}<br>
+・resolution_category_greatergood_vote_strength_mult(§Y大いなる善§!決議における票数) = 0.35<br>
+・resolutions_cost_mult(銀河共同体決議アクションコスト) = -0.15<br>
+<br>
+連邦(条件あり):<br>
+・条件：{"leader_class": "official"}<br>
+・federation_experience_add(毎月の連邦経験値) = 1.5<br>
+・cohesion_ethics_penalty_mult = -0.35<br>
+<br></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>leader_trait_iron_will</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>鉄の意志</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>veteran</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>艦隊:<br>
+・psionic_aura_resistance_mult(サイオニック・オーラ耐性) = 0.9<br>
+・ship_armor_hardening_add(装甲強化) = 0.2<br>
+・ship_tracking_mult(追尾) = 0.25<br>
+<br>
+地上軍:<br>
+・army_morale(地上軍の士気) = 0.5<br>
+・army_health(£ship_stats_hitpoints£ VALUE) = 0.25<br>
+<br></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>leader_trait_disciple_of_the_cradle</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>ゆりかごの使徒</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>destiny</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>本人:<br>
+・leader_lifespan_add(リーダーの寿命) = 15<br>
+<br>
+惑星:<br>
+・planet_stability_add(安定度) = 10<br>
+・planet_crime_add([GetCrimeDeviancy]) = -10<br>
+・planet_jobs_produces_mult(£job£ 職業からの資源) = -0.10<br>
+・planet_jobs_sr_zro_produces_mult(£job£ 職業からの£zro£ §Yズィロ§!) = 0.10<br>
+<br>
+評議会(条件あり):<br>
+・custom_tooltip = leader_trait_disciple_of_the_cradle_envoys_zro(    - パトロンに割り当てた使節が、 毎月§G0.5§!£zro£ §Yズィロ§!を生成するようになる)<br>
+・show_only_custom_tooltip = no(いいえ)<br>
+・envoy_harm_relations_mult(使節による関係悪化活動) = 0.25<br>
+<br></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>leader_trait_disciple_of_the_eater</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>ブラッドブリンガー</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>destiny</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>艦隊(条件あり):<br>
+・ship_fire_rate_mult(艦船連射レート) = 0.35<br>
+・ship_weapon_damage(艦船武器ダメージ) = 0.25<br>
+・ship_disengage_chance_mult(戦闘離脱成功率) = -1<br>
+・custom_tooltip = leader_trait_disciple_of_the_eater_zro_fleet_attack_effect(    - §G+@disciple_of_the_eater_zro_fleet_attack|1§! 軌道爆撃による破壊度1%ごとに£sr_zro£ §Iズィロ§!を獲得できる)<br>
+・show_only_custom_tooltip = no(いいえ)<br>
+<br>
+地上軍(条件あり):<br>
+・army_damage_mult(地上軍ダメージ) = 0.5<br>
+・custom_tooltip = leader_trait_disciple_of_the_eater_zro_army_attack_effect(    - §G+@disciple_of_the_eater_zro_army_attack|0§! 侵攻軍による破壊度1%ごとに£sr_zro£ §Iズィロ§!を獲得できる)<br>
+・show_only_custom_tooltip = no(いいえ)<br>
+<br></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>leader_trait_disciple_of_the_instrument</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>強欲なる心</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>destiny</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>惑星(条件あり):<br>
+・planet_jobs_produces_mult(£job£ 職業からの資源) = 0.2<br>
+・planet_miners_sr_zro_produces_add(£sr_zro£ ：100あたりの産出： [GetMinerSwapPluralWithIcon]) = 0.5<br>
+・planet_jobs_trade_produces_mult(£job£職業からの£trade£ 交易) = 0.2<br>
+・custom_tooltip = leader_trait_disciple_of_the_instrument_planetary_decision_effect(- §Y鉱脈の探り当て§!の惑星ディシジョンへのアクセスが可能になる)<br>
+・show_only_custom_tooltip = no(いいえ)<br>
+<br>
+セクター(条件あり):<br>
+・planet_jobs_produces_mult(£job£ 職業からの資源) = 0.1<br>
+・planet_miners_sr_zro_produces_add(£sr_zro£ ：100あたりの産出： [GetMinerSwapPluralWithIcon]) = 0.25<br>
+・planet_jobs_trade_produces_mult(£job£職業からの£trade£ 交易) = 0.1<br>
+<br></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>leader_trait_disciple_of_the_composer</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>苛まれし者の螺旋</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>destiny</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>惑星(条件あり):<br>
+・planet_jobs_physics_research_produces_mult(£job£ 職業からの£physics_research£ 物理学研究) = 0.05<br>
+・planet_jobs_society_research_produces_mult(£job£ 職業からの£society_research£ 社会学研究) = 0.05<br>
+・planet_jobs_engineering_research_produces_mult(£job£ 職業からの£engineering_research£ 工学研究) = 0.05<br>
+・planet_researchers_sr_zro_produces_add(£sr_zro£ ：100あたりの産出： [GetResearcherPluralWithIcon]) = 0.1<br>
+・planet_researchers_upkeep_mult([GetResearcherPluralWithIcon]の維持費) = 0.15<br>
+・planet_pops_upkeep_mult(POP維持費) = 0.15<br>
+・logistic_growth_mult(POPの成長速度) = 0.15<br>
+<br>
+セクター(条件あり):<br>
+・planet_jobs_physics_research_produces_mult(£job£ 職業からの£physics_research£ 物理学研究) = 0.025<br>
+・planet_jobs_society_research_produces_mult(£job£ 職業からの£society_research£ 社会学研究) = 0.025<br>
+・planet_jobs_engineering_research_produces_mult(£job£ 職業からの£engineering_research£ 工学研究) = 0.025<br>
+・planet_researchers_sr_zro_produces_add(£sr_zro£ ：100あたりの産出： [GetResearcherPluralWithIcon]) = 0.05<br>
+・planet_researchers_upkeep_mult([GetResearcherPluralWithIcon]の維持費) = 0.075<br>
+・planet_pops_upkeep_mult(POP維持費) = 0.075<br>
+・logistic_growth_mult(POPの成長速度) = 0.075<br>
+<br></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>leader_trait_disciple_of_the_composer_2</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>leader_trait_disciple_of_the_composer_2</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>destiny</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>本人:<br>
+・leader_lifespan_mult(リーダーの寿命) = -0.35<br>
+<br>
+惑星(条件あり):<br>
+・planet_jobs_physics_research_produces_mult(£job£ 職業からの£physics_research£ 物理学研究) = 0.1<br>
+・planet_jobs_society_research_produces_mult(£job£ 職業からの£society_research£ 社会学研究) = 0.1<br>
+・planet_jobs_engineering_research_produces_mult(£job£ 職業からの£engineering_research£ 工学研究) = 0.1<br>
+・planet_researchers_sr_zro_produces_add(£sr_zro£ ：100あたりの産出： [GetResearcherPluralWithIcon]) = 0.25<br>
+・planet_researchers_upkeep_mult([GetResearcherPluralWithIcon]の維持費) = 0.35<br>
+・planet_pops_upkeep_mult(POP維持費) = 0.35<br>
+・logistic_growth_mult(POPの成長速度) = 0.35<br>
+<br>
+セクター(条件あり):<br>
+・planet_jobs_physics_research_produces_mult(£job£ 職業からの£physics_research£ 物理学研究) = 0.05<br>
+・planet_jobs_society_research_produces_mult(£job£ 職業からの£society_research£ 社会学研究) = 0.05<br>
+・planet_jobs_engineering_research_produces_mult(£job£ 職業からの£engineering_research£ 工学研究) = 0.05<br>
+・planet_researchers_sr_zro_produces_add(£sr_zro£ ：100あたりの産出： [GetResearcherPluralWithIcon]) = 0.125<br>
+・planet_researchers_upkeep_mult([GetResearcherPluralWithIcon]の維持費) = 0.175<br>
+・planet_pops_upkeep_mult(POP維持費) = 0.175<br>
+・logistic_growth_mult(POPの成長速度) = 0.175<br>
+<br></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>苛まれし者の螺旋<br></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>leader_trait_disciple_of_the_whisperers</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>くぐもった囁き</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>destiny</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>評議会(条件あり):<br>
+・rare_tech_draw_chance_mult = 0.25<br>
+・rare_tech_research_speed_mult = 0.25<br>
+<br>
+・custom_tooltip = leader_trait_disciple_of_the_whisperers_effects(    - §Y希少§!もしくは§Y超能力§!に関わるテクノロジーを研究時、 @disciple_of_the_whisperers_tech_zro|0=+ £sr_zro£ §Iズィロ§!)<br>
+・show_only_custom_tooltip = no(いいえ)<br>
+・shroud_delve_cooldown(シュラウド探索クールダウン) = -0.2<br>
+<br></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>leader_trait_disciple_of_the_end</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>終焉の使徒</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>destiny</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>艦隊(条件あり):<br>
+・custom_tooltip = leader_trait_disciple_of_the_end_effects(    - 星系内で艦船が1つ破壊されるたびに、 オーラの強度が@disciple_of_the_end_aura_intensity|0=\n    - §H終焉のオーラ§!の中では、 ジャンプドライブ範囲が@disciple_of_the_end_jumpdrive_range|0=% )<br>
+・show_only_custom_tooltip = no(いいえ)<br>
+・ship_jumpdrive_cooldown_mult(ジャンプドライブのクールダウン) = -0.50<br>
+・ship_damage_against_starbases_mult(星系基地へのダメージ) = 0.5<br>
+・ship_speed_mult(亜光速移動速度) = 0.25<br>
+・ship_fire_rate_mult(艦船連射レート) = 0.25<br>
+<br></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>leader_trait_blinded</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>盲目</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>yes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>negative</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>評議会:<br>
+・country_unity_produces_mult(月間 統合力) = 1<br>
+・council_agenda_progress_speed(評議会の方針の進行速度) = -0.1<br>
+<br>
+リーダーアサイン時(条件あり):<br>
+・条件：{"leader_class": "scientist"}<br>
+・science_ship_survey_speed = -1<br>
+・ship_archaeological_site_excavation_speed_mult(考古学発掘速度) = -1<br>
+・ship_astral_rift_speed_mult(天体の裂け目の探索速度) = -1<br>
+<br></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>no</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
@@ -40630,7 +41947,7 @@ custom_tooltip_with_modifiers:<br>
 <p>評議会(条件あり):<br>
 ・条件：{"exists": "owner", "owner": {"is_gestalt": "no"}}<br>
 ・planet_pops_upkeep_mult(POP維持費) = -0.05<br>
-・planet_jobs_trade_produces_mult(£job£ 職業からの£trade£ 交易) = 0.05<br>
+・planet_jobs_trade_produces_mult(£job£職業からの£trade£ 交易) = 0.05<br>
 <br>
 custom_tooltip_with_modifiers:<br>
 §G評議員の特性に特化した熟練クラス§!</p>
