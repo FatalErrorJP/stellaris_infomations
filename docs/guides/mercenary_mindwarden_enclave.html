@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.23">
+<title>【Stellaris 4.1.3】マインドウォーデン中立機構に関するメモ</title>
+<link rel="stylesheet" href="../css/default.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="article toc2 toc-left">
+<div id="header">
+<h1>【Stellaris 4.1.3】マインドウォーデン中立機構に関するメモ</h1>
+<div id="toc" class="toc2">
+<div id="toctitle">目次</div>
+<ul class="sectlevel1">
+<li><a href="#_設立条件">1. 設立条件</a></li>
+<li><a href="#_tier">2. TIER</a></li>
+<li><a href="#_宇宙軍許容量の仕様">3. 宇宙軍許容量の仕様</a></li>
+<li><a href="#_研究">4. 研究</a></li>
+<li><a href="#_配当金の支払い">5. 配当金の支払い</a></li>
+<li><a href="#_マインドウォーデン中立機構ができること">6. マインドウォーデン中立機構ができること</a></li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_設立条件">1. 設立条件</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>通常帝国は中立機構許容量に空きがあれば自国の艦隊を傭兵中立機構またはマインドウォーデン中立機構に変更することができる。<br>
+具体的な条件は以下の通り。なお、赤字は傭兵中立機構とマインドウォーデン中立機構の設立条件の差異を示している。</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">表 1. 設立条件</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">傭兵中立機構</th>
+<th class="tableblock halign-left valign-top">マインドウォーデン中立機構</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="red">以下の全ての条件を満たさない国家であること</span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="red">マインドウォーデンである</span></p>
+</li>
+<li>
+<p><span class="red">ゲシュタルト意識かつ戦術アルゴリズムである</span></p>
+</li>
+<li>
+<p><span class="red">狂信的な浄化主義である</span></p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="red">以下の全てを満たす国家であること</span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="red">マインドウォーデンである</span></p>
+</li>
+<li>
+<p><span class="red">起源固有イベントを進め、設立条件を満たしていること</span><br>
+<span class="red">具体的には超能力戦争に勝利すると発生する</span><br>
+<span class="red">スペシャルプロジェクト「夢見る者の至聖所」を完了させた後</span><br>
+<span class="red">2年後に発生するイベント「第一中立機構」を確認していること</span></p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>上記に加え、以下の全ての条件を満たすこと</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>司令官が割り当てられている軍艦である</p>
+</li>
+<li>
+<p>艦隊のサイズが <span class="red">50</span> 以上である</p>
+</li>
+<li>
+<p>クローク能力がない艦隊である</p>
+</li>
+<li>
+<p>自国の支配下の星系である</p>
+</li>
+<li>
+<p>星系内に他の傭兵中立機構が存在しない</p>
+</li>
+<li>
+<p>星系内に小惑星または衛星がある</p>
+</li>
+<li>
+<p>中立機構許容量がある</p>
+</li>
+<li>
+<p>連邦艦隊やGDFではない</p>
+</li>
+<li>
+<p>宇宙生物艦ではない</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>上記に加え、以下の全ての条件を満たすこと</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>司令官が割り当てられている軍艦である</p>
+</li>
+<li>
+<p>艦隊のサイズが <span class="red">30</span> 以上である</p>
+</li>
+<li>
+<p>クローク能力がない艦隊である</p>
+</li>
+<li>
+<p>自国の支配下の星系である</p>
+</li>
+<li>
+<p>星系内に他のマインドウォーデン中立機構が存在しない</p>
+</li>
+<li>
+<p>星系内に小惑星または衛星がある</p>
+</li>
+<li>
+<p>中立機構許容量がある</p>
+</li>
+<li>
+<p>連邦艦隊やGDFではない</p>
+</li>
+<li>
+<p>宇宙生物艦ではない</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tier">2. TIER</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>傭兵中立機構、マインドウォーデン中立機構にはTIERの概念がある。<br>
+設立時はTIER:0で、エネルギー(バイオ艦の場合は食料)と合金を援助することで最大TIER:5まであげられる。</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<caption class="title">表 2. TIERをあげるために必要となる資源</caption>
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">TIER</th>
+<th class="tableblock halign-left valign-top">エネルギー(バイオ艦を使う帝国の場合は食料)</th>
+<th class="tableblock halign-left valign-top">合金</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>0</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>-</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>-</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>1</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>1000</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>500</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>2</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>2500</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>1250</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>3</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>5500</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>2750</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>4</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>10000</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>5000</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>5</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>13000</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>6500</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>傭兵中立機構の場合は、現在のTIERの状態に応じて傭兵中立機構自身に帝国補正が付与される。<br>
+この補正は累積する。つまりTIER3なら、TIER1～TIER3までの補正が全てついた状態となる。<br>
+マインドウォーデン中立機構については特にTIERによる帝国補正の付与はない。</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<caption class="title">表 3. TIERに応じた傭兵中立機構の補正</caption>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">TIER</th>
+<th class="tableblock halign-left valign-top">宇宙軍許容量</th>
+<th class="tableblock halign-left valign-top">艦隊指揮上限</th>
+<th class="tableblock halign-left valign-top">月間資源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>0</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>-</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>-</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>-</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>1</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>20</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>20</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>5%</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>2</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>30</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>30</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>5%</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>3</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>50</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>50</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>5%</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>4</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>80</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>80</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>5%</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>5</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>100</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>100</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>5%</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_宇宙軍許容量の仕様">3. 宇宙軍許容量の仕様</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>傭兵中立機構、マインドウォーデン中立機構の宇宙軍許容量は通常帝国とは仕様が異なっている。<br>
+具体的には艦隊指揮上限の値がそのまま宇宙軍許容量の値として採用される。<br>
+そのため、TIERや研究による宇宙軍許容量の補正は傭兵中立機構やマインドウォーデン中立機構には無意味な補正となっている。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_研究">4. 研究</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>傭兵中立機構、マインドウォーデン中立機構は通常帝国と同様に自身でも研究を行っている。<br>
+そのため、テクノロジーの共有をしなくても宇宙船ドクトリン(艦隊指揮上限+20)などの研究を自力で研究完了し、艦隊指揮上限をあげてくれることがある。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_配当金の支払い">5. 配当金の支払い</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>傭兵中立機構、マインドウォーデン中立機構は内部的に専用の状況イベントを持っており、この状況イベントが完了するタイミングで配当金が支払われる。<br>
+艦隊を雇用したり、援助したりすることで、状況イベントの進捗を加速することができる。<br></p>
+</div>
+<div class="paragraph">
+<p>状況イベントの進捗は補正なしであれば毎月1ずつ進捗が増え、240に達すれば完了となる。<br>
+具体的な補正の条件は以下の通り。</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">表 4. 配当金の支払いに関する進捗の補正</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">傭兵中立機構</th>
+<th class="tableblock halign-left valign-top">マインドウォーデン中立機構</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>基本値:1</p>
+</li>
+<li>
+<p>艦隊がパトロンに貸し出されている:&#43;1</p>
+</li>
+<li>
+<p>艦隊がパトロン意外に貸し出されている:&#43;2</p>
+</li>
+<li>
+<p>TIER1である:&#43;0.4</p>
+</li>
+<li>
+<p>TIER2である:&#43;0.8</p>
+</li>
+<li>
+<p>TIER3である:&#43;1.2</p>
+</li>
+<li>
+<p>TIER4である:&#43;1.6</p>
+</li>
+<li>
+<p>TIER5である:&#43;2.0</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>基本値:1</p>
+</li>
+<li>
+<p>艦隊がパトロンに貸し出されている:&#43;1</p>
+</li>
+<li>
+<p>艦隊がパトロン意外に貸し出されている:&#43;2</p>
+</li>
+<li>
+<p>TIER1である:&#43;0.4</p>
+</li>
+<li>
+<p>TIER2である:&#43;0.8</p>
+</li>
+<li>
+<p>TIER3である:&#43;1.2</p>
+</li>
+<li>
+<p>TIER4である:&#43;1.6</p>
+</li>
+<li>
+<p>TIER5である:&#43;2.0</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>傭兵中立機構が財政難: -5<br></p>
+</li>
+<li>
+<p>銀河共同体の決議「治安維持企業」が反映されている:&#43;0.5</p>
+</li>
+<li>
+<p>銀河共同体の決議「最重要保護対象」が反映されている:&#43;1.0</p>
+</li>
+<li>
+<p>銀河共同体の決議「中立防衛部隊」が反映されている:&#43;1.5</p>
+</li>
+<li>
+<p>銀河共同体の決議「銀河リスク管理」が反映されている:&#43;2.0</p>
+</li>
+<li>
+<p>銀河共同体の決議「企業による平和維持」が反映されている:&#43;2.5</p>
+</li>
+<li>
+<p>アセンションパーク「死の商人」を取得している:&#43;2.5</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>パトロンから以下の対応を依頼された場合、それぞれ&#43;1<br>
+  パトロン以外の国の場合は&#43;2<br>
+  ただし、補正は依頼されてから直近5年間のみ有効</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>「超能力の抑制」の研究について教えた</p>
+</li>
+<li>
+<p>ズィロを寄付された</p>
+</li>
+<li>
+<p>超能力者の襲撃を依頼された</p>
+</li>
+<li>
+<p>思想警察を雇用を依頼された</p>
+</li>
+<li>
+<p>兵站支援を依頼された</p>
+</li>
+<li>
+<p>アサルト・ウォーデンを雇用を依頼された</p>
+</li>
+<li>
+<p>長官を雇用を依頼された</p>
+</li>
+<li>
+<p>マインドウォーデンの戦略を伝授を依頼された</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>配当金の支払いのイベントは複数種類ある中からランダムで決まる。具体的な報酬は以下の通り。</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">表 5. 傭兵中立機構の配当金の支払い</caption>
+<colgroup>
+<col style="width: 18.1818%;">
+<col style="width: 27.2727%;">
+<col style="width: 27.2727%;">
+<col style="width: 27.2728%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">傭兵中立機構</th>
+<th class="tableblock halign-left valign-top">TIER:0～1</th>
+<th class="tableblock halign-left valign-top">TIER:2～3</th>
+<th class="tableblock halign-left valign-top">TIER:4～5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">パターン1(32%)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>6ヶ月分のエネルギー、物理学、社会学、工学(最小100、最大1000)</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>12ヶ月分のエネルギー、物理学、社会学、工学(最小150、最大2000)</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>18ヶ月分のエネルギー、物理学、社会学、工学(最小250、最大5000)</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">パターン2(32%)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>6ヶ月分のエネルギー、食料(最小100、最大1000)</p>
+</li>
+<li>
+<p>12ヶ月分の鉱物(最小150、最大2000)</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>12ヶ月分のエネルギー、食料(最小150、最大2000)</p>
+</li>
+<li>
+<p>18ヶ月分の鉱物(最小250、最大5000)</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>18ヶ月分のエネルギー、食料(最小250、最大5000)</p>
+</li>
+<li>
+<p>24ヶ月分の鉱物(最小350、最大10000)</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">パターン3(32％)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>12ヶ月分のエネルギー(最小150、最大2000)</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>18ヶ月分のエネルギー(最小250、最大5000)</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>24ヶ月分のエネルギー(最小350、最大10000)</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">パターン4(2％)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>6ヶ月分のエネルギー、鉱物(最小100、最大1000)</p>
+</li>
+<li>
+<p>12ヶ月分の物理学、社会学、工学(最小250、最大100000)</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>12ヶ月分のエネルギー、鉱物(最小150、最大2000)</p>
+</li>
+<li>
+<p>18ヶ月分の物理学、社会学、工学(最小350、最大100000)</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>18ヶ月分のエネルギー、鉱物(最小250、最大5000)</p>
+</li>
+<li>
+<p>24ヶ月分の物理学、社会学、工学(最小500、最大1000000)</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">パターン5(2％)</p></td>
+<td class="tableblock halign-left valign-top" colspan="3"><div class="content"><div class="paragraph">
+<p>傭兵中立機構が財政難になるイベントが発生し、以下のいずれかの選択肢から選択を求められる。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>6ヶ月分のエネルギー、食料(最小100、最大1000)</p>
+</li>
+<li>
+<p>傭兵中立機構の統治者の差し替え</p>
+</li>
+<li>
+<p>エネルギーと影響力を傭兵中立機構に提供する</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">表 6. マインドウォーデン中立機構の配当金の支払い</caption>
+<colgroup>
+<col style="width: 18.1818%;">
+<col style="width: 27.2727%;">
+<col style="width: 27.2727%;">
+<col style="width: 27.2728%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">マインドウォーデン中立機構</th>
+<th class="tableblock halign-left valign-top">TIER:0～1</th>
+<th class="tableblock halign-left valign-top">TIER:2～3</th>
+<th class="tableblock halign-left valign-top">TIER:4～5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">パターン1(32%)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>6ヶ月分のエネルギー(最小100、最大1000)</p>
+</li>
+<li>
+<p>12ヶ月分の物理学、社会学、工学(最小250、最大100000)</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>12ヶ月分のエネルギー(最小150、最大2000)</p>
+</li>
+<li>
+<p>18ヶ月分の物理学、社会学、工学(最小350、最大100000)</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>18ヶ月分のエネルギー(最小250、最大5000)</p>
+</li>
+<li>
+<p>24ヶ月分の物理学、社会学、工学(最小500、最大1000000)</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">パターン2(32%)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>6ヶ月分のエネルギー(最小100、最大1000)</p>
+</li>
+<li>
+<p>18ヶ月分の合金(最小250、最大5000)</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>12ヶ月分のエネルギー(最小150、最大2000)</p>
+</li>
+<li>
+<p>24ヶ月分の合金(最小350、最大10000)</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>18ヶ月分のエネルギー(最小250、最大5000)</p>
+</li>
+<li>
+<p>48ヶ月分の合金(最小700、最大30000)</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">パターン3(32％)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>12ヶ月分のエネルギー(最小150、最大2000)</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>18ヶ月分のエネルギー(最小250、最大5000)</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>24ヶ月分のエネルギー(最小350、最大10000)</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">パターン4(4％)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>6ヶ月分のエネルギー、合金(最小100、最大1000)</p>
+</li>
+<li>
+<p>12ヶ月分の物理学、社会学、工学(最小250、最大100000)</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>12ヶ月分のエネルギー、合金(最小150、最大2000)</p>
+</li>
+<li>
+<p>18ヶ月分の物理学、社会学、工学(最小350、最大100000)</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>18ヶ月分のエネルギー、合金(最小250、最大5000)</p>
+</li>
+<li>
+<p>24ヶ月分の物理学、社会学、工学(最小500、最大1000000)</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_マインドウォーデン中立機構ができること">6. マインドウォーデン中立機構ができること</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">表 7. マインドウォーデン中立機構の配当金の支払い</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">内容</th>
+<th class="tableblock halign-left valign-top">効果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ズィロを寄付する</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>配当金の支払いの進捗を早める</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">サイオニック・オーラについてできることはあるか？</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>1000エネルギー、50影響力を消費して「超能力の抑制」の研究を25％を与える<br>
+  この研究を完了することで、サイオニック・オーラの強度を下げる惑星建造物「サイオニック抑制機」と巨大建造物「シュラウド・シール」がアンロックされる</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">超能力者の絶好の標的を知っている……</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>5000エネルギー、50影響力を消費して超能力ルートに進んだ国家に艦隊を送り込む</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">我々の間で発生している犯罪への支援が必要だ</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>1000エネルギー、50影響力を消費して惑星のディシジョン「思想警察」を1つアンロックする<br>
+  このディシジョンは惑星に10年間安定度+10、犯罪-10%の効果を付与する</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">我々は今、兵站支援を必要としている</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>最低1000、最大10000エネルギーを消費して10年間の帝国補正「マインドウォーデンの後方支援」(C136艦船維持費-15%)を与える</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">あなたの兵士をお借りしたい</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>1000エネルギー、50影響力で地上軍「アサルト・ウォーデン」を雇用する<br>
+  戦力値は傭兵中立機構のエリート機構化傭兵の小規模部隊とだいたい同じぐらいになる</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">番人を派遣していただけるか？</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>5000エネルギー、50影響力を消費してLV5の司令官(長官、厳罰主義、番人、鉄の意志)を雇用する<br>
+  また評議会職「思考の監視者」(スキルレベルごとの帝国効果 月間統合力+1%、犯罪-1%、サイオニック・オーラ耐性+5%)をアンロックする<br>
+  リーダー特性の鉄の意志はサイオニック・オーラ耐性90％のため、対超能力国家との戦争で重宝するが、それ以外の特性は内政向きのため扱いは難しいかもしれない</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">円環の終わりについてあなた方と話がしたい</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>円環の終わりが存在している場合しか選択できない。10000エネルギーで帝国補正「マインドウォーデン」(報復へのダメージ+50%)を与える</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">中立機構の規模を拡大する手伝いがしたい</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>資源を投入することでマインドウォーデン中立機構のTIERを1段階あげる</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">我々のテクノロジーを共有したい</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>マインドウォーデン中立機構に完了済の研究を共有する</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">我々自身の目的のために艦隊を1つ雇いたい</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>マインドウォーデン中立機構から艦隊を借りる</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">マインドウォーデン中立機構の収容能力を増やしたい</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>設立可能なマインドウォーデン中立機構の枠を一つ増やす<br>
+  この選択肢を何度も選ぶことで国是や銀河共同体の決議で中立機構許容量を増やさなくてもいくらでもマインドウォーデン中立機構の枠を増やすことができる<br>
+  ただし中立機構許容量の最大値10という制約があるため枠を増やしても結局は最大10個までしか設立できない</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>以上</p>
+</div>
+<div id="GotoTop" class="paragraph">
+<p><a href="../">TOPへ戻る</a></p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  messageStyle: "none",
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    ignoreClass: "nostem|nolatexmath"
+  },
+  asciimath2jax: {
+    delimiters: [["\\$", "\\$"]],
+    ignoreClass: "nostem|noasciimath"
+  },
+  TeX: { equationNumbers: { autoNumber: "none" } }
+})
+MathJax.Hub.Register.StartupHook("AsciiMath Jax Ready", function () {
+  MathJax.InputJax.AsciiMath.postfilterHooks.Add(function (data, node) {
+    if ((node = data.script.parentNode) && (node = node.parentNode) && node.classList.contains("stemblock")) {
+      data.math.root.display = "block"
+    }
+    return data
+  })
+})
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
+<!-- [FC2 Analyzer] //analyzer.fc2.com/  -->
+<script language="javascript" src="//analyzer5.fc2.com/ana/processor.php?uid=1036071" type="text/javascript"></script>
+<noscript><div align="right"><img src="//analyzer5.fc2.com/ana/icon.php?uid=1036071&ref=&href=&wid=0&hei=0&col=0" /></div></noscript>
+<!-- [FC2 Analyzer]  -->
+</body>
+</html>
