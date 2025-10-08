@@ -1,6 +1,6 @@
 
 function getVersion() {
-    return "v4.1.3";
+    return "v4.1.5";
 }
 
 function getElements() {
@@ -1693,10 +1693,10 @@ function getElements() {
       cost: 2500,
       area:'社会学',
       category: '統治学',
-      weight: 0,
-      weight_modifier: [],
+      weight: 95,
+      weight_modifier: [{"modifier": [{"factor": "0.5"}, {"factor": "1.5"}, {"factor": "1.5"}, {"factor": "1.5"}, {"factor": "2", "is_memorialist_empire": "yes"}, {"factor": "2", "is_entropy_drinkers_empire": "yes"}]}],
       prerequisites: ["惑星統一"],
-      potential: {}
+      potential: {"is_wilderness_empire": "no"}
     },
     classes: 'society'
 },
@@ -3763,8 +3763,8 @@ function getElements() {
       cost: 5000,
       area:'社会学',
       category: '統治学',
-      weight: 90,
-      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_technology": "tech_rare_crystals", "has_country_flag": "has_market_access"}}]}],
+      weight: 75,
+      weight_modifier: [{"modifier": [{"factor": "0.5"}, {"factor": "1.5"}, {"factor": "1.5"}, {"factor": "1.5"}, {"factor": "2", "is_memorialist_empire": "yes"}, {"factor": "2", "is_entropy_drinkers_empire": "yes"}]}],
       prerequisites: ["社会文化史"],
       potential: {}
     },
@@ -5581,7 +5581,7 @@ function getElements() {
       weight: 65,
       weight_modifier: [{"factor": "0.5", "modifier": [{"factor": "0.20", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_curator"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_tomb_world_adaption"}}}, {"factor": "2", "any_owned_planet": {"is_planet_class": "pc_nuked"}}]}],
       prerequisites: ["過酷な環境への適応"],
-      potential: {}
+      potential: {"is_wilderness_empire": "no"}
     },
     classes: 'society'
 },
@@ -5938,8 +5938,8 @@ function getElements() {
       cost: 10000,
       area:'社会学',
       category: '統治学',
-      weight: 65,
-      weight_modifier: [],
+      weight: 60,
+      weight_modifier: [{"modifier": [{"factor": "0.5"}, {"factor": "1.5"}, {"factor": "1.5"}, {"factor": "1.5"}, {"factor": "2", "is_memorialist_empire": "yes"}, {"factor": "2", "is_entropy_drinkers_empire": "yes"}]}],
       prerequisites: ["星界遺産","植民地集権化"],
       potential: {}
     },
@@ -8836,7 +8836,7 @@ function getElements() {
       weight: 25,
       weight_modifier: [{"modifier": [{"factor": "0.1", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_cloaking_psi"}}}, {"factor": "5", "has_tradition": "tr_subterfuge_adopt"}]}],
       prerequisites: ["PSIジャンプドライブ"],
-      potential: {"NOT": {"has_ethic": "ethic_gestalt_consciousness"}, "has_first_contact_dlc": "yes"}
+      potential: {"OR": {"has_shroud_dlc": "yes", "NOT": {"has_ethic": "ethic_gestalt_consciousness"}}, "has_first_contact_dlc": "yes"}
     },
     classes: 'society'
 },

@@ -9,7 +9,7 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 25801.75)">
 <title>tech_tree</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-25801.75 4314.1,-25801.75 4314.1,4 -4,4"/>
-<text text-anchor="middle" x="2155.05" y="-5.35" font-family="BIZ UDPGothic" font-size="12.00">v4.1.3</text>
+<text text-anchor="middle" x="2155.05" y="-5.35" font-family="BIZ UDPGothic" font-size="12.00">v4.1.5</text>
 <g id="clust1" class="cluster">
 <title>cluster_tech_wilderness_terraform</title>
 <g id="a_clust1"><a xlink:title="前提研究:&#10;&#10;&#10;その他の条件:&#10;{&#10; &#160;&quot;is_wilderness_empire&quot;: &quot;yes&quot;&#10;}">
@@ -908,7 +908,7 @@
 </g>
 <g id="clust113" class="cluster">
 <title>cluster_tech_cultural_heritage</title>
-<g id="a_clust113"><a xlink:title="前提研究:&#10;惑星統一&#10;&#10;&#10;その他の条件:&#10;">
+<g id="a_clust113"><a xlink:title="前提研究:&#10;惑星統一&#10;&#10;&#10;その他の条件:&#10;{&#10; &#160;&quot;is_wilderness_empire&quot;: &quot;no&quot;&#10;}">
 <polygon fill="#90ee90" stroke="black" points="987.82,-5243.75 987.82,-5336.75 1116.02,-5336.75 1116.02,-5243.75 987.82,-5243.75"/>
 <text text-anchor="middle" x="1051.92" y="-5321.35" font-family="BIZ UDPGothic" font-size="12.00">社会文化史</text>
 </a>
@@ -2980,7 +2980,7 @@
 </g>
 <g id="clust372" class="cluster">
 <title>cluster_tech_tomb_world_adaption</title>
-<g id="a_clust372"><a xlink:title="前提研究:&#10;過酷な環境への適応&#10;&#10;&#10;その他の条件:&#10;">
+<g id="a_clust372"><a xlink:title="前提研究:&#10;過酷な環境への適応&#10;&#10;&#10;その他の条件:&#10;{&#10; &#160;&quot;is_wilderness_empire&quot;: &quot;no&quot;&#10;}">
 <polygon fill="#9370db" stroke="black" points="1917.55,-1769.75 1917.55,-1862.75 2045.75,-1862.75 2045.75,-1769.75 1917.55,-1769.75"/>
 <text text-anchor="middle" x="1981.65" y="-1847.35" font-family="BIZ UDPGothic" font-size="12.00">死の惑星への適応</text>
 </a>
@@ -4716,7 +4716,7 @@
 </g>
 <g id="clust589" class="cluster">
 <title>cluster_tech_cloaking_psi</title>
-<g id="a_clust589"><a xlink:title="前提研究:&#10;PSIジャンプドライブ&#10;&#10;&#10;その他の条件:&#10;{&#10; &#160;&quot;NOT&quot;: {&#10; &#160;&#160;&#160;&quot;has_ethic&quot;: &quot;ethic_gestalt_consciousness&quot;&#10; &#160;},&#10; &#160;&quot;has_first_contact_dlc&quot;: &quot;yes&quot;&#10;}">
+<g id="a_clust589"><a xlink:title="前提研究:&#10;PSIジャンプドライブ&#10;&#10;&#10;その他の条件:&#10;{&#10; &#160;&quot;OR&quot;: {&#10; &#160;&#160;&#160;&quot;has_shroud_dlc&quot;: &quot;yes&quot;,&#10; &#160;&#160;&#160;&quot;NOT&quot;: {&#10; &#160;&#160;&#160;&#160;&#160;&quot;has_ethic&quot;: &quot;ethic_gestalt_consciousness&quot;&#10; &#160;&#160;&#160;}&#10; &#160;},&#10; &#160;&quot;has_first_contact_dlc&quot;: &quot;yes&quot;&#10;}">
 <polygon fill="#9370db" stroke="black" points="1262.4,-19030.75 1262.4,-19123.75 1460.65,-19123.75 1460.65,-19030.75 1262.4,-19030.75"/>
 <text text-anchor="middle" x="1361.52" y="-19108.35" font-family="BIZ UDPGothic" font-size="12.00">PSI位相フィールド・ジェネレーター</text>
 </a>
@@ -8831,12 +8831,12 @@
 <!-- tech_cultural_heritage_info -->
 <g id="node113" class="node">
 <title>tech_cultural_heritage_info</title>
-<g id="a_node113"><a xlink:title="weight_modifier:&#10;">
+<g id="a_node113"><a xlink:title="weight_modifier:&#10;[&#10; &#160;{&#10; &#160;&#160;&#160;&quot;modifier&quot;: [&#10; &#160;&#160;&#160;&#160;&#160;{&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;factor&quot;: &quot;0.5&quot;&#10; &#160;&#160;&#160;&#160;&#160;},&#10; &#160;&#160;&#160;&#160;&#160;{&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;factor&quot;: &quot;1.5&quot;&#10; &#160;&#160;&#160;&#160;&#160;},&#10; &#160;&#160;&#160;&#160;&#160;{&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;factor&quot;: &quot;1.5&quot;&#10; &#160;&#160;&#160;&#160;&#160;},&#10; &#160;&#160;&#160;&#160;&#160;{&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;factor&quot;: &quot;1.5&quot;&#10; &#160;&#160;&#160;&#160;&#160;},&#10; &#160;&#160;&#160;&#160;&#160;{&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;factor&quot;: &quot;2&quot;,&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;is_memorialist_empire&quot;: &quot;yes&quot;&#10; &#160;&#160;&#160;&#160;&#160;},&#10; &#160;&#160;&#160;&#160;&#160;{&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;factor&quot;: &quot;2&quot;,&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;is_entropy_drinkers_empire&quot;: &quot;yes&quot;&#10; &#160;&#160;&#160;&#160;&#160;}&#10; &#160;&#160;&#160;]&#10; &#160;}&#10;]">
 <polygon fill="none" stroke="black" points="1108.02,-5307.95 995.82,-5307.95 995.82,-5251.55 1108.02,-5251.55 1108.02,-5307.95"/>
 <text text-anchor="start" x="1017.42" y="-5291.25" font-family="BIZ UDPGothic" font-size="10.00">社会学(統治学)</text>
 <text text-anchor="start" x="1017.42" y="-5280.75" font-family="BIZ UDPGothic" font-size="10.00">tier:1</text>
 <text text-anchor="start" x="1017.42" y="-5270.25" font-family="BIZ UDPGothic" font-size="10.00">cost:2500</text>
-<text text-anchor="start" x="1017.42" y="-5259.75" font-family="BIZ UDPGothic" font-size="10.00">weight:</text>
+<text text-anchor="start" x="1017.42" y="-5259.75" font-family="BIZ UDPGothic" font-size="10.00">weight:95</text>
 </a>
 </g>
 </g>
@@ -8951,12 +8951,12 @@
 <!-- tech_heritage_site_info -->
 <g id="node251" class="node">
 <title>tech_heritage_site_info</title>
-<g id="a_node251"><a xlink:title="weight_modifier:&#10;[&#10; &#160;{&#10; &#160;&#160;&#160;&quot;modifier&quot;: [&#10; &#160;&#160;&#160;&#160;&#160;{&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;factor&quot;: &quot;0&quot;,&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;NOR&quot;: {&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;has_technology&quot;: &quot;tech_rare_crystals&quot;,&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;has_country_flag&quot;: &quot;has_market_access&quot;&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;}&#10; &#160;&#160;&#160;&#160;&#160;}&#10; &#160;&#160;&#160;]&#10; &#160;}&#10;]">
+<g id="a_node251"><a xlink:title="weight_modifier:&#10;[&#10; &#160;{&#10; &#160;&#160;&#160;&quot;modifier&quot;: [&#10; &#160;&#160;&#160;&#160;&#160;{&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;factor&quot;: &quot;0.5&quot;&#10; &#160;&#160;&#160;&#160;&#160;},&#10; &#160;&#160;&#160;&#160;&#160;{&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;factor&quot;: &quot;1.5&quot;&#10; &#160;&#160;&#160;&#160;&#160;},&#10; &#160;&#160;&#160;&#160;&#160;{&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;factor&quot;: &quot;1.5&quot;&#10; &#160;&#160;&#160;&#160;&#160;},&#10; &#160;&#160;&#160;&#160;&#160;{&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;factor&quot;: &quot;1.5&quot;&#10; &#160;&#160;&#160;&#160;&#160;},&#10; &#160;&#160;&#160;&#160;&#160;{&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;factor&quot;: &quot;2&quot;,&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;is_memorialist_empire&quot;: &quot;yes&quot;&#10; &#160;&#160;&#160;&#160;&#160;},&#10; &#160;&#160;&#160;&#160;&#160;{&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;factor&quot;: &quot;2&quot;,&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;is_entropy_drinkers_empire&quot;: &quot;yes&quot;&#10; &#160;&#160;&#160;&#160;&#160;}&#10; &#160;&#160;&#160;]&#10; &#160;}&#10;]">
 <polygon fill="none" stroke="black" points="1417.12,-5307.95 1304.92,-5307.95 1304.92,-5251.55 1417.12,-5251.55 1417.12,-5307.95"/>
 <text text-anchor="start" x="1326.52" y="-5291.25" font-family="BIZ UDPGothic" font-size="10.00">社会学(統治学)</text>
 <text text-anchor="start" x="1326.52" y="-5280.75" font-family="BIZ UDPGothic" font-size="10.00">tier:2</text>
 <text text-anchor="start" x="1326.52" y="-5270.25" font-family="BIZ UDPGothic" font-size="10.00">cost:5000</text>
-<text text-anchor="start" x="1326.52" y="-5259.75" font-family="BIZ UDPGothic" font-size="10.00">weight:90</text>
+<text text-anchor="start" x="1326.52" y="-5259.75" font-family="BIZ UDPGothic" font-size="10.00">weight:75</text>
 </a>
 </g>
 </g>
@@ -11928,12 +11928,12 @@
 <!-- tech_hypercomms_forum_info -->
 <g id="node396" class="node">
 <title>tech_hypercomms_forum_info</title>
-<g id="a_node396"><a xlink:title="weight_modifier:&#10;">
+<g id="a_node396"><a xlink:title="weight_modifier:&#10;[&#10; &#160;{&#10; &#160;&#160;&#160;&quot;modifier&quot;: [&#10; &#160;&#160;&#160;&#160;&#160;{&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;factor&quot;: &quot;0.5&quot;&#10; &#160;&#160;&#160;&#160;&#160;},&#10; &#160;&#160;&#160;&#160;&#160;{&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;factor&quot;: &quot;1.5&quot;&#10; &#160;&#160;&#160;&#160;&#160;},&#10; &#160;&#160;&#160;&#160;&#160;{&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;factor&quot;: &quot;1.5&quot;&#10; &#160;&#160;&#160;&#160;&#160;},&#10; &#160;&#160;&#160;&#160;&#160;{&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;factor&quot;: &quot;1.5&quot;&#10; &#160;&#160;&#160;&#160;&#160;},&#10; &#160;&#160;&#160;&#160;&#160;{&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;factor&quot;: &quot;2&quot;,&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;is_memorialist_empire&quot;: &quot;yes&quot;&#10; &#160;&#160;&#160;&#160;&#160;},&#10; &#160;&#160;&#160;&#160;&#160;{&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;factor&quot;: &quot;2&quot;,&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;is_entropy_drinkers_empire&quot;: &quot;yes&quot;&#10; &#160;&#160;&#160;&#160;&#160;}&#10; &#160;&#160;&#160;]&#10; &#160;}&#10;]">
 <polygon fill="none" stroke="black" points="1730.62,-5258.95 1618.42,-5258.95 1618.42,-5202.55 1730.62,-5202.55 1730.62,-5258.95"/>
 <text text-anchor="start" x="1640.02" y="-5242.25" font-family="BIZ UDPGothic" font-size="10.00">社会学(統治学)</text>
 <text text-anchor="start" x="1640.02" y="-5231.75" font-family="BIZ UDPGothic" font-size="10.00">tier:3</text>
 <text text-anchor="start" x="1640.02" y="-5221.25" font-family="BIZ UDPGothic" font-size="10.00">cost:10000</text>
-<text text-anchor="start" x="1640.02" y="-5210.75" font-family="BIZ UDPGothic" font-size="10.00">weight:65</text>
+<text text-anchor="start" x="1640.02" y="-5210.75" font-family="BIZ UDPGothic" font-size="10.00">weight:60</text>
 </a>
 </g>
 </g>
