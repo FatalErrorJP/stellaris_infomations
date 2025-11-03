@@ -5,8 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.23">
-<meta name="author" content="最終更新日: 2025-10-08 20:26:56 +0900">
-<title>リーダー特性一覧 Verv4.1.5</title>
+<meta name="author" content="最終更新日: 2025-11-03 23:49:59 +0900">
+<title>リーダー特性一覧 Verv4.1.7</title>
 <link rel="stylesheet" href="./css/leader_traits.css">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CPZ4W026XM"></script>
@@ -20,9 +20,9 @@
 </head>
 <body class="article">
 <div id="header">
-<h1>リーダー特性一覧 Verv4.1.5</h1>
+<h1>リーダー特性一覧 Verv4.1.7</h1>
 <div class="details">
-<span id="author" class="author">最終更新日: 2025-10-08 20:26:56 +0900</span><br>
+<span id="author" class="author">最終更新日: 2025-11-03 23:49:59 +0900</span><br>
 </div>
 </div>
 <div id="content">
@@ -11888,10 +11888,10 @@ leader_trait_corrupt_2<br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>惑星:<br>
-・planet_jobs_slave_produces_mult(奴隷POPの資源産出) = 0.2<br>
+・pop_slave_bonus_workforce_mult(奴隷の職業の効率) = 0.2<br>
 <br>
 セクター:<br>
-・planet_jobs_slave_produces_mult(奴隷POPの資源産出) = 0.1<br>
+・pop_slave_bonus_workforce_mult(奴隷の職業の効率) = 0.1<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -11947,10 +11947,10 @@ leader_trait_corrupt_2<br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>惑星:<br>
-・planet_jobs_slave_produces_mult(奴隷POPの資源産出) = 0.35<br>
+・pop_slave_bonus_workforce_mult(奴隷の職業の効率) = 0.35<br>
 <br>
 セクター:<br>
-・planet_jobs_slave_produces_mult(奴隷POPの資源産出) = 0.15<br>
+・pop_slave_bonus_workforce_mult(奴隷の職業の効率) = 0.15<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -15610,14 +15610,14 @@ custom_tooltip_with_modifiers:<br>
 <p>惑星(条件あり):<br>
 ・条件：{"trait_is_individual_machine_check": "no"}<br>
 ・planet_jobs_worker_produces_mult([GetWorker]POPの資源産出) = 0.5<br>
-・planet_jobs_slave_produces_mult(奴隷POPの資源産出) = 0.5<br>
+・pop_slave_bonus_workforce_mult(奴隷の職業の効率) = 0.5<br>
 ・planet_pops_upkeep_mult(POP維持費) = -0.35<br>
 ・pop_happiness(POP幸福度が VALUE|Y COMPAREである) = -0.1<br>
 ・logistic_growth_mult(POPの成長速度) = -0.05<br>
 <br>
 ・条件：{"trait_is_individual_machine_check": "yes"}<br>
 ・planet_jobs_worker_produces_mult([GetWorker]POPの資源産出) = 0.5<br>
-・planet_jobs_slave_produces_mult(奴隷POPの資源産出) = 0.5<br>
+・pop_slave_bonus_workforce_mult(奴隷の職業の効率) = 0.5<br>
 ・planet_pops_upkeep_mult(POP維持費) = -0.35<br>
 ・pop_happiness(POP幸福度が VALUE|Y COMPAREである) = -0.1<br>
 ・planet_pop_assembly_mult(機械POP製造速度) = -0.05<br>
@@ -15625,14 +15625,14 @@ custom_tooltip_with_modifiers:<br>
 セクター(条件あり):<br>
 ・条件：{"trait_is_individual_machine_check": "no"}<br>
 ・planet_jobs_worker_produces_mult([GetWorker]POPの資源産出) = 0.25<br>
-・planet_jobs_slave_produces_mult(奴隷POPの資源産出) = 0.25<br>
+・pop_slave_bonus_workforce_mult(奴隷の職業の効率) = 0.25<br>
 ・planet_pops_upkeep_mult(POP維持費) = -0.175<br>
 ・pop_happiness(POP幸福度が VALUE|Y COMPAREである) = -0.05<br>
 ・logistic_growth_mult(POPの成長速度) = -0.025<br>
 <br>
 ・条件：{"trait_is_individual_machine_check": "yes"}<br>
 ・planet_jobs_worker_produces_mult([GetWorker]POPの資源産出) = 0.25<br>
-・planet_jobs_slave_produces_mult(奴隷POPの資源産出) = 0.25<br>
+・pop_slave_bonus_workforce_mult(奴隷の職業の効率) = 0.25<br>
 ・planet_pops_upkeep_mult(POP維持費) = -0.175<br>
 ・pop_happiness(POP幸福度が VALUE|Y COMPAREである) = -0.05<br>
 ・planet_pop_assembly_mult(機械POP製造速度) = -0.025<br>
@@ -24969,13 +24969,13 @@ leader_trait_collaborator_3<br></p>
 <br>
 惑星(条件あり):<br>
 ・条件：{"is_ruler": "no"}<br>
-・planet_jobs_slave_produces_mult(奴隷POPの資源産出) = 0.20<br>
+・pop_slave_bonus_workforce_mult(奴隷の職業の効率) = 0.20<br>
 ・planet_stability_add(安定度) = 5<br>
 ・mult = value:transcended_psionic_multiplier<br>
 <br>
 セクター(条件あり):<br>
 ・条件：{"is_ruler": "no"}<br>
-・planet_jobs_slave_produces_mult(奴隷POPの資源産出) = 0.10<br>
+・pop_slave_bonus_workforce_mult(奴隷の職業の効率) = 0.10<br>
 ・planet_stability_add(安定度) = 2.5<br>
 <br>
 艦隊(条件あり):<br>
@@ -25013,8 +25013,8 @@ leader_trait_collaborator_3<br></p>
 ・pop_happiness(POP幸福度が VALUE|Y COMPAREである) = 0.20<br>
 ・mult = value:transcended_psionic_multiplier<br>
 <br>
-・条件：{"is_ruler": "yes", "exists": "owner", "owner": {"is_gestalt": "no"}}<br>
-・planet_stability_mult(安定度) = 0.02<br>
+・条件：{"is_ruler": "yes", "exists": "owner", "owner": {"is_gestalt": "yes"}}<br>
+・planet_stability_add(安定度) = 5<br>
 ・mult = value:transcended_psionic_multiplier<br>
 <br>
 ・条件：{"is_ruler": "yes"}<br>
@@ -25184,7 +25184,7 @@ leader_trait_collaborator_3<br></p>
 <br>
 惑星(条件あり):<br>
 ・条件：{"is_ruler": "no"}<br>
-・pop_political_power(POPの政治力) = 5<br>
+・pop_political_power(POPの政治力) = 0.3<br>
 ・mult = value:transcended_psionic_multiplier<br>
 <br>
 ・条件：{"is_ruler": "no", "is_gestalt": "no"}<br>
@@ -25197,7 +25197,7 @@ leader_trait_collaborator_3<br></p>
 <br>
 セクター(条件あり):<br>
 ・条件：{"is_ruler": "no"}<br>
-・pop_political_power(POPの政治力) = 2.5<br>
+・pop_political_power(POPの政治力) = 0.15<br>
 ・mult = value:transcended_psionic_multiplier<br>
 <br>
 ・条件：{"is_ruler": "no", "is_gestalt": "no"}<br>
@@ -25602,7 +25602,7 @@ leader_trait_collaborator_3<br></p>
 ・条件：{"leader_class": "official"}<br>
 ・planet_jobs_produces_mult(£job£ 職業からの資源) = 0.05<br>
 ・pop_amenities_usage_mult(POPの快適度使用量) = -0.05<br>
-・planet_jobs_slave_produces_mult(奴隷POPの資源産出) = 0.1<br>
+・pop_slave_bonus_workforce_mult(奴隷の職業の効率) = 0.1<br>
 <br>
 ・条件：{"leader_class": "scientist"}<br>
 ・planet_jobs_physics_research_produces_mult(£job£ 職業からの£physics_research£ 物理学研究) = 0.10<br>
@@ -25613,7 +25613,7 @@ leader_trait_collaborator_3<br></p>
 ・条件：{"leader_class": "official"}<br>
 ・planet_jobs_produces_mult(£job£ 職業からの資源) = 0.025<br>
 ・pop_amenities_usage_mult(POPの快適度使用量) = -0.025<br>
-・planet_jobs_slave_produces_mult(奴隷POPの資源産出) = 0.05<br>
+・pop_slave_bonus_workforce_mult(奴隷の職業の効率) = 0.05<br>
 <br>
 ・条件：{"leader_class": "scientist"}<br>
 ・planet_jobs_physics_research_produces_mult(£job£ 職業からの£physics_research£ 物理学研究) = 0.05<br>
@@ -41227,13 +41227,14 @@ custom_tooltip_with_modifiers:<br>
 惑星:<br>
 ・planet_stability_add(安定度) = 10<br>
 ・planet_crime_add([GetCrimeDeviancy]) = -10<br>
-・planet_jobs_produces_mult(£job£ 職業からの資源) = -0.10<br>
 ・planet_jobs_sr_zro_produces_mult(£job£ 職業からの£zro£ §Yズィロ§!) = 0.10<br>
 <br>
 評議会(条件あり):<br>
 ・custom_tooltip = leader_trait_disciple_of_the_cradle_envoys_zro(    - パトロンに割り当てた使節が、 毎月§G0.5§!£zro£ §Yズィロ§!を生成するようになる)<br>
 ・show_only_custom_tooltip = no(いいえ)<br>
 ・envoy_harm_relations_mult(使節による関係悪化活動) = 0.25<br>
+・envoy_improve_relations_mult(使節による関係改善活動) = 0.25<br>
+・country_trust_cap_add(最大信用値) = 25<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">

@@ -1,6 +1,6 @@
 
 function getVersion() {
-    return "v4.1.5";
+    return "v4.1.7";
 }
 
 function getElements() {
@@ -449,7 +449,7 @@ function getElements() {
       area:'社会学',
       category: '生物学',
       weight: 0,
-      weight_modifier: [{"factor": "2", "modifier": [{"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_uncapped_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "AND": {"is_individual_machine": "yes", "NOT": {"has_country_flag": "non_lithoid_subspecies"}}}}, {"factor": "2", "has_relic": "r_pox_sample"}, {"factor": "2", "country_uses_bio_ships": "yes"}]}],
+      weight_modifier: [{"factor": "2", "modifier": [{"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "AND": {"is_individual_machine": "yes", "NOT": {"has_country_flag": "non_lithoid_subspecies"}}}}, {"factor": "2", "has_relic": "r_pox_sample"}, {"factor": "2", "country_uses_bio_ships": "yes"}]}],
       prerequisites: [],
       potential: {"is_wilderness_empire": "no"}
     },
@@ -929,7 +929,7 @@ function getElements() {
       area:'工学',
       category: '産業学',
       weight: 90,
-      weight_modifier: [{"factor": "2", "modifier": [{"factor": "1.25", "has_tradition": "tr_prosperity_adopt"}, {"factor": "1.5", "is_specialist_subject_type": {"TYPE": "prospectorium"}}, {"factor": "5", "OR": {"num_districts": {"type": "district_hollow_mountains_uncapped value > 0"}, "has_any_mining_zone": "yes"}}]}],
+      weight_modifier: [{"factor": "2", "modifier": [{"factor": "1.25", "has_tradition": "tr_prosperity_adopt"}, {"factor": "1.5", "is_specialist_subject_type": {"TYPE": "prospectorium"}}, {"factor": "5", "OR": {"num_districts": {"type": "district_hollow_mountains value > 0"}, "has_any_mining_zone": "yes"}}]}],
       prerequisites: ["地熱水圧破砕"],
       potential: {}
     },
@@ -1364,7 +1364,7 @@ function getElements() {
       area:'物理学',
       category: '力場操作',
       weight: 90,
-      weight_modifier: [{"factor": "2", "modifier": [{"factor": "1.25", "has_tradition": "tr_prosperity_adopt"}, {"factor": "1.5", "is_specialist_subject_type": {"TYPE": "prospectorium"}}, {"factor": "5", "OR": {"num_districts": {"type": "district_photosynthesis_fields_uncapped value > 0"}, "has_any_generator_zone": "yes"}}]}],
+      weight_modifier: [{"factor": "2", "modifier": [{"factor": "1.25", "has_tradition": "tr_prosperity_adopt"}, {"factor": "1.5", "is_specialist_subject_type": {"TYPE": "prospectorium"}}, {"factor": "5", "OR": {"num_districts": {"type": "district_photosynthesis_fields value > 0"}, "has_any_generator_zone": "yes"}}]}],
       prerequisites: ["力場調整"],
       potential: {}
     },
@@ -1409,7 +1409,7 @@ function getElements() {
       area:'社会学',
       category: '生物学',
       weight: 100,
-      weight_modifier: [{"modifier": [{"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_uncapped_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "AND": {"is_individual_machine": "yes", "NOT": {"has_country_flag": "non_lithoid_subspecies"}}}}, {"factor": "1.25", "has_ethic": "ethic_pacifist"}, {"factor": "1.5", "has_ethic": "ethic_fanatic_pacifist"}, {"factor": "2", "has_relic": "r_pox_sample"}, {"factor": "2", "country_uses_bio_ships": "yes"}, {"factor": "5", "OR": {"has_country_flag": "non_lithoid_subspecies", "country_uses_bio_ships": "yes", "AND": {"is_machine_empire": "no", "is_lithoid_empire": "no", "is_individual_machine": "no"}}, "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_uncapped_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}]}],
+      weight_modifier: [{"modifier": [{"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "AND": {"is_individual_machine": "yes", "NOT": {"has_country_flag": "non_lithoid_subspecies"}}}}, {"factor": "1.25", "has_ethic": "ethic_pacifist"}, {"factor": "1.5", "has_ethic": "ethic_fanatic_pacifist"}, {"factor": "2", "has_relic": "r_pox_sample"}, {"factor": "2", "country_uses_bio_ships": "yes"}, {"factor": "5", "OR": {"has_country_flag": "non_lithoid_subspecies", "country_uses_bio_ships": "yes", "AND": {"is_machine_empire": "no", "is_lithoid_empire": "no", "is_individual_machine": "no"}}, "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}]}],
       prerequisites: ["農産業"],
       potential: {}
     },
@@ -1424,7 +1424,7 @@ function getElements() {
       area:'社会学',
       category: '生物学',
       weight: 95,
-      weight_modifier: [{"modifier": [{"factor": "2", "country_uses_food": "yes"}, {"factor": "1.25", "has_tradition": "tr_prosperity_adopt", "country_uses_food": "yes"}, {"factor": "5", "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_uncapped_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}, {"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_uncapped_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "country_uses_food": "no"}, {"factor": "1.5", "OR": {"has_valid_civic": "civic_agrarian_idyll", "is_anglers_empire": "yes"}}, {"factor": "2", "is_catalytic_empire": "yes"}, {"factor": "2", "has_relic": "r_pox_sample"}]}],
+      weight_modifier: [{"modifier": [{"factor": "2", "country_uses_food": "yes"}, {"factor": "1.25", "has_tradition": "tr_prosperity_adopt", "country_uses_food": "yes"}, {"factor": "5", "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}, {"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "country_uses_food": "no"}, {"factor": "1.5", "OR": {"has_valid_civic": "civic_agrarian_idyll", "is_anglers_empire": "yes"}}, {"factor": "2", "is_catalytic_empire": "yes"}, {"factor": "2", "has_relic": "r_pox_sample"}]}],
       prerequisites: ["環境シミュレーション"],
       potential: {}
     },
@@ -3344,7 +3344,7 @@ function getElements() {
       area:'社会学',
       category: '生物学',
       weight: 85,
-      weight_modifier: [{"modifier": [{"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_uncapped_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "AND": {"is_individual_machine": "yes", "NOT": {"has_country_flag": "non_lithoid_subspecies"}}}}, {"factor": "1.25", "has_ethic": "ethic_pacifist"}, {"factor": "1.5", "has_ethic": "ethic_fanatic_pacifist"}, {"factor": "2", "has_relic": "r_pox_sample"}, {"factor": "2", "country_uses_bio_ships": "yes"}]}],
+      weight_modifier: [{"modifier": [{"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "AND": {"is_individual_machine": "yes", "NOT": {"has_country_flag": "non_lithoid_subspecies"}}}}, {"factor": "1.25", "has_ethic": "ethic_pacifist"}, {"factor": "1.5", "has_ethic": "ethic_fanatic_pacifist"}, {"factor": "2", "has_relic": "r_pox_sample"}, {"factor": "2", "country_uses_bio_ships": "yes"}]}],
       prerequisites: ["環境シミュレーション"],
       potential: {"is_wilderness_empire": "no"}
     },
@@ -5519,7 +5519,7 @@ function getElements() {
       area:'社会学',
       category: '生物学',
       weight: 65,
-      weight_modifier: [{"modifier": [{"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_uncapped_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "AND": {"is_individual_machine": "yes", "NOT": {"has_country_flag": "non_lithoid_subspecies"}}}}, {"factor": "1.25", "has_ethic": "ethic_pacifist"}, {"factor": "1.5", "has_ethic": "ethic_fanatic_pacifist"}, {"factor": "2", "has_relic": "r_pox_sample"}, {"factor": "2", "country_uses_bio_ships": "yes"}]}],
+      weight_modifier: [{"modifier": [{"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "AND": {"is_individual_machine": "yes", "NOT": {"has_country_flag": "non_lithoid_subspecies"}}}}, {"factor": "1.25", "has_ethic": "ethic_pacifist"}, {"factor": "1.5", "has_ethic": "ethic_fanatic_pacifist"}, {"factor": "2", "has_relic": "r_pox_sample"}, {"factor": "2", "country_uses_bio_ships": "yes"}]}],
       prerequisites: ["遺伝子改良作物"],
       potential: {"is_wilderness_empire": "no"}
     },
@@ -5534,7 +5534,7 @@ function getElements() {
       area:'社会学',
       category: '生物学',
       weight: 65,
-      weight_modifier: [{"factor": "2", "modifier": [{"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_uncapped_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "AND": {"is_individual_machine": "yes", "NOT": {"has_country_flag": "non_lithoid_subspecies"}}}}, {"factor": "0", "NOR": {"has_technology": "tech_volatile_motes", "has_country_flag": "has_market_access"}}, {"factor": "2", "has_relic": "r_pox_sample"}, {"factor": "2", "country_uses_bio_ships": "yes"}]}],
+      weight_modifier: [{"factor": "2", "modifier": [{"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "AND": {"is_individual_machine": "yes", "NOT": {"has_country_flag": "non_lithoid_subspecies"}}}}, {"factor": "0", "NOR": {"has_technology": "tech_volatile_motes", "has_country_flag": "has_market_access"}}, {"factor": "2", "has_relic": "r_pox_sample"}, {"factor": "2", "country_uses_bio_ships": "yes"}]}],
       prerequisites: ["食品加工"],
       potential: {}
     },
@@ -7364,7 +7364,7 @@ function getElements() {
       area:'社会学',
       category: '生物学',
       weight: 35,
-      weight_modifier: [{"modifier": [{"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_uncapped_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "AND": {"is_individual_machine": "yes", "NOT": {"has_country_flag": "non_lithoid_subspecies"}}}}, {"factor": "0.50", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_curator"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_nutrient_replication"}}}, {"factor": "1.25", "has_ethic": "ethic_pacifist"}, {"factor": "1.5", "has_ethic": "ethic_fanatic_pacifist"}, {"factor": "2", "has_relic": "r_pox_sample"}, {"factor": "2", "country_uses_bio_ships": "yes"}]}],
+      weight_modifier: [{"modifier": [{"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "AND": {"is_individual_machine": "yes", "NOT": {"has_country_flag": "non_lithoid_subspecies"}}}}, {"factor": "0.50", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_curator"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_nutrient_replication"}}}, {"factor": "1.25", "has_ethic": "ethic_pacifist"}, {"factor": "1.5", "has_ethic": "ethic_fanatic_pacifist"}, {"factor": "2", "has_relic": "r_pox_sample"}, {"factor": "2", "country_uses_bio_ships": "yes"}]}],
       prerequisites: ["ナノ活性化作物"],
       potential: {"is_machine_empire": "no", "is_wilderness_empire": "no"}
     },
