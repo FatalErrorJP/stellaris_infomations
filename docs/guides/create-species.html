@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.23">
-<title>【Stellaris 4.0.2】ポートレート＆種族の作り方</title>
+<title>【Stellaris 4.1.7】ポートレート＆種族の作り方</title>
 <link rel="stylesheet" href="../css/default.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- Google tag (gtag.js) -->
@@ -20,7 +20,7 @@
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>【Stellaris 4.0.2】ポートレート＆種族の作り方</h1>
+<h1>【Stellaris 4.1.7】ポートレート＆種族の作り方</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">目次</div>
 <ul class="sectlevel1">
@@ -592,6 +592,10 @@ d-man-biologicals = {
 			sequential_name = HUMAN1_CLONEARMY
 		}
 
+		perfected_clone_army = {
+			sequential_name = HUMAN1_CLONEARMY
+		}
+
 		undead_army = {
 			sequential_name = HUMAN1_DREADCOMMANDO
 		}
@@ -645,6 +649,18 @@ d-man-biologicals = {
 
 		warpling_army = {
 			sequential_name = seq_warpling_army
+		}
+
+		abomination_army = {
+			sequential_name = seq_abomination_army
+		}
+
+		wilderness_pre_sapient_defence_army = {
+			sequential_name = seq_wilderness_pre_sapient_defence_army
+		}
+
+		wilderness_pre_sapient_assault_army = {
+			sequential_name = seq_wilderness_pre_sapient_assault_army
 		}
 	}
 
@@ -1478,6 +1494,9 @@ d-man-biologicals = {
 	# 機械知性は選択不可
 	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
 
+	# デフォルト種族特性「有機生命」
+	trait = "trait_organic"
+
 	# 艦船セットを利用しない
 	generate_shipset = no
 
@@ -1499,16 +1518,68 @@ d-man-machines = {
 	# この種族を利用可能な条件
 	# バニラの機械種族の条件に準拠
 	possible = {
-		OR = {
-			AND = { host_has_dlc = "The Machine Age" authority = { NOT = { value = auth_hive_mind } } }
-			authority = { OR = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_USE_MACHINE_INTELLIGENCE } }
+		AND = {
+			limit = {
+				has_machine_age_dlc = yes
+			}
+			authority = {
+				NOT = {
+					value = auth_hive_mind
+				}
+			}
+		}
+		AND = {
+			limit = {
+				has_machine_age_dlc = no
+			}
+			authority = { # Prunes every potential authority except machine intelligence
+				NOR = {
+					value = auth_democratic
+					value = auth_oligarchic
+					value = auth_dictatorial
+					value = auth_imperial
+					value = auth_hive_mind
+					value = auth_ancient_machine_intelligence
+					value = auth_corporate
+					text = SPECIES_CLASS_MUST_USE_MACHINE_INTELLIGENCE
+				}
+			}
+			ethics = { # Prunes every potential etchic except gestalt consciousness
+				NOR = {
+					value = ethic_fanatic_authoritarian
+					value = ethic_authoritarian
+					value = ethic_fanatic_egalitarian
+					value = ethic_egalitarian
+					value = ethic_fanatic_xenophobe
+					value = ethic_xenophobe
+					value = ethic_fanatic_xenophile
+					value = ethic_xenophile
+					value = ethic_fanatic_militarist
+					value = ethic_militarist
+					value = ethic_fanatic_pacifist
+					value = ethic_pacifist
+					value = ethic_fanatic_spiritualist
+					value = ethic_spiritualist
+					value = ethic_fanatic_materialist
+					value = ethic_materialist
+					text = SPECIES_CLASS_MUST_USE_GESTALT_CONSCIOUSNESS
+				}
+			}
+		}
+		AND = {
+			limit = {
+				has_synthetic_dawn = no
+				has_machine_age_dlc = no
+				has_shroud_dlc = yes
+			}
+			origin = {
+				value = origin_shroud_forged
+			}
 		}
 	}
 	possible_secondary = {
-		OR = {
-			AND = { host_has_dlc = "The Machine Age" civics = { NOT = { value = civic_machine_servitor } } }
-			OR = { always = no text = SECONDARY_SPECIES_CLASS_INVALID }
-		}
+		always = no
+		text = SECONDARY_SPECIES_CLASS_INVALID
 	}
 
 	# プレイ可能な条件
@@ -1516,16 +1587,28 @@ d-man-machines = {
 	# 機械知性はDLC(Synthetic Dawn)または(Machine Age)が必須
 	playable = {
 		OR = {
-			host_has_dlc = "Synthetic Dawn Story Pack"
+			has_synthetic_dawn = yes
 			has_machine_age_dlc = yes
+			AND = {
+				is_scope_valid = yes
+				has_origin = origin_shroud_forged
+			}
 		}
 	}
 	randomized = {
 		OR = {
-			host_has_dlc = "Synthetic Dawn Story Pack"
+			has_synthetic_dawn = yes
 			has_machine_age_dlc = yes
+			AND = {
+				is_scope_valid = yes
+				has_origin = origin_shroud_forged
+			}
 		}
-		NOT = { has_global_flag = game_started }
+		# The create_species effect can't properly take the possible trigger below into account.
+		# Work around this by disabling this class for species randomization after game start.
+		NOT = {
+			has_global_flag = game_started
+		}
 	}
 
 	# デフォルト種族特性「機械」
