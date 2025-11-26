@@ -1,6 +1,6 @@
 
 function getVersion() {
-    return "v4.1.7";
+    return "v4.2.1";
 }
 
 function getElements() {
@@ -449,7 +449,7 @@ function getElements() {
       area:'社会学',
       category: '生物学',
       weight: 0,
-      weight_modifier: [{"factor": "2", "modifier": [{"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "AND": {"is_individual_machine": "yes", "NOT": {"has_country_flag": "non_lithoid_subspecies"}}}}, {"factor": "2", "has_relic": "r_pox_sample"}, {"factor": "2", "country_uses_bio_ships": "yes"}]}],
+      weight_modifier: [{"factor": "2", "modifier": [{"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "is_infernal_empire": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_infernal_empire": "yes", "AND": {"is_individual_machine": "yes", "NOT": {"has_country_flag": "non_lithoid_subspecies"}}}}, {"factor": "2", "has_relic": "r_pox_sample"}, {"factor": "2", "country_uses_bio_ships": "yes"}]}],
       prerequisites: [],
       potential: {"is_wilderness_empire": "no"}
     },
@@ -989,7 +989,7 @@ function getElements() {
       area:'工学',
       category: '産業学',
       weight: 90,
-      weight_modifier: [{"factor": "1.5", "modifier": [{"factor": "0", "has_policy_flag": "robots_outlawed"}, {"factor": "0.5", "OR": {"has_ethic": "\"ethic_fanatic_spiritualist\""}}, {"factor": "2", "OR": {"has_ethic": "ethic_fanatic_materialist"}}]}],
+      weight_modifier: [{"factor": "1.5", "modifier": [{"factor": "0", "has_policy_flag": "robots_outlawed"}, {"factor": "0.5", "OR": {"has_ethic": "\"ethic_fanatic_spiritualist\""}}, {"factor": "2", "is_materialist": "yes"}]}],
       prerequisites: ["強化外骨格"],
       potential: {"NOR": {"has_ethic": "\"ethic_gestalt_consciousness\"", "is_individual_machine": "yes"}}
     },
@@ -1019,7 +1019,7 @@ function getElements() {
       area:'工学',
       category: '産業学',
       weight: 90,
-      weight_modifier: [{"modifier": [{"factor": "1.25", "OR": {"has_ethic": "ethic_fanatic_militarist"}}]}],
+      weight_modifier: [{"modifier": [{"factor": "1.25", "is_militarist": "yes"}]}],
       prerequisites: [],
       potential: {}
     },
@@ -1409,7 +1409,7 @@ function getElements() {
       area:'社会学',
       category: '生物学',
       weight: 100,
-      weight_modifier: [{"modifier": [{"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "AND": {"is_individual_machine": "yes", "NOT": {"has_country_flag": "non_lithoid_subspecies"}}}}, {"factor": "1.25", "has_ethic": "ethic_pacifist"}, {"factor": "1.5", "has_ethic": "ethic_fanatic_pacifist"}, {"factor": "2", "has_relic": "r_pox_sample"}, {"factor": "2", "country_uses_bio_ships": "yes"}, {"factor": "5", "OR": {"has_country_flag": "non_lithoid_subspecies", "country_uses_bio_ships": "yes", "AND": {"is_machine_empire": "no", "is_lithoid_empire": "no", "is_individual_machine": "no"}}, "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}]}],
+      weight_modifier: [{"modifier": [{"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "is_infernal_empire": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_infernal_empire": "yes", "AND": {"is_individual_machine": "yes", "NOT": {"has_country_flag": "non_lithoid_subspecies"}}}}, {"factor": "1.25", "has_ethic": "ethic_pacifist"}, {"factor": "1.5", "has_ethic": "ethic_fanatic_pacifist"}, {"factor": "2", "has_relic": "r_pox_sample"}, {"factor": "2", "country_uses_bio_ships": "yes"}, {"factor": "5", "OR": {"has_country_flag": "non_lithoid_subspecies", "country_uses_bio_ships": "yes", "AND": {"is_machine_empire": "no", "is_lithoid_empire": "no", "is_individual_machine": "no"}}, "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}]}],
       prerequisites: ["農産業"],
       potential: {}
     },
@@ -1424,7 +1424,7 @@ function getElements() {
       area:'社会学',
       category: '生物学',
       weight: 95,
-      weight_modifier: [{"modifier": [{"factor": "2", "country_uses_food": "yes"}, {"factor": "1.25", "has_tradition": "tr_prosperity_adopt", "country_uses_food": "yes"}, {"factor": "5", "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}, {"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "country_uses_food": "no"}, {"factor": "1.5", "OR": {"has_valid_civic": "civic_agrarian_idyll", "is_anglers_empire": "yes"}}, {"factor": "2", "is_catalytic_empire": "yes"}, {"factor": "2", "has_relic": "r_pox_sample"}]}],
+      weight_modifier: [{"modifier": [{"factor": "2", "country_uses_food": "yes"}, {"factor": "1.25", "has_tradition": "tr_prosperity_adopt", "country_uses_food": "yes"}, {"factor": "5", "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}, {"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "is_infernal_empire": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "country_uses_food": "no"}, {"factor": "1.5", "OR": {"has_valid_civic": "civic_agrarian_idyll", "is_anglers_empire": "yes"}}, {"factor": "2", "is_catalytic_empire": "yes"}, {"factor": "2", "has_relic": "r_pox_sample"}]}],
       prerequisites: ["環境シミュレーション"],
       potential: {}
     },
@@ -1634,7 +1634,7 @@ function getElements() {
       area:'社会学',
       category: '統治学',
       weight: 100,
-      weight_modifier: [{"factor": "4", "modifier": [{"factor": "0.75", "NOT": {"OR": {"has_ethic": "ethic_fanatic_pacifist"}}}]}],
+      weight_modifier: [{"factor": "4", "modifier": [{"factor": "0.75", "NOT": {"is_pacifist": "yes"}}]}],
       prerequisites: ["惑星政府"],
       potential: {}
     },
@@ -2354,7 +2354,7 @@ function getElements() {
       area:'工学',
       category: '産業学',
       weight: 70,
-      weight_modifier: [{"modifier": [{"factor": "0", "has_policy_flag": "robots_outlawed"}, {"factor": "0.5", "OR": {"has_ethic": "\"ethic_fanatic_spiritualist\""}}, {"factor": "2", "OR": {"has_ethic": "ethic_fanatic_materialist"}}, {"factor": "2", "has_origin": "origin_mechanists"}]}],
+      weight_modifier: [{"modifier": [{"factor": "0", "has_policy_flag": "robots_outlawed"}, {"factor": "0.5", "OR": {"has_ethic": "\"ethic_fanatic_spiritualist\""}}, {"factor": "2", "is_materialist": "yes"}, {"factor": "2", "has_origin": "origin_mechanists"}]}],
       prerequisites: ["人工労働力","植民地集権化"],
       potential: {"NOR": {"has_ethic": "\"ethic_gestalt_consciousness\"", "is_individual_machine": "yes"}}
     },
@@ -3344,7 +3344,7 @@ function getElements() {
       area:'社会学',
       category: '生物学',
       weight: 85,
-      weight_modifier: [{"modifier": [{"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "AND": {"is_individual_machine": "yes", "NOT": {"has_country_flag": "non_lithoid_subspecies"}}}}, {"factor": "1.25", "has_ethic": "ethic_pacifist"}, {"factor": "1.5", "has_ethic": "ethic_fanatic_pacifist"}, {"factor": "2", "has_relic": "r_pox_sample"}, {"factor": "2", "country_uses_bio_ships": "yes"}]}],
+      weight_modifier: [{"modifier": [{"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "is_infernal_empire": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_infernal_empire": "yes", "AND": {"is_individual_machine": "yes", "NOT": {"has_country_flag": "non_lithoid_subspecies"}}}}, {"factor": "1.25", "has_ethic": "ethic_pacifist"}, {"factor": "1.5", "has_ethic": "ethic_fanatic_pacifist"}, {"factor": "2", "has_relic": "r_pox_sample"}, {"factor": "2", "country_uses_bio_ships": "yes"}]}],
       prerequisites: ["環境シミュレーション"],
       potential: {"is_wilderness_empire": "no"}
     },
@@ -3434,7 +3434,7 @@ function getElements() {
       area:'社会学',
       category: '新天地',
       weight: 75,
-      weight_modifier: [{"modifier": [{"factor": "2"}, {"factor": "1.25", "has_tradition": "tr_expansion_adopt"}, {"factor": "4", "has_ascension_perk": "ap_mastery_of_nature"}, {"factor": "0", "NOT": {"any_owned_planet": {"has_deposit": "\"d_active_volcano\""}}}, {"factor": "0"}]}],
+      weight_modifier: [{"modifier": [{"factor": "2"}, {"factor": "1.25", "has_tradition": "tr_expansion_adopt"}, {"factor": "4", "has_ascension_perk": "ap_mastery_of_nature"}, {"factor": "0", "NOT": {"any_owned_planet": {"has_deposit": "\"d_active_volcano\""}, "any_system_within_border": {"any_system_planet": {"is_planet_class": "pc_volcanic"}}}}, {"factor": "0"}]}],
       prerequisites: ["新天地プロトコル"],
       potential: {}
     },
@@ -3467,6 +3467,36 @@ function getElements() {
       weight_modifier: [{"factor": "1.5", "modifier": [{"factor": "0", "is_lithoid_devouring_swarm": "yes"}, {"factor": "1.25", "has_tradition": "tr_expansion_adopt"}, {"factor": "1.25", "has_trait": "trait_aquatic"}, {"factor": "1.25", "has_trait": "trait_robot_aquatic"}, {"factor": "1.25", "has_origin": "origin_life_seeded"}, {"add": "5", "has_origin": "origin_wilderness"}]}],
       prerequisites: ["新天地プロトコル"],
       potential: {}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_volcanic_forge',
+      name: '火山鍛造所',
+      tier: 2,
+      cost: 5000,
+      area:'社会学',
+      category: '新天地',
+      weight: 85,
+      weight_modifier: [{"modifier": [{"factor": "1.25", "has_tradition": "tr_expansion_adopt"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_volcanic_forge"}}}]}],
+      prerequisites: [],
+      potential: {"is_world_forger_empire": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_volcanic_terraforming',
+      name: '火山のテラフォーミング',
+      tier: 2,
+      cost: 5000,
+      area:'社会学',
+      category: '新天地',
+      weight: 70,
+      weight_modifier: [{"modifier": [{"factor": "0.5", "always": "yes"}]}, {"modifier": [{"factor": "1.25", "has_tradition": "tr_expansion_adopt"}]}, {"modifier": [{"factor": "3", "any_system_within_border": {"any_system_planet": {"is_planet_class": "pc_volcanic"}}}]}],
+      prerequisites: ["惑星整形","深部地殻加工"],
+      potential: {"has_infernals": "yes"}
     },
     classes: 'society'
 },
@@ -3659,7 +3689,7 @@ function getElements() {
       area:'社会学',
       category: '生物学',
       weight: 75,
-      weight_modifier: [{"factor": "0.5", "modifier": [{"factor": "1.25", "NOR": {"has_ethic": "ethic_fanatic_egalitarian"}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_subdermal_stimulation"}}}, {"factor": "2", "has_relic": "r_pox_sample"}]}],
+      weight_modifier: [{"factor": "0.5", "modifier": [{"factor": "1.25", "is_egalitarian": "no"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_subdermal_stimulation"}}}, {"factor": "2", "has_relic": "r_pox_sample"}]}],
       prerequisites: ["ゲノムマッピング"],
       potential: {"NOR": {"has_ethic": "ethic_gestalt_consciousness", "has_civic": "civic_dystopian_society", "is_individual_machine": "yes"}}
     },
@@ -3704,7 +3734,7 @@ function getElements() {
       area:'社会学',
       category: '統治学',
       weight: 70,
-      weight_modifier: [{"modifier": [{"factor": "0.5"}, {"factor": "1.5"}, {"factor": "1.5"}, {"factor": "1.5"}, {"factor": "1.25", "OR": {"has_ethic": "ethic_fanatic_authoritarian"}}]}],
+      weight_modifier: [{"modifier": [{"factor": "0.5"}, {"factor": "1.5"}, {"factor": "1.5"}, {"factor": "1.5"}, {"factor": "1.25", "is_authoritarian": "yes"}]}],
       prerequisites: ["植民地集権化"],
       potential: {"NOT": {"has_ethic": "ethic_gestalt_consciousness"}}
     },
@@ -4619,7 +4649,7 @@ function getElements() {
       area:'工学',
       category: '宇宙工学',
       weight: 50,
-      weight_modifier: [{"factor": "0.5", "modifier": [{"factor": "0.25", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_curator"}}}, {"factor": "1.5", "is_specialist_subject_type": {"TYPE": "bulwark"}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_space_defense_station_improvement"}}}, {"factor": "1.25", "OR": {"has_ethic": "ethic_fanatic_militarist"}}]}],
+      weight_modifier: [{"factor": "0.5", "modifier": [{"factor": "0.25", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_curator"}}}, {"factor": "1.5", "is_specialist_subject_type": {"TYPE": "bulwark"}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_space_defense_station_improvement"}}}, {"factor": "1.25", "is_militarist": "yes"}]}],
       prerequisites: ["星系要塞の建設","組み立て工学"],
       potential: {}
     },
@@ -4769,7 +4799,7 @@ function getElements() {
       area:'工学',
       category: '産業学',
       weight: 60,
-      weight_modifier: [{"factor": "0.5", "modifier": [{"factor": "0.5", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_curator"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_construction_templates"}}}, {"factor": "1.25", "OR": {"has_ethic": "ethic_fanatic_militarist"}}]}],
+      weight_modifier: [{"factor": "0.5", "modifier": [{"factor": "0.5", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_curator"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_construction_templates"}}}, {"factor": "1.25", "is_militarist": "yes"}]}],
       prerequisites: ["組み立てパターン"],
       potential: {}
     },
@@ -5519,7 +5549,7 @@ function getElements() {
       area:'社会学',
       category: '生物学',
       weight: 65,
-      weight_modifier: [{"modifier": [{"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "AND": {"is_individual_machine": "yes", "NOT": {"has_country_flag": "non_lithoid_subspecies"}}}}, {"factor": "1.25", "has_ethic": "ethic_pacifist"}, {"factor": "1.5", "has_ethic": "ethic_fanatic_pacifist"}, {"factor": "2", "has_relic": "r_pox_sample"}, {"factor": "2", "country_uses_bio_ships": "yes"}]}],
+      weight_modifier: [{"modifier": [{"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "is_infernal_empire": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_infernal_empire": "yes", "AND": {"is_individual_machine": "yes", "NOT": {"has_country_flag": "non_lithoid_subspecies"}}}}, {"factor": "1.25", "has_ethic": "ethic_pacifist"}, {"factor": "1.5", "has_ethic": "ethic_fanatic_pacifist"}, {"factor": "2", "has_relic": "r_pox_sample"}, {"factor": "2", "country_uses_bio_ships": "yes"}]}],
       prerequisites: ["遺伝子改良作物"],
       potential: {"is_wilderness_empire": "no"}
     },
@@ -5534,7 +5564,7 @@ function getElements() {
       area:'社会学',
       category: '生物学',
       weight: 65,
-      weight_modifier: [{"factor": "2", "modifier": [{"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "AND": {"is_individual_machine": "yes", "NOT": {"has_country_flag": "non_lithoid_subspecies"}}}}, {"factor": "0", "NOR": {"has_technology": "tech_volatile_motes", "has_country_flag": "has_market_access"}}, {"factor": "2", "has_relic": "r_pox_sample"}, {"factor": "2", "country_uses_bio_ships": "yes"}]}],
+      weight_modifier: [{"factor": "2", "modifier": [{"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "is_infernal_empire": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_infernal_empire": "yes", "AND": {"is_individual_machine": "yes", "NOT": {"has_country_flag": "non_lithoid_subspecies"}}}}, {"factor": "0", "NOR": {"has_technology": "tech_volatile_motes", "has_country_flag": "has_market_access"}}, {"factor": "2", "has_relic": "r_pox_sample"}, {"factor": "2", "country_uses_bio_ships": "yes"}]}],
       prerequisites: ["食品加工"],
       potential: {}
     },
@@ -5849,7 +5879,7 @@ function getElements() {
       area:'社会学',
       category: '統治学',
       weight: 50,
-      weight_modifier: [{"modifier": [{"factor": "0.5"}, {"factor": "1.5"}, {"factor": "1.5"}, {"factor": "1.5"}, {"factor": "1.5", "OR": {"has_ethic": "ethic_fanatic_authoritarian"}}]}],
+      weight_modifier: [{"modifier": [{"factor": "0.5"}, {"factor": "1.5"}, {"factor": "1.5"}, {"factor": "1.5"}, {"factor": "1.5", "is_authoritarian": "yes"}]}],
       prerequisites: ["植民地集権化"],
       potential: {"NOT": {"has_ethic": "ethic_gestalt_consciousness"}}
     },
@@ -6704,7 +6734,7 @@ function getElements() {
       area:'工学',
       category: '産業学',
       weight: 40,
-      weight_modifier: [{"factor": "0.5", "modifier": [{"factor": "0", "has_policy_flag": "robots_outlawed"}, {"factor": "0.5", "OR": {"has_ethic": "\"ethic_fanatic_spiritualist\""}}, {"factor": "2", "OR": {"has_ethic": "ethic_fanatic_materialist"}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_synthetic_workers"}}}, {"factor": "2", "has_origin": "origin_mechanists"}, {"factor": "0.20", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_expertise_industry"}}}]}],
+      weight_modifier: [{"factor": "0.5", "modifier": [{"factor": "0", "has_policy_flag": "robots_outlawed"}, {"factor": "0.5", "OR": {"has_ethic": "\"ethic_fanatic_spiritualist\""}}, {"factor": "2", "is_materialist": "yes"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_synthetic_workers"}}}, {"factor": "2", "has_origin": "origin_mechanists"}, {"factor": "0.20", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_expertise_industry"}}}]}],
       prerequisites: ["人工専門家","銀河規模の行政機構","陽電子AI"],
       potential: {"NOR": {"has_ethic": "\"ethic_gestalt_consciousness\"", "is_individual_machine": "yes"}}
     },
@@ -7327,6 +7357,21 @@ function getElements() {
 },
 {
     data: {
+      id: 'tech_starfire_cannon',
+      name: 'スターファイアキャノン',
+      tier: 4,
+      cost: 24000,
+      area:'物理学',
+      category: '素粒子物理学',
+      weight: 35,
+      weight_modifier: [{"modifier": [{"factor": "1.25", "has_ethic": "ethic_militarist"}, {"factor": "1.5", "has_ethic": "ethic_fanatic_militarist"}]}],
+      prerequisites: [],
+      potential: {"has_country_flag": "starfire_cannon_unlocked"}
+    },
+    classes: 'physics'
+},
+{
+    data: {
       id: 'tech_aura_intensification',
       name: 'サイオニック・オーラの強化',
       tier: 4,
@@ -7364,7 +7409,7 @@ function getElements() {
       area:'社会学',
       category: '生物学',
       weight: 35,
-      weight_modifier: [{"modifier": [{"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "AND": {"is_individual_machine": "yes", "NOT": {"has_country_flag": "non_lithoid_subspecies"}}}}, {"factor": "0.50", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_curator"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_nutrient_replication"}}}, {"factor": "1.25", "has_ethic": "ethic_pacifist"}, {"factor": "1.5", "has_ethic": "ethic_fanatic_pacifist"}, {"factor": "2", "has_relic": "r_pox_sample"}, {"factor": "2", "country_uses_bio_ships": "yes"}]}],
+      weight_modifier: [{"modifier": [{"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "is_infernal_empire": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_infernal_empire": "yes", "AND": {"is_individual_machine": "yes", "NOT": {"has_country_flag": "non_lithoid_subspecies"}}}}, {"factor": "0.50", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_curator"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_nutrient_replication"}}}, {"factor": "1.25", "has_ethic": "ethic_pacifist"}, {"factor": "1.5", "has_ethic": "ethic_fanatic_pacifist"}, {"factor": "2", "has_relic": "r_pox_sample"}, {"factor": "2", "country_uses_bio_ships": "yes"}]}],
       prerequisites: ["ナノ活性化作物"],
       potential: {"is_machine_empire": "no", "is_wilderness_empire": "no"}
     },
@@ -7817,6 +7862,21 @@ function getElements() {
       weight_modifier: [{"factor": "0.00"}],
       prerequisites: [],
       potential: {"has_nemesis": "yes", "has_ascension_perk": "ap_become_the_crisis", "has_country_flag": "can_build_star_eaters"}
+    },
+    classes: 'engineering'
+},
+{
+    data: {
+      id: 'tech_pk_smelter',
+      name: '惑星精錬機',
+      tier: 5,
+      cost: 48000,
+      area:'工学',
+      category: '宇宙工学',
+      weight: 20,
+      weight_modifier: [{"factor": "0.50", "modifier": [{"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_pk_smelter"}}}, {"factor": "0.20", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_expertise_voidcraft"}}}]}],
+      prerequisites: ["コロッサス"],
+      potential: {"host_has_dlc": "\"Apocalypse\"", "has_country_flag": "colossus_project", "can_get_planet_smelter": "yes"}
     },
     classes: 'engineering'
 },
@@ -10058,6 +10118,8 @@ function getElements() {
 { data: { id: 'tech_colonization_1_to_tech_volcano', source: 'tech_colonization_1', target: 'tech_volcano' } },
 { data: { id: 'tech_colonization_1_to_tech_dangerous_wildlife', source: 'tech_colonization_1', target: 'tech_dangerous_wildlife' } },
 { data: { id: 'tech_colonization_1_to_tech_terrestrial_sculpting', source: 'tech_colonization_1', target: 'tech_terrestrial_sculpting' } },
+{ data: { id: 'tech_terrestrial_sculpting_to_tech_volcanic_terraforming', source: 'tech_terrestrial_sculpting', target: 'tech_volcanic_terraforming' } },
+{ data: { id: 'tech_volcano_to_tech_volcanic_terraforming', source: 'tech_volcano', target: 'tech_volcanic_terraforming' } },
 { data: { id: 'tech_genome_mapping_to_tech_vitality_boosters', source: 'tech_genome_mapping', target: 'tech_vitality_boosters' } },
 { data: { id: 'tech_genome_mapping_to_tech_epigenetic_triggers', source: 'tech_genome_mapping', target: 'tech_epigenetic_triggers' } },
 { data: { id: 'tech_genome_mapping_to_tech_cloning', source: 'tech_genome_mapping', target: 'tech_cloning' } },
@@ -10368,6 +10430,7 @@ function getElements() {
 { data: { id: 'tech_colossus_to_tech_pk_neutron', source: 'tech_colossus', target: 'tech_pk_neutron' } },
 { data: { id: 'tech_colossus_to_tech_pk_godray', source: 'tech_colossus', target: 'tech_pk_godray' } },
 { data: { id: 'tech_colossus_to_tech_pk_nanobots', source: 'tech_colossus', target: 'tech_pk_nanobots' } },
+{ data: { id: 'tech_colossus_to_tech_pk_smelter', source: 'tech_colossus', target: 'tech_pk_smelter' } },
 { data: { id: 'tech_weaver_bio_healing_4_to_tech_weaver_bio_healing_5', source: 'tech_weaver_bio_healing_4', target: 'tech_weaver_bio_healing_5' } },
 { data: { id: 'tech_weaver_bio_healing_5_to_tech_weaver_bio_healing_6', source: 'tech_weaver_bio_healing_5', target: 'tech_weaver_bio_healing_6' } },
 { data: { id: 'tech_weaver_bio_evasion_4_to_tech_weaver_bio_evasion_5', source: 'tech_weaver_bio_evasion_4', target: 'tech_weaver_bio_evasion_5' } },
