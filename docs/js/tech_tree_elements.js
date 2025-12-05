@@ -1,6 +1,6 @@
 
 function getVersion() {
-    return "v4.2.1";
+    return "v4.2.3";
 }
 
 function getElements() {
@@ -3811,7 +3811,7 @@ function getElements() {
       weight: 75,
       weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_technology": "tech_rare_crystals", "has_country_flag": "has_market_access"}}]}],
       prerequisites: ["惑星政府"],
-      potential: {"OR": {"has_ethic": "ethic_fanatic_spiritualist", "AND": {"is_gestalt": "no", "has_make_spiritualist_perk": "yes"}}}
+      potential: {"OR": {"is_spiritualist": "yes", "AND": {"is_gestalt": "no", "has_make_spiritualist_perk": "yes"}}}
     },
     classes: 'society'
 },
@@ -5986,7 +5986,7 @@ function getElements() {
       weight: 65,
       weight_modifier: [],
       prerequisites: ["管理AI","植民地集権化"],
-      potential: {"NOR": {"has_ethic": "ethic_fanatic_spiritualist", "is_wilderness_empire": "yes"}}
+      potential: {"NOR": {"is_spiritualist": "yes", "is_wilderness_empire": "yes"}}
     },
     classes: 'society'
 },
@@ -6001,7 +6001,7 @@ function getElements() {
       weight: 60,
       weight_modifier: [],
       prerequisites: ["ホログラフィック儀式","植民地集権化"],
-      potential: {"OR": {"has_ethic": "ethic_fanatic_spiritualist", "AND": {"is_gestalt": "no", "has_make_spiritualist_perk": "yes"}}}
+      potential: {"OR": {"is_spiritualist": "yes", "AND": {"is_gestalt": "no", "has_make_spiritualist_perk": "yes"}}}
     },
     classes: 'society'
 },
@@ -7366,7 +7366,7 @@ function getElements() {
       weight: 35,
       weight_modifier: [{"modifier": [{"factor": "1.25", "has_ethic": "ethic_militarist"}, {"factor": "1.5", "has_ethic": "ethic_fanatic_militarist"}]}],
       prerequisites: [],
-      potential: {"has_country_flag": "starfire_cannon_unlocked"}
+      potential: {"has_origin": "origin_red_giant", "has_country_flag": "starfire_cannon_unlocked"}
     },
     classes: 'physics'
 },
@@ -7621,7 +7621,7 @@ function getElements() {
       weight: 40,
       weight_modifier: [],
       prerequisites: ["聖別された領域","銀河規模の行政機構"],
-      potential: {"OR": {"has_ethic": "ethic_fanatic_spiritualist", "AND": {"is_gestalt": "no", "has_make_spiritualist_perk": "yes"}}}
+      potential: {"OR": {"is_spiritualist": "yes", "AND": {"is_gestalt": "no", "has_make_spiritualist_perk": "yes"}}}
     },
     classes: 'society'
 },
@@ -9659,7 +9659,7 @@ function getElements() {
       area:'社会学',
       category: '軍事学',
       weight: 20,
-      weight_modifier: [{"modifier": [{"factor": "0", "OR": {"has_valid_civic": "\"civic_machine_terminator\""}}, {"factor": "2", "has_ethic": "ethic_fanatic_militarist"}, {"factor": "1.5", "has_ethic": "ethic_militarist"}, {"factor": "2"}, {"factor": "2"}, {"factor": "2"}, {"factor": "0"}, {"factor": "0.5", "has_ethic": "ethic_pacifist"}, {"factor": "0", "has_ethic": "ethic_fanatic_pacifist"}]}],
+      weight_modifier: [{"modifier": [{"factor": "0", "OR": {"has_valid_civic": "\"civic_machine_terminator\""}}, {"factor": "2", "has_ethic": "ethic_fanatic_militarist"}, {"factor": "1.5", "has_ethic": "ethic_militarist"}, {"factor": "2"}, {"factor": "2"}, {"factor": "2"}, {"factor": "0"}, {"factor": "0.5", "has_ethic": "ethic_pacifist"}, {"factor": "0", "is_fanatic_pacifist": "yes"}]}],
       prerequisites: ["銀河戦役"],
       potential: {}
     },

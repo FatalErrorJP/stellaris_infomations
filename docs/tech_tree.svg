@@ -9,7 +9,7 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 27627.75)">
 <title>tech_tree</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-27627.75 3997.6,-27627.75 3997.6,4 -4,4"/>
-<text text-anchor="middle" x="1996.8" y="-5.35" font-family="BIZ UDPGothic" font-size="12.00">v4.2.1</text>
+<text text-anchor="middle" x="1996.8" y="-5.35" font-family="BIZ UDPGothic" font-size="12.00">v4.2.3</text>
 <g id="clust1" class="cluster">
 <title>cluster_tech_wilderness_terraform</title>
 <g id="a_clust1"><a xlink:title="前提研究:&#10;&#10;&#10;その他の条件:&#10;{&#10; &#160;&quot;is_wilderness_empire&quot;: &quot;yes&quot;&#10;}">
@@ -2036,7 +2036,7 @@
 </g>
 <g id="clust254" class="cluster">
 <title>cluster_tech_holographic_rituals</title>
-<g id="a_clust254"><a xlink:title="前提研究:&#10;惑星政府&#10;&#10;&#10;その他の条件:&#10;{&#10; &#160;&quot;OR&quot;: {&#10; &#160;&#160;&#160;&quot;has_ethic&quot;: &quot;ethic_fanatic_spiritualist&quot;,&#10; &#160;&#160;&#160;&quot;AND&quot;: {&#10; &#160;&#160;&#160;&#160;&#160;&quot;is_gestalt&quot;: &quot;no&quot;,&#10; &#160;&#160;&#160;&#160;&#160;&quot;has_make_spiritualist_perk&quot;: &quot;yes&quot;&#10; &#160;&#160;&#160;}&#10; &#160;}&#10;}">
+<g id="a_clust254"><a xlink:title="前提研究:&#10;惑星政府&#10;&#10;&#10;その他の条件:&#10;{&#10; &#160;&quot;OR&quot;: {&#10; &#160;&#160;&#160;&quot;is_spiritualist&quot;: &quot;yes&quot;,&#10; &#160;&#160;&#160;&quot;AND&quot;: {&#10; &#160;&#160;&#160;&#160;&#160;&quot;is_gestalt&quot;: &quot;no&quot;,&#10; &#160;&#160;&#160;&#160;&#160;&quot;has_make_spiritualist_perk&quot;: &quot;yes&quot;&#10; &#160;&#160;&#160;}&#10; &#160;}&#10;}">
 <polygon fill="#90ee90" stroke="black" points="1296.92,-6232.75 1296.92,-6325.75 1425.12,-6325.75 1425.12,-6232.75 1296.92,-6232.75"/>
 <text text-anchor="middle" x="1361.02" y="-6310.35" font-family="BIZ UDPGothic" font-size="12.00">ホログラフィック儀式</text>
 </a>
@@ -3196,7 +3196,7 @@
 </g>
 <g id="clust399" class="cluster">
 <title>cluster_tech_autocurating_vault</title>
-<g id="a_clust399"><a xlink:title="前提研究:&#10;管理AI&#10;植民地集権化&#10;&#10;&#10;その他の条件:&#10;{&#10; &#160;&quot;NOR&quot;: {&#10; &#160;&#160;&#160;&quot;has_ethic&quot;: &quot;ethic_fanatic_spiritualist&quot;,&#10; &#160;&#160;&#160;&quot;is_wilderness_empire&quot;: &quot;yes&quot;&#10; &#160;}&#10;}">
+<g id="a_clust399"><a xlink:title="前提研究:&#10;管理AI&#10;植民地集権化&#10;&#10;&#10;その他の条件:&#10;{&#10; &#160;&quot;NOR&quot;: {&#10; &#160;&#160;&#160;&quot;is_spiritualist&quot;: &quot;yes&quot;,&#10; &#160;&#160;&#160;&quot;is_wilderness_empire&quot;: &quot;yes&quot;&#10; &#160;}&#10;}">
 <polygon fill="#90ee90" stroke="black" points="1594.65,-2381.75 1594.65,-2474.75 1752.4,-2474.75 1752.4,-2381.75 1594.65,-2381.75"/>
 <text text-anchor="middle" x="1673.52" y="-2459.35" font-family="BIZ UDPGothic" font-size="12.00">自動キュレートアルゴリズム</text>
 </a>
@@ -3204,7 +3204,7 @@
 </g>
 <g id="clust400" class="cluster">
 <title>cluster_tech_consecration_fields</title>
-<g id="a_clust400"><a xlink:title="前提研究:&#10;ホログラフィック儀式&#10;植民地集権化&#10;&#10;&#10;その他の条件:&#10;{&#10; &#160;&quot;OR&quot;: {&#10; &#160;&#160;&#160;&quot;has_ethic&quot;: &quot;ethic_fanatic_spiritualist&quot;,&#10; &#160;&#160;&#160;&quot;AND&quot;: {&#10; &#160;&#160;&#160;&#160;&#160;&quot;is_gestalt&quot;: &quot;no&quot;,&#10; &#160;&#160;&#160;&#160;&#160;&quot;has_make_spiritualist_perk&quot;: &quot;yes&quot;&#10; &#160;&#160;&#160;}&#10; &#160;}&#10;}">
+<g id="a_clust400"><a xlink:title="前提研究:&#10;ホログラフィック儀式&#10;植民地集権化&#10;&#10;&#10;その他の条件:&#10;{&#10; &#160;&quot;OR&quot;: {&#10; &#160;&#160;&#160;&quot;is_spiritualist&quot;: &quot;yes&quot;,&#10; &#160;&#160;&#160;&quot;AND&quot;: {&#10; &#160;&#160;&#160;&#160;&#160;&quot;is_gestalt&quot;: &quot;no&quot;,&#10; &#160;&#160;&#160;&#160;&#160;&quot;has_make_spiritualist_perk&quot;: &quot;yes&quot;&#10; &#160;&#160;&#160;}&#10; &#160;}&#10;}">
 <polygon fill="#90ee90" stroke="black" points="1608.92,-6238.75 1608.92,-6331.75 1737.12,-6331.75 1737.12,-6238.75 1608.92,-6238.75"/>
 <text text-anchor="middle" x="1673.02" y="-6316.35" font-family="BIZ UDPGothic" font-size="12.00">聖別された領域</text>
 </a>
@@ -3932,7 +3932,7 @@
 </g>
 <g id="clust491" class="cluster">
 <title>cluster_tech_starfire_cannon</title>
-<g id="a_clust491"><a xlink:title="前提研究:&#10;&#10;&#10;その他の条件:&#10;{&#10; &#160;&quot;has_country_flag&quot;: &quot;starfire_cannon_unlocked&quot;&#10;}">
+<g id="a_clust491"><a xlink:title="前提研究:&#10;&#10;&#10;その他の条件:&#10;{&#10; &#160;&quot;has_origin&quot;: &quot;origin_red_giant&quot;,&#10; &#160;&quot;has_country_flag&quot;: &quot;starfire_cannon_unlocked&quot;&#10;}">
 <polygon fill="#9370db" stroke="black" points="40.9,-22068.75 40.9,-22161.75 198.35,-22161.75 198.35,-22068.75 40.9,-22068.75"/>
 <text text-anchor="middle" x="119.62" y="-22146.35" font-family="BIZ UDPGothic" font-size="12.00">スターファイアキャノン</text>
 </a>
@@ -4068,7 +4068,7 @@
 </g>
 <g id="clust508" class="cluster">
 <title>cluster_tech_transcendent_faith</title>
-<g id="a_clust508"><a xlink:title="前提研究:&#10;聖別された領域&#10;銀河規模の行政機構&#10;&#10;&#10;その他の条件:&#10;{&#10; &#160;&quot;OR&quot;: {&#10; &#160;&#160;&#160;&quot;has_ethic&quot;: &quot;ethic_fanatic_spiritualist&quot;,&#10; &#160;&#160;&#160;&quot;AND&quot;: {&#10; &#160;&#160;&#160;&#160;&#160;&quot;is_gestalt&quot;: &quot;no&quot;,&#10; &#160;&#160;&#160;&#160;&#160;&quot;has_make_spiritualist_perk&quot;: &quot;yes&quot;&#10; &#160;&#160;&#160;}&#10; &#160;}&#10;}">
+<g id="a_clust508"><a xlink:title="前提研究:&#10;聖別された領域&#10;銀河規模の行政機構&#10;&#10;&#10;その他の条件:&#10;{&#10; &#160;&quot;OR&quot;: {&#10; &#160;&#160;&#160;&quot;is_spiritualist&quot;: &quot;yes&quot;,&#10; &#160;&#160;&#160;&quot;AND&quot;: {&#10; &#160;&#160;&#160;&#160;&#160;&quot;is_gestalt&quot;: &quot;no&quot;,&#10; &#160;&#160;&#160;&#160;&#160;&quot;has_make_spiritualist_perk&quot;: &quot;yes&quot;&#10; &#160;&#160;&#160;}&#10; &#160;}&#10;}">
 <polygon fill="#90ee90" stroke="black" points="1947.18,-5729.75 1947.18,-5822.75 2075.38,-5822.75 2075.38,-5729.75 1947.18,-5729.75"/>
 <text text-anchor="middle" x="2011.28" y="-5807.35" font-family="BIZ UDPGothic" font-size="12.00">メタ認知的信仰</text>
 </a>
@@ -15328,7 +15328,7 @@
 <!-- tech_existential_campaigns_info -->
 <g id="node644" class="node">
 <title>tech_existential_campaigns_info</title>
-<g id="a_node644"><a xlink:title="weight_modifier:&#10;[&#10; &#160;{&#10; &#160;&#160;&#160;&quot;modifier&quot;: [&#10; &#160;&#160;&#160;&#160;&#160;{&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;factor&quot;: &quot;0&quot;,&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;OR&quot;: {&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;has_valid_civic&quot;: &quot;&quot;civic_machine_terminator&quot;&quot;&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;}&#10; &#160;&#160;&#160;&#160;&#160;},&#10; &#160;&#160;&#160;&#160;&#160;{&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;factor&quot;: &quot;2&quot;,&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;has_ethic&quot;: &quot;ethic_fanatic_militarist&quot;&#10; &#160;&#160;&#160;&#160;&#160;},&#10; &#160;&#160;&#160;&#160;&#160;{&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;factor&quot;: &quot;1.5&quot;,&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;has_ethic&quot;: &quot;ethic_militarist&quot;&#10; &#160;&#160;&#160;&#160;&#160;},&#10; &#160;&#160;&#160;&#160;&#160;{&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;factor&quot;: &quot;2&quot;&#10; &#160;&#160;&#160;&#160;&#160;},&#10; &#160;&#160;&#160;&#160;&#160;{&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;factor&quot;: &quot;2&quot;&#10; &#160;&#160;&#160;&#160;&#160;},&#10; &#160;&#160;&#160;&#160;&#160;{&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;factor&quot;: &quot;2&quot;&#10; &#160;&#160;&#160;&#160;&#160;},&#10; &#160;&#160;&#160;&#160;&#160;{&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;factor&quot;: &quot;0&quot;&#10; &#160;&#160;&#160;&#160;&#160;},&#10; &#160;&#160;&#160;&#160;&#160;{&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;factor&quot;: &quot;0.5&quot;,&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;has_ethic&quot;: &quot;ethic_pacifist&quot;&#10; &#160;&#160;&#160;&#160;&#160;},&#10; &#160;&#160;&#160;&#160;&#160;{&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;factor&quot;: &quot;0&quot;,&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;has_ethic&quot;: &quot;ethic_fanatic_pacifist&quot;&#10; &#160;&#160;&#160;&#160;&#160;}&#10; &#160;&#160;&#160;]&#10; &#160;}&#10;]">
+<g id="a_node644"><a xlink:title="weight_modifier:&#10;[&#10; &#160;{&#10; &#160;&#160;&#160;&quot;modifier&quot;: [&#10; &#160;&#160;&#160;&#160;&#160;{&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;factor&quot;: &quot;0&quot;,&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;OR&quot;: {&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;has_valid_civic&quot;: &quot;&quot;civic_machine_terminator&quot;&quot;&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;}&#10; &#160;&#160;&#160;&#160;&#160;},&#10; &#160;&#160;&#160;&#160;&#160;{&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;factor&quot;: &quot;2&quot;,&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;has_ethic&quot;: &quot;ethic_fanatic_militarist&quot;&#10; &#160;&#160;&#160;&#160;&#160;},&#10; &#160;&#160;&#160;&#160;&#160;{&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;factor&quot;: &quot;1.5&quot;,&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;has_ethic&quot;: &quot;ethic_militarist&quot;&#10; &#160;&#160;&#160;&#160;&#160;},&#10; &#160;&#160;&#160;&#160;&#160;{&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;factor&quot;: &quot;2&quot;&#10; &#160;&#160;&#160;&#160;&#160;},&#10; &#160;&#160;&#160;&#160;&#160;{&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;factor&quot;: &quot;2&quot;&#10; &#160;&#160;&#160;&#160;&#160;},&#10; &#160;&#160;&#160;&#160;&#160;{&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;factor&quot;: &quot;2&quot;&#10; &#160;&#160;&#160;&#160;&#160;},&#10; &#160;&#160;&#160;&#160;&#160;{&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;factor&quot;: &quot;0&quot;&#10; &#160;&#160;&#160;&#160;&#160;},&#10; &#160;&#160;&#160;&#160;&#160;{&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;factor&quot;: &quot;0.5&quot;,&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;has_ethic&quot;: &quot;ethic_pacifist&quot;&#10; &#160;&#160;&#160;&#160;&#160;},&#10; &#160;&#160;&#160;&#160;&#160;{&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;factor&quot;: &quot;0&quot;,&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;is_fanatic_pacifist&quot;: &quot;yes&quot;&#10; &#160;&#160;&#160;&#160;&#160;}&#10; &#160;&#160;&#160;]&#10; &#160;}&#10;]">
 <polygon fill="none" stroke="black" points="1108.02,-17587.95 995.82,-17587.95 995.82,-17531.55 1108.02,-17531.55 1108.02,-17587.95"/>
 <text text-anchor="start" x="1017.42" y="-17571.25" font-family="BIZ UDPGothic" font-size="10.00">社会学(軍事学)</text>
 <text text-anchor="start" x="1017.42" y="-17560.75" font-family="BIZ UDPGothic" font-size="10.00">tier:5</text>
