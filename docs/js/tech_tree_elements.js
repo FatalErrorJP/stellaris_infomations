@@ -1,6 +1,6 @@
 
 function getVersion() {
-    return "v4.2.3";
+    return "v4.2.4";
 }
 
 function getElements() {
@@ -929,7 +929,7 @@ function getElements() {
       area:'工学',
       category: '産業学',
       weight: 90,
-      weight_modifier: [{"factor": "2", "modifier": [{"factor": "1.25", "has_tradition": "tr_prosperity_adopt"}, {"factor": "1.5", "is_specialist_subject_type": {"TYPE": "prospectorium"}}, {"factor": "5", "OR": {"num_districts": {"type": "district_hollow_mountains value > 0"}, "has_any_mining_zone": "yes"}}]}],
+      weight_modifier: [{"factor": "2", "modifier": [{"factor": "1.25", "has_tradition": "tr_prosperity_adopt"}, {"factor": "1.5", "is_specialist_subject_type": {"TYPE": "prospectorium"}}, {"factor": "5", "OR": {"num_districts": {"type": "district_melting value > 0"}, "has_any_mining_zone": "yes"}}]}],
       prerequisites: ["地熱水圧破砕"],
       potential: {}
     },
@@ -1364,7 +1364,7 @@ function getElements() {
       area:'物理学',
       category: '力場操作',
       weight: 90,
-      weight_modifier: [{"factor": "2", "modifier": [{"factor": "1.25", "has_tradition": "tr_prosperity_adopt"}, {"factor": "1.5", "is_specialist_subject_type": {"TYPE": "prospectorium"}}, {"factor": "5", "OR": {"num_districts": {"type": "district_photosynthesis_fields value > 0"}, "has_any_generator_zone": "yes"}}]}],
+      weight_modifier: [{"factor": "2", "modifier": [{"factor": "1.25", "has_tradition": "tr_prosperity_adopt"}, {"factor": "1.5", "is_specialist_subject_type": {"TYPE": "prospectorium"}}, {"factor": "5", "OR": {"num_districts": {"type": "district_geothermal value > 0"}, "has_any_generator_zone": "yes"}}]}],
       prerequisites: ["力場調整"],
       potential: {}
     },

@@ -1,4 +1,4 @@
-= 【Stellaris 3.14.159】艦船の挙動について
+= 【Stellaris 4.2.4】艦船の挙動について
 :toc: left
 :toc-title: 目次
 :example-caption: 例

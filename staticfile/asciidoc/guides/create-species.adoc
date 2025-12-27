@@ -1,4 +1,4 @@
-= 【Stellaris 4.1.7】ポートレート＆種族の作り方
+= 【Stellaris 4.2.4】ポートレート＆種族の作り方
 :toc: left
 :toc-title: 目次
 :example-caption: 例
@@ -443,6 +443,14 @@ d-man-biologicals = {
 
 		warpling_army = {
 			sequential_name = seq_warpling_army
+		}
+
+		ember_legion = {
+			sequential_name = seq_ember_legion
+		}
+
+		lm_imbued_army = {
+			sequential_name = seq_lm_imbued_army
 		}
 
 		abomination_army = {
