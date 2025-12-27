@@ -148,7 +148,7 @@ image::ship_behaviors_4.png[]
 | swarm(突進戦術)     | min                    | 10                 | 60                           | orbit               | charge               | -
 | picket(前哨戦術)    | median                 | median             | max                          | stay_at_range       | orbit                | -
 | line(戦列戦術)      | median                 | median             | max                          | stay_at_range       | charge               | -
-| artillery(砲撃戦術) | max                    | max                | max                          | maintain_distance   | stay_at_range        | -
+| artillery(砲撃戦術) | median                 | median             | median                       | maintain_distance   | stay_at_range        | -
 | carrier(空母戦術)   | max                    | max                | max                          | maintain_distance   | stay_at_range        | strike_craft
 | torpedo(魚雷戦術)   | 10                     | 10                 | max                          | charge              | charge               | -
 |===
