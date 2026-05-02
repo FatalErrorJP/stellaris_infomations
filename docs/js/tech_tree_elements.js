@@ -1,6 +1,6 @@
 
 function getVersion() {
-    return "v4.3.0";
+    return "v4.3.5";
 }
 
 function getElements() {
@@ -2759,7 +2759,7 @@ function getElements() {
       area:'社会学',
       category: '統治学',
       weight: 85,
-      weight_modifier: [],
+      weight_modifier: [{"modifier": [{"factor": "trigger:acquired_specimen_count"}, {"factor": "2", "any_neighbor_country": {"has_technology": "tech_galactic_archivism"}}, {"factor": "5", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_curator"}, "has_modifier": "\"curator_insight\""}}]}],
       prerequisites: [],
       potential: {"has_grand_archive_dlc": "yes", "OR": {"is_galactic_curators_empire": "yes", "is_beastmasters_empire": "yes"}}
     },
@@ -5804,7 +5804,7 @@ function getElements() {
       area:'社会学',
       category: '超能力',
       weight: 50,
-      weight_modifier: [{"factor": "0.5", "modifier": [{"factor": "0", "OR": {"has_utopia": "yes", "has_shroud_dlc": "yes"}, "has_psionic_ascension": "yes"}, {"factor": "0.50", "NOT": {"has_trait_in_council": {"TRAIT": "leader_trait_expertise_psionics"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_telepathy"}}}, {"factor": "2", "has_ethic": "\"ethic_spiritualist\""}, {"factor": "3", "has_ethic": "\"ethic_fanatic_spiritualist\""}, {"factor": "3", "has_paragon_dlc": "no", "any_owned_leader": {"has_trait": "leader_trait_shroudwalker"}}, {"factor": "4", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}]}],
+      weight_modifier: [{"factor": "0.5", "modifier": [{"factor": "0", "OR": {"has_utopia": "yes", "has_shroud_dlc": "yes"}, "has_psionic_ascension": "no"}, {"factor": "0.50", "NOT": {"has_trait_in_council": {"TRAIT": "leader_trait_expertise_psionics"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_telepathy"}}}, {"factor": "2", "has_ethic": "\"ethic_spiritualist\""}, {"factor": "3", "has_ethic": "\"ethic_fanatic_spiritualist\""}, {"factor": "3", "has_paragon_dlc": "no", "any_owned_leader": {"has_trait": "leader_trait_shroudwalker"}}, {"factor": "4", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}]}],
       prerequisites: ["超能力理論"],
       potential: {"OR": {"has_shroud_dlc": "yes", "NOT": {"has_ethic": "ethic_gestalt_consciousness"}}}
     },

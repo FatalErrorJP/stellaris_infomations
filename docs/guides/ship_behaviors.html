@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.23">
-<title>【Stellaris 4.2.4】艦船の挙動について</title>
+<title>【Stellaris 4.3.5】艦船の挙動について</title>
 <link rel="stylesheet" href="../css/default.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- Google tag (gtag.js) -->
@@ -20,7 +20,7 @@
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>【Stellaris 4.2.4】艦船の挙動について</h1>
+<h1>【Stellaris 4.3.5】艦船の挙動について</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">目次</div>
 <ul class="sectlevel1">
@@ -34,6 +34,7 @@
 <li><a href="#_各戦術の定義">4.3. 各戦術の定義</a></li>
 <li><a href="#_minmedianmaxについて">4.4. min/median/maxについて</a></li>
 <li><a href="#_各戦術の挙動のまとめ">4.5. 各戦術の挙動のまとめ</a></li>
+<li><a href="#_射程とabの距離の早見表">4.6. 射程とABの距離の早見表</a></li>
 </ul>
 </li>
 </ul>
@@ -75,6 +76,30 @@
 <td class="tableblock halign-left valign-top"><div class="content"><div class="videoblock">
 <div class="content">
 <iframe width="400" height="225" src="https://www.youtube.com/embed/dHkHec_Q27w?rel=0&amp;list=PL80uh3ENsGgbDmt5nZO79Jl8AvbHP8C4s" frameborder="0" allowfullscreen></iframe>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="videoblock">
+<div class="content">
+<iframe width="400" height="225" src="https://www.youtube.com/embed/2lQyvYkf6oI?rel=0&amp;list=PL80uh3ENsGgbDmt5nZO79Jl8AvbHP8C4s" frameborder="0" allowfullscreen></iframe>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="videoblock">
+<div class="content">
+<iframe width="400" height="225" src="https://www.youtube.com/embed/FiJRVkopLGA?rel=0&amp;list=PL80uh3ENsGgbDmt5nZO79Jl8AvbHP8C4s" frameborder="0" allowfullscreen></iframe>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="videoblock">
+<div class="content">
+<iframe width="400" height="225" src="https://www.youtube.com/embed/ht_1XQRi_UA?rel=0&amp;list=PL80uh3ENsGgbDmt5nZO79Jl8AvbHP8C4s" frameborder="0" allowfullscreen></iframe>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="videoblock">
+<div class="content">
+<iframe width="400" height="225" src="https://www.youtube.com/embed/x5Difc5NSi8?rel=0&amp;list=PL80uh3ENsGgbDmt5nZO79Jl8AvbHP8C4s" frameborder="0" allowfullscreen></iframe>
 </div>
 </div></div></td>
 </tr>
@@ -408,16 +433,39 @@ Mod等でこの値を別の値に変更している場合には、交戦距離�
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>default(混合戦術)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>median</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>10</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>500</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>none</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>orbit</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>-</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>swarm(突進戦術)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>min</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>10</p>
+<p>min</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>60</p>
+<p>1500</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>orbit</p>
@@ -440,7 +488,7 @@ Mod等でこの値を別の値に変更している場合には、交戦距離�
 <p>median</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>max</p>
+<p>250</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>stay_at_range</p>
@@ -463,7 +511,7 @@ Mod等でこの値を別の値に変更している場合には、交戦距離�
 <p>median</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>max</p>
+<p>500</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>stay_at_range</p>
@@ -480,13 +528,13 @@ Mod等でこの値を別の値に変更している場合には、交戦距離�
 <p>artillery(砲撃戦術)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>median</p>
+<p>max</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>median</p>
+<p>max</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>median</p>
+<p>1000</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>maintain_distance</p>
@@ -509,7 +557,7 @@ Mod等でこの値を別の値に変更している場合には、交戦距離�
 <p>max</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>max</p>
+<p>1000</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>maintain_distance</p>
@@ -532,7 +580,7 @@ Mod等でこの値を別の値に変更している場合には、交戦距離�
 <p>10</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>max</p>
+<p>1200</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>charge</p>
@@ -586,14 +634,23 @@ range_componentsがweaponの状態で軍用機以外の武器をつけていな�
 <div class="sect2">
 <h3 id="_各戦術の挙動のまとめ">4.5. 各戦術の挙動のまとめ</h3>
 <div class="paragraph">
-<p>定義値と、実際にゲーム内で動かして確認してみた結果を元に確認した各戦術の挙動について、以下に記載します。</p>
+<p>定義値と、実際にゲーム内で動かしてみた結果を参考にまとめた各戦術の挙動について、以下に記載します。</p>
 </div>
 <div class="sect3">
-<h4 id="_突進戦術">4.5.1. 突進戦術</h4>
+<h4 id="_混合戦術">4.5.1. 混合戦術</h4>
 <div class="paragraph">
-<p>突進戦術は、Bの距離まで前進した後Aの距離をぐるぐる回るような挙動になります。<br>
-武器によってはAがCを越えてしまう場合がありますが、その場合は距離10～60の間を絶えず動き回りながら<br>
-Passive MoveとAttack Moveが切り替わり続けるというような動作になります。<br></p>
+<p>混合戦術は、距離10まで前進した後、10の距離を保ったままぐるぐる回るような挙動になります。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/ship_behaviors_12.png" alt="ship behaviors 12" width="100%">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_突進戦術">4.5.2. 突進戦術</h4>
+<div class="paragraph">
+<p>突進戦術は、Bの距離まで前進した後Aの距離をぐるぐる回るような挙動になります。</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -602,7 +659,7 @@ Passive MoveとAttack Moveが切り替わり続けるというような動作に
 </div>
 </div>
 <div class="sect3">
-<h4 id="_前哨戦術">4.5.2. 前哨戦術</h4>
+<h4 id="_前哨戦術">4.5.3. 前哨戦術</h4>
 <div class="paragraph">
 <p>前哨戦術は、Bの距離まで移動した後でAの距離まで前進し、停止します。<br>
 その後は相手が近づいてきても停止状態のまま動きません。<br>
@@ -611,8 +668,7 @@ Passive MoveとAttack Moveが切り替わり続けるというような動作に
 </div>
 <div class="paragraph">
 <p>なお、Bの距離まで移動する際は若干楕円系を描くような動きにはなりますが、<br>
-ほぼ直線上なため戦列戦術とあまり動きに違いはありません。<br>
-ちなみに、射程延長の補正でAがmedian以上になることはありません。</p>
+ほぼ直線上なため戦列戦術とあまり動きに違いはありません。</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -621,12 +677,11 @@ Passive MoveとAttack Moveが切り替わり続けるというような動作に
 </div>
 </div>
 <div class="sect3">
-<h4 id="_戦列戦術">4.5.3. 戦列戦術</h4>
+<h4 id="_戦列戦術">4.5.4. 戦列戦術</h4>
 <div class="paragraph">
 <p>戦列戦術は、Bの距離まで移動した後でAの距離まで前進し、停止します。<br>
 前哨戦術との違いは、Passive Moveが完全に直線的な動きであること1点のみです。<br>
-前哨戦術と同じく亜光速移動速度が高い場合、Aの距離で停止しきれず前に出てしまうので注意が必要です。<br>
-ちなみに、前哨戦術と同じく射程延長の補正でAがmedian以上になることはありません。</p>
+前哨戦術と同じく亜光速移動速度が高い場合、Aの距離で停止しきれず前に出てしまうので注意が必要です。</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -635,12 +690,11 @@ Passive MoveとAttack Moveが切り替わり続けるというような動作に
 </div>
 </div>
 <div class="sect3">
-<h4 id="_砲撃戦術">4.5.4. 砲撃戦術</h4>
+<h4 id="_砲撃戦術">4.5.5. 砲撃戦術</h4>
 <div class="paragraph">
 <p>砲撃戦術はBの距離まで接近した後は、Aの距離を常に保つように動きます。<br>
 敵艦が接近してこなければ基本的には静止しますが、接近してくる場合は円を描くように敵から離れようとします。<br>
-前哨や戦列と同じく亜光速移動速度が高い場合、Bの距離で停止しきれず前に出てしまうので注意が必要です。<br>
-検証していませんが、Cがmedianであることを考えると射程延長の補正でAがmedianの以上にはならない可能性があります。</p>
+前哨や戦列と同じく亜光速移動速度が高い場合、Bの距離で停止しきれず前に出てしまうので注意が必要です。</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -649,13 +703,12 @@ Passive MoveとAttack Moveが切り替わり続けるというような動作に
 </div>
 </div>
 <div class="sect3">
-<h4 id="_空母戦術">4.5.5. 空母戦術</h4>
+<h4 id="_空母戦術">4.5.6. 空母戦術</h4>
 <div class="paragraph">
 <p>空母戦術の基本的な動作は砲撃戦術と同じで、Bの距離まで接近した後は、Aの距離を常に保つように動きます。<br>
 ただし、A,B,Cの数値計算の基準が軍用機の艦船交戦距離基準に変化します。<br>
 射程延長の補正も効かなくなり、代わりに艦船交戦距離の補正が影響するようになるので、空母を運用する際には注意が必要です。<br>
-軍用機をスロットに入れていない場合は他の武器の射程が参照されるようになるため砲撃戦術と挙動が完全に同じになります。<br>
-検証していませんが、Cがmaxであることを考えると射程延長の補正でAがmaxの以上にはならない可能性があります。</p>
+軍用機をスロットに入れていない場合は他の武器の射程が参照されるようになるため砲撃戦術と挙動が完全に同じになります。</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -664,7 +717,7 @@ Passive MoveとAttack Moveが切り替わり続けるというような動作に
 </div>
 </div>
 <div class="sect3">
-<h4 id="_突進戦術_2">4.5.6. 突進戦術</h4>
+<h4 id="_突進戦術_2">4.5.7. 突進戦術</h4>
 <div class="paragraph">
 <p>突進戦術は、常に敵艦に向かって一直線に前進します。特記事項は特にありません。</p>
 </div>
@@ -673,12 +726,575 @@ Passive MoveとAttack Moveが切り替わり続けるというような動作に
 <img src="images/ship_behaviors_11.png" alt="ship behaviors 11" width="100%">
 </div>
 </div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_射程とabの距離の早見表">4.6. 射程とABの距離の早見表</h3>
+<div class="openblock scrollable">
+<div class="content">
+<table class="tableblock frame-all grid-all fit-content stretch">
+<caption class="title">Table 3. SWARM(突進戦術)のAの距離の目安</caption>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">艦船武器射程＼minの武器射程</th>
+<th class="tableblock halign-left valign-top">30</th>
+<th class="tableblock halign-left valign-top">60</th>
+<th class="tableblock halign-left valign-top">100</th>
+<th class="tableblock halign-left valign-top">120</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">補正なし(1倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25.950</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">51.900</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">86.500</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">103.800</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船武器射程+10%(1.1倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28.545</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">57.090</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">95.150</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">114.180</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船武器射程+20%(1.2倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31.140</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">62.280</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">103.800</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">124.560</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船武器射程+30%(1.3倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">33.735</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">67.470</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">112.450</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">134.940</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船武器射程+40%(1.4倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">36.330</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">72.660</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">121.100</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">145.320</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船武器射程+50%(1.5倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">38.925</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">77.850</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">129.750</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">155.700</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船武器射程+60%(1.6倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41.520</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">83.040</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">138.400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">166.080</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船武器射程+70%(1.7倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">44.115</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">88.230</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">147.050</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">176.460</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船武器射程+80%(1.8倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">46.710</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">93.420</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">155.700</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">186.840</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船武器射程+90%(1.9倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">49.305</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">98.610</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">164.350</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">197.220</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船武器射程+100%(2倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">51.900</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">103.800</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">173.000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">207.600</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="openblock scrollable">
+<div class="content">
+<table class="tableblock frame-all grid-all fit-content stretch">
+<caption class="title">Table 4. picket(前哨戦術)および、line(戦列戦術)のAの距離の目安</caption>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">艦船武器射程＼medianの武器射程</th>
+<th class="tableblock halign-left valign-top">30</th>
+<th class="tableblock halign-left valign-top">60</th>
+<th class="tableblock halign-left valign-top">100</th>
+<th class="tableblock halign-left valign-top">120</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">補正なし(1倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">19.050</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">38.100</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">63.500</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">76.200</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船武器射程+10%(1.1倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20.955</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41.910</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">69.850</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">83.820</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船武器射程+20%(1.2倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">22.860</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">45.720</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">76.200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">91.440</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船武器射程+30%(1.3倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24.765</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">49.530</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">82.550</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">99.060</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船武器射程+40%(1.4倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26.670</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">53.340</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">88.900</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">106.680</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船武器射程+50%(1.5倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28.575</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">57.150</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">95.250</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">114.300</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船武器射程+60%(1.6倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30.480</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">60.960</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">101.600</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">121.920</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船武器射程+70%(1.7倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">32.385</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">64.770</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">107.950</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">129.540</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船武器射程+80%(1.8倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">34.290</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">68.580</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">114.300</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">137.160</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船武器射程+90%(1.9倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">36.195</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">72.390</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">120.650</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">144.780</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船武器射程+100%(2倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">38.100</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">76.200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">127.000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">152.400</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="openblock scrollable">
+<div class="content">
+<table class="tableblock frame-all grid-all fit-content stretch">
+<caption class="title">Table 5. artillery(砲撃戦術)のBの距離の目安</caption>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">艦船武器射程＼maxの武器射程</th>
+<th class="tableblock halign-left valign-top">100</th>
+<th class="tableblock halign-left valign-top">120</th>
+<th class="tableblock halign-left valign-top">150</th>
+<th class="tableblock halign-left valign-top">250</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">補正なし(1倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">75.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">112.50</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">187.50</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船武器射程+10%(1.1倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">82.50</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">99.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">123.75</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">206.25</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船武器射程+20%(1.2倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">108.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">135.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">225.00</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船武器射程+30%(1.3倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">97.50</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">117.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">146.25</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">243.75</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船武器射程+40%(1.4倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">105.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">126.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">157.50</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">262.50</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船武器射程+50%(1.5倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">112.50</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">135.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">168.75</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">281.25</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船武器射程+60%(1.6倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">120.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">144.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">180.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">300.00</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船武器射程+70%(1.7倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">127.50</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">153.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">191.25</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">318.75</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船武器射程+80%(1.8倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">135.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">162.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">202.50</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">337.50</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船武器射程+90%(1.9倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">142.50</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">171.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">213.75</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">356.25</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船武器射程+100%(2倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">150.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">180.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">225.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">375.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="openblock scrollable">
+<div class="content">
+<table class="tableblock frame-all grid-all fit-content stretch">
+<caption class="title">Table 6. artillery(砲撃戦術)のAの距離の目安</caption>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">艦船武器射程＼maxの武器射程</th>
+<th class="tableblock halign-left valign-top">100</th>
+<th class="tableblock halign-left valign-top">120</th>
+<th class="tableblock halign-left valign-top">150</th>
+<th class="tableblock halign-left valign-top">250</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">補正なし(1倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">50.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">60.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">75.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">125.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船武器射程+10%(1.1倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">55.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">66.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">82.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">137.5</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船武器射程+20%(1.2倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">60.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">72.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">150.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船武器射程+30%(1.3倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">65.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">78.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">97.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">162.5</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船武器射程+40%(1.4倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">70.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">84.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">105.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">175.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船武器射程+50%(1.5倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">75.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">112.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">187.5</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船武器射程+60%(1.6倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">80.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">96.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">120.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船武器射程+70%(1.7倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">85.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">102.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">127.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">212.5</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船武器射程+80%(1.8倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">108.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">135.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">225.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船武器射程+90%(1.9倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">95.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">114.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">142.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">237.5</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船武器射程+100%(2倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">100.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">120.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">150.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">250.0</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="openblock scrollable">
+<div class="content">
+<table class="tableblock frame-all grid-all fit-content stretch">
+<caption class="title">Table 7. carrier(空母戦術)のBの距離の目安</caption>
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">艦船交戦距離＼Hスロットの艦船交戦距離</th>
+<th class="tableblock halign-left valign-top">100</th>
+<th class="tableblock halign-left valign-top">125</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">補正なし(1倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">75.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">93.75</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船交戦距離+10%(1.1倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">82.50</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">103.13</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船交戦距離+20%(1.2倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">112.50</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船交戦距離+30%(1.3倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">97.50</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">121.88</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船交戦距離+40%(1.4倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">105.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">131.25</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船交戦距離+50%(1.5倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">112.50</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">140.63</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船交戦距離+60%(1.6倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">120.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">150.00</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船交戦距離+70%(1.7倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">127.50</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">159.38</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船交戦距離+80%(1.8倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">135.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">168.75</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船交戦距離+90%(1.9倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">142.50</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">178.13</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船交戦距離+100%(2倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">150.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">187.50</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="openblock scrollable">
+<div class="content">
+<table class="tableblock frame-all grid-all fit-content stretch">
+<caption class="title">Table 8. carrier(空母戦術)のAの距離の目安</caption>
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">艦船交戦距離＼Hスロットの艦船交戦距離</th>
+<th class="tableblock halign-left valign-top">100</th>
+<th class="tableblock halign-left valign-top">125.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">補正なし(1倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">50.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">62.5</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船交戦距離+10%(1.1倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">55.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">68.8</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船交戦距離+20%(1.2倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">60.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">75.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船交戦距離+30%(1.3倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">65.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">81.3</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船交戦距離+40%(1.4倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">70.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">87.5</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船交戦距離+50%(1.5倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">75.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">93.8</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船交戦距離+60%(1.6倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">80.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">100.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船交戦距離+70%(1.7倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">85.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">106.3</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船交戦距離+80%(1.8倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">112.5</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船交戦距離+90%(1.9倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">95.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">118.8</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">艦船交戦距離+100%(2倍)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">100.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">125.0</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <div class="paragraph">
 <p>以上</p>
 </div>
 <div id="GotoTop" class="paragraph">
 <p><a href="../">TOPへ戻る</a></p>
-</div>
 </div>
 </div>
 </div>
