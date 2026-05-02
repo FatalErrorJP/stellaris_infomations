@@ -237,8 +237,8 @@ image::ship_behaviors_9.png[width=100%]
 image::ship_behaviors_10.png[width=100%]
 
 
-==== 突進戦術
-突進戦術は、常に敵艦に向かって一直線に前進します。特記事項は特にありません。
+==== 魚雷戦術
+魚雷戦術は、常に敵艦に向かって一直線に前進します。特記事項は特にありません。
 
 image::ship_behaviors_11.png[width=100%]
 
