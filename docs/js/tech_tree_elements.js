@@ -1,6 +1,6 @@
 
 function getVersion() {
-    return "v4.3.5";
+    return "v4.4.2";
 }
 
 function getElements() {
@@ -31,22 +31,7 @@ function getElements() {
       weight: 0,
       weight_modifier: [],
       prerequisites: ["星系港の建設"],
-      potential: {}
-    },
-    classes: 'engineering'
-},
-{
-    data: {
-      id: 'tech_space_exploration',
-      name: '宇宙探索',
-      tier: 0,
-      cost: 0,
-      area:'工学',
-      category: '宇宙工学',
-      weight: 0,
-      weight_modifier: [],
-      prerequisites: [],
-      potential: {}
+      potential: {"is_nomadic": "no"}
     },
     classes: 'engineering'
 },
@@ -60,7 +45,7 @@ function getElements() {
       category: '宇宙工学',
       weight: 0,
       weight_modifier: [{"factor": "1000"}],
-      prerequisites: ["星系港の建設"],
+      prerequisites: [],
       potential: {"country_uses_bio_ships": "no"}
     },
     classes: 'engineering'
@@ -76,7 +61,7 @@ function getElements() {
       weight: 0,
       weight_modifier: [],
       prerequisites: ["宇宙建設"],
-      potential: {}
+      potential: {"is_nomadic": "no"}
     },
     classes: 'engineering'
 },
@@ -91,7 +76,7 @@ function getElements() {
       weight: 0,
       weight_modifier: [],
       prerequisites: ["星系基地建設"],
-      potential: {}
+      potential: {"is_nomadic": "no"}
     },
     classes: 'engineering'
 },
@@ -151,7 +136,7 @@ function getElements() {
       weight: 0,
       weight_modifier: [],
       prerequisites: ["星系基地建設"],
-      potential: {}
+      potential: {"is_nomadic": "no"}
     },
     classes: 'engineering'
 },
@@ -181,7 +166,7 @@ function getElements() {
       weight: 0,
       weight_modifier: [],
       prerequisites: [],
-      potential: {}
+      potential: {"is_nomadic": "no"}
     },
     classes: 'engineering'
 },
@@ -257,6 +242,51 @@ function getElements() {
       weight_modifier: [{"factor": "0"}],
       prerequisites: [],
       potential: {"has_first_contact_dlc": "yes"}
+    },
+    classes: 'physics'
+},
+{
+    data: {
+      id: 'tech_nomads_mechanized_mining',
+      name: '戦略的抽出',
+      tier: 0,
+      cost: 0,
+      area:'工学',
+      category: '産業学',
+      weight: 0,
+      weight_modifier: [],
+      prerequisites: [],
+      potential: {"is_nomadic": "yes"}
+    },
+    classes: 'engineering'
+},
+{
+    data: {
+      id: 'tech_waystation_1',
+      name: '中継所',
+      tier: 0,
+      cost: 0,
+      area:'工学',
+      category: '宇宙工学',
+      weight: 0,
+      weight_modifier: [],
+      prerequisites: ["宇宙建設"],
+      potential: {"is_nomadic": "yes"}
+    },
+    classes: 'engineering'
+},
+{
+    data: {
+      id: 'tech_space_exploration',
+      name: '宇宙探索',
+      tier: 0,
+      cost: 0,
+      area:'物理学',
+      category: 'コンピュータ',
+      weight: 0,
+      weight_modifier: [],
+      prerequisites: [],
+      potential: {}
     },
     classes: 'physics'
 },
@@ -466,7 +496,7 @@ function getElements() {
       weight: 0,
       weight_modifier: [{"factor": "1000"}],
       prerequisites: ["宇宙探索"],
-      potential: {}
+      potential: {"is_nomadic": "no"}
     },
     classes: 'society'
 },
@@ -488,7 +518,7 @@ function getElements() {
 {
     data: {
       id: 'tech_planetary_government',
-      name: '惑星政府',
+      name: '統一政府',
       tier: 0,
       cost: 500,
       area:'社会学',
@@ -554,7 +584,7 @@ function getElements() {
       area:'社会学',
       category: '生物学',
       weight: 0,
-      weight_modifier: [{"factor": "0"}],
+      weight_modifier: [{"factor": "1000"}],
       prerequisites: [],
       potential: {"country_uses_bio_ships": "yes"}
     },
@@ -840,7 +870,7 @@ function getElements() {
       category: '宇宙工学',
       weight: 90,
       weight_modifier: [],
-      prerequisites: ["星系港の建設"],
+      prerequisites: [],
       potential: {}
     },
     classes: 'engineering'
@@ -1186,7 +1216,7 @@ function getElements() {
       weight: 90,
       weight_modifier: [],
       prerequisites: ["管理AI","新天地プロトコル"],
-      potential: {}
+      potential: {"is_nomadic": "no"}
     },
     classes: 'physics'
 },
@@ -1471,7 +1501,7 @@ function getElements() {
       weight: 95,
       weight_modifier: [{"modifier": [{"factor": "2"}, {"factor": "1.25", "has_tradition": "tr_expansion_adopt"}, {"factor": "4", "has_ascension_perk": "ap_mastery_of_nature"}, {"factor": "0", "NOT": {"any_owned_planet": {"has_deposit": "\"d_dense_jungle\""}}}, {"factor": "0"}]}],
       prerequisites: ["新天地プロトコル"],
-      potential: {}
+      potential: {"is_nomadic": "no"}
     },
     classes: 'society'
 },
@@ -1486,7 +1516,7 @@ function getElements() {
       weight: 95,
       weight_modifier: [{"modifier": [{"factor": "2"}, {"factor": "1.25", "has_tradition": "tr_expansion_adopt"}, {"factor": "4", "has_ascension_perk": "ap_mastery_of_nature"}, {"factor": "0", "NOT": {"any_owned_planet": {"has_deposit": "\"d_quicksand_basin\""}}}, {"factor": "0"}]}],
       prerequisites: ["新天地プロトコル"],
-      potential: {}
+      potential: {"is_nomadic": "no"}
     },
     classes: 'society'
 },
@@ -1501,7 +1531,7 @@ function getElements() {
       weight: 95,
       weight_modifier: [{"modifier": [{"factor": "2"}, {"factor": "1.25", "has_tradition": "tr_expansion_adopt"}, {"factor": "4", "has_ascension_perk": "ap_mastery_of_nature"}, {"factor": "0", "NOT": {"any_owned_planet": {"has_deposit": "\"d_noxious_swamp\""}}}, {"factor": "0"}]}],
       prerequisites: ["新天地プロトコル"],
-      potential: {}
+      potential: {"is_nomadic": "no"}
     },
     classes: 'society'
 },
@@ -1516,7 +1546,7 @@ function getElements() {
       weight: 95,
       weight_modifier: [{"modifier": [{"factor": "2"}, {"factor": "1.25", "has_tradition": "tr_expansion_adopt"}, {"factor": "4", "has_ascension_perk": "ap_mastery_of_nature"}, {"factor": "0", "NOT": {"any_owned_planet": {"has_deposit": "\"d_massive_glacier\""}}}, {"factor": "0"}]}],
       prerequisites: ["新天地プロトコル"],
-      potential: {}
+      potential: {"is_nomadic": "no"}
     },
     classes: 'society'
 },
@@ -1531,7 +1561,7 @@ function getElements() {
       weight: 95,
       weight_modifier: [{"modifier": [{"factor": "2"}, {"factor": "1.25", "has_tradition": "tr_expansion_adopt"}, {"factor": "4", "has_ascension_perk": "ap_mastery_of_nature"}, {"factor": "0", "NOT": {"any_owned_planet": {"has_deposit": "\"d_toxic_kelp\""}}}, {"factor": "0"}]}],
       prerequisites: ["新天地プロトコル"],
-      potential: {}
+      potential: {"is_nomadic": "no"}
     },
     classes: 'society'
 },
@@ -1546,7 +1576,7 @@ function getElements() {
       weight: 95,
       weight_modifier: [{"modifier": [{"factor": "2"}, {"factor": "1.25", "has_tradition": "tr_expansion_adopt"}, {"factor": "4", "has_ascension_perk": "ap_mastery_of_nature"}, {"factor": "0", "NOT": {"any_owned_planet": {"has_deposit": "\"d_deep_sinkhole\""}}}, {"factor": "0"}]}],
       prerequisites: ["新天地プロトコル"],
-      potential: {}
+      potential: {"is_nomadic": "no"}
     },
     classes: 'society'
 },
@@ -1613,14 +1643,14 @@ function getElements() {
 {
     data: {
       id: 'tech_planetary_unification',
-      name: '惑星統一',
+      name: '社会的統合',
       tier: 1,
       cost: 1000,
       area:'社会学',
       category: '統治学',
       weight: 100,
       weight_modifier: [{"factor": "4", "modifier": [{"factor": "0.75", "NOT": {"is_pacifist": "yes"}}]}],
-      prerequisites: ["惑星政府"],
+      prerequisites: ["統一政府"],
       potential: {}
     },
     classes: 'society'
@@ -1635,7 +1665,7 @@ function getElements() {
       category: '統治学',
       weight: 95,
       weight_modifier: [{"modifier": [{"factor": "0.5"}, {"factor": "1.5"}, {"factor": "1.5"}, {"factor": "1.5"}]}],
-      prerequisites: ["惑星統一"],
+      prerequisites: ["社会的統合"],
       potential: {}
     },
     classes: 'society'
@@ -1680,7 +1710,7 @@ function getElements() {
       category: '統治学',
       weight: 95,
       weight_modifier: [{"modifier": [{"factor": "0.5"}, {"factor": "1.5"}, {"factor": "1.5"}, {"factor": "1.5"}, {"factor": "2", "is_memorialist_empire": "yes"}, {"factor": "2", "is_entropy_drinkers_empire": "yes"}]}],
-      prerequisites: ["惑星統一"],
+      prerequisites: ["社会的統合"],
       potential: {"is_wilderness_empire": "no"}
     },
     classes: 'society'
@@ -1844,7 +1874,7 @@ function getElements() {
       area:'物理学',
       category: '素粒子物理学',
       weight: 85,
-      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_country_flag": "astral_threads_found", "any_system_within_border": {"OR": {"exists": "astral_rift", "any_system_planet": {"has_resource": {"type": "astral_threads amount > 0"}}}}, "any_relation": {"AND": {"is_country_type": "default", "has_communications": "ROOT", "has_technology": "tech_astral_harvesting"}}}}, {"factor": "2", "any_system_within_border": {"OR": {"exists": "astral_rift", "any_system_planet": {"is_astral_scar": "yes"}}}}]}],
+      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_country_flag": "astral_threads_found", "any_system_within_border": {"OR": {"exists": "astral_rift", "any_system_planet": {"has_resource": {"type": "astral_threads amount > 0"}}}}, "AND": {"is_nomadic": "yes", "any_owned_nonprimary_starbase": {"is_waystation_starbase": "yes", "solar_system": {"OR": {"exists": "astral_rift", "any_system_planet": {"has_resource": {"type": "astral_threads amount > 0"}}}}}}, "any_relation": {"AND": {"is_country_type": "default", "has_communications": "ROOT", "has_technology": "tech_astral_harvesting"}}}}, {"factor": "2", "any_system_within_border": {"OR": {"exists": "astral_rift", "any_system_planet": {"is_astral_scar": "yes"}}}}, {"factor": "2", "is_nomadic": "yes", "any_owned_nonprimary_starbase": {"is_waystation_starbase": "yes", "solar_system": {"OR": {"exists": "astral_rift", "any_system_planet": {"is_astral_scar": "yes"}}}}}]}],
       prerequisites: [],
       potential: {"has_astral_planes_dlc": "yes"}
     },
@@ -2131,7 +2161,7 @@ function getElements() {
       weight: 75,
       weight_modifier: [{"modifier": [{"factor": "0.1", "NOT": {}}, {"factor": "10", "any_neighbor_country": {"has_technology": "tech_starbase_3"}}, {"factor": "2"}, {"factor": "3"}, {"factor": "4"}, {"factor": "5", "count_starbase_sizes": {"starbase_size": "starbase_starport"}}, {"factor": "1.25", "has_tradition": "tr_unyielding_adopt"}, {"factor": "10", "has_modifier": "agenda_impenetrable_border_finish"}]}],
       prerequisites: ["星系港の建設"],
-      potential: {}
+      potential: {"is_nomadic": "no"}
     },
     classes: 'engineering'
 },
@@ -2145,7 +2175,7 @@ function getElements() {
       category: '宇宙工学',
       weight: 70,
       weight_modifier: [{"factor": "0.5", "modifier": [{"factor": "0.5", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_curator"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_modular_engineering"}}}]}],
-      prerequisites: ["星系軍港の建設"],
+      prerequisites: ["OR","=","{","星系軍港の建設","改良された中継ライン物流","}"],
       potential: {}
     },
     classes: 'engineering'
@@ -2354,7 +2384,7 @@ function getElements() {
       area:'工学',
       category: '産業学',
       weight: 70,
-      weight_modifier: [{"factor": "1.5"}],
+      weight_modifier: [{"factor": "1.5", "modifier": [{"factor": "@ap_pending_tech_boost", "OR": {"has_ascension_perk": "ap_organo_machine_interfacing_assimilator"}}]}],
       prerequisites: ["強化外骨格","植民地集権化"],
       potential: {"OR": {"AND": {"is_machine_empire": "no", "is_individual_machine": "no"}, "has_civic": "civic_machine_assimilator"}}
     },
@@ -2506,7 +2536,7 @@ function getElements() {
       weight: 0,
       weight_modifier: [],
       prerequisites: [],
-      potential: {"has_shroud_dlc": "yes"}
+      potential: {"has_shroud_dlc": "yes", "is_nomadic": "no"}
     },
     classes: 'society'
 },
@@ -2519,7 +2549,7 @@ function getElements() {
       area:'物理学',
       category: '力場操作',
       weight: 70,
-      weight_modifier: [{"modifier": [{"factor": "value:tech_weight_likelihood", "has_trait_in_council": {"TRAIT": "leader_trait_curator"}}, {"factor": "value:tech_weight_likelihood", "has_trait_in_council": {"TRAIT": "leader_trait_fotd_scientist"}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_cloaking_1"}}}, {"factor": "5", "has_tradition": "tr_subterfuge_adopt"}]}],
+      weight_modifier: [{"modifier": [{"factor": "value:tech_weight_likelihood", "has_trait_in_council": {"TRAIT": "leader_trait_curator"}}, {"factor": "value:tech_weight_likelihood", "has_trait_in_council": {"TRAIT": "leader_trait_fotd_scientist"}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_cloaking_1"}}}, {"factor": "5", "has_tradition": "tr_subterfuge_adopt"}, {"factor": "2", "has_cloaking_civic_or_origin": "yes"}]}],
       prerequisites: ["改良デフレクター"],
       potential: {"has_first_contact_dlc": "yes"}
     },
@@ -2761,7 +2791,7 @@ function getElements() {
       weight: 85,
       weight_modifier: [{"modifier": [{"factor": "trigger:acquired_specimen_count"}, {"factor": "2", "any_neighbor_country": {"has_technology": "tech_galactic_archivism"}}, {"factor": "5", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_curator"}, "has_modifier": "\"curator_insight\""}}]}],
       prerequisites: [],
-      potential: {"has_grand_archive_dlc": "yes", "OR": {"is_galactic_curators_empire": "yes", "is_beastmasters_empire": "yes"}}
+      potential: {"has_grand_archive_dlc": "yes"}
     },
     classes: 'society'
 },
@@ -2909,7 +2939,7 @@ function getElements() {
       area:'工学',
       category: '材料工学',
       weight: 70,
-      weight_modifier: [{"factor": "0.5", "modifier": [{"factor": "0.2", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "2", "OR": {"has_megastructure": "orbital_arc_furnace_4"}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_orbital_arc_furnace"}}}]}],
+      weight_modifier: [{"factor": "0.5", "modifier": [{"factor": "0.2", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "2", "OR": {"has_megastructure": "orbital_arc_furnace_4"}}]}],
       prerequisites: [],
       potential: {"has_machine_age_dlc": "yes"}
     },
@@ -2932,6 +2962,51 @@ function getElements() {
 },
 {
     data: {
+      id: 'tech_waystation_2',
+      name: '改良された中継ライン物流',
+      tier: 2,
+      cost: 2500,
+      area:'工学',
+      category: '宇宙工学',
+      weight: 75,
+      weight_modifier: [{"modifier": [{"factor": "0.1", "NOT": {}}, {"factor": "10", "any_neighbor_country": {"has_technology": "tech_starbase_3"}}, {"factor": "2"}, {"factor": "3"}, {"factor": "4"}, {"factor": "5", "count_starbase_sizes": {"starbase_size": "starbase_waystation_1"}}, {"factor": "1.25", "has_tradition": "tr_expansion_adopt"}]}],
+      prerequisites: ["中継所"],
+      potential: {"is_nomadic": "yes"}
+    },
+    classes: 'engineering'
+},
+{
+    data: {
+      id: 'tech_planetary_engineering',
+      name: '惑星工学',
+      tier: 2,
+      cost: 2000,
+      area:'工学',
+      category: '産業学',
+      weight: 85,
+      weight_modifier: [{"modifier": [{"factor": "2", "has_technology": "tech_space_mining_3"}, {"factor": "2", "has_technology": "tech_space_mining_4"}, {"factor": "2", "has_technology": "tech_space_mining_5"}, {"factor": "1.25", "has_tradition": "tr_expansion_adopt"}]}],
+      prerequisites: ["宇宙探索","長距離鉱物スキャナー"],
+      potential: {"is_nomadic": "yes"}
+    },
+    classes: 'engineering'
+},
+{
+    data: {
+      id: 'tech_dyson_gun',
+      name: '恒星砲',
+      tier: 2,
+      cost: 3000,
+      area:'工学',
+      category: '材料工学',
+      weight: 70,
+      weight_modifier: [{"modifier": [{"factor": "0.5"}, {"factor": "0.2", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "2", "OR": {"has_megastructure": "dyson_gun_3"}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_dyson_gun"}}}]}],
+      prerequisites: [],
+      potential: {"has_nomads_dlc": "yes", "is_nomadic": "no"}
+    },
+    classes: 'engineering'
+},
+{
+    data: {
       id: 'tech_hyper_relays',
       name: 'ハイパーリレイ',
       tier: 2,
@@ -2939,7 +3014,7 @@ function getElements() {
       area:'物理学',
       category: '素粒子物理学',
       weight: 70,
-      weight_modifier: [{"factor": "0.5", "modifier": [{"factor": "0", "NOR": {"has_technology": "tech_rare_crystals", "has_country_flag": "has_market_access"}}, {"factor": "0.2", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}, "has_seen_any_bypass": "relay_bypass"}}, {"factor": "2", "OR": {"has_megastructure": "hyper_relay_restored"}}, {"factor": "1.25", "has_tradition": "tr_expansion_finish"}, {"factor": "1.5", "has_seen_any_bypass": "relay_bypass"}, {"factor": "1.25", "has_technology": "tech_experimental_subspace_navigation"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_hyper_relays"}}}, {"factor": "@ap_grasp_the_void_travel_tech", "has_ascension_perk": "ap_grasp_the_void"}, {"factor": "@eager_explorer_effect", "is_eager_explorer_empire": "yes"}]}],
+      weight_modifier: [{"factor": "0.5", "modifier": [{"factor": "0", "NOR": {"has_technology": "tech_rare_crystals", "has_country_flag": "has_market_access"}}, {"factor": "0.2", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}, "has_seen_any_bypass": "relay_bypass"}}, {"factor": "2", "has_any_hyper_relay": "yes"}, {"factor": "1.25", "has_tradition": "tr_expansion_finish"}, {"factor": "1.5", "has_seen_any_bypass": "relay_bypass"}, {"factor": "1.25", "has_technology": "tech_experimental_subspace_navigation"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_hyper_relays"}}}, {"factor": "@ap_grasp_the_void_travel_tech", "has_ascension_perk": "ap_grasp_the_void"}, {"factor": "@eager_explorer_effect", "is_eager_explorer_empire": "yes"}]}],
       prerequisites: ["ハイパーレーン突破点"],
       potential: {"has_overlord_dlc": "yes"}
     },
@@ -3149,7 +3224,7 @@ function getElements() {
       area:'物理学',
       category: 'コンピュータ',
       weight: 85,
-      weight_modifier: [{"modifier": [{"factor": "1.25", "has_tradition": "tr_discovery_adopt"}, {"factor": "1.25", "has_tradition": "tr_subterfuge_adopt"}, {"factor": "1.25", "any_system_within_border": {"is_inside_nebula": "yes"}}]}],
+      weight_modifier: [{"modifier": [{"factor": "1.25", "has_tradition": "tr_discovery_adopt"}, {"factor": "1.25", "has_tradition": "tr_subterfuge_adopt"}, {"factor": "1.25", "is_nomadic": "no", "any_system_within_border": {"is_inside_nebula": "yes"}}, {"factor": "1.25", "is_nomadic": "yes", "any_owned_nonprimary_starbase": {"is_waystation_starbase": "yes", "solar_system": {"is_inside_nebula": "yes"}}}]}],
       prerequisites: [],
       potential: {}
     },
@@ -3211,7 +3286,7 @@ function getElements() {
       weight: 85,
       weight_modifier: [{"factor": "4", "modifier": [{"factor": "1.25", "has_tradition": "tr_unyielding_adopt"}]}],
       prerequisites: ["ハイパースペース航行"],
-      potential: {}
+      potential: {"is_nomadic": "no"}
     },
     classes: 'physics'
 },
@@ -3421,7 +3496,7 @@ function getElements() {
       weight: 75,
       weight_modifier: [{"modifier": [{"factor": "2"}, {"factor": "1.25", "has_tradition": "tr_expansion_adopt"}, {"factor": "4", "has_ascension_perk": "ap_mastery_of_nature"}, {"factor": "0", "NOT": {"any_owned_planet": {"has_deposit": "\"d_mountain_range\""}}}, {"factor": "0"}]}],
       prerequisites: ["新天地プロトコル"],
-      potential: {}
+      potential: {"is_nomadic": "no"}
     },
     classes: 'society'
 },
@@ -3436,7 +3511,7 @@ function getElements() {
       weight: 75,
       weight_modifier: [{"modifier": [{"factor": "2"}, {"factor": "1.25", "has_tradition": "tr_expansion_adopt"}, {"factor": "4", "has_ascension_perk": "ap_mastery_of_nature"}, {"factor": "0", "NOT": {"any_owned_planet": {"has_deposit": "\"d_active_volcano\""}, "any_system_within_border": {"any_system_planet": {"is_planet_class": "pc_volcanic"}}}}, {"factor": "0"}]}],
       prerequisites: ["新天地プロトコル"],
-      potential: {}
+      potential: {"is_nomadic": "no"}
     },
     classes: 'society'
 },
@@ -3451,7 +3526,7 @@ function getElements() {
       weight: 75,
       weight_modifier: [{"modifier": [{"factor": "2"}, {"factor": "1.25", "has_tradition": "tr_expansion_adopt"}, {"factor": "4", "has_ascension_perk": "ap_mastery_of_nature"}, {"factor": "0", "NOT": {"any_owned_planet": {"has_deposit": "d_dangerous_wildlife_blocker"}}}, {"factor": "0"}]}],
       prerequisites: ["新天地プロトコル"],
-      potential: {}
+      potential: {"is_nomadic": "no"}
     },
     classes: 'society'
 },
@@ -3465,8 +3540,8 @@ function getElements() {
       category: '新天地',
       weight: 70,
       weight_modifier: [{"factor": "1.5", "modifier": [{"factor": "0", "is_lithoid_devouring_swarm": "yes"}, {"factor": "1.25", "has_tradition": "tr_expansion_adopt"}, {"factor": "1.25", "has_trait": "trait_aquatic"}, {"factor": "1.25", "has_trait": "trait_robot_aquatic"}, {"factor": "1.25", "has_origin": "origin_life_seeded"}, {"add": "5", "has_origin": "origin_wilderness"}]}],
-      prerequisites: ["新天地プロトコル"],
-      potential: {}
+      prerequisites: ["OR","=","{","新天地プロトコル","惑星工学","}"],
+      potential: {"is_nomadic": "no"}
     },
     classes: 'society'
 },
@@ -3660,7 +3735,7 @@ function getElements() {
       category: '新天地',
       weight: 75,
       weight_modifier: [{"factor": "4"}],
-      prerequisites: ["惑星統一"],
+      prerequisites: ["社会的統合"],
       potential: {}
     },
     classes: 'society'
@@ -3810,7 +3885,7 @@ function getElements() {
       category: '統治学',
       weight: 75,
       weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_technology": "tech_rare_crystals", "has_country_flag": "has_market_access"}}]}],
-      prerequisites: ["惑星政府"],
+      prerequisites: ["統一政府"],
       potential: {"OR": {"is_spiritualist": "yes", "AND": {"is_gestalt": "no", "has_make_spiritualist_perk": "yes"}}}
     },
     classes: 'society'
@@ -3856,7 +3931,7 @@ function getElements() {
       weight: 70,
       weight_modifier: [{"factor": "0.5", "modifier": [{"factor": "0.25", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_curator"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_penal_colonies"}}}, {"factor": "2", "is_authoritarian": "yes"}, {"factor": "0"}]}],
       prerequisites: ["人工的な倫理規範"],
-      potential: {"is_gestalt": "no"}
+      potential: {"is_gestalt": "no", "is_nomadic": "no"}
     },
     classes: 'society'
 },
@@ -3871,7 +3946,7 @@ function getElements() {
       weight: 70,
       weight_modifier: [{"factor": "1.5", "modifier": [{"factor": "0"}]}],
       prerequisites: ["人工的な倫理規範"],
-      potential: {"is_gestalt": "no"}
+      potential: {"is_gestalt": "no", "is_nomadic": "no"}
     },
     classes: 'society'
 },
@@ -3886,7 +3961,7 @@ function getElements() {
       weight: 70,
       weight_modifier: [{"factor": "1", "modifier": [{"factor": "0.25", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_curator"}}}, {"factor": "0"}, {"factor": "0.0", "OR": {"allows_slavery": "no", "NOT": {"any_owned_pop_group": {"is_enslaved": "yes"}}}}]}],
       prerequisites: ["神経学習"],
-      potential: {"is_gestalt": "no"}
+      potential: {"is_gestalt": "no", "is_nomadic": "no"}
     },
     classes: 'society'
 },
@@ -3915,7 +3990,7 @@ function getElements() {
       category: '統治学',
       weight: 70,
       weight_modifier: [{"factor": "1", "modifier": [{"factor": "0.25", "NOT": {"has_tradition": "tr_prosperity_finish"}}]}],
-      prerequisites: ["惑星統一"],
+      prerequisites: ["社会的統合"],
       potential: {}
     },
     classes: 'society'
@@ -4019,7 +4094,7 @@ function getElements() {
       area:'物理学',
       category: '素粒子物理学',
       weight: 85,
-      weight_modifier: [{"factor": "2", "modifier": [{"factor": "0", "NOT": {"any_owned_planet": {"OR": {"has_deposit": "d_industrial_sector"}}, "any_planet_within_border": {"OR": {"has_deposit": "d_volatile_motes_5"}}}}]}],
+      weight_modifier: [{"factor": "2", "modifier": [{"factor": "0", "is_nomadic": "no", "NOT": {"any_owned_planet": {"has_volatile_motes_deposit": "yes"}, "any_planet_within_border": {"OR": {"has_deposit": "d_volatile_motes_5"}}}}, {"factor": "0", "is_nomadic": "yes", "NOT": {"has_country_flag": "volatile_motes_found"}}]}],
       prerequisites: ["宇宙建設"],
       potential: {}
     },
@@ -4034,7 +4109,7 @@ function getElements() {
       area:'物理学',
       category: '素粒子物理学',
       weight: 85,
-      weight_modifier: [{"factor": "2", "modifier": [{"factor": "0.5", "OR": {"any_owned_planet": {"OR": {"has_deposit": "d_industrial_sector"}}, "any_planet_within_border": {"OR": {"has_deposit": "d_volatile_motes_5"}}}}]}],
+      weight_modifier: [{"factor": "2", "modifier": [{"factor": "0.5", "OR": {"any_owned_planet": {"has_volatile_motes_deposit": "yes"}, "any_planet_within_border": {"OR": {"has_deposit": "d_volatile_motes_5"}}}}]}],
       prerequisites: ["産業基盤"],
       potential: {}
     },
@@ -4049,7 +4124,7 @@ function getElements() {
       area:'工学',
       category: '材料工学',
       weight: 85,
-      weight_modifier: [{"factor": "2", "modifier": [{"factor": "0", "NOT": {"any_owned_planet": {"OR": {"has_deposit": "d_exotic_mountain"}}, "any_planet_within_border": {"OR": {"has_deposit": "d_exotic_gases_5"}}}}]}],
+      weight_modifier: [{"factor": "2", "modifier": [{"factor": "0", "is_nomadic": "no", "NOT": {"any_owned_planet": {"has_exotic_gases_deposit": "yes"}, "any_planet_within_border": {"OR": {"has_deposit": "d_exotic_gases_5"}}}}, {"factor": "0", "is_nomadic": "yes", "NOT": {"has_country_flag": "exotic_gases_found"}}]}],
       prerequisites: ["宇宙建設"],
       potential: {}
     },
@@ -4064,7 +4139,7 @@ function getElements() {
       area:'工学',
       category: '材料工学',
       weight: 85,
-      weight_modifier: [{"factor": "2", "modifier": [{"factor": "0.5", "OR": {"any_owned_planet": {"OR": {"has_deposit": "d_exotic_mountain"}}, "any_planet_within_border": {"OR": {"has_deposit": "d_exotic_gases_5"}}}}]}],
+      weight_modifier: [{"factor": "2", "modifier": [{"factor": "0.5", "OR": {"any_owned_planet": {"has_exotic_gases_deposit": "yes"}, "any_planet_within_border": {"OR": {"has_deposit": "d_exotic_gases_5"}}}}]}],
       prerequisites: ["産業基盤"],
       potential: {}
     },
@@ -4079,7 +4154,7 @@ function getElements() {
       area:'工学',
       category: '材料工学',
       weight: 85,
-      weight_modifier: [{"factor": "2", "modifier": [{}, {"factor": "0", "NOT": {"any_owned_planet": {"OR": {"has_deposit": "d_industrial_sector"}}, "any_planet_within_border": {"OR": {"has_deposit": "d_rare_crystals_5"}}}}, {"add": "1", "has_country_flag": "tech_mine_rare_crystals_culling_boost"}]}],
+      weight_modifier: [{"factor": "2", "modifier": [{"factor": "0", "is_nomadic": "no", "NOT": {"any_owned_planet": {"has_rare_crystals_deposit": "yes"}, "any_planet_within_border": {"OR": {"has_deposit": "d_rare_crystals_5"}}}}, {"factor": "0", "is_nomadic": "yes", "NOT": {"has_country_flag": "rare_crystals_found"}}, {"add": "1", "has_country_flag": "tech_mine_rare_crystals_culling_boost"}]}],
       prerequisites: ["宇宙建設"],
       potential: {}
     },
@@ -4094,7 +4169,7 @@ function getElements() {
       area:'工学',
       category: '材料工学',
       weight: 85,
-      weight_modifier: [{"factor": "2", "modifier": [{"factor": "0.5", "OR": {"any_owned_planet": {"OR": {"has_deposit": "d_industrial_sector"}}, "any_planet_within_border": {"OR": {"has_deposit": "d_rare_crystals_5"}}}}]}],
+      weight_modifier: [{"factor": "2", "modifier": [{"factor": "0.5", "OR": {"any_owned_planet": {"has_rare_crystals_deposit": "yes"}, "any_planet_within_border": {"OR": {"has_deposit": "d_rare_crystals_5"}}}}]}],
       prerequisites: ["産業基盤"],
       potential: {}
     },
@@ -4109,7 +4184,7 @@ function getElements() {
       area:'工学',
       category: '材料工学',
       weight: 70,
-      weight_modifier: [{"factor": "0.50", "modifier": [{"factor": "0", "NOT": {"any_system_within_border": {"any_system_planet": {"has_resource": {"type": "nanites amount > 0"}}}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_nanite_transmutation"}}}]}],
+      weight_modifier: [{"factor": "0.50", "modifier": [{"factor": "0", "NOR": {"any_system_within_border": {"any_system_planet": {"has_resource": {"type": "nanites amount > 0"}}}, "AND": {"is_nomadic": "yes", "any_owned_nonprimary_starbase": {"is_waystation_starbase": "yes", "solar_system": {"any_system_planet": {"has_resource": {"type": "nanites amount > 0"}}}}}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_nanite_transmutation"}}}]}],
       prerequisites: [],
       potential: {"host_has_dlc": "\"Distant Stars Story Pack\""}
     },
@@ -4291,7 +4366,7 @@ function getElements() {
       weight: 35,
       weight_modifier: [{"modifier": [{"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_archaeo_rampart"}}}, {"factor": "0.1", "num_buildings": {"type": "building_archaeostudies_faculty", "disabled": "no", "in_construction": "no"}}, {"factor": "0.1", "NOT": {"has_ascension_perk": "ap_archaeoengineers"}}, {"factor": "0", "has_ancrel": "no"}, {"factor": "0.85", "has_technology": "tech_archaeoshield", "NOT": {"has_ascension_perk": "ap_archaeoengineers"}}, {"factor": "0.85", "has_technology": "tech_archaeoarmor", "NOT": {"has_ascension_perk": "ap_archaeoengineers"}}, {"factor": "0.85", "has_technology": "tech_archaeo_detection_scrambler", "NOT": {"has_ascension_perk": "ap_archaeoengineers"}}, {"factor": "0.85", "has_technology": "tech_archaeo_titan_beam", "NOT": {"has_ascension_perk": "ap_archaeoengineers"}}, {"factor": "0.85", "has_technology": "tech_archaeo_pk_devolving_beam", "NOT": {"has_ascension_perk": "ap_archaeoengineers"}}, {"factor": "0.85", "has_technology": "tech_archaeo_mass_drivers", "NOT": {"has_ascension_perk": "ap_archaeoengineers"}}, {"factor": "0.85", "has_technology": "tech_archaeo_lasers", "NOT": {"has_ascension_perk": "ap_archaeoengineers"}}, {"factor": "0.85", "has_technology": "tech_archaeo_point_defence", "NOT": {"has_ascension_perk": "ap_archaeoengineers"}}, {"factor": "0.85", "has_technology": "tech_archaeo_missiles", "NOT": {"has_ascension_perk": "ap_archaeoengineers"}}, {"factor": "0.85", "has_technology": "tech_archaeo_mass_accelerator", "NOT": {"has_ascension_perk": "ap_archaeoengineers"}}, {"factor": "0.85", "has_technology": "tech_archaeo_strike_crafts", "NOT": {"has_ascension_perk": "ap_archaeoengineers"}}, {"factor": "0.85", "has_technology": "tech_archaeo_rampart", "NOT": {"has_ascension_perk": "ap_archaeoengineers"}}, {"factor": "0.85", "has_technology": "tech_archaeo_overcharger", "NOT": {"has_ascension_perk": "ap_archaeoengineers"}}, {"factor": "0.85", "has_technology": "tech_archaeo_refinery", "NOT": {"has_ascension_perk": "ap_archaeoengineers"}}]}],
       prerequisites: ["考古学技術"],
-      potential: {"has_ancrel": "yes"}
+      potential: {"has_ancrel": "yes", "is_nomadic": "no"}
     },
     classes: 'society'
 },
@@ -4499,9 +4574,9 @@ function getElements() {
       area:'社会学',
       category: '軍事学',
       weight: 50,
-      weight_modifier: [{"factor": "0.25", "modifier": [{"factor": "0.5", "is_pacifist": "yes"}, {"factor": "2", "is_militarist": "yes"}, {"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_spark_of_genius_2"}}}, {"factor": "2", "OR": {"has_ascension_perk": "ap_galactic_wonders_utopia_and_megacorp"}}, {"factor": "6", "has_ascension_perk": "ap_master_builders"}, {"factor": "6", "has_ascension_perk": "ap_galactic_force_projection"}, {"factor": "6", "has_ascension_perk": "ap_eternal_vigilance"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_deep_space_citadel"}}}]}],
+      weight_modifier: [{"factor": "0.25", "modifier": [{"factor": "0.5", "is_pacifist": "yes"}, {"factor": "2", "is_militarist": "yes"}, {"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_spark_of_genius_2"}}}, {"factor": "2", "has_galactic_wonders": "yes"}, {"factor": "6", "has_ascension_perk": "ap_master_builders"}, {"factor": "6", "has_ascension_perk": "ap_galactic_force_projection"}, {"factor": "6", "has_ascension_perk": "ap_eternal_vigilance"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_deep_space_citadel"}}}]}],
       prerequisites: ["星系軍港の建設"],
-      potential: {"has_biogenesis_dlc": "yes"}
+      potential: {"has_biogenesis_dlc": "yes", "is_nomadic": "no"}
     },
     classes: 'society'
 },
@@ -4621,7 +4696,7 @@ function getElements() {
       weight: 60,
       weight_modifier: [{"modifier": [{"factor": "0.1", "NOT": {}}, {"factor": "10", "any_neighbor_country": {"has_technology": "tech_starbase_4"}}, {"factor": "2"}, {"factor": "3"}, {"factor": "4"}, {"factor": "5", "count_starbase_sizes": {"starbase_size": "starbase_starhold"}}, {"factor": "1.25", "has_tradition": "tr_unyielding_adopt"}, {"factor": "5", "has_modifier": "agenda_impenetrable_border_finish"}]}],
       prerequisites: ["星系軍港の建設"],
-      potential: {}
+      potential: {"is_nomadic": "no"}
     },
     classes: 'engineering'
 },
@@ -4636,7 +4711,7 @@ function getElements() {
       weight: 60,
       weight_modifier: [{"modifier": [{"factor": "0.1", "NOT": {}}, {"factor": "10", "any_neighbor_country": {"has_technology": "tech_habitat_1"}}, {"factor": "2"}, {"factor": "3"}, {"factor": "4"}, {"factor": "5", "count_starbase_sizes": {"starbase_size": "starbase_starhold"}}, {"factor": "1.25", "has_tradition": "tr_expansion_adopt"}, {"factor": "1.25", "has_tradition": "tr_expansion_finish"}]}],
       prerequisites: ["星系軍港の建設"],
-      potential: {"is_wilderness_empire": "no", "OR": {"has_void_dweller_origin": "yes", "has_origin": "origin_toxic_knights", "host_has_dlc": "\"Utopia\""}}
+      potential: {"is_wilderness_empire": "no", "is_nomadic": "no"}
     },
     classes: 'engineering'
 },
@@ -4919,7 +4994,7 @@ function getElements() {
       area:'物理学',
       category: '力場操作',
       weight: 50,
-      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_technology": "tech_exotic_gases", "has_country_flag": "has_market_access"}}, {"factor": "value:tech_weight_likelihood", "has_trait_in_council": {"TRAIT": "leader_trait_curator"}}, {"factor": "value:tech_weight_likelihood", "has_trait_in_council": {"TRAIT": "leader_trait_fotd_scientist"}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_cloaking_2"}}}, {"factor": "5", "has_tradition": "tr_subterfuge_adopt"}]}],
+      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_technology": "tech_exotic_gases", "has_country_flag": "has_market_access"}}, {"factor": "value:tech_weight_likelihood", "has_trait_in_council": {"TRAIT": "leader_trait_curator"}}, {"factor": "value:tech_weight_likelihood", "has_trait_in_council": {"TRAIT": "leader_trait_fotd_scientist"}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_cloaking_2"}}}, {"factor": "5", "has_tradition": "tr_subterfuge_adopt"}, {"factor": "2", "has_cloaking_civic_or_origin": "yes"}]}],
       prerequisites: ["基礎クロークフィールド","シールド"],
       potential: {"has_first_contact_dlc": "yes"}
     },
@@ -5152,6 +5227,96 @@ function getElements() {
 },
 {
     data: {
+      id: 'tech_arkship_construction',
+      name: '箱舟の建造',
+      tier: 3,
+      cost: 4000,
+      area:'工学',
+      category: '宇宙工学',
+      weight: 65,
+      weight_modifier: [{"factor": "1000"}],
+      prerequisites: ["OR","=","{","駆逐艦","ウィーヴァー","}"],
+      potential: {"is_nomadic": "yes"}
+    },
+    classes: 'engineering'
+},
+{
+    data: {
+      id: 'tech_arkship_tier_2',
+      name: '箱舟の工学技術',
+      tier: 3,
+      cost: 5000,
+      area:'工学',
+      category: '宇宙工学',
+      weight: 60,
+      weight_modifier: [{"modifier": [{"factor": "5", "has_technology": "tech_arkship_construction"}]}],
+      prerequisites: ["OR","=","{","巡洋艦","ハーヴィンジャー","}","箱舟の建造"],
+      potential: {"is_nomadic": "yes"}
+    },
+    classes: 'engineering'
+},
+{
+    data: {
+      id: 'tech_civilian_arkship',
+      name: '民間型箱舟',
+      tier: 3,
+      cost: 4000,
+      area:'社会学',
+      category: '新天地',
+      weight: 65,
+      weight_modifier: [{"modifier": [{"factor": "5", "has_technology": "tech_arkship_tier_2"}, {"factor": "5", "has_technology": "tech_arkship_tier_3"}, {"factor": "1.25", "has_tradition": "tr_expansion_adopt"}]}],
+      prerequisites: ["惑星工学","箱舟の建造"],
+      potential: {"is_nomadic": "yes"}
+    },
+    classes: 'society'
+},
+{
+    data: {
+      id: 'tech_science_arkship',
+      name: '科学型箱舟',
+      tier: 3,
+      cost: 4000,
+      area:'物理学',
+      category: 'コンピュータ',
+      weight: 65,
+      weight_modifier: [{"modifier": [{"factor": "5", "has_technology": "tech_arkship_tier_2"}, {"factor": "5", "has_technology": "tech_arkship_tier_3"}, {"factor": "1.25", "has_tradition": "tr_expansion_adopt"}]}],
+      prerequisites: ["重力センサー","箱舟の建造"],
+      potential: {"is_nomadic": "yes"}
+    },
+    classes: 'physics'
+},
+{
+    data: {
+      id: 'tech_military_arkship',
+      name: '軍事型箱舟',
+      tier: 3,
+      cost: 4000,
+      area:'工学',
+      category: '宇宙工学',
+      weight: 65,
+      weight_modifier: [{"modifier": [{"factor": "5", "has_technology": "tech_arkship_tier_2"}, {"factor": "5", "has_technology": "tech_arkship_tier_3"}, {"factor": "1.25", "has_tradition": "tr_expansion_adopt"}]}],
+      prerequisites: ["OR","=","{","駆逐艦","発展型モーラ―の開発","}","箱舟の建造"],
+      potential: {"is_nomadic": "yes"}
+    },
+    classes: 'engineering'
+},
+{
+    data: {
+      id: 'tech_waystation_3',
+      name: '高度な中継ライン物流',
+      tier: 3,
+      cost: 5000,
+      area:'工学',
+      category: '宇宙工学',
+      weight: 60,
+      weight_modifier: [{"modifier": [{"factor": "0.1", "NOT": {}}, {"factor": "2"}, {"factor": "3"}, {"factor": "4"}, {"factor": "5", "count_starbase_sizes": {"starbase_size": "starbase_waystation_2"}}, {"factor": "1.25", "has_tradition": "tr_expansion_finish"}]}],
+      prerequisites: ["改良された中継ライン物流"],
+      potential: {"is_nomadic": "yes"}
+    },
+    classes: 'engineering'
+},
+{
+    data: {
       id: 'tech_quantum_catapult',
       name: '量子カタパルト',
       tier: 3,
@@ -5159,7 +5324,7 @@ function getElements() {
       area:'物理学',
       category: '素粒子物理学',
       weight: 50,
-      weight_modifier: [{"factor": "0.25", "modifier": [{"factor": "0.5", "is_pacifist": "yes"}, {"factor": "2", "is_militarist": "yes"}, {"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_spark_of_genius_2"}}}, {"factor": "4", "OR": {"has_megastructure": "quantum_catapult_ruined_slingshot"}}, {"factor": "2", "OR": {"has_ascension_perk": "ap_galactic_wonders_utopia_and_megacorp"}}, {"factor": "6", "has_ascension_perk": "ap_master_builders"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_quantum_catapult"}}}, {"factor": "@ap_grasp_the_void_travel_tech", "has_ascension_perk": "ap_grasp_the_void"}, {"factor": "@eager_explorer_effect", "is_eager_explorer_empire": "yes"}]}],
+      weight_modifier: [{"factor": "0.25", "modifier": [{"factor": "0.5", "is_pacifist": "yes"}, {"factor": "2", "is_militarist": "yes"}, {"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_spark_of_genius_2"}}}, {"factor": "4", "OR": {"has_megastructure": "quantum_catapult_ruined_slingshot"}}, {"factor": "2", "has_galactic_wonders": "yes"}, {"factor": "6", "has_ascension_perk": "ap_master_builders"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_quantum_catapult"}}}, {"factor": "@ap_grasp_the_void_travel_tech", "has_ascension_perk": "ap_grasp_the_void"}, {"factor": "@eager_explorer_effect", "is_eager_explorer_empire": "yes"}]}],
       prerequisites: [],
       potential: {"has_overlord_dlc": "yes", "OR": {"has_technology": "tech_mega_engineering", "has_country_flag": "has_quantum_catapult_insight", "has_origin": "origin_star_slingshot"}}
     },
@@ -5176,7 +5341,7 @@ function getElements() {
       weight: 60,
       weight_modifier: [{"modifier": [{"factor": "0.1", "NOT": {}}, {"factor": "10", "any_neighbor_country": {"has_technology": "tech_orbital_ring_tier_1"}}, {"factor": "2"}, {"factor": "3"}, {"factor": "4"}, {"factor": "5", "count_starbase_sizes": {"starbase_size": "starbase_starhold"}}, {"factor": "1.25", "has_tradition": "tr_expansion_adopt"}, {"factor": "1.25", "has_tradition": "tr_expansion_finish"}]}],
       prerequisites: ["星系軍港の建設","銀河規模の行政機構","セラモ金属インフラ"],
-      potential: {"has_overlord_dlc": "yes"}
+      potential: {"has_overlord_dlc": "yes", "is_nomadic": "no"}
     },
     classes: 'engineering'
 },
@@ -5251,7 +5416,7 @@ function getElements() {
       weight: 70,
       weight_modifier: [],
       prerequisites: ["自己進化論理","自動コロニー船"],
-      potential: {}
+      potential: {"is_nomadic": "no"}
     },
     classes: 'physics'
 },
@@ -5279,7 +5444,7 @@ function getElements() {
       area:'物理学',
       category: 'コンピュータ',
       weight: 65,
-      weight_modifier: [{"factor": "1.5", "modifier": [{"factor": "0", "OR": {"has_utopia": "yes", "has_machine_age_dlc": "yes"}, "NOR": {"has_ascension_perk": "ap_organo_machine_interfacing_assimilator"}}, {"factor": "0.25", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_curator"}}}]}],
+      weight_modifier: [{"factor": "1.5", "modifier": [{"factor": "0", "NOR": {"has_ascension_perk": "ap_organo_machine_interfacing_assimilator"}}, {"factor": "0.25", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_curator"}}}]}],
       prerequisites: ["エキゾチック物質研究所","統合サイバネティクス"],
       potential: {"is_wilderness_empire": "no", "OR": {"is_machine_empire": "no", "has_civic": "civic_machine_assimilator"}}
     },
@@ -5339,7 +5504,7 @@ function getElements() {
       area:'物理学',
       category: 'コンピュータ',
       weight: 65,
-      weight_modifier: [{"modifier": [{"factor": "1.25", "has_tradition": "tr_discovery_adopt"}, {"factor": "1.25", "has_tradition": "tr_subterfuge_adopt"}, {"factor": "1.25", "any_system_within_border": {"is_inside_nebula": "yes"}}]}],
+      weight_modifier: [{"modifier": [{"factor": "1.25", "has_tradition": "tr_discovery_adopt"}, {"factor": "1.25", "has_tradition": "tr_subterfuge_adopt"}, {"factor": "1.25", "is_nomadic": "no", "any_system_within_border": {"is_inside_nebula": "yes"}}, {"factor": "1.25", "is_nomadic": "yes", "any_owned_nonprimary_starbase": {"is_waystation_starbase": "yes", "solar_system": {"is_inside_nebula": "yes"}}}]}],
       prerequisites: ["重力センサー"],
       potential: {}
     },
@@ -5384,7 +5549,7 @@ function getElements() {
       area:'物理学',
       category: '素粒子物理学',
       weight: 65,
-      weight_modifier: [{"factor": "0.5", "modifier": [{"factor": "0.5", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "1.25", "has_tradition": "tr_discovery_adopt"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_wormhole_stabilization"}}}, {"factor": "@ap_grasp_the_void_travel_tech", "has_ascension_perk": "ap_grasp_the_void"}, {"factor": "@eager_explorer_effect", "is_eager_explorer_empire": "yes"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_wormhole_stabilization"}}}, {"factor": "0", "NOR": {"has_seen_any_bypass": "wormhole", "any_relation": {"is_country_type": "default", "has_communications": "ROOT", "has_technology": "tech_wormhole_stabilization"}}}, {"factor": "4", "owns_any_bypass": "wormhole"}, {"factor": "10", "has_country_flag": "chosen_empire"}]}],
+      weight_modifier: [{"factor": "0.5", "modifier": [{"factor": "0.5", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "1.25", "has_tradition": "tr_discovery_adopt"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_wormhole_stabilization"}}}, {"factor": "@ap_grasp_the_void_travel_tech", "has_ascension_perk": "ap_grasp_the_void"}, {"factor": "@eager_explorer_effect", "is_eager_explorer_empire": "yes"}, {"factor": "0", "NOR": {"has_seen_any_bypass": "wormhole", "any_relation": {"is_country_type": "default", "has_communications": "ROOT", "has_technology": "tech_wormhole_stabilization"}}}, {"factor": "4", "owns_any_bypass": "wormhole"}, {"factor": "10", "has_country_flag": "chosen_empire"}]}],
       prerequisites: ["ハイパーレーン突破点"],
       potential: {}
     },
@@ -5624,7 +5789,7 @@ function getElements() {
       area:'社会学',
       category: '生物学',
       weight: 65,
-      weight_modifier: [{"factor": "2.0", "modifier": [{"factor": "1.25", "is_hive_empire": "yes"}, {"factor": "1.25", "is_xenophile": "yes"}, {"factor": "1.25", "has_origin": "origin_necrophage", "has_trait": "trait_necrophage"}, {"factor": "2", "has_relic": "r_pox_sample"}, {"factor": "0", "is_individual_machine": "yes", "NOT": {"any_owned_species": {"is_organic_species": "yes"}}}]}],
+      weight_modifier: [{"factor": "2.0", "modifier": [{"factor": "1.25", "is_hive_empire": "yes"}, {"factor": "1.25", "is_xenophile": "yes"}, {"factor": "1.25", "has_origin": "origin_necrophage", "has_trait": "trait_necrophage"}, {"factor": "2", "has_relic": "r_pox_sample"}, {"factor": "0", "is_individual_machine": "yes", "NOT": {"any_owned_species": {"is_organic_species": "yes"}}}, {"factor": "@ap_pending_tech_boost", "has_ascension_perk": "ap_engineered_evolution"}]}],
       prerequisites: ["ゲノムマッピング"],
       potential: {"OR": {"is_machine_empire": "no", "has_civic": "civic_machine_servitor"}, "is_natural_design_empire": "no"}
     },
@@ -5789,7 +5954,7 @@ function getElements() {
       area:'社会学',
       category: '超能力',
       weight: 65,
-      weight_modifier: [{"factor": "0.5", "modifier": [{"factor": "0", "has_shroud_dlc": "no", "has_ethic": "ethic_gestalt_consciousness"}, {"factor": "0.5", "is_spiritualist": "no"}, {"factor": "2", "has_ethic": "\"ethic_fanatic_spiritualist\""}, {"factor": "2", "any_country": {"has_origin": "origin_mindwardens", "NOT": {"is_same_value": "prev"}}}, {"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_whisperers_chosen"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_psionic_theory"}}}, {"factor": "2", "any_owned_pop_group": {"is_psionic_species": "yes"}}, {"factor": "1.25", "any_owned_pop_group": {"is_latent_psionic_species": "yes"}, "NOT": {"any_owned_pop_group": {"is_psionic_species": "yes"}}}, {"factor": "2", "has_paragon_dlc": "no", "any_owned_leader": {"has_trait": "leader_trait_shroudwalker"}}, {"factor": "0", "AND": {"is_materialist": "yes", "NOR": {"has_tier1or2or3_in_council": {"TRAIT": "leader_trait_expertise_psionics"}, "has_councilor": {"COUNCILOR": "\"councilor_shroudwalker_teacher\""}, "any_owned_pop_group": {"has_psionic_species_trait": "yes"}}}}, {"factor": "0", "has_origin": "origin_endbringers"}]}],
+      weight_modifier: [{"factor": "0.5", "modifier": [{"factor": "0", "has_shroud_dlc": "no", "has_ethic": "ethic_gestalt_consciousness"}, {"factor": "0.5", "is_spiritualist": "no"}, {"factor": "2", "has_ethic": "\"ethic_fanatic_spiritualist\""}, {"factor": "2", "any_country": {"has_origin": "origin_mindwardens", "NOT": {"is_same_value": "prev"}}}, {"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_whisperers_chosen"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_psionic_theory"}}}, {"factor": "2", "any_owned_pop_group": {"is_psionic_species": "yes"}}, {"factor": "1.25", "any_owned_pop_group": {"is_latent_psionic_species": "yes"}, "NOT": {"any_owned_pop_group": {"is_psionic_species": "yes"}}}, {"factor": "2", "has_paragon_dlc": "no", "any_owned_leader": {"has_trait": "leader_trait_shroudwalker"}}, {"factor": "0", "AND": {"is_materialist": "yes", "NOR": {"has_tier1or2or3_in_council": {"TRAIT": "leader_trait_expertise_psionics"}, "has_councilor": {"COUNCILOR": "\"councilor_shroudwalker_teacher\""}, "any_owned_pop_group": {"has_psionic_species_trait": "yes"}}}}, {"factor": "0", "has_origin": "origin_endbringers"}, {"factor": "@ap_pending_tech_boost", "has_ascension_perk": "ap_mind_over_matter"}]}],
       prerequisites: [],
       potential: {"OR": {"has_shroud_dlc": "yes", "NOT": {"has_ethic": "ethic_gestalt_consciousness"}, "is_active_resolution": "resolution_galacticstudies_extradimensional_experimentation", "has_relic": "r_zro_crystal"}, "NOT": {"has_origin": "origin_mindwardens"}}
     },
@@ -5804,7 +5969,7 @@ function getElements() {
       area:'社会学',
       category: '超能力',
       weight: 50,
-      weight_modifier: [{"factor": "0.5", "modifier": [{"factor": "0", "OR": {"has_utopia": "yes", "has_shroud_dlc": "yes"}, "has_psionic_ascension": "no"}, {"factor": "0.50", "NOT": {"has_trait_in_council": {"TRAIT": "leader_trait_expertise_psionics"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_telepathy"}}}, {"factor": "2", "has_ethic": "\"ethic_spiritualist\""}, {"factor": "3", "has_ethic": "\"ethic_fanatic_spiritualist\""}, {"factor": "3", "has_paragon_dlc": "no", "any_owned_leader": {"has_trait": "leader_trait_shroudwalker"}}, {"factor": "4", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}]}],
+      weight_modifier: [{"factor": "0.5", "modifier": [{"factor": "0", "has_psionic_ascension": "no"}, {"factor": "0.50", "NOT": {"has_trait_in_council": {"TRAIT": "leader_trait_expertise_psionics"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_telepathy"}}}, {"factor": "2", "has_ethic": "\"ethic_spiritualist\""}, {"factor": "3", "has_ethic": "\"ethic_fanatic_spiritualist\""}, {"factor": "3", "has_paragon_dlc": "no", "any_owned_leader": {"has_trait": "leader_trait_shroudwalker"}}, {"factor": "4", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}]}],
       prerequisites: ["超能力理論"],
       potential: {"OR": {"has_shroud_dlc": "yes", "NOT": {"has_ethic": "ethic_gestalt_consciousness"}}}
     },
@@ -5941,7 +6106,7 @@ function getElements() {
       weight: 65,
       weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_technology": "tech_rare_crystals", "has_country_flag": "has_market_access"}}]}],
       prerequisites: ["気象制御システム"],
-      potential: {"OR": {"is_gestalt": "no", "has_valid_civic": "civic_machine_servitor"}}
+      potential: {"OR": {"is_gestalt": "no", "has_valid_civic": "civic_machine_servitor", "has_origin": "origin_forever_cruise"}}
     },
     classes: 'society'
 },
@@ -6149,7 +6314,7 @@ function getElements() {
       area:'物理学',
       category: '力場操作',
       weight: 50,
-      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_country_flag": "dark_matter_found", "any_system_within_border": {"any_system_planet": {"has_resource": {"type": "sr_dark_matter amount > 0"}}}, "any_relation": {"AND": {"is_country_type": "default", "has_communications": "ROOT", "has_technology": "tech_mine_dark_matter"}}}}]}],
+      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_country_flag": "dark_matter_found", "any_system_within_border": {"any_system_planet": {"has_resource": {"type": "sr_dark_matter amount > 0"}}}, "AND": {"is_nomadic": "yes", "any_owned_nonprimary_starbase": {"is_waystation_starbase": "yes", "solar_system": {"any_system_planet": {"has_resource": {"type": "sr_dark_matter amount > 0"}}}}}, "any_relation": {"AND": {"is_country_type": "default", "has_communications": "ROOT", "has_technology": "tech_mine_dark_matter"}}}}]}],
       prerequisites: ["タキオンセンサー"],
       potential: {}
     },
@@ -6601,7 +6766,7 @@ function getElements() {
       weight: 40,
       weight_modifier: [{"modifier": [{"factor": "0.1", "NOT": {}}, {"factor": "10", "any_neighbor_country": {"has_technology": "tech_starbase_5"}}, {"factor": "2"}, {"factor": "3"}, {"factor": "4"}, {"factor": "5", "count_starbase_sizes": {"starbase_size": "starbase_starfortress"}}, {"factor": "1.25", "has_tradition": "tr_unyielding_adopt"}, {"factor": "5", "has_modifier": "agenda_impenetrable_border_finish"}]}],
       prerequisites: ["星系要塞の建設"],
-      potential: {}
+      potential: {"is_nomadic": "no"}
     },
     classes: 'engineering'
 },
@@ -6616,7 +6781,7 @@ function getElements() {
       weight: 35,
       weight_modifier: [{"modifier": [{"factor": "0", "NOT": {"any_owned_planet": {"is_planet_class": "pc_habitat"}}}, {"factor": "10", "is_void_dweller_empire": "yes"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_habitat_2"}}}]}],
       prerequisites: ["軌道上居住地","星系要塞の建設"],
-      potential: {"is_wilderness_empire": "no", "OR": {"has_void_dweller_origin": "yes", "host_has_dlc": "\"Utopia\""}}
+      potential: {"is_wilderness_empire": "no", "is_nomadic": "no"}
     },
     classes: 'engineering'
 },
@@ -6631,7 +6796,7 @@ function getElements() {
       weight: 35,
       weight_modifier: [{"modifier": [{"factor": "0", "NOT": {"any_owned_planet": {"is_planet_class": "pc_habitat"}}}, {"factor": "10", "is_void_dweller_empire": "yes"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_habitat_3"}}}]}],
       prerequisites: ["軌道上居住地の拡張","シタデルの建設"],
-      potential: {"is_wilderness_empire": "no", "OR": {"is_void_dweller_empire": "yes", "host_has_dlc": "\"Utopia\""}}
+      potential: {"is_wilderness_empire": "no", "is_nomadic": "no"}
     },
     classes: 'engineering'
 },
@@ -6719,7 +6884,7 @@ function getElements() {
       area:'工学',
       category: '産業学',
       weight: 40,
-      weight_modifier: [{"factor": "0.5", "modifier": [{"factor": "0", "has_policy_flag": "robots_outlawed"}, {"factor": "0.5", "OR": {"has_ethic": "\"ethic_fanatic_spiritualist\""}}, {"factor": "2", "is_materialist": "yes"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_synthetic_workers"}}}, {"factor": "2", "has_origin": "origin_mechanists"}, {"factor": "0.20", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_expertise_industry"}}}]}],
+      weight_modifier: [{"factor": "0.5", "modifier": [{"factor": "0", "has_policy_flag": "robots_outlawed"}, {"factor": "0.5", "OR": {"has_ethic": "\"ethic_fanatic_spiritualist\""}}, {"factor": "2", "is_materialist": "yes"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_synthetic_workers"}}}, {"factor": "2", "has_origin": "origin_mechanists"}, {"factor": "0.20", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_expertise_industry"}}}, {"factor": "@ap_pending_tech_boost", "has_ascension_perk": "ap_synthetic_evolution"}]}],
       prerequisites: ["人工専門家","銀河規模の行政機構","陽電子AI"],
       potential: {"NOR": {"has_ethic": "\"ethic_gestalt_consciousness\"", "is_individual_machine": "yes"}}
     },
@@ -6914,7 +7079,7 @@ function getElements() {
       area:'物理学',
       category: '力場操作',
       weight: 35,
-      weight_modifier: [{"modifier": [{"factor": "value:tech_weight_likelihood", "has_trait_in_council": {"TRAIT": "leader_trait_curator"}}, {"factor": "value:tech_weight_likelihood", "has_trait_in_council": {"TRAIT": "leader_trait_fotd_scientist"}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_cloaking_3"}}}, {"factor": "5", "has_tradition": "tr_subterfuge_adopt"}]}],
+      weight_modifier: [{"modifier": [{"factor": "value:tech_weight_likelihood", "has_trait_in_council": {"TRAIT": "leader_trait_curator"}}, {"factor": "value:tech_weight_likelihood", "has_trait_in_council": {"TRAIT": "leader_trait_fotd_scientist"}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_cloaking_3"}}}, {"factor": "5", "has_tradition": "tr_subterfuge_adopt"}, {"factor": "2", "has_cloaking_civic_or_origin": "yes"}]}],
       prerequisites: ["発展型クロークフィールド","発展型シールド"],
       potential: {"has_first_contact_dlc": "yes"}
     },
@@ -7057,6 +7222,81 @@ function getElements() {
 },
 {
     data: {
+      id: 'tech_arkship_tier_3',
+      name: '箱舟工学の習熟',
+      tier: 4,
+      cost: 10000,
+      area:'工学',
+      category: '宇宙工学',
+      weight: 40,
+      weight_modifier: [{"modifier": [{"factor": "5", "has_technology": "tech_arkship_construction"}, {"factor": "1.25", "has_tradition": "tr_expansion_finish"}]}],
+      prerequisites: ["OR","=","{","スティンガー","戦艦","}","箱舟の工学技術"],
+      potential: {"is_nomadic": "yes"}
+    },
+    classes: 'engineering'
+},
+{
+    data: {
+      id: 'tech_arkship_planetary_refinery',
+      name: '惑星再処理機',
+      tier: 4,
+      cost: 10000,
+      area:'工学',
+      category: '産業学',
+      weight: 40,
+      weight_modifier: [{"modifier": [{"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "2", "has_technology": "tech_space_mining_3"}, {"factor": "2", "has_technology": "tech_space_mining_4"}, {"factor": "2", "has_technology": "tech_space_mining_5"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_arkship_planetary_refinery"}}}]}],
+      prerequisites: ["箱舟工学の習熟","惑星工学"],
+      potential: {"is_nomadic": "yes"}
+    },
+    classes: 'engineering'
+},
+{
+    data: {
+      id: 'tech_arkship_stellar_igniter',
+      name: '恒星エンジン',
+      tier: 4,
+      cost: 10000,
+      area:'物理学',
+      category: '力場操作',
+      weight: 40,
+      weight_modifier: [{"modifier": [{"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_arkship_stellar_igniter"}}}]}],
+      prerequisites: ["箱舟工学の習熟","ダークマター吸収"],
+      potential: {"is_nomadic": "yes"}
+    },
+    classes: 'physics'
+},
+{
+    data: {
+      id: 'tech_arkship_system_scanner',
+      name: '亜空間イメージングアレイ',
+      tier: 4,
+      cost: 10000,
+      area:'物理学',
+      category: 'コンピュータ',
+      weight: 40,
+      weight_modifier: [{"modifier": [{"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "2", "has_technology": "tech_sensors_3"}, {"factor": "2", "has_technology": "tech_sensors_4"}, {"factor": "5", "has_technology": "tech_curator_lab"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_arkship_system_scanner"}}}]}],
+      prerequisites: ["箱舟工学の習熟","重力センサー","自動探索プロトコル"],
+      potential: {"is_nomadic": "yes"}
+    },
+    classes: 'physics'
+},
+{
+    data: {
+      id: 'tech_arkship_exodus_jump',
+      name: 'エクソダスジャンプ調整機',
+      tier: 4,
+      cost: 10000,
+      area:'物理学',
+      category: '素粒子物理学',
+      weight: 40,
+      weight_modifier: [{"modifier": [{"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_arkship_exodus_jump"}}}]}],
+      prerequisites: ["箱舟工学の習熟","ジャンプドライブ"],
+      potential: {"is_nomadic": "yes"}
+    },
+    classes: 'physics'
+},
+{
+    data: {
       id: 'tech_sapient_ai',
       name: '陽電子AI',
       tier: 4,
@@ -7126,7 +7366,7 @@ function getElements() {
       weight: 40,
       weight_modifier: [{"factor": "0.5", "modifier": [{"factor": "0.50", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_curator"}}}, {"factor": "0.75", "has_ethic": "ethic_pacifist"}, {"factor": "0.65", "has_ethic": "ethic_fanatic_pacifist"}, {"factor": "1.10", "has_ethic": "ethic_militarist"}, {"factor": "1.20", "has_ethic": "ethic_fanatic_militarist"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_synchronized_defences"}}}]}],
       prerequisites: ["自己進化論理"],
-      potential: {}
+      potential: {"is_nomadic": "no"}
     },
     classes: 'physics'
 },
@@ -7214,7 +7454,7 @@ function getElements() {
       area:'物理学',
       category: 'コンピュータ',
       weight: 45,
-      weight_modifier: [{"modifier": [{"factor": "1.25", "has_tradition": "tr_discovery_adopt"}, {"factor": "1.25", "has_tradition": "tr_subterfuge_adopt"}, {"factor": "1.25", "any_system_within_border": {"is_inside_nebula": "yes"}}]}],
+      weight_modifier: [{"modifier": [{"factor": "1.25", "has_tradition": "tr_discovery_adopt"}, {"factor": "1.25", "has_tradition": "tr_subterfuge_adopt"}, {"factor": "1.25", "is_nomadic": "no", "any_system_within_border": {"is_inside_nebula": "yes"}}, {"factor": "1.25", "is_nomadic": "yes", "any_owned_nonprimary_starbase": {"is_waystation_starbase": "yes", "solar_system": {"is_inside_nebula": "yes"}}}]}],
       prerequisites: ["亜空間センサー"],
       potential: {}
     },
@@ -7454,7 +7694,7 @@ function getElements() {
       area:'社会学',
       category: '生物学',
       weight: 45,
-      weight_modifier: [{"modifier": [{"factor": "0", "host_has_dlc": "\"Utopia\"", "NOT": {"has_ascension_perk": "ap_engineered_evolution"}}, {"factor": "1.25", "is_hive_empire": "yes"}, {"factor": "1.25", "has_ethic": "ethic_militarist"}, {"factor": "1.5", "has_ethic": "ethic_fanatic_militarist"}, {"factor": "0.10", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_curator"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_gene_seed_purification"}}}, {"factor": "1.25", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_spark_of_genius_2"}}}, {"factor": "0.5", "is_individual_machine": "yes"}, {"factor": "2", "AND": {"is_individual_machine": "yes", "any_owned_species": {"is_organic_species": "yes"}}}]}],
+      weight_modifier: [{"modifier": [{"factor": "0", "NOT": {"has_ascension_perk": "ap_engineered_evolution"}}, {"factor": "1.25", "is_hive_empire": "yes"}, {"factor": "1.25", "has_ethic": "ethic_militarist"}, {"factor": "1.5", "has_ethic": "ethic_fanatic_militarist"}, {"factor": "0.10", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_curator"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_gene_seed_purification"}}}, {"factor": "1.25", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_spark_of_genius_2"}}}, {"factor": "0.5", "is_individual_machine": "yes"}, {"factor": "2", "AND": {"is_individual_machine": "yes", "any_owned_species": {"is_organic_species": "yes"}}}]}],
       prerequisites: ["遺伝子改変"],
       potential: {"NOR": {"is_machine_empire": "yes", "is_natural_design_empire": "yes", "is_individual_machine": "yes", "is_wilderness_empire": "yes"}}
     },
@@ -7529,7 +7769,7 @@ function getElements() {
       area:'社会学',
       category: '超能力',
       weight: 40,
-      weight_modifier: [{"factor": "0.5", "modifier": [{"factor": "0", "host_has_dlc": "\"Utopia\""}, {"factor": "0.50", "NOT": {"has_trait_in_council": {"TRAIT": "leader_trait_expertise_psionics"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_precognition_interface"}}}, {"factor": "2", "has_ethic": "\"ethic_spiritualist\""}, {"factor": "3", "has_ethic": "\"ethic_fanatic_spiritualist\""}, {"factor": "3", "has_paragon_dlc": "no", "any_owned_leader": {"has_trait": "leader_trait_shroudwalker"}}, {"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}]}],
+      weight_modifier: [{"factor": "0.5", "modifier": [{"factor": "0.50", "NOT": {"has_trait_in_council": {"TRAIT": "leader_trait_expertise_psionics"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_precognition_interface"}}}, {"factor": "2", "has_ethic": "\"ethic_spiritualist\""}, {"factor": "3", "has_ethic": "\"ethic_fanatic_spiritualist\""}, {"factor": "3", "has_paragon_dlc": "no", "any_owned_leader": {"has_trait": "leader_trait_shroudwalker"}}, {"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}]}],
       prerequisites: ["テレパシー"],
       potential: {"OR": {"has_shroud_dlc": "yes", "NOT": {"has_ethic": "ethic_gestalt_consciousness"}}}
     },
@@ -7816,7 +8056,7 @@ function getElements() {
       weight: 20,
       weight_modifier: [{"factor": "0.50", "modifier": [{"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_pk_neutron"}}}, {"factor": "0.20", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_expertise_particles"}}}, {"factor": "2", "is_materialist": "yes"}]}],
       prerequisites: ["コロッサス"],
-      potential: {"host_has_dlc": "\"Apocalypse\"", "has_country_flag": "colossus_project", "OR": {"is_spiritualist": "no", "NOR": {"AND": {"OR": {"host_has_dlc": "\"Utopia\"", "has_shroud_dlc": "yes"}, "has_psionic_ascension": "yes"}}}, "is_pacifist": "no"}
+      potential: {"host_has_dlc": "\"Apocalypse\"", "has_country_flag": "colossus_project", "OR": {"is_spiritualist": "no", "NOT": {"has_psionic_ascension": "yes"}}, "is_pacifist": "no"}
     },
     classes: 'physics'
 },
@@ -7831,7 +8071,7 @@ function getElements() {
       weight: 20,
       weight_modifier: [{"factor": "0.50", "modifier": [{"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_pk_godray"}}}, {"factor": "0.20", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_expertise_psionics"}}}]}],
       prerequisites: ["コロッサス"],
-      potential: {"host_has_dlc": "\"Apocalypse\"", "has_country_flag": "colossus_project", "is_spiritualist": "yes", "OR": {"AND": {"OR": {"host_has_dlc": "\"Utopia\"", "has_shroud_dlc": "yes"}, "has_psionic_ascension": "yes"}}}
+      potential: {"host_has_dlc": "\"Apocalypse\"", "has_country_flag": "colossus_project", "is_spiritualist": "yes", "has_psionic_ascension": "yes"}
     },
     classes: 'society'
 },
@@ -8130,7 +8370,7 @@ function getElements() {
       category: '宇宙工学',
       weight: 20,
       weight_modifier: [{"factor": "0.25", "modifier": [{"factor": "1.5", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_juggernaut"}}}, {"factor": "1.25", "has_technology": "\"tech_titans\""}]}],
-      prerequisites: ["シタデルの建設","OR","=","{","戦艦","発展型ハーヴィンジャーの開発","}"],
+      prerequisites: ["OR","=","{","シタデルの建設","箱舟の建造","}","OR","=","{","戦艦","発展型ハーヴィンジャーの開発","}"],
       potential: {"host_has_dlc": "\"Federations\""}
     },
     classes: 'engineering'
@@ -8879,7 +9119,7 @@ function getElements() {
       area:'物理学',
       category: '力場操作',
       weight: 25,
-      weight_modifier: [{"modifier": [{"factor": "value:tech_weight_likelihood", "has_trait_in_council": {"TRAIT": "leader_trait_curator"}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_cloaking_dark_matter"}}}, {"factor": "5", "has_tradition": "tr_subterfuge_adopt"}]}],
+      weight_modifier: [{"modifier": [{"factor": "value:tech_weight_likelihood", "has_trait_in_council": {"TRAIT": "leader_trait_curator"}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_cloaking_dark_matter"}}}, {"factor": "5", "has_tradition": "tr_subterfuge_adopt"}, {"factor": "2", "has_cloaking_civic_or_origin": "yes"}]}],
       prerequisites: ["ダークマターデフレクター","最先端クロークフィールド"],
       potential: {}
     },
@@ -8894,7 +9134,7 @@ function getElements() {
       area:'社会学',
       category: '超能力',
       weight: 25,
-      weight_modifier: [{"modifier": [{"factor": "0.1", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_cloaking_psi"}}}, {"factor": "5", "has_tradition": "tr_subterfuge_adopt"}]}],
+      weight_modifier: [{"modifier": [{"factor": "0.1", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_cloaking_psi"}}}, {"factor": "5", "has_tradition": "tr_subterfuge_adopt"}, {"factor": "2", "has_cloaking_civic_or_origin": "yes"}]}],
       prerequisites: ["PSIジャンプドライブ"],
       potential: {"OR": {"has_shroud_dlc": "yes", "NOT": {"has_ethic": "ethic_gestalt_consciousness"}}, "has_first_contact_dlc": "yes"}
     },
@@ -8969,7 +9209,7 @@ function getElements() {
       area:'物理学',
       category: 'コンピュータ',
       weight: 30,
-      weight_modifier: [],
+      weight_modifier: [{"modifier": [{"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_synth_queen_knowledge"}}}]}],
       prerequisites: [],
       potential: {"has_machine_age_dlc": "yes", "has_country_flag": "synth_queen_knowledge"}
     },
@@ -9284,8 +9524,8 @@ function getElements() {
       area:'工学',
       category: '宇宙工学',
       weight: 20,
-      weight_modifier: [{"factor": "0.25", "modifier": [{"factor": "1.5", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_mega_engineering"}}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_starhold"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_starhold"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_starhold"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_starhold"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_starhold"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_starhold"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_citadel"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_citadel"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_citadel"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_citadel"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_citadel"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_citadel"}}, {"factor": "2", "any_owned_planet": {"is_planet_class": "pc_habitat"}}, {"factor": "1.5", "any_neighbor_country": {"has_technology": "tech_mega_engineering"}}, {"factor": "20", "OR": {"has_any_megastructure_in_empire": "yes", "has_origin": "origin_shattered_ring"}}]}],
-      prerequisites: ["シタデルの建設","ゼロポイント発電","OR","=","{","戦艦","スティンガー","}"],
+      weight_modifier: [{"factor": "0.25", "modifier": [{"factor": "1.5", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_mega_engineering"}}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_starhold"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_starhold"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_starhold"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_starhold"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_starhold"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_starhold"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_citadel"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_citadel"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_citadel"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_citadel"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_citadel"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_citadel"}}, {"factor": "2", "any_owned_planet": {"is_planet_class": "pc_habitat"}}, {"factor": "1.5", "any_neighbor_country": {"has_technology": "tech_mega_engineering"}}, {"factor": "20", "OR": {"has_any_megastructure_in_empire": "yes", "has_origin": "origin_shattered_ring"}}, {"factor": "1.5", "is_nomadic": "yes", "count_starbase_sizes": {"starbase_size": "starbase_waystation_2"}}, {"factor": "1.5", "is_nomadic": "yes", "count_starbase_sizes": {"starbase_size": "starbase_waystation_2"}}, {"factor": "1.5", "is_nomadic": "yes", "count_starbase_sizes": {"starbase_size": "starbase_waystation_3"}}, {"factor": "1.5", "is_nomadic": "yes", "count_starbase_sizes": {"starbase_size": "starbase_waystation_3"}}, {"factor": "1.5", "is_nomadic": "yes", "any_owned_nonprimary_starbase": {"is_waystation_starbase": "yes", "solar_system": {"space_owner": {"has_technology": "tech_mega_engineering"}}}}, {"factor": "20", "is_nomadic": "yes", "any_owned_nonprimary_starbase": {"is_waystation_starbase": "yes", "solar_system": {"any_system_megastructure": {"always": "yes"}}}}]}],
+      prerequisites: ["OR","=","{","シタデルの建設","箱舟工学の習熟","}","ゼロポイント発電","OR","=","{","戦艦","スティンガー","}"],
       potential: {}
     },
     classes: 'engineering'
@@ -9299,9 +9539,9 @@ function getElements() {
       area:'物理学',
       category: 'コンピュータ',
       weight: 20,
-      weight_modifier: [{"factor": "0.25", "modifier": [{"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_spark_of_genius_2"}}}, {"factor": "2", "OR": {"has_ascension_perk": "ap_galactic_wonders_utopia_and_megacorp"}}, {"factor": "6", "has_ascension_perk": "ap_master_builders"}, {"factor": "9", "has_ascension_perk": "ap_technological_ascendancy"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_science_nexus"}}}]}],
+      weight_modifier: [{"factor": "0.25", "modifier": [{"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_spark_of_genius_2"}}}, {"factor": "2", "has_galactic_wonders": "yes"}, {"factor": "6", "has_ascension_perk": "ap_master_builders"}, {"factor": "9", "has_ascension_perk": "ap_technological_ascendancy"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_science_nexus"}}}]}],
       prerequisites: ["メガエンジニアリング"],
-      potential: {"host_has_dlc": "\"Utopia\""}
+      potential: {"is_nomadic": "no"}
     },
     classes: 'physics'
 },
@@ -9314,9 +9554,9 @@ function getElements() {
       area:'物理学',
       category: 'コンピュータ',
       weight: 20,
-      weight_modifier: [{"factor": "0.25", "modifier": [{"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_spark_of_genius_2"}}}, {"factor": "2", "OR": {"has_ascension_perk": "ap_galactic_wonders_utopia_and_megacorp"}}, {"factor": "6", "has_ascension_perk": "ap_master_builders"}, {"factor": "6", "has_ascension_perk": "ap_enigmatic_engineering"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_sentry_array"}}}]}],
+      weight_modifier: [{"factor": "0.25", "modifier": [{"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_spark_of_genius_2"}}}, {"factor": "2", "has_galactic_wonders": "yes"}, {"factor": "6", "has_ascension_perk": "ap_master_builders"}, {"factor": "6", "has_ascension_perk": "ap_enigmatic_engineering"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_sentry_array"}}}]}],
       prerequisites: ["メガエンジニアリング"],
-      potential: {"host_has_dlc": "\"Utopia\""}
+      potential: {"is_nomadic": "no"}
     },
     classes: 'physics'
 },
@@ -9329,9 +9569,9 @@ function getElements() {
       area:'社会学',
       category: '軍事学',
       weight: 20,
-      weight_modifier: [{"factor": "0.25", "modifier": [{"factor": "0.5", "is_pacifist": "yes"}, {"factor": "2", "is_militarist": "yes"}, {"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_spark_of_genius_2"}}}, {"factor": "2", "OR": {"has_ascension_perk": "ap_galactic_wonders_utopia_and_megacorp"}}, {"factor": "6", "has_ascension_perk": "ap_master_builders"}, {"factor": "6", "has_ascension_perk": "ap_eternal_vigilance"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_strategic_coordination"}}}]}],
+      weight_modifier: [{"factor": "0.25", "modifier": [{"factor": "0.5", "is_pacifist": "yes"}, {"factor": "2", "is_militarist": "yes"}, {"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_spark_of_genius_2"}}}, {"factor": "2", "has_galactic_wonders": "yes"}, {"factor": "6", "has_ascension_perk": "ap_master_builders"}, {"factor": "6", "has_ascension_perk": "ap_eternal_vigilance"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_strategic_coordination"}}}]}],
       prerequisites: ["メガエンジニアリング"],
-      potential: {"host_has_dlc": "\"Megacorp\""}
+      potential: {"has_megacorp": "yes", "is_nomadic": "no"}
     },
     classes: 'society'
 },
@@ -9344,9 +9584,9 @@ function getElements() {
       area:'社会学',
       category: '統治学',
       weight: 20,
-      weight_modifier: [{"factor": "0.25", "modifier": [{"factor": "0.5", "is_xenophobe": "yes"}, {"factor": "2", "is_xenophile": "yes"}, {"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_spark_of_genius_2"}}}, {"factor": "2", "OR": {"has_ascension_perk": "ap_galactic_wonders_utopia_and_megacorp"}}, {"factor": "6", "has_ascension_perk": "ap_master_builders"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_interstellar_assembly"}}}]}],
+      weight_modifier: [{"factor": "0.25", "modifier": [{"factor": "0.5", "is_xenophobe": "yes"}, {"factor": "2", "is_xenophile": "yes"}, {"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_spark_of_genius_2"}}}, {"factor": "2", "has_galactic_wonders": "yes"}, {"factor": "6", "has_ascension_perk": "ap_master_builders"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_interstellar_assembly"}}}]}],
       prerequisites: ["メガエンジニアリング"],
-      potential: {"host_has_dlc": "\"Megacorp\""}
+      potential: {"has_megacorp": "yes", "is_nomadic": "no"}
     },
     classes: 'society'
 },
@@ -9359,9 +9599,9 @@ function getElements() {
       area:'社会学',
       category: '統治学',
       weight: 20,
-      weight_modifier: [{"factor": "0.25", "modifier": [{"factor": "0.5", "is_militarist": "yes"}, {"factor": "2", "is_pacifist": "yes"}, {"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_spark_of_genius_2"}}}, {"factor": "2", "OR": {"has_ascension_perk": "ap_galactic_wonders_utopia_and_megacorp"}}, {"factor": "6", "has_ascension_perk": "ap_master_builders"}, {"factor": "6", "has_ascension_perk": "ap_one_vision"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_mega_art"}}}]}],
+      weight_modifier: [{"factor": "0.25", "modifier": [{"factor": "0.5", "is_militarist": "yes"}, {"factor": "2", "is_pacifist": "yes"}, {"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_spark_of_genius_2"}}}, {"factor": "2", "has_galactic_wonders": "yes"}, {"factor": "6", "has_ascension_perk": "ap_master_builders"}, {"factor": "6", "has_ascension_perk": "ap_one_vision"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_mega_art"}}}]}],
       prerequisites: ["メガエンジニアリング"],
-      potential: {"host_has_dlc": "\"Megacorp\""}
+      potential: {"has_megacorp": "yes", "is_nomadic": "no"}
     },
     classes: 'society'
 },
@@ -9391,7 +9631,7 @@ function getElements() {
       weight: 20,
       weight_modifier: [{"factor": "0"}],
       prerequisites: ["メガエンジニアリング"],
-      potential: {"host_has_dlc": "\"Utopia\""}
+      potential: {"is_nomadic": "no"}
     },
     classes: 'physics'
 },
@@ -9406,7 +9646,7 @@ function getElements() {
       weight: 20,
       weight_modifier: [{"factor": "0"}],
       prerequisites: ["メガエンジニアリング"],
-      potential: {"host_has_dlc": "\"Megacorp\""}
+      potential: {"has_megacorp": "yes", "is_nomadic": "no"}
     },
     classes: 'physics'
 },
@@ -9421,7 +9661,7 @@ function getElements() {
       weight: 20,
       weight_modifier: [{"factor": "0"}],
       prerequisites: ["メガエンジニアリング"],
-      potential: {"host_has_dlc": "\"Utopia\"", "is_wilderness_empire": "no"}
+      potential: {"is_wilderness_empire": "no", "is_nomadic": "no"}
     },
     classes: 'engineering'
 },
@@ -9434,9 +9674,9 @@ function getElements() {
       area:'社会学',
       category: '軍事学',
       weight: 20,
-      weight_modifier: [{"factor": "0.25", "modifier": [{"factor": "0.5", "is_pacifist": "yes"}, {"factor": "2", "is_militarist": "yes"}, {"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_spark_of_genius_2"}}}, {"factor": "2", "OR": {"has_ascension_perk": "ap_galactic_wonders_utopia_and_megacorp"}}, {"factor": "6", "has_ascension_perk": "ap_master_builders"}, {"factor": "6", "has_ascension_perk": "ap_galactic_force_projection"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_mega_shipyard"}}}]}],
+      weight_modifier: [{"factor": "0.25", "modifier": [{"factor": "0.5", "is_pacifist": "yes"}, {"factor": "2", "is_militarist": "yes"}, {"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "2", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_spark_of_genius_2"}}}, {"factor": "2", "has_galactic_wonders": "yes"}, {"factor": "6", "has_ascension_perk": "ap_master_builders"}, {"factor": "6", "has_ascension_perk": "ap_galactic_force_projection"}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_mega_shipyard"}}}]}],
       prerequisites: ["メガエンジニアリング"],
-      potential: {"host_has_dlc": "\"Federations\""}
+      potential: {"has_federations_dlc": "yes", "is_nomadic": "no"}
     },
     classes: 'society'
 },
@@ -9644,7 +9884,7 @@ function getElements() {
       area:'社会学',
       category: '超能力',
       weight: 25,
-      weight_modifier: [{"factor": "0.1", "modifier": [{"factor": "0", "OR": {"has_utopia": "yes", "has_shroud_dlc": "yes"}}, {"factor": "0.1", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_psi_jump_drive_1"}}}, {"factor": "@ap_grasp_the_void_travel_tech", "has_ascension_perk": "ap_grasp_the_void"}, {"factor": "@eager_explorer_effect", "is_eager_explorer_empire": "yes"}, {"factor": "@ap_grasp_the_void_travel_tech", "has_country_flag": "jaunted_traveler_secret_revealed"}]}],
+      weight_modifier: [{"factor": "0.1", "modifier": [{"factor": "0"}, {"factor": "0.1", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_psi_jump_drive_1"}}}, {"factor": "@ap_grasp_the_void_travel_tech", "has_ascension_perk": "ap_grasp_the_void"}, {"factor": "@eager_explorer_effect", "is_eager_explorer_empire": "yes"}, {"factor": "@ap_grasp_the_void_travel_tech", "has_country_flag": "jaunted_traveler_secret_revealed"}]}],
       prerequisites: ["予知型インターフェース"],
       potential: {"OR": {"has_shroud_dlc": "yes", "NOT": {"has_ethic": "ethic_gestalt_consciousness"}}}
     },
@@ -9944,18 +10184,18 @@ function getElements() {
       area:'工学',
       category: '材料工学',
       weight: 30,
-      weight_modifier: [{"factor": "0.5", "modifier": [{"factor": "0", "NOT": {"any_planet_within_border": {"has_deposit": "d_living_metal_deposit"}}}]}],
+      weight_modifier: [{"factor": "0.5", "modifier": [{"factor": "0", "is_nomadic": "no", "NOT": {"any_planet_within_border": {"has_deposit": "d_living_metal_deposit"}}}, {"factor": "0", "is_nomadic": "yes", "NOT": {"has_country_flag": "living_metal_found"}}]}],
       prerequisites: ["宇宙建設"],
       potential: {}
     },
     classes: 'engineering'
 },
 { data: { id: 'tech_starbase_2_to_tech_solar_panel_network', source: 'tech_starbase_2', target: 'tech_solar_panel_network' } },
-{ data: { id: 'tech_starbase_2_to_tech_corvettes', source: 'tech_starbase_2', target: 'tech_corvettes' } },
 { data: { id: 'tech_space_construction_to_tech_starbase_1', source: 'tech_space_construction', target: 'tech_starbase_1' } },
 { data: { id: 'tech_starbase_1_to_tech_starbase_2', source: 'tech_starbase_1', target: 'tech_starbase_2' } },
 { data: { id: 'tech_planetary_defenses_to_tech_assault_armies', source: 'tech_planetary_defenses', target: 'tech_assault_armies' } },
 { data: { id: 'tech_starbase_1_to_tech_space_defense_station_1', source: 'tech_starbase_1', target: 'tech_space_defense_station_1' } },
+{ data: { id: 'tech_space_construction_to_tech_waystation_1', source: 'tech_space_construction', target: 'tech_waystation_1' } },
 { data: { id: 'tech_fission_power_to_tech_reactor_boosters_1', source: 'tech_fission_power', target: 'tech_reactor_boosters_1' } },
 { data: { id: 'tech_space_exploration_to_tech_colonization_1', source: 'tech_space_exploration', target: 'tech_colonization_1' } },
 { data: { id: 'tech_maulers_to_tech_mauler_build_speed', source: 'tech_maulers', target: 'tech_mauler_build_speed' } },
@@ -9974,7 +10214,6 @@ function getElements() {
 { data: { id: 'tech_storm_prediction_1_to_tech_ship_storm_weapons_1', source: 'tech_storm_prediction_1', target: 'tech_ship_storm_weapons_1' } },
 { data: { id: 'tech_corvettes_to_tech_corvette_build_speed', source: 'tech_corvettes', target: 'tech_corvette_build_speed' } },
 { data: { id: 'tech_corvettes_to_tech_corvette_hull_1', source: 'tech_corvettes', target: 'tech_corvette_hull_1' } },
-{ data: { id: 'tech_starbase_2_to_tech_strike_craft_1', source: 'tech_starbase_2', target: 'tech_strike_craft_1' } },
 { data: { id: 'tech_ship_armor_1_to_tech_ship_armor_2', source: 'tech_ship_armor_1', target: 'tech_ship_armor_2' } },
 { data: { id: 'tech_basic_industry_to_tech_powered_exoskeletons', source: 'tech_basic_industry', target: 'tech_powered_exoskeletons' } },
 { data: { id: 'tech_space_construction_to_tech_space_mining_1', source: 'tech_space_construction', target: 'tech_space_mining_1' } },
@@ -10050,6 +10289,7 @@ function getElements() {
 { data: { id: 'tech_destroyers_to_tech_destroyer_hull_1', source: 'tech_destroyers', target: 'tech_destroyer_hull_1' } },
 { data: { id: 'tech_starbase_2_to_tech_starbase_3', source: 'tech_starbase_2', target: 'tech_starbase_3' } },
 { data: { id: 'tech_starbase_3_to_tech_modular_engineering', source: 'tech_starbase_3', target: 'tech_modular_engineering' } },
+{ data: { id: 'tech_waystation_2_to_tech_modular_engineering', source: 'tech_waystation_2', target: 'tech_modular_engineering' } },
 { data: { id: 'tech_strike_craft_1_to_tech_strike_craft_2', source: 'tech_strike_craft_1', target: 'tech_strike_craft_2' } },
 { data: { id: 'tech_ship_armor_2_to_tech_ship_armor_3', source: 'tech_ship_armor_2', target: 'tech_ship_armor_3' } },
 { data: { id: 'tech_advanced_metallurgy_1_to_tech_armor_hardeners_1', source: 'tech_advanced_metallurgy_1', target: 'tech_armor_hardeners_1' } },
@@ -10085,6 +10325,9 @@ function getElements() {
 { data: { id: 'tech_controlled_mutations_to_tech_hyper_drive_bio_integration', source: 'tech_controlled_mutations', target: 'tech_hyper_drive_bio_integration' } },
 { data: { id: 'tech_controlled_mutations_to_tech_sensors_bio_integration', source: 'tech_controlled_mutations', target: 'tech_sensors_bio_integration' } },
 { data: { id: 'tech_controlled_mutations_to_tech_combat_computers_bio_integration', source: 'tech_controlled_mutations', target: 'tech_combat_computers_bio_integration' } },
+{ data: { id: 'tech_waystation_1_to_tech_waystation_2', source: 'tech_waystation_1', target: 'tech_waystation_2' } },
+{ data: { id: 'tech_space_exploration_to_tech_planetary_engineering', source: 'tech_space_exploration', target: 'tech_planetary_engineering' } },
+{ data: { id: 'tech_space_mining_2_to_tech_planetary_engineering', source: 'tech_space_mining_2', target: 'tech_planetary_engineering' } },
 { data: { id: 'tech_hyper_drive_2_to_tech_hyper_relays', source: 'tech_hyper_drive_2', target: 'tech_hyper_relays' } },
 { data: { id: 'tech_space_science_2_to_tech_space_science_3', source: 'tech_space_science_2', target: 'tech_space_science_3' } },
 { data: { id: 'tech_space_science_3_to_tech_space_science_4', source: 'tech_space_science_3', target: 'tech_space_science_4' } },
@@ -10118,6 +10361,7 @@ function getElements() {
 { data: { id: 'tech_colonization_1_to_tech_volcano', source: 'tech_colonization_1', target: 'tech_volcano' } },
 { data: { id: 'tech_colonization_1_to_tech_dangerous_wildlife', source: 'tech_colonization_1', target: 'tech_dangerous_wildlife' } },
 { data: { id: 'tech_colonization_1_to_tech_terrestrial_sculpting', source: 'tech_colonization_1', target: 'tech_terrestrial_sculpting' } },
+{ data: { id: 'tech_planetary_engineering_to_tech_terrestrial_sculpting', source: 'tech_planetary_engineering', target: 'tech_terrestrial_sculpting' } },
 { data: { id: 'tech_terrestrial_sculpting_to_tech_volcanic_terraforming', source: 'tech_terrestrial_sculpting', target: 'tech_volcanic_terraforming' } },
 { data: { id: 'tech_volcano_to_tech_volcanic_terraforming', source: 'tech_volcano', target: 'tech_volcanic_terraforming' } },
 { data: { id: 'tech_genome_mapping_to_tech_vitality_boosters', source: 'tech_genome_mapping', target: 'tech_vitality_boosters' } },
@@ -10221,6 +10465,19 @@ function getElements() {
 { data: { id: 'tech_controlled_mutations_2_to_tech_unique_mutation_crystalline_entity', source: 'tech_controlled_mutations_2', target: 'tech_unique_mutation_crystalline_entity' } },
 { data: { id: 'tech_akx_worm_1_to_tech_akx_worm_3', source: 'tech_akx_worm_1', target: 'tech_akx_worm_3' } },
 { data: { id: 'tech_akx_worm_2_to_tech_akx_worm_3', source: 'tech_akx_worm_2', target: 'tech_akx_worm_3' } },
+{ data: { id: 'tech_destroyers_to_tech_arkship_construction', source: 'tech_destroyers', target: 'tech_arkship_construction' } },
+{ data: { id: 'tech_weavers_to_tech_arkship_construction', source: 'tech_weavers', target: 'tech_arkship_construction' } },
+{ data: { id: 'tech_cruisers_to_tech_arkship_tier_2', source: 'tech_cruisers', target: 'tech_arkship_tier_2' } },
+{ data: { id: 'tech_harbingers_to_tech_arkship_tier_2', source: 'tech_harbingers', target: 'tech_arkship_tier_2' } },
+{ data: { id: 'tech_arkship_construction_to_tech_arkship_tier_2', source: 'tech_arkship_construction', target: 'tech_arkship_tier_2' } },
+{ data: { id: 'tech_planetary_engineering_to_tech_civilian_arkship', source: 'tech_planetary_engineering', target: 'tech_civilian_arkship' } },
+{ data: { id: 'tech_arkship_construction_to_tech_civilian_arkship', source: 'tech_arkship_construction', target: 'tech_civilian_arkship' } },
+{ data: { id: 'tech_sensors_2_to_tech_science_arkship', source: 'tech_sensors_2', target: 'tech_science_arkship' } },
+{ data: { id: 'tech_arkship_construction_to_tech_science_arkship', source: 'tech_arkship_construction', target: 'tech_science_arkship' } },
+{ data: { id: 'tech_destroyers_to_tech_military_arkship', source: 'tech_destroyers', target: 'tech_military_arkship' } },
+{ data: { id: 'tech_mauler_growth_2_to_tech_military_arkship', source: 'tech_mauler_growth_2', target: 'tech_military_arkship' } },
+{ data: { id: 'tech_arkship_construction_to_tech_military_arkship', source: 'tech_arkship_construction', target: 'tech_military_arkship' } },
+{ data: { id: 'tech_waystation_2_to_tech_waystation_3', source: 'tech_waystation_2', target: 'tech_waystation_3' } },
 { data: { id: 'tech_starbase_3_to_tech_orbital_ring_tier_1', source: 'tech_starbase_3', target: 'tech_orbital_ring_tier_1' } },
 { data: { id: 'tech_galactic_administration_to_tech_orbital_ring_tier_1', source: 'tech_galactic_administration', target: 'tech_orbital_ring_tier_1' } },
 { data: { id: 'tech_planetary_infrastructure_1_to_tech_orbital_ring_tier_1', source: 'tech_planetary_infrastructure_1', target: 'tech_orbital_ring_tier_1' } },
@@ -10363,6 +10620,18 @@ function getElements() {
 { data: { id: 'tech_controlled_mutations_2_to_tech_unique_mutation_restorative_enzymes', source: 'tech_controlled_mutations_2', target: 'tech_unique_mutation_restorative_enzymes' } },
 { data: { id: 'tech_controlled_mutations_2_to_tech_unique_mutation_starborne_biology', source: 'tech_controlled_mutations_2', target: 'tech_unique_mutation_starborne_biology' } },
 { data: { id: 'tech_hyper_drive_3_to_tech_gateway_activation', source: 'tech_hyper_drive_3', target: 'tech_gateway_activation' } },
+{ data: { id: 'tech_stingers_to_tech_arkship_tier_3', source: 'tech_stingers', target: 'tech_arkship_tier_3' } },
+{ data: { id: 'tech_battleships_to_tech_arkship_tier_3', source: 'tech_battleships', target: 'tech_arkship_tier_3' } },
+{ data: { id: 'tech_arkship_tier_2_to_tech_arkship_tier_3', source: 'tech_arkship_tier_2', target: 'tech_arkship_tier_3' } },
+{ data: { id: 'tech_arkship_tier_3_to_tech_arkship_planetary_refinery', source: 'tech_arkship_tier_3', target: 'tech_arkship_planetary_refinery' } },
+{ data: { id: 'tech_planetary_engineering_to_tech_arkship_planetary_refinery', source: 'tech_planetary_engineering', target: 'tech_arkship_planetary_refinery' } },
+{ data: { id: 'tech_arkship_tier_3_to_tech_arkship_stellar_igniter', source: 'tech_arkship_tier_3', target: 'tech_arkship_stellar_igniter' } },
+{ data: { id: 'tech_mine_dark_matter_to_tech_arkship_stellar_igniter', source: 'tech_mine_dark_matter', target: 'tech_arkship_stellar_igniter' } },
+{ data: { id: 'tech_arkship_tier_3_to_tech_arkship_system_scanner', source: 'tech_arkship_tier_3', target: 'tech_arkship_system_scanner' } },
+{ data: { id: 'tech_sensors_2_to_tech_arkship_system_scanner', source: 'tech_sensors_2', target: 'tech_arkship_system_scanner' } },
+{ data: { id: 'tech_automated_exploration_to_tech_arkship_system_scanner', source: 'tech_automated_exploration', target: 'tech_arkship_system_scanner' } },
+{ data: { id: 'tech_arkship_tier_3_to_tech_arkship_exodus_jump', source: 'tech_arkship_tier_3', target: 'tech_arkship_exodus_jump' } },
+{ data: { id: 'tech_jump_drive_1_to_tech_arkship_exodus_jump', source: 'tech_jump_drive_1', target: 'tech_arkship_exodus_jump' } },
 { data: { id: 'tech_self_aware_logic_to_tech_sapient_ai', source: 'tech_self_aware_logic', target: 'tech_sapient_ai' } },
 { data: { id: 'tech_self_aware_logic_to_tech_positronic_implants', source: 'tech_self_aware_logic', target: 'tech_positronic_implants' } },
 { data: { id: 'tech_combat_computers_2_to_tech_combat_computers_3', source: 'tech_combat_computers_2', target: 'tech_combat_computers_3' } },
@@ -10446,6 +10715,7 @@ function getElements() {
 { data: { id: 'tech_battleships_to_tech_titans', source: 'tech_battleships', target: 'tech_titans' } },
 { data: { id: 'tech_stinger_growth_2_to_tech_titans', source: 'tech_stinger_growth_2', target: 'tech_titans' } },
 { data: { id: 'tech_starbase_5_to_tech_juggernaut', source: 'tech_starbase_5', target: 'tech_juggernaut' } },
+{ data: { id: 'tech_arkship_construction_to_tech_juggernaut', source: 'tech_arkship_construction', target: 'tech_juggernaut' } },
 { data: { id: 'tech_battleships_to_tech_juggernaut', source: 'tech_battleships', target: 'tech_juggernaut' } },
 { data: { id: 'tech_harbinger_growth_2_to_tech_juggernaut', source: 'tech_harbinger_growth_2', target: 'tech_juggernaut' } },
 { data: { id: 'tech_battleship_hull_1_to_tech_battleship_hull_2', source: 'tech_battleship_hull_1', target: 'tech_battleship_hull_2' } },
@@ -10491,6 +10761,7 @@ function getElements() {
 { data: { id: 'tech_detection_array_to_tech_dark_matter_detection', source: 'tech_detection_array', target: 'tech_dark_matter_detection' } },
 { data: { id: 'tech_mine_dark_matter_to_tech_dark_matter_detection', source: 'tech_mine_dark_matter', target: 'tech_dark_matter_detection' } },
 { data: { id: 'tech_starbase_5_to_tech_mega_engineering', source: 'tech_starbase_5', target: 'tech_mega_engineering' } },
+{ data: { id: 'tech_arkship_tier_3_to_tech_mega_engineering', source: 'tech_arkship_tier_3', target: 'tech_mega_engineering' } },
 { data: { id: 'tech_zero_point_power_to_tech_mega_engineering', source: 'tech_zero_point_power', target: 'tech_mega_engineering' } },
 { data: { id: 'tech_battleships_to_tech_mega_engineering', source: 'tech_battleships', target: 'tech_mega_engineering' } },
 { data: { id: 'tech_stingers_to_tech_mega_engineering', source: 'tech_stingers', target: 'tech_mega_engineering' } },
