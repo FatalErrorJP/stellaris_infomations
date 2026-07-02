@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import glob
 import os
+import pprint
 from typing import TextIO
 
 from src.parser.trait_parser import TraitParser
@@ -74,6 +75,7 @@ def _write_data(wf: TextIO, leader_traits: list[Trait]) -> None:
             allowed_origins=leader_trait.allowed_origins,
             forbidden_origins=leader_trait.forbidden_origins,
             allowed_ethics=leader_trait.allowed_ethics,
+            forbidden_ethics=leader_trait.forbidden_ethics,
             leader_potential_add=leader_trait.leader_potential_add,
             prerequisites=leader_trait.prerequisites,
             opposites=leader_trait.opposites,

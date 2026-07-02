@@ -1,6 +1,6 @@
 
 function getVersion() {
-    return "v4.4.2";
+    return "v4.4.4";
 }
 
 function getElements() {
@@ -6314,7 +6314,7 @@ function getElements() {
       area:'物理学',
       category: '力場操作',
       weight: 50,
-      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_country_flag": "dark_matter_found", "any_system_within_border": {"any_system_planet": {"has_resource": {"type": "sr_dark_matter amount > 0"}}}, "AND": {"is_nomadic": "yes", "any_owned_nonprimary_starbase": {"is_waystation_starbase": "yes", "solar_system": {"any_system_planet": {"has_resource": {"type": "sr_dark_matter amount > 0"}}}}}, "any_relation": {"AND": {"is_country_type": "default", "has_communications": "ROOT", "has_technology": "tech_mine_dark_matter"}}}}]}],
+      weight_modifier: [{"modifier": [{"factor": "0", "NOR": {"has_country_flag": "sr_dark_matter_found", "any_system_within_border": {"any_system_planet": {"has_resource": {"type": "sr_dark_matter amount > 0"}}}, "AND": {"is_nomadic": "yes", "any_owned_nonprimary_starbase": {"is_waystation_starbase": "yes", "solar_system": {"any_system_planet": {"has_resource": {"type": "sr_dark_matter amount > 0"}}}}}, "any_relation": {"AND": {"is_country_type": "default", "has_communications": "ROOT", "has_technology": "tech_mine_dark_matter"}}}}]}],
       prerequisites: ["タキオンセンサー"],
       potential: {}
     },
@@ -10184,7 +10184,7 @@ function getElements() {
       area:'工学',
       category: '材料工学',
       weight: 30,
-      weight_modifier: [{"factor": "0.5", "modifier": [{"factor": "0", "is_nomadic": "no", "NOT": {"any_planet_within_border": {"has_deposit": "d_living_metal_deposit"}}}, {"factor": "0", "is_nomadic": "yes", "NOT": {"has_country_flag": "living_metal_found"}}]}],
+      weight_modifier: [{"factor": "0.5", "modifier": [{"factor": "0", "is_nomadic": "no", "NOT": {"any_planet_within_border": {"has_deposit": "d_living_metal_deposit"}}}, {"factor": "0", "is_nomadic": "yes", "NOT": {"has_country_flag": "sr_living_metal_found"}}]}],
       prerequisites: ["宇宙建設"],
       potential: {}
     },

@@ -8,7 +8,9 @@ class TraitParser(BaseParser):
     _model_class: Type[Trait] = Trait
 
     def _get_simlle_list_keys(self) -> list[str]:
-        return ['opposites', 'leader_class', 'replace_traits', 'allowed_origins', 'forbidden_origins', 'allowed_ethics']
+        return ['opposites', 'leader_class', 'replace_traits', 'allowed_origins', 'forbidden_origins', 'allowed_ethics', 'forbidden_ethics',
+                'allowed_archetypes', 'localized_tags', 'tags']
+
 
     def _get_prerequisites_block_keys(self) -> list[str]:
         return ['prerequisites']
@@ -18,4 +20,4 @@ class TraitParser(BaseParser):
                 'army_modifier', 'galcom_modifier', 'federation_modifier', 'background_planet_modifier', 'councilor_modifier', 'triggered_modifier',
                 'triggered_self_modifier', 'triggered_planet_modifier', 'triggered_system_modifier', 'triggered_sector_modifier',
                 'triggered_fleet_modifier', 'triggered_army_modifier', 'triggered_galcom_modifier', 'triggered_federation_modifier',
-                'triggered_background_planet_modifier', 'triggered_councilor_modifier']
+                'triggered_background_planet_modifier', 'triggered_councilor_modifier', 'triggered_pop_group_modifier']

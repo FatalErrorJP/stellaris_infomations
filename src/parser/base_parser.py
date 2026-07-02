@@ -14,8 +14,8 @@ class BaseParser(ABC, Generic[T]):
 
     def __init__(self):
         # キーと値、またはキーとブロックの正規表現
-        self.key_value_pattern = re.compile(r'^\s*(\w+)\s*=\s*(\S.*?)\s*$')
-        self.key_block_start_pattern = re.compile(r'^\s*(\w+)\s*=\s*\{\s*$')
+        self.key_value_pattern = re.compile(r'^\s*([\w?.]+)\s*=\s*(\S.*?)\s*$')
+        self.key_block_start_pattern = re.compile(r'^\s*([\w?.]+)\s*=\s*\{\s*$')
         self.block_end_pattern = re.compile(r'^\s*}\s*$')
         self.comment_pattern = re.compile(r'^\s*#.*$')
         self.at_variable_pattern = re.compile(r'^\s*@\w+\s*=\s*\S.*$')  # @で始まる変数行を無視

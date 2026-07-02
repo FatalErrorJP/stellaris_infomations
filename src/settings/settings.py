@@ -33,13 +33,13 @@ TEMPLATE_TITLE = '''= {title} Ver{version}
 TEMPLATE_LEADER_TRAITS_HEADER = '''[[GotoTop]]
 link:./[トップへ戻る]
 
-[cols="21*a", separator=＆, options="autowidth,header"]
+[cols="22*a", separator=＆, options="autowidth,header"]
 .リーダー特性一覧
 |===
 ＆物理名 ＆論理名 ＆司令官 ＆役人 ＆科学者 ＆特性タイプ
 ＆効果 ＆不死 ＆FTL妨害 ＆特性取得時に発生するEffect
 ＆initial ＆randomized  ＆replace_traits
-＆統治者作成時に設定可能な特性 ＆統治者作成時に設定可能な起源 ＆統治者作成時に設定不可能な起源 ＆統治者作成時に設定可能な志向
+＆統治者作成時に設定可能な特性 ＆設定可能な起源 ＆設定不可能な起源 ＆設定可能な志向 ＆設定不可能な志向
 ＆習得条件 ＆前提技術 ＆排他特性 ＆志向特有の運命特性
 '''
 TEMPLATE_LEADER_TRAITS_DATA = '''＆ {key}
@@ -59,6 +59,7 @@ TEMPLATE_LEADER_TRAITS_DATA = '''＆ {key}
 ＆ {allowed_origins}
 ＆ {forbidden_origins}
 ＆ {allowed_ethics}
+＆ {forbidden_ethics}
 ＆ {leader_potential_add}
 ＆ {prerequisites}
 ＆ {opposites}

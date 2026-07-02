@@ -36,6 +36,7 @@ class Trait(BaseVo):
                  allowed_origins: list[str] = None,
                  forbidden_origins: list[str] = None,
                  allowed_ethics: list[str] = None,
+                 forbidden_ethics: list[str] = None,
                  opposites: list[str] = None,
                  custom_subtitle: str = None,
                  custom_tooltip: str = None,
@@ -93,6 +94,7 @@ class Trait(BaseVo):
         self._allowed_origins = allowed_origins or []
         self._forbidden_origins = forbidden_origins or []
         self._allowed_ethics = allowed_ethics or []
+        self._forbidden_ethics = forbidden_ethics or []
         self._opposites = opposites or []
         self._custom_subtitle = custom_subtitle
         self._custom_tooltip = custom_tooltip
@@ -234,6 +236,10 @@ class Trait(BaseVo):
     @property
     def allowed_ethics(self) -> str:
         return self._get_list(self._allowed_ethics)
+
+    @property
+    def forbidden_ethics(self) -> str:
+        return self._get_list(self._forbidden_ethics)
 
     @property
     def opposites(self) -> str:
