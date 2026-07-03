@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.23">
-<meta name="author" content="最終更新日: 2026-07-02 18:06:06 +0900">
+<meta name="author" content="最終更新日: 2026-07-03 11:28:32 +0900">
 <title>リーダー特性一覧 Verv4.4.4</title>
 <link rel="stylesheet" href="./css/leader_traits.css">
 <!-- Google tag (gtag.js) -->
@@ -22,7 +22,7 @@
 <div id="header">
 <h1>リーダー特性一覧 Verv4.4.4</h1>
 <div class="details">
-<span id="author" class="author">最終更新日: 2026-07-02 18:06:06 +0900</span><br>
+<span id="author" class="author">最終更新日: 2026-07-03 11:28:32 +0900</span><br>
 </div>
 </div>
 <div id="content">
@@ -8465,7 +8465,7 @@ custom_tooltip_with_modifiers:<br></p>
 ・species_leader_exp_gain = 0.1<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_opportunity_custom_effect"</p>
+    レベル4未満はリーダー雇用上限の対象とならない。</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -9385,8 +9385,7 @@ leader_trait_tyrannical_2<br></p>
 ・条件：{"is_heir": "yes", "leader_class": "official", "exists": "owner", "owner": {"is_imperial_authority": "yes", "is_transcendent_authority": "yes"}}<br>
 ・planet_stability_add(安定度) = @transcendent_imperial_heir_stability<br>
 <br>
-custom_tooltip_with_modifiers:<br>
-"trait_imperial_heir_effects"</p>
+custom_tooltip_with_modifiers:<br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -25230,7 +25229,7 @@ leader_trait_collaborator_3<br></p>
 <br>
 ・条件：{"exists": "owner", "owner": {"is_cyber_oligarchy": "yes"}, "is_councilor": "yes"}<br>
 ・leader_lifespan_add(リーダーの寿命) = 40<br>
-・custom_tooltip = "BLANK_STRING"<br>
+・custom_tooltip = "BLANK_STRING"()<br>
 <br>
 ・条件：{"exists": "owner", "owner": {"is_machine_empire": "yes", "has_country_flag": "driven_neural_chorus"}}<br>
 ・leaders_upkeep_mult(リーダー維持費) = -0.25<br>
@@ -35292,7 +35291,7 @@ custom_tooltip:<br>
 ・ship_starting_experience_add(艦船の初期経験値) = 75<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_origin_desc"</p>
+§G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -35351,7 +35350,7 @@ custom_tooltip_with_modifiers:<br>
 ・ship_starting_experience_add(艦船の初期経験値) = 150<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_origin_desc"</p>
+§G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -35407,7 +35406,7 @@ custom_tooltip_with_modifiers:<br>
 ・ship_starting_experience_add(艦船の初期経験値) = 300<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_origin_desc"</p>
+§G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -35463,7 +35462,7 @@ custom_tooltip_with_modifiers:<br>
 ・ship_accuracy_add(命中率) = 5<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_origin_desc"</p>
+§G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -35522,7 +35521,7 @@ custom_tooltip_with_modifiers:<br>
 ・ship_accuracy_add(命中率) = 7<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_origin_desc"</p>
+§G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -35578,7 +35577,7 @@ custom_tooltip_with_modifiers:<br>
 ・ship_accuracy_add(命中率) = 10<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_origin_desc"</p>
+§G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -35636,7 +35635,7 @@ custom_tooltip_with_modifiers:<br>
 ・country_scientist_cap_add(£scientist£ 科学者上限数) = 1<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_origin_desc"</p>
+§G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -35697,7 +35696,7 @@ custom_tooltip_with_modifiers:<br>
 ・country_scientist_cap_add(£scientist£ 科学者上限数) = 1<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_origin_desc"</p>
+§G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -35755,7 +35754,7 @@ custom_tooltip_with_modifiers:<br>
 ・country_scientist_cap_add(£scientist£ 科学者上限数) = 1<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_origin_desc"</p>
+§G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -35811,7 +35810,7 @@ custom_tooltip_with_modifiers:<br>
 ・planet_bureaucrats_society_research_produces_add(£society_research£ ：100あたりの産出： [GetBureaucratSwapPluralWithIcon]) = 0.25<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_origin_desc"</p>
+§G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -35870,7 +35869,7 @@ custom_tooltip_with_modifiers:<br>
 ・planet_bureaucrats_society_research_produces_add(£society_research£ ：100あたりの産出： [GetBureaucratSwapPluralWithIcon]) = 0.5<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_origin_desc"</p>
+§G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -35926,7 +35925,7 @@ custom_tooltip_with_modifiers:<br>
 ・planet_bureaucrats_society_research_produces_add(£society_research£ ：100あたりの産出： [GetBureaucratSwapPluralWithIcon]) = 1<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_origin_desc"</p>
+§G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -35981,7 +35980,7 @@ custom_tooltip_with_modifiers:<br>
 ・diplo_action_acceptance_add(外交許諾値) = 5<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_origin_desc"</p>
+§G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -36039,7 +36038,7 @@ custom_tooltip_with_modifiers:<br>
 ・diplo_action_acceptance_add(外交許諾値) = 10<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_origin_desc"</p>
+§G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -36094,7 +36093,7 @@ custom_tooltip_with_modifiers:<br>
 ・diplo_action_acceptance_add(外交許諾値) = 15<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_origin_desc"</p>
+§G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -36150,7 +36149,7 @@ custom_tooltip_with_modifiers:<br>
 ・pop_cat_ruler_bonus_workforce_mult(精鋭の職業効率) = 0.1<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_origin_desc"</p>
+§G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -36209,7 +36208,7 @@ custom_tooltip_with_modifiers:<br>
 ・pop_cat_ruler_bonus_workforce_mult(精鋭の職業効率) = 0.2<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_origin_desc"</p>
+§G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -36265,7 +36264,7 @@ custom_tooltip_with_modifiers:<br>
 ・pop_cat_ruler_bonus_workforce_mult(精鋭の職業効率) = 0.3<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_origin_desc"</p>
+§G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -36327,7 +36326,7 @@ custom_tooltip_with_modifiers:<br>
 ・ships_upkeep_mult(艦船維持費) = -0.025<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_origin_desc"</p>
+§G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -36392,7 +36391,7 @@ custom_tooltip_with_modifiers:<br>
 ・ships_upkeep_mult(艦船維持費) = -0.05<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_origin_desc"</p>
+§G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -36454,7 +36453,7 @@ custom_tooltip_with_modifiers:<br>
 ・ships_upkeep_mult(艦船維持費) = -0.10<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_origin_desc"</p>
+§G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -36509,7 +36508,7 @@ custom_tooltip_with_modifiers:<br>
 ・all_technology_research_speed = 0.05<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_scientific_diplomacy_tt"</p>
+§Y移民条約§!は§G@scientific_diplomacy_1_amt§!£physics£ £society£ £engineering£ §Y研究力§!を産出する\n    - §G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -36567,7 +36566,7 @@ custom_tooltip_with_modifiers:<br>
 ・all_technology_research_speed = 0.075<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_scientific_diplomacy_2_tt"</p>
+§Y移民条約§!は§G@scientific_diplomacy_2_amt§!£physics£ £society£ £engineering£ §Y研究力§!を産出する\n    - §G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -36622,7 +36621,7 @@ custom_tooltip_with_modifiers:<br>
 ・all_technology_research_speed = 0.1<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_scientific_diplomacy_3_tt"</p>
+§Y移民条約§!は§G@scientific_diplomacy_3_amt§!£physics£ £society£ £engineering£ §Y研究力§!を産出する\n    - §G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -36677,7 +36676,7 @@ custom_tooltip_with_modifiers:<br>
 ・planet_jobs_food_produces_mult(£job£ 職業からの£food£ 食料) = 0.1<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_origin_desc"</p>
+§G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -36735,7 +36734,7 @@ custom_tooltip_with_modifiers:<br>
 ・planet_jobs_food_produces_mult(£job£ 職業からの£food£ 食料) = 0.15<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_origin_desc"</p>
+§G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -36790,7 +36789,7 @@ custom_tooltip_with_modifiers:<br>
 ・planet_jobs_food_produces_mult(£job£ 職業からの£food£ 食料) = 0.3<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_origin_desc"</p>
+§G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -36846,7 +36845,7 @@ custom_tooltip_with_modifiers:<br>
 ・pop_government_ethic_attraction(統治志向の魅力) = 0.1<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_origin_desc"</p>
+§G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -36905,7 +36904,7 @@ custom_tooltip_with_modifiers:<br>
 ・pop_government_ethic_attraction(統治志向の魅力) = 0.2<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_origin_desc"</p>
+§G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -36961,7 +36960,7 @@ custom_tooltip_with_modifiers:<br>
 ・pop_government_ethic_attraction(統治志向の魅力) = 0.4<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_origin_desc"</p>
+§G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -37017,7 +37016,7 @@ custom_tooltip_with_modifiers:<br>
 ・planet_jobs_consumer_goods_produces_mult(£job£ 職業からの£consumer_goods£ 消費財) = 0.05<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_origin_desc"</p>
+§G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -37076,7 +37075,7 @@ custom_tooltip_with_modifiers:<br>
 ・planet_jobs_consumer_goods_produces_mult(£job£ 職業からの£consumer_goods£ 消費財) = 0.1<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_origin_desc"</p>
+§G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -37132,7 +37131,7 @@ custom_tooltip_with_modifiers:<br>
 ・planet_jobs_consumer_goods_produces_mult(£job£ 職業からの£consumer_goods£ 消費財) = 0.15<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_origin_desc"</p>
+§G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -37187,7 +37186,7 @@ custom_tooltip_with_modifiers:<br>
 ・planet_pop_assemblers_engineering_research_produces_add(£engineering_research£ ：100あたりの産出： [GetPopAssemblersPluralWithIcon]) = 0.5<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_great_inventor_tt"</p>
+£job_roboticist£ ロボット製造者による£amenities£ 快適度：§G+1§!\n    - §G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -37245,7 +37244,7 @@ custom_tooltip_with_modifiers:<br>
 ・planet_pop_assemblers_engineering_research_produces_add(£engineering_research£ ：100あたりの産出： [GetPopAssemblersPluralWithIcon]) = 1<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_great_inventor_2_tt"</p>
+£job_roboticist£ ロボット製造者による£amenities£ 快適度：§G+2§!\n    - §G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -37300,7 +37299,7 @@ custom_tooltip_with_modifiers:<br>
 ・planet_pop_assemblers_engineering_research_produces_add(£engineering_research£ ：100あたりの産出： [GetPopAssemblersPluralWithIcon]) = 2<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_great_inventor_3_tt"</p>
+£job_roboticist£ ロボット製造者による£amenities£ 快適度：§G+3§!\n    - §G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -37355,7 +37354,7 @@ custom_tooltip_with_modifiers:<br>
 ・planet_pops_upkeep_mult(POP維持費) = -0.10<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_origin_desc"</p>
+§G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -37413,7 +37412,7 @@ custom_tooltip_with_modifiers:<br>
 ・planet_pops_upkeep_mult(POP維持費) = -0.15<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_origin_desc"</p>
+§G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -37469,7 +37468,7 @@ custom_tooltip_with_modifiers:<br>
 ・planet_pops_upkeep_mult(POP維持費) = -0.25<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_origin_desc"</p>
+§G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -37524,7 +37523,7 @@ custom_tooltip_with_modifiers:<br>
 ・intel_encryption_add(暗号力) = 1<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_origin_desc"</p>
+§G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -37582,7 +37581,7 @@ custom_tooltip_with_modifiers:<br>
 ・intel_encryption_add(暗号力) = 2<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_origin_desc"</p>
+§G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -37637,7 +37636,7 @@ custom_tooltip_with_modifiers:<br>
 ・intel_encryption_add(暗号力) = 4<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_origin_desc"</p>
+§G啓発統治者の特性§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -37879,7 +37878,7 @@ custom_tooltip_with_modifiers:<br>
 ・planet_crime_add([GetCrimeDeviancy]) = 20<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_legendary_harsh_ruler_tt"</p>
+£job_enforcer£ §Y法務執行官§!と£job_telepath£ §Yテレパス§!が£happiness£ §Y幸福度§!を§R2.5%§!減少させる</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -39704,7 +39703,7 @@ custom_tooltip_with_modifiers:<br>
 ・ship_evasion_mult(回避確率) = 0.30<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"mod_trait_storm_rider"</p>
+\n    このリーダーは宇宙嵐のなかにいると、 特性の効果が増加する。</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -39790,7 +39789,7 @@ custom_tooltip_with_modifiers:<br>
 ・planet_jobs_engineering_research_produces_mult(£job£ 職業からの£engineering_research£ 工学研究) = 00.035<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"mod_trait_storm_rider"</p>
+\n    このリーダーは宇宙嵐のなかにいると、 特性の効果が増加する。</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -39878,7 +39877,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_storm_environmentalists_stances_vote_strength_mult(§Y宇宙嵐保護論者§!の決議における票数) = 0.05<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"mod_trait_storm_rider"</p>
+\n    このリーダーは宇宙嵐のなかにいると、 特性の効果が増加する。</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -41426,7 +41425,7 @@ custom_tooltip_with_modifiers:<br>
 ・country_alloys_produces_mult(月間 合金) = 0.05<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"trait_ruler_apex_predator_tt"</p>
+['concept_apex_predator_victories']から追加の['concept_apex_predator_effects',洞察]を得る。</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -42945,7 +42944,7 @@ custom_tooltip_with_modifiers:<br>
 ・ship_weapon_range_mult(艦船武器射程) = 0.25<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-"leader_trait_paladin_effect"</p>
+このリーダーは§Y維持費§!を持たず、 §Yリーダー雇用上限§!も消費しない</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -43050,7 +43049,7 @@ custom_tooltip_with_modifiers:<br>
 ・ship_weapon_range_mult(艦船武器射程) = 0.05<br>
 <br>
 custom_tooltip:<br>
-"leader_trait_paladin_strategist_tt"</p>
+星系内の艦隊：\n    - 艦船連射レート：§G+30%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -43155,7 +43154,7 @@ custom_tooltip:<br>
 ・ships_upkeep_mult(艦船維持費) = -0.05<br>
 <br>
 custom_tooltip:<br>
-"leader_trait_paladin_logistician_tt"</p>
+星系内の艦隊：\n    - 艦船維持費：§G-15%§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>

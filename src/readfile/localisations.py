@@ -28,6 +28,7 @@ class Localisations:
         :param key: キー名
         :return: value
         """
+        key = key.strip('"')
         lower_key = key.lower()
         data = Localisations.get_data()
 
