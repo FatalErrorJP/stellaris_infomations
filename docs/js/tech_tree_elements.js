@@ -1,6 +1,6 @@
 
 function getVersion() {
-    return "v4.4.4";
+    return "v4.4.5";
 }
 
 function getElements() {
@@ -1786,7 +1786,7 @@ function getElements() {
       weight: 85,
       weight_modifier: [],
       prerequisites: ["強化外骨格"],
-      potential: {"OR": {"is_machine_empire": "yes", "is_individual_machine": "yes"}}
+      potential: {"OR": {"is_machine_empire": "yes", "is_individual_machine": "yes", "is_hive_empire_with_machines": "yes"}}
     },
     classes: 'engineering'
 },
@@ -4231,7 +4231,7 @@ function getElements() {
       weight: 75,
       weight_modifier: [{"factor": "1.5"}],
       prerequisites: [],
-      potential: {"OR": {"is_machine_empire": "yes", "is_individual_machine": "yes"}}
+      potential: {"OR": {"is_machine_empire": "yes", "is_individual_machine": "yes", "is_hive_empire_with_machines": "yes"}}
     },
     classes: 'engineering'
 },
@@ -6331,7 +6331,7 @@ function getElements() {
       weight: 65,
       weight_modifier: [],
       prerequisites: ["植民地集権化","機械テンプレートシステム"],
-      potential: {"OR": {"is_machine_empire": "yes", "is_individual_machine": "yes"}}
+      potential: {"OR": {"is_machine_empire": "yes", "is_individual_machine": "yes", "is_hive_empire_with_machines": "yes"}}
     },
     classes: 'engineering'
 },
@@ -6346,7 +6346,7 @@ function getElements() {
       weight: 50,
       weight_modifier: [{"factor": "1.5"}],
       prerequisites: ["マイクロレプリケーター"],
-      potential: {"OR": {"is_machine_empire": "yes", "is_individual_machine": "yes"}}
+      potential: {"OR": {"is_machine_empire": "yes", "is_individual_machine": "yes", "is_hive_empire_with_machines": "yes"}}
     },
     classes: 'engineering'
 },
@@ -7951,7 +7951,7 @@ function getElements() {
       weight: 45,
       weight_modifier: [{"factor": "0.5", "modifier": [{"factor": "0.20", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_expertise_industry"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_nanite_assemblers"}}}]}],
       prerequisites: ["バイナリモチベーター","銀河規模の行政機構"],
-      potential: {"OR": {"is_machine_empire": "yes", "is_individual_machine": "yes"}}
+      potential: {"OR": {"is_machine_empire": "yes", "is_individual_machine": "yes", "is_hive_empire_with_machines": "yes"}}
     },
     classes: 'engineering'
 },
@@ -7966,7 +7966,7 @@ function getElements() {
       weight: 45,
       weight_modifier: [{"factor": "0.5", "modifier": [{"factor": "0.20", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_expertise_industry"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_mega_assembly"}}}]}],
       prerequisites: ["バイナリモチベーター","銀河規模の行政機構"],
-      potential: {"OR": {"is_machine_empire": "yes", "is_individual_machine": "yes"}}
+      potential: {"OR": {"is_machine_empire": "yes", "is_individual_machine": "yes", "is_hive_empire_with_machines": "yes"}}
     },
     classes: 'engineering'
 },

@@ -9,7 +9,7 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28561.75)">
 <title>tech_tree</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-28561.75 3089.65,-28561.75 3089.65,4 -4,4"/>
-<text text-anchor="middle" x="1542.83" y="-5.35" font-family="BIZ UDPGothic" font-size="12.00">v4.4.4</text>
+<text text-anchor="middle" x="1542.83" y="-5.35" font-family="BIZ UDPGothic" font-size="12.00">v4.4.5</text>
 <g id="clust1" class="cluster">
 <title>cluster_tech_wilderness_terraform</title>
 <g id="a_clust1"><a xlink:title="前提研究:&#10;&#10;&#10;その他の条件:&#10;{&#10; &#160;&quot;is_wilderness_empire&quot;: &quot;yes&quot;&#10;}">
@@ -956,7 +956,7 @@
 </g>
 <g id="clust119" class="cluster">
 <title>cluster_tech_robomodding_m</title>
-<g id="a_clust119"><a xlink:title="前提研究:&#10;強化外骨格&#10;&#10;&#10;その他の条件:&#10;{&#10; &#160;&quot;OR&quot;: {&#10; &#160;&#160;&#160;&quot;is_machine_empire&quot;: &quot;yes&quot;,&#10; &#160;&#160;&#160;&quot;is_individual_machine&quot;: &quot;yes&quot;&#10; &#160;}&#10;}">
+<g id="a_clust119"><a xlink:title="前提研究:&#10;強化外骨格&#10;&#10;&#10;その他の条件:&#10;{&#10; &#160;&quot;OR&quot;: {&#10; &#160;&#160;&#160;&quot;is_machine_empire&quot;: &quot;yes&quot;,&#10; &#160;&#160;&#160;&quot;is_individual_machine&quot;: &quot;yes&quot;,&#10; &#160;&#160;&#160;&quot;is_hive_empire_with_machines&quot;: &quot;yes&quot;&#10; &#160;}&#10;}">
 <polygon fill="#cd853f" stroke="black" points="1374.08,-10155.75 1374.08,-10248.75 1522.83,-10248.75 1522.83,-10155.75 1374.08,-10155.75"/>
 <text text-anchor="middle" x="1448.45" y="-10233.35" font-family="BIZ UDPGothic" font-size="12.00">機械テンプレートシステム</text>
 </a>
@@ -2260,7 +2260,7 @@
 </g>
 <g id="clust282" class="cluster">
 <title>cluster_tech_micro_replicators</title>
-<g id="a_clust282"><a xlink:title="前提研究:&#10;&#10;&#10;その他の条件:&#10;{&#10; &#160;&quot;OR&quot;: {&#10; &#160;&#160;&#160;&quot;is_machine_empire&quot;: &quot;yes&quot;,&#10; &#160;&#160;&#160;&quot;is_individual_machine&quot;: &quot;yes&quot;&#10; &#160;}&#10;}">
+<g id="a_clust282"><a xlink:title="前提研究:&#10;&#10;&#10;その他の条件:&#10;{&#10; &#160;&quot;OR&quot;: {&#10; &#160;&#160;&#160;&quot;is_machine_empire&quot;: &quot;yes&quot;,&#10; &#160;&#160;&#160;&quot;is_individual_machine&quot;: &quot;yes&quot;,&#10; &#160;&#160;&#160;&quot;is_hive_empire_with_machines&quot;: &quot;yes&quot;&#10; &#160;}&#10;}">
 <polygon fill="#cd853f" stroke="black" points="52.5,-19416.75 52.5,-19509.75 187.75,-19509.75 187.75,-19416.75 52.5,-19416.75"/>
 <text text-anchor="middle" x="120.12" y="-19494.35" font-family="BIZ UDPGothic" font-size="12.00">マイクロレプリケーター</text>
 </a>
@@ -3380,7 +3380,7 @@
 </g>
 <g id="clust422" class="cluster">
 <title>cluster_tech_binary_motivators</title>
-<g id="a_clust422"><a xlink:title="前提研究:&#10;植民地集権化&#10;機械テンプレートシステム&#10;&#10;&#10;その他の条件:&#10;{&#10; &#160;&quot;OR&quot;: {&#10; &#160;&#160;&#160;&quot;is_machine_empire&quot;: &quot;yes&quot;,&#10; &#160;&#160;&#160;&quot;is_individual_machine&quot;: &quot;yes&quot;&#10; &#160;}&#10;}">
+<g id="a_clust422"><a xlink:title="前提研究:&#10;植民地集権化&#10;機械テンプレートシステム&#10;&#10;&#10;その他の条件:&#10;{&#10; &#160;&quot;OR&quot;: {&#10; &#160;&#160;&#160;&quot;is_machine_empire&quot;: &quot;yes&quot;,&#10; &#160;&#160;&#160;&quot;is_individual_machine&quot;: &quot;yes&quot;,&#10; &#160;&#160;&#160;&quot;is_hive_empire_with_machines&quot;: &quot;yes&quot;&#10; &#160;}&#10;}">
 <polygon fill="#cd853f" stroke="black" points="1702.2,-8277.75 1702.2,-8370.75 1827.7,-8370.75 1827.7,-8277.75 1702.2,-8277.75"/>
 <text text-anchor="middle" x="1764.95" y="-8355.35" font-family="BIZ UDPGothic" font-size="12.00">バイナリモチベーター</text>
 </a>
@@ -3388,7 +3388,7 @@
 </g>
 <g id="clust423" class="cluster">
 <title>cluster_tech_self_assembling_components</title>
-<g id="a_clust423"><a xlink:title="前提研究:&#10;マイクロレプリケーター&#10;&#10;&#10;その他の条件:&#10;{&#10; &#160;&quot;OR&quot;: {&#10; &#160;&#160;&#160;&quot;is_machine_empire&quot;: &quot;yes&quot;,&#10; &#160;&#160;&#160;&quot;is_individual_machine&quot;: &quot;yes&quot;&#10; &#160;}&#10;}">
+<g id="a_clust423"><a xlink:title="前提研究:&#10;マイクロレプリケーター&#10;&#10;&#10;その他の条件:&#10;{&#10; &#160;&quot;OR&quot;: {&#10; &#160;&#160;&#160;&quot;is_machine_empire&quot;: &quot;yes&quot;,&#10; &#160;&#160;&#160;&quot;is_individual_machine&quot;: &quot;yes&quot;,&#10; &#160;&#160;&#160;&quot;is_hive_empire_with_machines&quot;: &quot;yes&quot;&#10; &#160;}&#10;}">
 <polygon fill="#cd853f" stroke="black" points="382.12,-19416.75 382.12,-19509.75 534.62,-19509.75 534.62,-19416.75 382.12,-19416.75"/>
 <text text-anchor="middle" x="458.38" y="-19494.35" font-family="BIZ UDPGothic" font-size="12.00">自己組立式コンポーネント</text>
 </a>
@@ -4244,7 +4244,7 @@
 </g>
 <g id="clust530" class="cluster">
 <title>cluster_tech_nanite_assemblers</title>
-<g id="a_clust530"><a xlink:title="前提研究:&#10;バイナリモチベーター&#10;銀河規模の行政機構&#10;&#10;&#10;その他の条件:&#10;{&#10; &#160;&quot;OR&quot;: {&#10; &#160;&#160;&#160;&quot;is_machine_empire&quot;: &quot;yes&quot;,&#10; &#160;&#160;&#160;&quot;is_individual_machine&quot;: &quot;yes&quot;&#10; &#160;}&#10;}">
+<g id="a_clust530"><a xlink:title="前提研究:&#10;バイナリモチベーター&#10;銀河規模の行政機構&#10;&#10;&#10;その他の条件:&#10;{&#10; &#160;&quot;OR&quot;: {&#10; &#160;&#160;&#160;&quot;is_machine_empire&quot;: &quot;yes&quot;,&#10; &#160;&#160;&#160;&quot;is_individual_machine&quot;: &quot;yes&quot;,&#10; &#160;&#160;&#160;&quot;is_hive_empire_with_machines&quot;: &quot;yes&quot;&#10; &#160;}&#10;}">
 <polygon fill="#9370db" stroke="black" points="2014.23,-7001.75 2014.23,-7094.75 2132.68,-7094.75 2132.68,-7001.75 2014.23,-7001.75"/>
 <text text-anchor="middle" x="2073.45" y="-7079.35" font-family="BIZ UDPGothic" font-size="12.00">ナノマシン組立機</text>
 </a>
@@ -4252,7 +4252,7 @@
 </g>
 <g id="clust531" class="cluster">
 <title>cluster_tech_mega_assembly</title>
-<g id="a_clust531"><a xlink:title="前提研究:&#10;バイナリモチベーター&#10;銀河規模の行政機構&#10;&#10;&#10;その他の条件:&#10;{&#10; &#160;&quot;OR&quot;: {&#10; &#160;&#160;&#160;&quot;is_machine_empire&quot;: &quot;yes&quot;,&#10; &#160;&#160;&#160;&quot;is_individual_machine&quot;: &quot;yes&quot;&#10; &#160;}&#10;}">
+<g id="a_clust531"><a xlink:title="前提研究:&#10;バイナリモチベーター&#10;銀河規模の行政機構&#10;&#10;&#10;その他の条件:&#10;{&#10; &#160;&quot;OR&quot;: {&#10; &#160;&#160;&#160;&quot;is_machine_empire&quot;: &quot;yes&quot;,&#10; &#160;&#160;&#160;&quot;is_individual_machine&quot;: &quot;yes&quot;,&#10; &#160;&#160;&#160;&quot;is_hive_empire_with_machines&quot;: &quot;yes&quot;&#10; &#160;}&#10;}">
 <polygon fill="#9370db" stroke="black" points="1999.58,-6900.75 1999.58,-6993.75 2148.33,-6993.75 2148.33,-6900.75 1999.58,-6900.75"/>
 <text text-anchor="middle" x="2073.95" y="-6978.35" font-family="BIZ UDPGothic" font-size="12.00">メガアセンブリーシステム</text>
 </a>
