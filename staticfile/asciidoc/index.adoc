@@ -23,6 +23,9 @@
 * link:./leader_traits.html[リーダー特性一覧]
 * テクノロジーツリー (link:./tech_tree.svg[svg版] link:./tech_tree.html[cytoscape.js版])
 
+ツール::
+* link:./graph.html[Stellaris Empire Stats Viewer]
+
 
 == 外部リンク
 GitHub::

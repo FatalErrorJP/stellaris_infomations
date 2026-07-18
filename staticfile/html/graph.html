@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Stellaris Empire Stats Viewer</title>
+    <link rel="stylesheet" href="css/graph.css">
+    <!-- Chart.jsライブラリの読み込み -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js" integrity="sha256-SERKgtTty1vsDxll+qzd4Y2cF9swY9BCq62i9wXJ9Uo=" crossorigin="anonymous"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CPZ4W026XM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-CPZ4W026XM');
+    </script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- 左側コントロールパネル -->
+        <aside class="sidebar">
+            <div style="margin-bottom: 15px; text-align: left;">
+                <a href="./" style="color: #6366f1; text-decoration: none; font-size: 13px; font-weight: bold;">トップへ戻る</a>
+            </div>
+
+            <h1 class="app-title">Stellaris Empire Stats Viewer</h1>
+
+            <!-- ファイル読み込み -->
+            <div class="control-group">
+                <h3>ファイル読み込み</h3>
+                <div style="display: flex; gap: 8px; margin-bottom: 6px;">
+                    <label class="file-upload-btn" for="fileInput" style="flex: 1;">ファイルを追加</label>
+                    <button id="clearDataBtn" style="background-color: #e53e3e; color: white; border: none; border-radius: 4px; padding: 0 12px; cursor: pointer; font-size: 12px; font-weight: 500;">クリア</button>
+                </div>
+                <input type="file" id="fileInput" accept=".tsv" style="display: none;">
+                <div id="fileNameDisplay" class="file-name-display" title="ファイルが選択されていません">ファイルが選択されていません</div>
+            </div>
+
+            <!-- X軸表示期間 -->
+            <div class="control-group">
+                <h3>X軸 (表示期間)</h3>
+                <div style="display: flex; align-items: center; gap: 8px; color: #cfcfd6; font-size: 12px;">
+                    <input type="number" id="startYear" value="2200" style="width: 65px; background: #1a1a1f; color: #e0e0e3; border: 1px solid #33333f; border-radius: 4px; padding: 4px; text-align: center;"> 年
+                    <span>〜</span>
+                    <input type="number" id="endYear" value="2500" style="width: 65px; background: #1a1a1f; color: #e0e0e3; border: 1px solid #33333f; border-radius: 4px; padding: 4px; text-align: center;"> 年
+                </div>
+            </div>
+
+            <!-- X軸時間単位 -->
+            <div class="control-group">
+                <h3>X軸 (時間単位)</h3>
+                <div class="radio-group">
+                    <label><input type="radio" name="timeUnit" value="1m"> 1ヶ月</label>
+                    <label><input type="radio" name="timeUnit" value="1y" checked> 1年</label>
+                    <label><input type="radio" name="timeUnit" value="5y"> 5年</label>
+                    <label><input type="radio" name="timeUnit" value="10y"> 10年</label>
+                </div>
+            </div>
+
+            <!-- Y軸表示指標 -->
+            <div class="control-group">
+                <h3>Y軸 (表示指標)</h3>
+                <div class="checkbox-group-horizontal">
+                    <label><input type="checkbox" name="metric" value="Economy"> Economy</label>
+                    <label><input type="checkbox" name="metric" value="Military"> Military</label>
+                    <label><input type="checkbox" name="metric" value="Tech"> Tech</label>
+                    <label><input type="checkbox" name="metric" value="Total" checked> Total</label>
+                </div>
+            </div>
+
+            <!-- Empireフィルタ & 色指定 -->
+            <div class="control-group empire-group">
+                <h3>Empire フィルタ & 色設定</h3>
+                <div class="empire-bulk-actions">
+                    <button id="selectAllEmpires">すべて選択</button>
+                    <button id="deselectAllEmpires">すべて解除</button>
+                </div>
+                <div id="empireList" class="empire-list">
+                    <!-- JSで動的に追加されます -->
+                </div>
+            </div>
+        </aside>
+
+        <!-- 右側グラフ表示領域 -->
+        <main class="main-content">
+            <div class="chart-wrapper">
+                <canvas id="chartCanvas"></canvas>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/graph.js"></script>
+</body>
+</html>
