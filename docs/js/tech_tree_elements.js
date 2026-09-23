@@ -1,6 +1,6 @@
 
 function getVersion() {
-    return "v4.4.6";
+    return "v4.5.0";
 }
 
 function getElements() {
@@ -479,7 +479,7 @@ function getElements() {
       area:'社会学',
       category: '生物学',
       weight: 0,
-      weight_modifier: [{"factor": "2", "modifier": [{"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "is_infernal_empire": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_infernal_empire": "yes", "AND": {"is_individual_machine": "yes", "NOT": {"has_country_flag": "non_lithoid_subspecies"}}}}, {"factor": "2", "has_relic": "r_pox_sample"}, {"factor": "2", "country_uses_bio_ships": "yes"}]}],
+      weight_modifier: [{"factor": "2", "modifier": [{"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "is_infernal_empire": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_infernal_empire": "yes", "AND": {"is_individual_machine": "yes", "NOT": {"has_country_flag": "non_lithoid_subspecies"}}}}, {"factor": "2", "has_relic": "r_pox_sample"}, {"factor": "2", "country_uses_bio_ships": "yes"}]}],
       prerequisites: [],
       potential: {"is_wilderness_empire": "no"}
     },
@@ -764,7 +764,7 @@ function getElements() {
       area:'工学',
       category: '産業学',
       weight: 100,
-      weight_modifier: [{"modifier": [{"factor": "1.2", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_shared_knowledge\""}, {"factor": "1.5", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_protection_initiative\""}, {"factor": "1.75", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_galactic_management\""}, {"factor": "10000", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_utilization_protocols\""}, {"factor": "10000", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_manipulation_mandate\""}, {"factor": "value:storm_callers_councilor_tech_discovery_chance_multiplier", "any_owned_leader": {"is_councilor": "yes", "OR": {"is_councilor_type": "councilor_storm_callers_megacorp"}}}, {"factor": "@storm_chasers_storm_tech_weight_mult", "has_origin": "origin_storm_chasers"}, {"factor": "0"}, {"factor": "2", "OR": {"has_origin": "origin_storm_chasers", "has_storm_attraction_civic": "yes"}}]}],
+      weight_modifier: [{"modifier": [{"factor": "1.2", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_shared_knowledge\""}, {"factor": "1.5", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_protection_initiative\""}, {"factor": "1.75", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_galactic_management\""}, {"factor": "10000", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_utilization_protocols\""}, {"factor": "10000", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_manipulation_mandate\""}, {"factor": "value:storm_callers_councilor_tech_discovery_chance_multiplier", "any_owned_leader": {"is_councilor": "yes", "OR": {"is_councilor_type": "councilor_storm_callers_megacorp"}}}, {"factor": "@storm_chasers_storm_tech_weight_mult", "has_origin": "origin_storm_chasers"}, {"factor": "0", "is_nomadic": "no"}, {"factor": "2", "OR": {"has_origin": "origin_storm_chasers", "has_storm_attraction_civic": "yes"}}]}],
       prerequisites: [],
       potential: {"has_cosmic_storms_dlc": "yes"}
     },
@@ -779,7 +779,7 @@ function getElements() {
       area:'物理学',
       category: 'コンピュータ',
       weight: 90,
-      weight_modifier: [{"modifier": [{"factor": "1.2", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_shared_knowledge\""}, {"factor": "1.5", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_protection_initiative\""}, {"factor": "1.75", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_galactic_management\""}, {"factor": "10000", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_utilization_protocols\""}, {"factor": "10000", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_manipulation_mandate\""}, {"factor": "value:storm_callers_councilor_tech_discovery_chance_multiplier", "any_owned_leader": {"is_councilor": "yes", "OR": {"is_councilor_type": "councilor_storm_callers_megacorp"}}}, {"factor": "@storm_chasers_storm_tech_weight_mult", "has_origin": "origin_storm_chasers"}, {"factor": "0"}, {"factor": "2", "OR": {"has_origin": "origin_storm_chasers", "has_storm_attraction_civic": "yes"}}]}],
+      weight_modifier: [{"modifier": [{"factor": "1.2", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_shared_knowledge\""}, {"factor": "1.5", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_protection_initiative\""}, {"factor": "1.75", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_galactic_management\""}, {"factor": "10000", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_utilization_protocols\""}, {"factor": "10000", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_manipulation_mandate\""}, {"factor": "value:storm_callers_councilor_tech_discovery_chance_multiplier", "any_owned_leader": {"is_councilor": "yes", "OR": {"is_councilor_type": "councilor_storm_callers_megacorp"}}}, {"factor": "@storm_chasers_storm_tech_weight_mult", "has_origin": "origin_storm_chasers"}, {"factor": "0", "is_nomadic": "no"}, {"factor": "2", "OR": {"has_origin": "origin_storm_chasers", "has_storm_attraction_civic": "yes"}}]}],
       prerequisites: ["惑星規模の嵐対策"],
       potential: {"has_cosmic_storms_dlc": "yes"}
     },
@@ -794,7 +794,7 @@ function getElements() {
       area:'工学',
       category: '材料工学',
       weight: 100,
-      weight_modifier: [{"modifier": [{"factor": "1.2", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_shared_knowledge\""}, {"factor": "1.5", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_protection_initiative\""}, {"factor": "1.75", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_galactic_management\""}, {"factor": "10000", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_utilization_protocols\""}, {"factor": "10000", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_manipulation_mandate\""}, {"factor": "value:storm_callers_councilor_tech_discovery_chance_multiplier", "any_owned_leader": {"is_councilor": "yes", "OR": {"is_councilor_type": "councilor_storm_callers_megacorp"}}}, {"factor": "@storm_chasers_storm_tech_weight_mult", "has_origin": "origin_storm_chasers"}, {"factor": "0"}, {"factor": "2", "OR": {"has_origin": "origin_storm_chasers", "has_storm_attraction_civic": "yes"}}]}],
+      weight_modifier: [{"modifier": [{"factor": "1.2", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_shared_knowledge\""}, {"factor": "1.5", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_protection_initiative\""}, {"factor": "1.75", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_galactic_management\""}, {"factor": "10000", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_utilization_protocols\""}, {"factor": "10000", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_manipulation_mandate\""}, {"factor": "value:storm_callers_councilor_tech_discovery_chance_multiplier", "any_owned_leader": {"is_councilor": "yes", "OR": {"is_councilor_type": "councilor_storm_callers_megacorp"}}}, {"factor": "@storm_chasers_storm_tech_weight_mult", "has_origin": "origin_storm_chasers"}, {"factor": "0", "is_nomadic": "no"}, {"factor": "2", "OR": {"has_origin": "origin_storm_chasers", "has_storm_attraction_civic": "yes"}}]}],
       prerequisites: ["宇宙気象モデル"],
       potential: {"has_cosmic_storms_dlc": "yes"}
     },
@@ -809,7 +809,7 @@ function getElements() {
       area:'工学',
       category: '宇宙工学',
       weight: 100,
-      weight_modifier: [{"modifier": [{"factor": "1.2", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_shared_knowledge\""}, {"factor": "1.5", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_protection_initiative\""}, {"factor": "1.75", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_galactic_management\""}, {"factor": "10000", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_utilization_protocols\""}, {"factor": "10000", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_manipulation_mandate\""}, {"factor": "value:storm_callers_councilor_tech_discovery_chance_multiplier", "any_owned_leader": {"is_councilor": "yes", "OR": {"is_councilor_type": "councilor_storm_callers_megacorp"}}}, {"factor": "@storm_chasers_storm_tech_weight_mult", "has_origin": "origin_storm_chasers"}, {"factor": "0"}, {"factor": "2", "OR": {"has_origin": "origin_storm_chasers", "has_storm_attraction_civic": "yes"}}]}],
+      weight_modifier: [{"modifier": [{"factor": "1.2", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_shared_knowledge\""}, {"factor": "1.5", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_protection_initiative\""}, {"factor": "1.75", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_galactic_management\""}, {"factor": "10000", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_utilization_protocols\""}, {"factor": "10000", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_manipulation_mandate\""}, {"factor": "value:storm_callers_councilor_tech_discovery_chance_multiplier", "any_owned_leader": {"is_councilor": "yes", "OR": {"is_councilor_type": "councilor_storm_callers_megacorp"}}}, {"factor": "@storm_chasers_storm_tech_weight_mult", "has_origin": "origin_storm_chasers"}, {"factor": "0", "is_nomadic": "no"}, {"factor": "2", "OR": {"has_origin": "origin_storm_chasers", "has_storm_attraction_civic": "yes"}}]}],
       prerequisites: ["宇宙気象モデル"],
       potential: {"has_cosmic_storms_dlc": "yes"}
     },
@@ -1424,7 +1424,7 @@ function getElements() {
       area:'社会学',
       category: '生物学',
       weight: 100,
-      weight_modifier: [{"modifier": [{"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "is_infernal_empire": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_infernal_empire": "yes", "AND": {"is_individual_machine": "yes", "NOT": {"has_country_flag": "non_lithoid_subspecies"}}}}, {"factor": "1.25", "has_ethic": "ethic_pacifist"}, {"factor": "1.5", "has_ethic": "ethic_fanatic_pacifist"}, {"factor": "2", "has_relic": "r_pox_sample"}, {"factor": "2", "country_uses_bio_ships": "yes"}, {"factor": "5", "OR": {"has_country_flag": "non_lithoid_subspecies", "country_uses_bio_ships": "yes", "AND": {"is_machine_empire": "no", "is_lithoid_empire": "no", "is_individual_machine": "no"}}, "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}]}],
+      weight_modifier: [{"modifier": [{"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "is_infernal_empire": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_infernal_empire": "yes", "AND": {"is_individual_machine": "yes", "NOT": {"has_country_flag": "non_lithoid_subspecies"}}}}, {"factor": "1.25", "has_ethic": "ethic_pacifist"}, {"factor": "1.5", "has_ethic": "ethic_fanatic_pacifist"}, {"factor": "2", "has_relic": "r_pox_sample"}, {"factor": "2", "country_uses_bio_ships": "yes"}, {"factor": "5", "OR": {"has_country_flag": "non_lithoid_subspecies", "country_uses_bio_ships": "yes", "AND": {"is_machine_empire": "no", "is_lithoid_empire": "no", "is_individual_machine": "no"}}, "any_owned_planet": {"OR": {"has_any_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}]}],
       prerequisites: ["農産業"],
       potential: {}
     },
@@ -1439,7 +1439,7 @@ function getElements() {
       area:'社会学',
       category: '生物学',
       weight: 95,
-      weight_modifier: [{"modifier": [{"factor": "2", "country_uses_food": "yes"}, {"factor": "1.25", "has_tradition": "tr_prosperity_adopt", "country_uses_food": "yes"}, {"factor": "5", "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}, {"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "is_infernal_empire": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "country_uses_food": "no"}, {"factor": "1.5", "OR": {"has_valid_civic": "civic_agrarian_idyll", "is_anglers_empire": "yes"}}, {"factor": "2", "is_catalytic_empire": "yes"}, {"factor": "2", "has_relic": "r_pox_sample"}]}],
+      weight_modifier: [{"modifier": [{"factor": "2", "country_uses_food": "yes"}, {"factor": "1.25", "has_tradition": "tr_prosperity_adopt", "country_uses_food": "yes"}, {"factor": "5", "any_owned_planet": {"OR": {"has_any_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}, {"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "is_infernal_empire": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "country_uses_food": "no"}, {"factor": "1.5", "OR": {"has_valid_civic": "civic_agrarian_idyll", "is_anglers_empire": "yes"}}, {"factor": "2", "is_catalytic_empire": "yes"}, {"factor": "2", "has_relic": "r_pox_sample"}]}],
       prerequisites: ["環境シミュレーション"],
       potential: {}
     },
@@ -2009,7 +2009,7 @@ function getElements() {
       area:'物理学',
       category: '力場操作',
       weight: 75,
-      weight_modifier: [{"modifier": [{"factor": "1.2", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_shared_knowledge\""}, {"factor": "1.5", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_protection_initiative\""}, {"factor": "1.75", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_galactic_management\""}, {"factor": "10000", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_utilization_protocols\""}, {"factor": "10000", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_manipulation_mandate\""}, {"factor": "value:storm_callers_councilor_tech_discovery_chance_multiplier", "any_owned_leader": {"is_councilor": "yes", "OR": {"is_councilor_type": "councilor_storm_callers_megacorp"}}}, {"factor": "@storm_chasers_storm_tech_weight_mult", "has_origin": "origin_storm_chasers"}, {"factor": "0", "OR": {"has_origin": "origin_storm_chasers"}}]}],
+      weight_modifier: [{"modifier": [{"factor": "1.2", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_shared_knowledge\""}, {"factor": "1.5", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_protection_initiative\""}, {"factor": "1.75", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_galactic_management\""}, {"factor": "10000", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_utilization_protocols\""}, {"factor": "10000", "is_galactic_community_member": "yes", "is_active_resolution": "\"resolution_cosmic_storms_manipulation_mandate\""}, {"factor": "value:storm_callers_councilor_tech_discovery_chance_multiplier", "any_owned_leader": {"is_councilor": "yes", "OR": {"is_councilor_type": "councilor_storm_callers_megacorp"}}}, {"factor": "@storm_chasers_storm_tech_weight_mult", "has_origin": "origin_storm_chasers"}, {"factor": "0", "has_origin": "origin_storm_chasers"}, {"factor": "0", "is_nomadic": "no"}]}],
       prerequisites: ["惑星規模の嵐対策"],
       potential: {"has_cosmic_storms_dlc": "yes"}
     },
@@ -2992,21 +2992,6 @@ function getElements() {
 },
 {
     data: {
-      id: 'tech_dyson_gun',
-      name: '恒星砲',
-      tier: 2,
-      cost: 3000,
-      area:'工学',
-      category: '材料工学',
-      weight: 70,
-      weight_modifier: [{"modifier": [{"factor": "0.5"}, {"factor": "0.2", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "2", "OR": {"has_megastructure": "dyson_gun_3"}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_dyson_gun"}}}]}],
-      prerequisites: [],
-      potential: {"has_nomads_dlc": "yes", "is_nomadic": "no"}
-    },
-    classes: 'engineering'
-},
-{
-    data: {
       id: 'tech_hyper_relays',
       name: 'ハイパーリレイ',
       tier: 2,
@@ -3419,7 +3404,7 @@ function getElements() {
       area:'社会学',
       category: '生物学',
       weight: 85,
-      weight_modifier: [{"modifier": [{"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "is_infernal_empire": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_infernal_empire": "yes", "AND": {"is_individual_machine": "yes", "NOT": {"has_country_flag": "non_lithoid_subspecies"}}}}, {"factor": "1.25", "has_ethic": "ethic_pacifist"}, {"factor": "1.5", "has_ethic": "ethic_fanatic_pacifist"}, {"factor": "2", "has_relic": "r_pox_sample"}, {"factor": "2", "country_uses_bio_ships": "yes"}]}],
+      weight_modifier: [{"modifier": [{"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "is_infernal_empire": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_infernal_empire": "yes", "AND": {"is_individual_machine": "yes", "NOT": {"has_country_flag": "non_lithoid_subspecies"}}}}, {"factor": "1.25", "has_ethic": "ethic_pacifist"}, {"factor": "1.5", "has_ethic": "ethic_fanatic_pacifist"}, {"factor": "2", "has_relic": "r_pox_sample"}, {"factor": "2", "country_uses_bio_ships": "yes"}]}],
       prerequisites: ["環境シミュレーション"],
       potential: {"is_wilderness_empire": "no"}
     },
@@ -3539,7 +3524,7 @@ function getElements() {
       area:'社会学',
       category: '新天地',
       weight: 70,
-      weight_modifier: [{"factor": "1.5", "modifier": [{"factor": "0", "is_lithoid_devouring_swarm": "yes"}, {"factor": "1.25", "has_tradition": "tr_expansion_adopt"}, {"factor": "1.25", "has_trait": "trait_aquatic"}, {"factor": "1.25", "has_trait": "trait_robot_aquatic"}, {"factor": "1.25", "has_origin": "origin_life_seeded"}, {"add": "5", "has_origin": "origin_wilderness"}]}],
+      weight_modifier: [{"factor": "1.5", "modifier": [{"factor": "0", "is_lithoid_devouring_swarm": "yes"}, {"factor": "1.25", "has_tradition": "tr_expansion_adopt"}, {"factor": "1.25", "has_aquatic_trait": "yes"}, {"factor": "1.25", "has_origin": "origin_life_seeded"}, {"add": "5", "has_origin": "origin_wilderness"}]}],
       prerequisites: ["OR","=","{","新天地プロトコル","惑星工学","}"],
       potential: {"is_nomadic": "no"}
     },
@@ -5317,6 +5302,21 @@ function getElements() {
 },
 {
     data: {
+      id: 'tech_dyson_gun',
+      name: '恒星砲',
+      tier: 3,
+      cost: 6000,
+      area:'工学',
+      category: '材料工学',
+      weight: 50,
+      weight_modifier: [{"modifier": [{"factor": "0.5"}, {"factor": "0.2", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "2", "OR": {"has_megastructure": "dyson_gun_3"}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_dyson_gun"}}}]}],
+      prerequisites: ["ワームホール安定化","紫外線レーザー"],
+      potential: {"has_nomads_dlc": "yes", "is_nomadic": "no"}
+    },
+    classes: 'engineering'
+},
+{
+    data: {
       id: 'tech_quantum_catapult',
       name: '量子カタパルト',
       tier: 3,
@@ -5699,7 +5699,7 @@ function getElements() {
       area:'社会学',
       category: '生物学',
       weight: 65,
-      weight_modifier: [{"modifier": [{"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "is_infernal_empire": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_infernal_empire": "yes", "AND": {"is_individual_machine": "yes", "NOT": {"has_country_flag": "non_lithoid_subspecies"}}}}, {"factor": "1.25", "has_ethic": "ethic_pacifist"}, {"factor": "1.5", "has_ethic": "ethic_fanatic_pacifist"}, {"factor": "2", "has_relic": "r_pox_sample"}, {"factor": "2", "country_uses_bio_ships": "yes"}]}],
+      weight_modifier: [{"modifier": [{"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "is_infernal_empire": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_infernal_empire": "yes", "AND": {"is_individual_machine": "yes", "NOT": {"has_country_flag": "non_lithoid_subspecies"}}}}, {"factor": "1.25", "has_ethic": "ethic_pacifist"}, {"factor": "1.5", "has_ethic": "ethic_fanatic_pacifist"}, {"factor": "2", "has_relic": "r_pox_sample"}, {"factor": "2", "country_uses_bio_ships": "yes"}]}],
       prerequisites: ["遺伝子改良作物"],
       potential: {"is_wilderness_empire": "no"}
     },
@@ -5714,7 +5714,7 @@ function getElements() {
       area:'社会学',
       category: '生物学',
       weight: 65,
-      weight_modifier: [{"factor": "2", "modifier": [{"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "is_infernal_empire": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_infernal_empire": "yes", "AND": {"is_individual_machine": "yes", "NOT": {"has_country_flag": "non_lithoid_subspecies"}}}}, {"factor": "0", "NOR": {"has_technology": "tech_volatile_motes", "has_country_flag": "has_market_access"}}, {"factor": "2", "has_relic": "r_pox_sample"}, {"factor": "2", "country_uses_bio_ships": "yes"}]}],
+      weight_modifier: [{"factor": "2", "modifier": [{"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "is_infernal_empire": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_infernal_empire": "yes", "AND": {"is_individual_machine": "yes", "NOT": {"has_country_flag": "non_lithoid_subspecies"}}}}, {"factor": "0", "NOR": {"has_technology": "tech_volatile_motes", "has_country_flag": "has_market_access"}}, {"factor": "2", "has_relic": "r_pox_sample"}, {"factor": "2", "country_uses_bio_ships": "yes"}]}],
       prerequisites: ["食品加工"],
       potential: {}
     },
@@ -7649,7 +7649,7 @@ function getElements() {
       area:'社会学',
       category: '生物学',
       weight: 35,
-      weight_modifier: [{"modifier": [{"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "is_infernal_empire": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_capped_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_infernal_empire": "yes", "AND": {"is_individual_machine": "yes", "NOT": {"has_country_flag": "non_lithoid_subspecies"}}}}, {"factor": "0.50", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_curator"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_nutrient_replication"}}}, {"factor": "1.25", "has_ethic": "ethic_pacifist"}, {"factor": "1.5", "has_ethic": "ethic_fanatic_pacifist"}, {"factor": "2", "has_relic": "r_pox_sample"}, {"factor": "2", "country_uses_bio_ships": "yes"}]}],
+      weight_modifier: [{"modifier": [{"factor": "0.01", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_individual_machine": "yes", "is_infernal_empire": "yes", "has_origin": "origin_synthetic_fertility"}, "NOR": {"has_country_flag": "non_lithoid_subspecies", "has_valid_civic": "civic_machine_assimilator", "any_owned_planet": {"OR": {"has_any_planet_farming_district": "yes", "has_any_agriculture_zone": "yes"}}}}, {"factor": "0.5", "OR": {"is_machine_empire": "yes", "is_lithoid_empire": "yes", "is_infernal_empire": "yes", "AND": {"is_individual_machine": "yes", "NOT": {"has_country_flag": "non_lithoid_subspecies"}}}}, {"factor": "0.50", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_curator"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_nutrient_replication"}}}, {"factor": "1.25", "has_ethic": "ethic_pacifist"}, {"factor": "1.5", "has_ethic": "ethic_fanatic_pacifist"}, {"factor": "2", "has_relic": "r_pox_sample"}, {"factor": "2", "country_uses_bio_ships": "yes"}]}],
       prerequisites: ["ナノ活性化作物"],
       potential: {"is_machine_empire": "no", "is_wilderness_empire": "no"}
     },
@@ -9524,7 +9524,7 @@ function getElements() {
       area:'工学',
       category: '宇宙工学',
       weight: 20,
-      weight_modifier: [{"factor": "0.25", "modifier": [{"factor": "1.5", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_mega_engineering"}}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_starhold"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_starhold"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_starhold"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_starhold"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_starhold"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_starhold"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_citadel"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_citadel"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_citadel"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_citadel"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_citadel"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_citadel"}}, {"factor": "2", "any_owned_planet": {"is_planet_class": "pc_habitat"}}, {"factor": "1.5", "any_neighbor_country": {"has_technology": "tech_mega_engineering"}}, {"factor": "20", "OR": {"has_any_megastructure_in_empire": "yes", "has_origin": "origin_shattered_ring"}}, {"factor": "1.5", "is_nomadic": "yes", "count_starbase_sizes": {"starbase_size": "starbase_waystation_2"}}, {"factor": "1.5", "is_nomadic": "yes", "count_starbase_sizes": {"starbase_size": "starbase_waystation_2"}}, {"factor": "1.5", "is_nomadic": "yes", "count_starbase_sizes": {"starbase_size": "starbase_waystation_3"}}, {"factor": "1.5", "is_nomadic": "yes", "count_starbase_sizes": {"starbase_size": "starbase_waystation_3"}}, {"factor": "1.5", "is_nomadic": "yes", "any_owned_nonprimary_starbase": {"is_waystation_starbase": "yes", "solar_system": {"space_owner": {"has_technology": "tech_mega_engineering"}}}}, {"factor": "20", "is_nomadic": "yes", "any_owned_nonprimary_starbase": {"is_waystation_starbase": "yes", "solar_system": {"any_system_megastructure": {"always": "yes"}}}}]}],
+      weight_modifier: [{"factor": "0.25", "modifier": [{"factor": "1.5", "OR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_mega_engineering"}}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_starhold"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_starhold"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_starhold"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_starhold"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_starhold"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_starhold"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_citadel"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_citadel"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_citadel"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_citadel"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_citadel"}}, {"factor": "1.5", "count_starbase_sizes": {"starbase_size": "starbase_citadel"}}, {"factor": "2", "any_owned_planet": {"is_planet_class": "pc_habitat"}}, {"factor": "1.5", "any_neighbor_country": {"has_technology": "tech_mega_engineering"}}, {"factor": "20", "OR": {"has_any_megastructure_in_empire": "yes", "has_origin": "origin_shattered_ring"}}, {"factor": "1.5", "is_nomadic": "yes", "count_starbase_sizes": {"starbase_size": "starbase_waystation_2"}}, {"factor": "1.5", "is_nomadic": "yes", "count_starbase_sizes": {"starbase_size": "starbase_waystation_2"}}, {"factor": "1.5", "is_nomadic": "yes", "count_starbase_sizes": {"starbase_size": "starbase_waystation_3"}}, {"factor": "1.5", "is_nomadic": "yes", "count_starbase_sizes": {"starbase_size": "starbase_waystation_3"}}, {"factor": "1.5", "is_nomadic": "yes", "any_owned_nonprimary_starbase": {"is_waystation_starbase": "yes", "solar_system": {"space_owner?": {"has_technology": "tech_mega_engineering"}}}}, {"factor": "20", "is_nomadic": "yes", "any_owned_nonprimary_starbase": {"is_waystation_starbase": "yes", "solar_system": {"any_system_megastructure": {"always": "yes"}}}}]}],
       prerequisites: ["OR","=","{","シタデルの建設","箱舟工学の習熟","}","ゼロポイント発電","OR","=","{","戦艦","スティンガー","}"],
       potential: {}
     },
@@ -9883,8 +9883,8 @@ function getElements() {
       cost: 20000,
       area:'社会学',
       category: '超能力',
-      weight: 25,
-      weight_modifier: [{"factor": "0.1", "modifier": [{"factor": "0"}, {"factor": "0.1", "NOR": {"has_trait_in_council": {"TRAIT": "leader_trait_maniacal_3"}}}, {"factor": "@federation_perk_factor", "has_federation": "yes", "federation": {"has_federation_perk": "rare_tech_boost", "any_member": {"has_technology": "tech_psi_jump_drive_1"}}}, {"factor": "@ap_grasp_the_void_travel_tech", "has_ascension_perk": "ap_grasp_the_void"}, {"factor": "@eager_explorer_effect", "is_eager_explorer_empire": "yes"}, {"factor": "@ap_grasp_the_void_travel_tech", "has_country_flag": "jaunted_traveler_secret_revealed"}]}],
+      weight: 0,
+      weight_modifier: [],
       prerequisites: ["予知型インターフェース"],
       potential: {"OR": {"has_shroud_dlc": "yes", "NOT": {"has_ethic": "ethic_gestalt_consciousness"}}}
     },
@@ -9914,7 +9914,7 @@ function getElements() {
       area:'社会学',
       category: '超能力',
       weight: 0,
-      weight_modifier: [{"factor": "0"}],
+      weight_modifier: [],
       prerequisites: ["超能力理論"],
       potential: {}
     },
@@ -9929,7 +9929,7 @@ function getElements() {
       area:'社会学',
       category: '超能力',
       weight: 0,
-      weight_modifier: [{"factor": "0"}],
+      weight_modifier: [],
       prerequisites: ["超能力理論"],
       potential: {}
     },
@@ -9944,7 +9944,7 @@ function getElements() {
       area:'社会学',
       category: '超能力',
       weight: 0,
-      weight_modifier: [{"factor": "0"}],
+      weight_modifier: [],
       prerequisites: ["超能力理論"],
       potential: {}
     },
@@ -9959,7 +9959,7 @@ function getElements() {
       area:'社会学',
       category: '超能力',
       weight: 0,
-      weight_modifier: [{"factor": "0"}],
+      weight_modifier: [],
       prerequisites: ["超能力理論"],
       potential: {}
     },
@@ -9974,7 +9974,7 @@ function getElements() {
       area:'社会学',
       category: '超能力',
       weight: 0,
-      weight_modifier: [{"factor": "0"}],
+      weight_modifier: [],
       prerequisites: ["超能力理論"],
       potential: {}
     },
@@ -9989,7 +9989,7 @@ function getElements() {
       area:'社会学',
       category: '超能力',
       weight: 0,
-      weight_modifier: [{"factor": "0"}],
+      weight_modifier: [],
       prerequisites: ["超能力理論"],
       potential: {}
     },
@@ -10478,6 +10478,8 @@ function getElements() {
 { data: { id: 'tech_mauler_growth_2_to_tech_military_arkship', source: 'tech_mauler_growth_2', target: 'tech_military_arkship' } },
 { data: { id: 'tech_arkship_construction_to_tech_military_arkship', source: 'tech_arkship_construction', target: 'tech_military_arkship' } },
 { data: { id: 'tech_waystation_2_to_tech_waystation_3', source: 'tech_waystation_2', target: 'tech_waystation_3' } },
+{ data: { id: 'tech_wormhole_stabilization_to_tech_dyson_gun', source: 'tech_wormhole_stabilization', target: 'tech_dyson_gun' } },
+{ data: { id: 'tech_lasers_3_to_tech_dyson_gun', source: 'tech_lasers_3', target: 'tech_dyson_gun' } },
 { data: { id: 'tech_starbase_3_to_tech_orbital_ring_tier_1', source: 'tech_starbase_3', target: 'tech_orbital_ring_tier_1' } },
 { data: { id: 'tech_galactic_administration_to_tech_orbital_ring_tier_1', source: 'tech_galactic_administration', target: 'tech_orbital_ring_tier_1' } },
 { data: { id: 'tech_planetary_infrastructure_1_to_tech_orbital_ring_tier_1', source: 'tech_planetary_infrastructure_1', target: 'tech_orbital_ring_tier_1' } },

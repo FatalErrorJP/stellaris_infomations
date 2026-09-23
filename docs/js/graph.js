@@ -329,10 +329,10 @@ function updateChart() {
                         chart.data.datasets.forEach(ds => {
                             if (ds.empireName === hoveredEmpire) {
                                 ds.borderColor = ds.originalColor; 
-                                ds.borderWidth = ds.originalBorderWidth + 3; 
+                                ds.borderWidth = ds.originalBorderWidth + 3;
                             } else {
                                 ds.borderColor = hexToRgba(ds.originalColor, 0.15); 
-                                ds.borderWidth = 1; 
+                                ds.borderWidth = 2;
                             }
                         });
                         chart.update(); 
@@ -404,7 +404,7 @@ function updateChart() {
                                     ds.borderWidth = ds.originalBorderWidth + 3;
                                 } else {
                                     ds.borderColor = hexToRgba(ds.originalColor, 0.15);
-                                    ds.borderWidth = 1;
+                                    ds.borderWidth = 2;
                                 }
                             });
                             chart.update();

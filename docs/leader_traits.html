@@ -5,8 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.23">
-<meta name="author" content="最終更新日: 2026-07-18 13:43:41 +0900">
-<title>リーダー特性一覧 Verv4.4.6</title>
+<meta name="author" content="最終更新日: 2026-09-23 13:03:12 +0900">
+<title>リーダー特性一覧 Verv4.5.0</title>
 <link rel="stylesheet" href="./css/leader_traits.css">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CPZ4W026XM"></script>
@@ -20,9 +20,9 @@
 </head>
 <body class="article">
 <div id="header">
-<h1>リーダー特性一覧 Verv4.4.6</h1>
+<h1>リーダー特性一覧 Verv4.5.0</h1>
 <div class="details">
-<span id="author" class="author">最終更新日: 2026-07-18 13:43:41 +0900</span><br>
+<span id="author" class="author">最終更新日: 2026-09-23 13:03:12 +0900</span><br>
 </div>
 </div>
 <div id="content">
@@ -1130,7 +1130,7 @@ leader_trait_reckless_2<br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>custom_tooltip:<br>
-£military_ship£ §Y軍事艦隊§!§E効果§!：\n    敵帝国艦船を破壊した数につき：\n        £energy£ §Yエネルギー通貨§!： 破壊された艦船の§H宇宙軍許容量§!§Y5§!につき§G+@trait_corsair_amt§!</p>
+£military_ship£ §Y軍事艦隊§!§E効果§!：\n    敵帝国艦船を破壊した数につき：\n        £energy£ §Yエネルギー通貨§!： 破壊された艦船の§H宇宙軍許容量§!§Y@corvette_size_multiplier|0§!につき§G+@trait_corsair_amt§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -1195,7 +1195,7 @@ leader_trait_reckless_2<br></p>
 ・ships_upkeep_mult(艦船維持費) = -0.10<br>
 <br>
 custom_tooltip:<br>
-£military_ship£ §Y軍事艦隊§!§E効果§!：\n    敵帝国艦船を破壊した数につき：\n        £energy£ §Yエネルギー通貨§!： 破壊された艦船の§H宇宙軍許容量§!§Y5§!につき§G+@trait_corsair_2_amt§!</p>
+£military_ship£ §Y軍事艦隊§!§E効果§!：\n    敵帝国艦船を破壊した数につき：\n        £energy£ §Yエネルギー通貨§!： 破壊された艦船の§H宇宙軍許容量§!§Y@corvette_size_multiplier|0§!につき§G+@trait_corsair_2_amt§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -1347,7 +1347,7 @@ custom_tooltip:<br>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>custom_tooltip:<br>
-£military_ship£ §Y軍事艦隊§!§E効果§!:\n    敵帝国艦船を1隻破壊するごとに：\n        £alloys£ §Y合金§!： 破壊された艦船の§H宇宙軍許容量§!§Y5§!につき§G+@trait_shipbreaker_amt|1§!</p>
+£military_ship£ §Y軍事艦隊§!§E効果§!:\n    敵帝国艦船を1隻破壊するごとに：\n        £alloys£ §Y合金§!： 破壊された艦船の§H宇宙軍許容量§!§Y@corvette_size_multiplier|0§!につき§G+@trait_shipbreaker_amt|1§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -1404,7 +1404,7 @@ custom_tooltip:<br>
 ・ship_armor_hardening_add(装甲強化) = 0.15<br>
 <br>
 custom_tooltip:<br>
-£military_ship£ §Y軍事艦隊§!§E効果§!:\n    敵艦船を1隻破壊するごとに：\n        £alloys£ §Y合金§!： 破壊された艦船の§H宇宙軍許容量§!§Y5§!につき§G+@trait_shipbreaker_2_amt|1§!</p>
+£military_ship£ §Y軍事艦隊§!§E効果§!:\n    敵艦船を1隻破壊するごとに：\n        £alloys£ §Y合金§!： 破壊された艦船の§H宇宙軍許容量§!§Y@corvette_size_multiplier|0§!につき§G+@trait_shipbreaker_2_amt|1§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -2311,7 +2311,7 @@ leader_trait_wrecker_2<br></p>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>艦隊:<br>
+<p>リーダーアサイン時:<br>
 ・ship_speed_mult(亜光速移動速度) = 0.25<br>
 ・ship_hyperlane_range_add(船のハイパーレーン認識距離) = 4<br>
 ・fleet_mia_time_mult(行方不明状態でいる時間) = -0.25<br>
@@ -5426,7 +5426,7 @@ custom_tooltip:<br>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>custom_tooltip:<br>
-£military_ship£ §Y軍事艦隊§!§E効果§!：\n    敵帝国艦船を破壊した数につき：\n        £unity£ §Y統合力§!： 破壊された艦船の§H宇宙軍許容量§!§Y5§!につき§G+@trait_crusader_fleet_amt|1§!\n\n£army_ship£ §Y地上軍§!§E効果§!：\n    戦死した敵の数につき：\n        £unity£ §Y統合力§!：§G+25§!</p>
+£military_ship£ §Y軍事艦隊§!§E効果§!：\n    敵帝国艦船を破壊した数につき：\n        £unity£ §Y統合力§!： 破壊された艦船の§H宇宙軍許容量§!§Y@corvette_size_multiplier|0§!につき§G+@trait_crusader_fleet_amt|1§!\n\n£army_ship£ §Y地上軍§!§E効果§!：\n    戦死した敵の数につき：\n        £unity£ §Y統合力§!：§G+25§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -5488,7 +5488,7 @@ custom_tooltip:<br>
 ・army_morale(地上軍の士気) = 0.25<br>
 <br>
 custom_tooltip:<br>
-£military_ship£ §Y軍事艦隊§!§E効果§!：\n    敵帝国艦船を破壊した数につき：\n        £unity£ §Y統合力§!： 破壊された艦船の§H宇宙軍許容量§!§Y5§!につき§G+@trait_crusader_2_fleet_amt|1§!\n\n£army_ship£ §Y地上軍§!§E効果§!：\n    戦死した敵の数につき：\n        £unity£ §Y統合力§!：§G+40§!</p>
+£military_ship£ §Y軍事艦隊§!§E効果§!：\n    敵帝国艦船を破壊した数につき：\n        £unity£ §Y統合力§!： 破壊された艦船の§H宇宙軍許容量§!§Y@corvette_size_multiplier|0§!につき§G+@trait_crusader_2_fleet_amt|1§!\n\n£army_ship£ §Y地上軍§!§E効果§!：\n    戦死した敵の数につき：\n        £unity£ §Y統合力§!：§G+40§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -7103,13 +7103,18 @@ custom_tooltip_with_modifiers:<br>
 <p>destiny</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>惑星:<br>
+<p>セクター:<br>
+・job_soldier_add([soldier.GetName]の職業枠) = 200<br>
+・soldier_jobs_bonus_workforce_mult(兵士職の職業効率：) = 0.10<br>
+<br>
+惑星(条件あり):<br>
+・条件：{"exists": "planet", "planet": {"NOT": {"has_knights_zone": "yes"}}}<br>
 ・job_soldier_add([soldier.GetName]の職業枠) = 400<br>
 ・soldier_jobs_bonus_workforce_mult(兵士職の職業効率：) = 0.20<br>
 <br>
-セクター:<br>
-・job_soldier_add([soldier.GetName]の職業枠) = 200<br>
-・soldier_jobs_bonus_workforce_mult(兵士職の職業効率：) = 0.10<br>
+・条件：{"exists": "planet", "planet": {"has_knights_zone": "yes"}}<br>
+・job_knight_add([knight.GetName]の職業枠) = 200<br>
+・soldier_jobs_bonus_workforce_mult(兵士職の職業効率：) = 0.20<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -12437,8 +12442,11 @@ leader_trait_corrupt_2<br></p>
 ・armies_cost_mult(地上軍コスト) = -0.1<br>
 <br>
 惑星(条件あり):<br>
-・条件：{"trait_is_gestalt_check": "no", "exists": "planet", "planet": {"NOT": {"has_modifier": "slave_colony"}}}<br>
+・条件：{"trait_is_gestalt_check": "no", "exists": "planet", "planet": {"NOT": {"has_knights_zone": "yes"}}}<br>
 ・job_soldier_add([soldier.GetName]の職業枠) = 200<br>
+<br>
+・条件：{"trait_is_gestalt_check": "no", "exists": "planet", "planet": {"NOT": {"has_modifier": "slave_colony"}, "has_knights_zone": "yes"}}<br>
+・job_knight_add([knight.GetName]の職業枠) = 100<br>
 <br>
 ・条件：{"trait_is_gestalt_check": "no", "exists": "planet", "planet": {"has_modifier": "slave_colony"}}<br>
 ・job_battle_thrall_add([battle_thrall.GetName]の職業枠) = 200<br>
@@ -17508,59 +17516,6 @@ leader_trait_righteous_2<br></p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>leader_trait_zealot</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>敬虔なる者</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>no</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>yes</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>no</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>basic</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>リーダーアサイン時:<br>
-・planet_stability_add(安定度) = 3<br>
-・planet_crime_add([GetCrimeDeviancy]) = -10<br>
-・pop_government_ethic_attraction(統治志向の魅力) = 0.20<br>
-・planet_bureaucrats_unity_produces_mult(£unity£ 産出： [GetBureaucratSwapPluralWithIcon]) = 0.10<br>
-<br></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>no</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>no</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>no</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>no</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>no</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>leader_trait_foredoomed_to_a_rendezvous</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -18414,8 +18369,9 @@ leader_trait_neurotic_2<br></p>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>custom_tooltip:<br>
-£science_ship£ §Y調査船§!§E効果§!：\n    調査完了時：\n        一定確率で資源鉱床規模が上昇： §G+20%§!</p>
+<p>リーダーアサイン時:<br>
+・deposit_increase_on_survey_chance_mult(調査時、 一定確率で資源鉱床規模が上昇) = 0.2<br>
+<br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -18466,8 +18422,9 @@ leader_trait_neurotic_2<br></p>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>custom_tooltip:<br>
-£science_ship£ §Y調査船§!§E効果§!：\n    調査完了時：\n        一定確率で資源鉱床規模が上昇： §G+35%§!</p>
+<p>リーダーアサイン時:<br>
+・deposit_increase_on_survey_chance_mult(調査時、 一定確率で資源鉱床規模が上昇) = 0.35<br>
+<br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -18515,8 +18472,9 @@ leader_trait_neurotic_2<br></p>
 <p>veteran</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>custom_tooltip_with_modifiers:<br>
-£science_ship£ §Y調査船§!§E効果§!：\n    調査完了時：\n        一定確率で資源鉱床規模が上昇： §G+50%§!</p>
+<p>リーダーアサイン時:<br>
+・deposit_increase_on_survey_chance_mult(調査時、 一定確率で資源鉱床規模が上昇) = 0.5<br>
+<br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -25782,14 +25740,29 @@ leader_trait_collaborator_3<br></p>
 <br>
 惑星(条件あり):<br>
 ・条件：{"is_ruler": "no"}<br>
-・pop_slave_bonus_workforce_mult(奴隷の職業効率) = 0.20<br>
 ・planet_stability_add(安定度) = 5<br>
+・mult = value:transcended_psionic_multiplier<br>
+<br>
+・条件：{"is_ruler": "no", "trait_is_gestalt_check": "no"}<br>
+・pop_slave_bonus_workforce_mult(奴隷の職業効率) = 0.20<br>
+・mult = value:transcended_psionic_multiplier<br>
+<br>
+・条件：{"is_ruler": "no", "trait_is_gestalt_check": "yes"}<br>
+・pop_cat_simple_drone_bonus_workforce_mult(雑役ドローンの職業効率：) = 0.15<br>
 ・mult = value:transcended_psionic_multiplier<br>
 <br>
 セクター(条件あり):<br>
 ・条件：{"is_ruler": "no"}<br>
-・pop_slave_bonus_workforce_mult(奴隷の職業効率) = 0.10<br>
 ・planet_stability_add(安定度) = 2.5<br>
+・mult = value:transcended_psionic_multiplier<br>
+<br>
+・条件：{"is_ruler": "no", "trait_is_gestalt_check": "no"}<br>
+・pop_slave_bonus_workforce_mult(奴隷の職業効率) = 0.10<br>
+・mult = value:transcended_psionic_multiplier<br>
+<br>
+・条件：{"is_ruler": "no", "trait_is_gestalt_check": "yes"}<br>
+・pop_cat_simple_drone_bonus_workforce_mult(雑役ドローンの職業効率：) = 0.075<br>
+・mult = value:transcended_psionic_multiplier<br>
 <br>
 艦隊(条件あり):<br>
 ・条件：{"is_ruler": "no", "leader_class": "commander"}<br>
@@ -25896,8 +25869,12 @@ leader_trait_collaborator_3<br></p>
 ・mult = value:transcended_psionic_multiplier<br>
 <br>
 惑星(条件あり):<br>
-・条件：{"is_ruler": "no", "is_gestalt": "no"}<br>
+・条件：{"is_ruler": "no", "is_gestalt": "no", "exists": "planet", "planet": {"NOT": {"has_knights_zone": "yes"}}}<br>
 ・job_soldier_add([soldier.GetName]の職業枠) = 200<br>
+・mult = value:transcended_psionic_multiplier<br>
+<br>
+・条件：{"is_ruler": "no", "is_gestalt": "no", "exists": "planet", "planet": {"has_knights_zone": "yes"}}<br>
+・job_knight_add([knight.GetName]の職業枠) = 100<br>
 ・mult = value:transcended_psionic_multiplier<br>
 <br>
 ・条件：{"is_ruler": "no", "is_gestalt": "yes"}<br>
@@ -26006,35 +25983,36 @@ leader_trait_collaborator_3<br></p>
 ・mult = value:transcended_psionic_multiplier<br>
 <br>
 惑星(条件あり):<br>
-・条件：{"is_ruler": "no"}<br>
-・pop_political_power(POPの政治力) = 0.3<br>
-・mult = value:transcended_psionic_multiplier<br>
-<br>
 ・条件：{"is_ruler": "no", "is_gestalt": "no"}<br>
 ・pop_happiness(POP幸福度が VALUE|Y COMPAREである) = 0.15<br>
+・pop_political_power(POPの政治力) = 0.3<br>
 ・mult = value:transcended_psionic_multiplier<br>
 <br>
 ・条件：{"is_ruler": "no", "is_gestalt": "yes"}<br>
 ・planet_crime_no_happiness_mult(逸脱性) = -0.2<br>
+・planet_stability_add(安定度) = 2<br>
 ・mult = value:transcended_psionic_multiplier<br>
 <br>
 セクター(条件あり):<br>
-・条件：{"is_ruler": "no"}<br>
-・pop_political_power(POPの政治力) = 0.15<br>
-・mult = value:transcended_psionic_multiplier<br>
-<br>
 ・条件：{"is_ruler": "no", "is_gestalt": "no"}<br>
 ・pop_happiness(POP幸福度が VALUE|Y COMPAREである) = 0.075<br>
+・pop_political_power(POPの政治力) = 0.15<br>
 ・mult = value:transcended_psionic_multiplier<br>
 <br>
 ・条件：{"is_ruler": "no", "is_gestalt": "yes"}<br>
 ・planet_crime_no_happiness_mult(逸脱性) = -0.1<br>
+・planet_stability_add(安定度) = 1<br>
 ・mult = value:transcended_psionic_multiplier<br>
 <br>
 艦隊(条件あり):<br>
-・条件：{"is_ruler": "no", "leader_class": "commander"}<br>
+・条件：{"is_ruler": "no", "leader_class": "commander", "trait_is_nomad_check": "no"}<br>
 ・ship_friendly_territory_fire_rate_mult(友好的な星系の艦船連射レート) = 0.3<br>
 ・ship_friendly_territory_hull_mult(友好的な星系の船体値) = 0.3<br>
+・mult = value:transcended_psionic_multiplier<br>
+<br>
+・条件：{"is_ruler": "no", "leader_class": "commander", "trait_is_nomad_check": "yes"}<br>
+・ship_fire_rate_mult(艦船連射レート) = 0.15<br>
+・ship_speed_mult(亜光速移動速度) = 0.15<br>
 ・mult = value:transcended_psionic_multiplier<br>
 <br>
 地上軍(条件あり):<br>
@@ -26057,8 +26035,15 @@ leader_trait_collaborator_3<br></p>
 <br>
 評議会(条件あり):<br>
 ・条件：{"is_ruler": "yes"}<br>
-・pop_factions_produces_mult(派閥の資源産出) = 0.3<br>
 ・diplo_action_acceptance_add(外交許諾値) = 10<br>
+・mult = value:transcended_psionic_multiplier<br>
+<br>
+・条件：{"is_ruler": "yes", "trait_is_gestalt_check": "no"}<br>
+・pop_factions_produces_mult(派閥の資源産出) = 0.3<br>
+・mult = value:transcended_psionic_multiplier<br>
+<br>
+・条件：{"is_ruler": "yes", "trait_is_gestalt_check": "yes"}<br>
+・planet_jobs_unity_produces_mult(£job£ 職業からの£unity£ 統合力) = 0.1<br>
 ・mult = value:transcended_psionic_multiplier<br>
 <br>
 ・条件：{"is_ruler": "yes"}<br>
@@ -38246,7 +38231,7 @@ custom_tooltip_with_modifiers:<br>
 ・country_scientist_cap_add(£scientist£ 科学者上限数) = 1<br>
 ・leaders_upkeep_mult(リーダー維持費) = -0.25<br>
 ・leaders_cost_mult(リーダーコスト) = 0.10<br>
-・species_leader_exp_gain = -0.25<br>
+・species_leader_exp_gain = -0.10<br>
 <br>
 本人(条件あり):<br>
 ・条件：{"leader_class": "commander"}<br>
@@ -38370,7 +38355,7 @@ custom_tooltip_with_modifiers:<br>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>評議会:<br>
-・planet_jobs_produces_mult(£job£ 職業からの資源) = 0.25<br>
+・robotic_pop_bonus_workforce_mult(機械POPと機械知性POPの職業効率：) = 0.15<br>
 ・pop_ethics_shift_speed_mult = 0.25<br>
 ・planet_pop_assembly_add(月間機械POP製造) = 1<br>
 ・pop_happiness(POP幸福度が VALUE|Y COMPAREである) = -0.15<br>
@@ -39703,7 +39688,7 @@ custom_tooltip_with_modifiers:<br>
 ・ship_evasion_mult(回避確率) = 0.30<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-\n    このリーダーは宇宙嵐のなかにいると、 特性の効果が増加する。</p>
+§Yこのリーダーが宇宙嵐の中にいるあいだ、 特性の効果が増加する。§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -39789,7 +39774,7 @@ custom_tooltip_with_modifiers:<br>
 ・planet_jobs_engineering_research_produces_mult(£job£ 職業からの£engineering_research£ 工学研究) = 00.035<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-\n    このリーダーは宇宙嵐のなかにいると、 特性の効果が増加する。</p>
+§Yこのリーダーが宇宙嵐の中にいるあいだ、 特性の効果が増加する。§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -39877,7 +39862,7 @@ custom_tooltip_with_modifiers:<br>
 ・resolution_category_storm_environmentalists_stances_vote_strength_mult(§Y宇宙嵐保護論者§!の決議における票数) = 0.05<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-\n    このリーダーは宇宙嵐のなかにいると、 特性の効果が増加する。</p>
+§Yこのリーダーが宇宙嵐の中にいるあいだ、 特性の効果が増加する。§!</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -40141,7 +40126,7 @@ custom_tooltip_with_modifiers:<br>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>評議会:<br>
-・enemy_ship_destroyed_energy_add(破壊した敵艦船のサイズごとに£energy£ §Yエネルギー通貨§!) = 25<br>
+・enemy_ship_destroyed_energy_add(£energy£ §Yエネルギー通貨§! 破壊された艦船の§H宇宙軍許容量§!§Y@corvette_size_multiplier|0§!につき) = 25<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -40193,7 +40178,7 @@ custom_tooltip_with_modifiers:<br>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>評議会:<br>
-・enemy_ship_destroyed_energy_add(破壊した敵艦船のサイズごとに£energy£ §Yエネルギー通貨§!) = 50<br>
+・enemy_ship_destroyed_energy_add(£energy£ §Yエネルギー通貨§! 破壊された艦船の§H宇宙軍許容量§!§Y@corvette_size_multiplier|0§!につき) = 50<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -40245,7 +40230,7 @@ custom_tooltip_with_modifiers:<br>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>評議会:<br>
-・enemy_ship_destroyed_energy_add(破壊した敵艦船のサイズごとに£energy£ §Yエネルギー通貨§!) = 75<br>
+・enemy_ship_destroyed_energy_add(£energy£ §Yエネルギー通貨§! 破壊された艦船の§H宇宙軍許容量§!§Y@corvette_size_multiplier|0§!につき) = 75<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -40459,7 +40444,7 @@ custom_tooltip_with_modifiers:<br>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>評議会:<br>
-・deposit_increase_on_survey_chance_mult(調査完了時：\n    一定確率で資源鉱床規模が上昇) = 0.1<br>
+・deposit_increase_on_survey_chance_mult(調査時、 一定確率で資源鉱床規模が上昇) = 0.1<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -40511,7 +40496,7 @@ custom_tooltip_with_modifiers:<br>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>評議会:<br>
-・deposit_increase_on_survey_chance_mult(調査完了時：\n    一定確率で資源鉱床規模が上昇) = 0.2<br>
+・deposit_increase_on_survey_chance_mult(調査時、 一定確率で資源鉱床規模が上昇) = 0.2<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -40563,7 +40548,7 @@ custom_tooltip_with_modifiers:<br>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>評議会:<br>
-・deposit_increase_on_survey_chance_mult(調査完了時：\n    一定確率で資源鉱床規模が上昇) = 0.3<br>
+・deposit_increase_on_survey_chance_mult(調査時、 一定確率で資源鉱床規模が上昇) = 0.3<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -43633,7 +43618,7 @@ custom_tooltip:<br>
 ・army_morale_damage_taken_mult(地上軍士気の被ダメージ) = -0.25<br>
 <br>
 本人(条件あり):<br>
-・custom_tooltip = leader_trait_nomadic_champion_effect(    - 惑星侵攻に成功すると、 貴重な§H戦利品§!を回収できるチャンスがもたらされる。\n    - 戦利品は我々の§Y帝国首都§!の§H戦利品ホール§!に保管され、 その効果は累積していく。)<br>
+・custom_tooltip = leader_trait_nomadic_champion_effect(    - 惑星侵攻を§Y主導§!して成功させると、 この司令官は一定確率で貴重な§H戦利品§!を獲得する。\n    - 戦利品は我々の§Y帝国首都§!にある§H戦利品ホール§!に保管され、 戦利品が増えるほどその効果も累積する。)<br>
 <br></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -43977,7 +43962,7 @@ custom_tooltip:<br>
 ・ship_evasion_mult(回避確率) = 0.05<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-£military_ship£ §Y軍事艦隊§!§E効果§!：\n    敵帝国艦船を破壊した数につき：\n        £consumer_goods£ §Y消費財§!または£trade£ §Y交易§!：§G+@trait_plunderer_amt|0§! 破壊された艦船の§H宇宙軍許容量§!§Y5§!につき</p>
+£military_ship£ §Y軍事艦隊§!§E効果§!：\n    敵帝国艦船を破壊した数につき：\n        £consumer_goods£ §Y消費財§!または£trade£ §Y交易§!：§G+@trait_plunderer_amt|0§! 破壊された艦船の§H宇宙軍許容量§!§Y@corvette_size_multiplier|0§!につき</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
@@ -44042,7 +44027,7 @@ custom_tooltip_with_modifiers:<br>
 ・ship_evasion_mult(回避確率) = 0.05<br>
 <br>
 custom_tooltip_with_modifiers:<br>
-£military_ship£ §Y軍事艦隊§!§E効果§!：\n    敵帝国艦船を破壊した数につき：\n        £consumer_goods£ §Y消費財§!または£trade£ §Y交易§!：§G+@trait_plunderer_2_amt|0§! 破壊された艦船の§H宇宙軍許容量§!§Y5§!につき</p>
+£military_ship£ §Y軍事艦隊§!§E効果§!：\n    敵帝国艦船を破壊した数につき：\n        £consumer_goods£ §Y消費財§!または£trade£ §Y交易§!：§G+@trait_plunderer_2_amt|0§! 破壊された艦船の§H宇宙軍許容量§!§Y@corvette_size_multiplier|0§!につき</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>no</p>
