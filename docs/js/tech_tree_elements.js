@@ -1,6 +1,6 @@
 
 function getVersion() {
-    return "v4.5.0";
+    return "v4.5.1";
 }
 
 function getElements() {

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.23">
-<title>【Stellaris 4.3.5】艦船の挙動について</title>
+<title>【Stellaris 4.5.0】艦船の挙動について</title>
 <link rel="stylesheet" href="../css/default.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- Google tag (gtag.js) -->
@@ -20,7 +20,7 @@
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>【Stellaris 4.3.5】艦船の挙動について</h1>
+<h1>【Stellaris 4.5.0】艦船の挙動について</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">目次</div>
 <ul class="sectlevel1">
@@ -301,7 +301,7 @@ Mod等でこの値を別の値に変更している場合には、交戦距離�
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>武器の射程(min,median,max)を指定したときの計算対象を指定する。<br>
-                                 weapon,strike_craftを指定可能で、default = weapon。</p>
+                                 weapon,strike_craft,weapon_and_strike_craftを指定可能で、default = weapon。</p>
 </div>
 <div class="dlist">
 <dl>
@@ -316,7 +316,20 @@ Mod等でこの値を別の値に変更している場合には、交戦距離�
 <p>軍用機以外の武器の射程を計算の対象として採用する。<br>
 軍用機のみの場合は射程0を計算の対象として採用する。</p>
 </dd>
+<dt class="hdlist1">weapon_and_strike_craftが設定されている場合</dt>
+<dd>
+<p>全ての武器の射程を計算の対象として採用する。<br>
+ただし、軍用機の場合は射程の代わりに交戦距離を利用する。<br></p>
+</dd>
 </dl>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>combat_movement</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>player_overrideが指定されている場合、戦闘中でもプレイヤーによるマウス操作での指示を優先して受け付ける。</p>
 </div></div></td>
 </tr>
 <tr>
@@ -404,13 +417,16 @@ Mod等でこの値を別の値に変更している場合には、交戦距離�
 </ul>
 </div>
 <div class="paragraph">
-<p>この6つのパラメータについて、コルベット、駆逐艦などのプレイヤー側の艦船で指定できる戦術の定義を以下の表に示します。</p>
+<p>この6つのパラメータについて、コルベット、駆逐艦などのプレイヤー側の艦船で指定できる戦術の定義を以下の表に示します。<br>
+なお、arkship(方舟)は空母戦術、paladin_line(パラディン)は戦列戦術と原則同じです。<br>
+プレイヤーの操作で戦闘中の指示を上書きできる部分のみの違いしかありません。</p>
 </div>
 <div class="openblock scrollable">
 <div class="content">
 <table class="tableblock frame-all grid-all fit-content stretch">
 <caption class="title">Table 2. 各戦術の定義値</caption>
 <colgroup>
+<col>
 <col>
 <col>
 <col>
@@ -428,6 +444,7 @@ Mod等でこの値を別の値に変更している場合には、交戦距離�
 <th class="tableblock halign-left valign-top">attack_move_pattern</th>
 <th class="tableblock halign-left valign-top">passive_move_pattern</th>
 <th class="tableblock halign-left valign-top">range_components</th>
+<th class="tableblock halign-left valign-top">combat_movement</th>
 </tr>
 </thead>
 <tbody>
@@ -449,6 +466,9 @@ Mod等でこの値を別の値に変更している場合には、交戦距離�
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>orbit</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>-</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>-</p>
@@ -476,6 +496,9 @@ Mod等でこの値を別の値に変更している場合には、交戦距離�
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>-</p>
 </div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>-</p>
+</div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -495,6 +518,9 @@ Mod等でこの値を別の値に変更している場合には、交戦距離�
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>orbit</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>-</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>-</p>
@@ -522,6 +548,9 @@ Mod等でこの値を別の値に変更している場合には、交戦距離�
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>-</p>
 </div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>-</p>
+</div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -541,6 +570,9 @@ Mod等でこの値を別の値に変更している場合には、交戦距離�
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>stay_at_range</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>-</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>-</p>
@@ -566,7 +598,10 @@ Mod等でこの値を別の値に変更している場合には、交戦距離�
 <p>stay_at_range</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>strike_craft</p>
+<p>weapon_and_strike_craft</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>-</p>
 </div></div></td>
 </tr>
 <tr>
@@ -590,6 +625,61 @@ Mod等でこの値を別の値に変更している場合には、交戦距離�
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>-</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>-</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>arkship(方舟)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>max</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>max</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>1000</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>maintain_distance</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>stay_at_range</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>weapon_and_strike_craft</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>player_override</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>paladin_line(パラディン)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>median</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>median</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>500</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>stay_at_range</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>charge</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>-</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>player_override</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -706,9 +796,7 @@ range_componentsがweaponの状態で軍用機以外の武器をつけていな�
 <h4 id="_空母戦術">4.5.6. 空母戦術</h4>
 <div class="paragraph">
 <p>空母戦術の基本的な動作は砲撃戦術と同じで、Bの距離まで接近した後は、Aの距離を常に保つように動きます。<br>
-ただし、A,B,Cの数値計算の基準が軍用機の艦船交戦距離基準に変化します。<br>
-射程延長の補正も効かなくなり、代わりに艦船交戦距離の補正が影響するようになるので、空母を運用する際には注意が必要です。<br>
-軍用機をスロットに入れていない場合は他の武器の射程が参照されるようになるため砲撃戦術と挙動が完全に同じになります。</p>
+砲撃戦術と異なりは、A,Bの距離計算をする際に、軍用機の艦船交戦距離も対象にするため、砲撃戦術の艦隊より距離を取ってくれる場合が多いです。</p>
 </div>
 <div class="imageblock">
 <div class="content">

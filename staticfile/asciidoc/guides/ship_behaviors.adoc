@@ -1,4 +1,4 @@
-= 【Stellaris 4.3.5】艦船の挙動について
+= 【Stellaris 4.5.0】艦船の挙動について
 :toc: left
 :toc-title: 目次
 :example-caption: 例
@@ -113,13 +113,16 @@ image::ship_behaviors_4.png[]
                                  指定可能な動作パターンは以下の通り。 +
                                  none/orbit/charge/stay_at_range/maintain_distance/stationary/flee
 | range_components             | 武器の射程(min,median,max)を指定したときの計算対象を指定する。 +
-                                 weapon,strike_craftを指定可能で、default = weapon。
+                                 weapon,strike_craft,weapon_and_strike_craftを指定可能で、default = weapon。
 
                                  strike_craftが設定されている場合:: 軍用機(いわゆるHスロットにセットする武器の総称)の +
                                                                     交戦距離のみを計算の対象として採用する。 +
                                                                     軍用機をセットしていない場合は他の武器の射程を計算の対象として採用する。
                                  weaponが設定されている場合::       軍用機以外の武器の射程を計算の対象として採用する。 +
                                                                     軍用機のみの場合は射程0を計算の対象として採用する。
+                                 weapon_and_strike_craftが設定されている場合:: 全ての武器の射程を計算の対象として採用する。 +
+                                                                               ただし、軍用機の場合は射程の代わりに交戦距離を利用する。 +
+| combat_movement              | player_overrideが指定されている場合、戦闘中でもプレイヤーによるマウス操作での指示を優先して受け付ける。
 | collision_awareness          | How much we try to avoid other ships
 | collision_strafe             | Allows the ship to move in any direction while colliding with another
 | collision_radius             | Multiplier on the radius specified in the ship size
@@ -141,21 +144,25 @@ image::ship_behaviors_4.png[]
 * passive_move_pattern
 * range_components
 
-この6つのパラメータについて、コルベット、駆逐艦などのプレイヤー側の艦船で指定できる戦術の定義を以下の表に示します。
+この6つのパラメータについて、コルベット、駆逐艦などのプレイヤー側の艦船で指定できる戦術の定義を以下の表に示します。 +
+なお、arkship(方舟)は空母戦術、paladin_line(パラディン)は戦列戦術と原則同じです。 +
+プレイヤーの操作で戦闘中の指示を上書きできる部分のみの違いしかありません。
 
 [.scrollable]
 --
-[cols="7*a", options="autowidth,header", role=stretch]
+[cols="8*a", options="autowidth,header", role=stretch]
 .各戦術の定義値
 |===
-| name                | preferred_attack_range | formation_distance | return_to_formation_distance | attack_move_pattern | passive_move_pattern | range_components
-| default(混合戦術)   | median                 | 10                 | 500                          | none                | orbit                | -
-| swarm(突進戦術)     | min                    | min                | 1500                         | orbit               | charge               | -
-| picket(前哨戦術)    | median                 | median             | 250                          | stay_at_range       | orbit                | -
-| line(戦列戦術)      | median                 | median             | 500                          | stay_at_range       | charge               | -
-| artillery(砲撃戦術) | max                    | max                | 1000                         | maintain_distance   | stay_at_range        | -
-| carrier(空母戦術)   | max                    | max                | 1000                         | maintain_distance   | stay_at_range        | strike_craft
-| torpedo(魚雷戦術)   | 10                     | 10                 | 1200                         | charge              | charge               | -
+| name                     | preferred_attack_range | formation_distance | return_to_formation_distance | attack_move_pattern | passive_move_pattern | range_components        | combat_movement
+| default(混合戦術)        | median                 | 10                 | 500                          | none                | orbit                | -                       | -
+| swarm(突進戦術)          | min                    | min                | 1500                         | orbit               | charge               | -                       | -
+| picket(前哨戦術)         | median                 | median             | 250                          | stay_at_range       | orbit                | -                       | -
+| line(戦列戦術)           | median                 | median             | 500                          | stay_at_range       | charge               | -                       | -
+| artillery(砲撃戦術)      | max                    | max                | 1000                         | maintain_distance   | stay_at_range        | -                       | -
+| carrier(空母戦術)        | max                    | max                | 1000                         | maintain_distance   | stay_at_range        | weapon_and_strike_craft | -
+| torpedo(魚雷戦術)        | 10                     | 10                 | 1200                         | charge              | charge               | -                       | -
+| arkship(方舟)            | max                    | max                | 1000                         | maintain_distance   | stay_at_range        | weapon_and_strike_craft | player_override
+| paladin_line(パラディン) | median                 | median             | 500                          | stay_at_range       | charge               | -                       | player_override
 |===
 --
 
@@ -230,9 +237,7 @@ image::ship_behaviors_9.png[width=100%]
 
 ==== 空母戦術
 空母戦術の基本的な動作は砲撃戦術と同じで、Bの距離まで接近した後は、Aの距離を常に保つように動きます。 +
-ただし、A,B,Cの数値計算の基準が軍用機の艦船交戦距離基準に変化します。 +
-射程延長の補正も効かなくなり、代わりに艦船交戦距離の補正が影響するようになるので、空母を運用する際には注意が必要です。 +
-軍用機をスロットに入れていない場合は他の武器の射程が参照されるようになるため砲撃戦術と挙動が完全に同じになります。
+砲撃戦術と異なりは、A,Bの距離計算をする際に、軍用機の艦船交戦距離も対象にするため、砲撃戦術の艦隊より距離を取ってくれる場合が多いです。
 
 image::ship_behaviors_10.png[width=100%]
 
